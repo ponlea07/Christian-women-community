@@ -3147,3 +3147,11 @@ grid-template-columns:1fr;
 }
 
 }
+.join-form select {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+}

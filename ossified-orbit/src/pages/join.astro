@@ -77,31 +77,65 @@ Become Part of the Community
 
 </h3>
 
-<form>
+<form
+  action="https://formspree.io/f/xdarjdzy"
+  method="POST">
 
-<input
-type="text"
-placeholder="Full Name">
+  <input
+  type="hidden"
+  name="_next"
+  value="https://christian-women-community.vercel.app/thank-you" />
 
-<input
-type="email"
-placeholder="Email Address">
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Virtuosa Registration" />
 
-<input
-type="text"
-placeholder="Country">
+  <input
+    type="text"
+    name="name"
+    placeholder="Full Name"
+    required />
 
-<textarea
-rows="5"
-placeholder="Tell us a little about yourself"></textarea>
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    required />
 
-<button
-type="submit"
-class="btn-primary">
+  <input
+    type="text"
+    name="country"
+    placeholder="Country" />
 
-Become a Virtuosa
+  <input
+    type="text"
+    name="church"
+    placeholder="Church (Optional)" />
 
-</button>
+  <select name="heard_about_us">
+    <option value="">How did you hear about us?</option>
+    <option>Instagram</option>
+    <option>Facebook</option>
+    <option>YouTube</option>
+    <option>Friend</option>
+    <option>Church</option>
+    <option>Google Search</option>
+    <option>Other</option>
+  </select>
+
+  <textarea
+    name="message"
+    rows="5"
+    placeholder="Tell us a little about yourself or share a prayer request"></textarea>
+
+  <button
+    type="submit"
+    class="btn-primary">
+
+    Become a Virtuosa
+
+  </button>
 
 </form>
 
