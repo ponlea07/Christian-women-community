@@ -1,0 +1,100 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import BecomeVirtuosa from "../components/BecomeVirtuosa.astro";
+import GrowInTheWord from "../components/GrowInTheWord.astro";
+import { marketplace } from "../content/marketplace";
+---
+
+<Layout title="Virtuosa Marketplace | Christian Women Community">
+
+  <section class="page-hero">
+
+    <div class="container">
+
+      <span class="page-eyebrow">
+        VIRTUOSA MARKETPLACE
+      </span>
+
+      <h1>
+        Support Women. Build Kingdom.
+      </h1>
+
+      <p>
+
+        Discover businesses, ministries and professional services owned
+        by Christian women within our community.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <section class="marketplace-page">
+
+    <div class="container">
+
+      <SectionHeading
+
+        eyebrow="FEATURED BUSINESSES"
+
+        title="Shop with Purpose"
+
+        text="Every purchase supports Christian women pursuing excellence in business and ministry."
+
+      />
+
+      <div class="marketplace-grid">
+
+        {marketplace.map((business) => (
+
+          <article class="business-card">
+
+            <div class="business-logo">
+
+              {business.initials}
+
+            </div>
+
+            <span class="category">
+
+              {business.category}
+
+            </span>
+
+            <h3>
+
+              {business.name}
+
+            </h3>
+
+            <p>
+
+              {business.description}
+
+            </p>
+
+            <a
+              href={business.link}
+              class="btn-primary">
+
+              View Business
+
+            </a>
+
+          </article>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <BecomeVirtuosa />
+
+  <GrowInTheWord />
+
+</Layout>

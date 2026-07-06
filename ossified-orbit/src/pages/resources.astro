@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import BecomeVirtuosa from "../components/BecomeVirtuosa.astro";
+import GrowInTheWord from "../components/GrowInTheWord.astro";
+import { resources } from "../content/resources";
+---
+
+<Layout title="Resources | Christian Women Community">
+
+  <section class="page-hero">
+
+    <div class="container">
+
+      <span class="page-eyebrow">
+        RESOURCES
+      </span>
+
+      <h1>
+        Grow Every Day
+      </h1>
+
+      <p>
+
+        Christ-centred resources to strengthen your faith,
+        leadership and everyday walk with God.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <section class="resources-page">
+
+    <div class="container">
+
+      <SectionHeading
+        eyebrow="GROW IN CHRIST"
+        title="Resources for Every Season"
+        text="Whether you're beginning your faith journey or leading others, these resources are here to encourage and equip you."
+      />
+
+      <div class="resources-grid">
+
+        {resources.map((resource) => (
+
+          <article class="resource-card">
+
+            <div class="resource-icon">
+              📖
+            </div>
+
+            <h3>
+              {resource.title}
+            </h3>
+
+            <p>
+              {resource.description}
+            </p>
+
+            <a
+              href="/join"
+              class="btn-primary">
+
+              Explore
+
+            </a>
+
+          </article>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <BecomeVirtuosa />
+
+  <GrowInTheWord />
+
+</Layout>

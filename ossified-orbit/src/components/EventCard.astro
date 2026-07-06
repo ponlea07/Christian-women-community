@@ -1,0 +1,37 @@
+---
+interface Event {
+  badge: string;
+  date: string;
+  title: string;
+  description: string;
+  button: string;
+  link: string;
+  featured?: boolean;
+}
+
+interface Props {
+  event: Event;
+}
+
+const { event } = Astro.props;
+---
+
+<article class={`event-card ${event.featured ? "featured" : ""}`}>
+
+  <div class="event-badge">
+    {event.badge}
+  </div>
+
+  <div class="event-date">
+    {event.date}
+  </div>
+
+  <h3>{event.title}</h3>
+
+  <p>{event.description}</p>
+
+  <a href={event.link}>
+    {event.button} →
+  </a>
+
+</article>

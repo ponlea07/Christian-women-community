@@ -1,0 +1,35 @@
+---
+interface Business {
+  initials: string;
+  category: string;
+  name: string;
+  description: string;
+  link: string;
+}
+
+interface Props {
+  business: Business;
+}
+
+const { business } = Astro.props;
+---
+
+<article class="business-card">
+
+  <div class="business-logo">
+    {business.initials}
+  </div>
+
+  <span class="category">
+    {business.category}
+  </span>
+
+  <h3>{business.name}</h3>
+
+  <p>{business.description}</p>
+
+  <a href={business.link}>
+    View Profile →
+  </a>
+
+</article>

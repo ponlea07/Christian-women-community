@@ -1,0 +1,27 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import EventCard from "./EventCard.astro";
+import { events } from "../content/events";
+---
+
+<section class="events">
+
+  <div class="container">
+
+    <SectionHeading
+      eyebrow="UPCOMING EVENTS"
+      title="Join Us at Our Gatherings"
+      text="From weekly Bible Study and Prayer Meetings to our signature Christian Women's Hangout and Kingdom business events, there's always a place for you to connect, grow and belong."
+    />
+
+    <div class="events-grid">
+
+      {events.map((event) => (
+        <EventCard event={event} />
+      ))}
+
+    </div>
+
+  </div>
+
+</section>

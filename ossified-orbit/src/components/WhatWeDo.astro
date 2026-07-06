@@ -1,0 +1,55 @@
+---
+import FeatureCard from "./FeatureCard.astro";
+import SectionHeading from "./SectionHeading.astro";
+---
+
+<section class="what-we-do">
+
+<div class="container">
+
+<SectionHeading
+  eyebrow="WHAT WE DO"
+  title="Helping Every Virtuosa Flourish"
+  text="We nurture women spiritually, personally and professionally, creating a community where faith inspires purpose and purpose creates impact."
+/>
+
+<div class="services-grid">
+
+  <FeatureCard
+    icon="✦"
+    title="Spiritual Growth"
+    text="Prayer, Bible study, discipleship and worship experiences that deepen your walk with Christ."
+    href="/programs"
+    linkText="Learn More"
+  />
+
+  <FeatureCard
+    icon="👥"
+    title="Community"
+    text="Meaningful friendships, mentoring relationships and authentic sisterhood."
+    href="/join"
+    linkText="Become a Virtuosa"
+  />
+
+  <FeatureCard
+    icon="⌘"
+    title="Virtuosa Marketplace"
+    text="Discover businesses, ministries and services owned by Christian women in our community."
+    href="/marketplace"
+    linkText="Explore Marketplace"
+    featured={true}
+  />
+
+  <FeatureCard
+    icon="+"
+    title="Purpose & Impact"
+    text="Serving communities, influencing culture and advancing God's Kingdom together."
+    href="/about"
+    linkText="Discover More"
+  />
+
+</div>
+
+</div>
+
+</section>

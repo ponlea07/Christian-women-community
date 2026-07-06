@@ -1,0 +1,35 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  text: string;
+  href: string;
+  linkText: string;
+  featured?: boolean;
+}
+
+const {
+  icon,
+  title,
+  text,
+  href,
+  linkText,
+  featured = false
+} = Astro.props;
+---
+
+<article class={`service-card ${featured ? "featured" : ""}`}>
+
+  <div class="service-icon">
+    <span>{icon}</span>
+  </div>
+
+  <h3>{title}</h3>
+
+  <p>{text}</p>
+
+  <a href={href}>
+    {linkText} →
+  </a>
+
+</article>

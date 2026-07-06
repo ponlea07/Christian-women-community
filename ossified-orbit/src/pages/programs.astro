@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import BecomeVirtuosa from "../components/BecomeVirtuosa.astro";
+import { programs } from "../content/programs";
+---
+
+<Layout title="Programs | Christian Women Community">
+
+  <section class="page-hero">
+
+    <div class="container">
+
+      <span class="page-eyebrow">OUR PROGRAMS</span>
+
+      <h1>Growing Together in Christ</h1>
+
+      <p>
+
+        Every programme is designed to help women grow spiritually,
+        build authentic relationships and flourish in every area of life.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <section class="programs-page">
+
+    <div class="container">
+
+      <SectionHeading
+        eyebrow="PROGRAMS"
+        title="Join Our Gatherings"
+        text="Whether weekly or monthly, there's always a place for you."
+      />
+
+      <div class="program-grid">
+
+        {programs.map((program) => (
+
+          <article class="program-card">
+
+            <span class="program-day">
+
+              {program.day}
+
+            </span>
+
+            <h3>
+
+              {program.title}
+
+            </h3>
+
+            <p class="program-time">
+
+              {program.time}
+
+            </p>
+
+            <p>
+
+              {program.description}
+
+            </p>
+
+            <a
+              href="/join"
+              class="btn-primary">
+
+              Join Us
+
+            </a>
+
+          </article>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <BecomeVirtuosa />
+
+</Layout>

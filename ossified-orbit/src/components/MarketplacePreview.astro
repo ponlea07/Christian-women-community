@@ -1,0 +1,39 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import MarketplaceCard from "./MarketplaceCard.astro";
+import { marketplace } from "../content/marketplace";
+---
+
+<section class="marketplace">
+
+  <div class="container">
+
+    <SectionHeading
+      eyebrow="VIRTUOSA MARKETPLACE"
+      title="Discover Businesses Within Our Community"
+      text="Support Christian women-owned businesses, ministries and professional services. Shop with purpose, collaborate with excellence and build Kingdom connections."
+    />
+
+    <div class="marketplace-grid">
+
+      {marketplace.map((business) => (
+        <MarketplaceCard business={business} />
+      ))}
+
+    </div>
+
+    <div class="marketplace-cta">
+
+      <a href="/marketplace" class="btn-primary">
+        Explore Marketplace
+      </a>
+
+      <a href="/join" class="btn-secondary">
+        Become a Vendor
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

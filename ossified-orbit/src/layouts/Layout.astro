@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import SanctuaryFooter from "../components/SanctuaryFooter.astro";
+
+interface Props {
+  title?: string;
+}
+
+const {
+  title = "Christian Women Community | Donna Virtuosa"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{title}</title>
+
+  <meta
+    name="description"
+    content="Christian Women Community - Donna Virtuosa | More Than Rubies"
+  />
+
+  <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <Navbar />
+
+  <main>
+    <slot />
+  </main>
+
+  <SanctuaryFooter />
+
+</body>
+</html>
