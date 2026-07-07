@@ -2,6 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import GrowInTheWord from "../components/GrowInTheWord.astro";
 import JoinModal from "../components/JoinModal.astro";
+import IconBadge from "../components/IconBadge.astro";
+
+import {
+  HandHeart,
+  BookOpen,
+  Handshake,
+  Globe
+} from "@lucide/astro";
 ---
 
 <Layout title="Become a Virtuosa | Christian Women Community">
@@ -87,15 +95,23 @@ Why Join?
 
   <div class="join-highlights">
 
-    <div>🙏 Weekly Prayer</div>
+  <IconBadge
+    icon={HandHeart}
+    text="Weekly Prayer" />
 
-    <div>📖 Bible Study</div>
+  <IconBadge
+    icon={BookOpen}
+    text="Bible Study" />
 
-    <div>🤝 Mentorship</div>
+  <IconBadge
+    icon={Handshake}
+    text="Mentorship" />
 
-    <div>🌍 Global Sisterhood</div>
+  <IconBadge
+    icon={Globe}
+    text="Global Sisterhood" />
 
-  </div>
+</div>
 
   <button
     id="openJoinModal"

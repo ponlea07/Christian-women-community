@@ -1,19 +1,19 @@
 ---
-interface Props{
-icon:string;
-text:string;
+interface Props {
+  icon: any;
+  text: string;
 }
 
-const{
-icon,
-text
-}=Astro.props;
+const {
+  icon: Icon,
+  text
+} = Astro.props;
 ---
 
 <div class="icon-badge">
 
-<span>{icon}</span>
+  <Icon size={22} />
 
-<p>{text}</p>
+  <p>{text}</p>
 
 </div>

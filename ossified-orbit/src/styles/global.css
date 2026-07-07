@@ -3354,7 +3354,7 @@ line-height:1.25;
 .join-card p{
     color:#666;
     line-height:1.8;
-    margin-bottom:20px;
+    margin-bottom:32px;
 }
 
 .join-badge{
@@ -3414,24 +3414,19 @@ transition:.3s ease;
 }
 
 .join-card .btn-primary{
-
-width:100%;
-
-border:none;
-
-box-shadow:0 12px 25px rgba(218,178,41,.25);
-
-transition:.3s ease;
-
+    width:100%;
+    margin-top:12px;
+    box-shadow:
+0 20px 60px rgba(0,0,0,.06),
+0 8px 20px rgba(15,107,115,.05);
+    transition:.3s ease;
 }
 
 .join-card .btn-primary:hover{
-
-transform:translateY(-4px);
-
-box-shadow:0 20px 40px rgba(218,178,41,.35);
-
+    transform:translateY(-3px);
+    box-shadow:0 20px 40px rgba(218,178,41,.38);
 }
+
 .join-highlights div:hover{
 
 background:#0F6B73;
@@ -3482,9 +3477,40 @@ transform:translateY(-3px);
 }
 
 .icon-badge{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  font-weight:600;
-  color:#0F6B73;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    padding:16px 20px;
+
+    background:#F8F8F8;
+    border-radius:18px;
+
+    color:#0F6B73;
+    font-weight:600;
+
+    transition:.3s ease;
+    cursor:default;
+}
+.icon-badge{
+    border:1px solid rgba(15,107,115,.08);
+}
+
+.icon-badge svg{
+    width:22px;
+    height:22px;
+    flex-shrink:0;
+}
+
+.icon-badge p{
+    margin:0;
+    font-size:1rem;
+}
+
+.icon-badge:hover{
+    background:#0F6B73;
+    color:white;
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(15,107,115,.18);
 }

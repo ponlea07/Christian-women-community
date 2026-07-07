@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://christian-women-community.vercel.app/sitemap-index.xml
