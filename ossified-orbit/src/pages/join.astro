@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import GrowInTheWord from "../components/GrowInTheWord.astro";
+import JoinModal from "../components/JoinModal.astro";
 ---
 
 <Layout title="Become a Virtuosa | Christian Women Community">
@@ -69,75 +70,40 @@ Why Join?
 
 </div>
 
-<div class="join-form">
+<div class="join-card">
 
-<h3>
+  <span class="join-badge">
+    Join Our Sisterhood
+  </span>
 
-Become Part of the Community
+  <h3>
+    Become Part of the Community
+  </h3>
 
-</h3>
+  <p>
+    Join a Christ-centred community where women grow in faith,
+    discover purpose, build lasting friendships and make Kingdom impact.
+  </p>
 
-<form
-  action="https://formspree.io/f/xdarjdzy"
-  method="POST">
+  <div class="join-highlights">
 
-  <input
-  type="hidden"
-  name="_next"
-  value="https://christian-women-community.vercel.app/thank-you" />
+    <div>🙏 Weekly Prayer</div>
 
-  <input
-    type="hidden"
-    name="_subject"
-    value="New Virtuosa Registration" />
+    <div>📖 Bible Study</div>
 
-  <input
-    type="text"
-    name="name"
-    placeholder="Full Name"
-    required />
+    <div>🤝 Mentorship</div>
 
-  <input
-    type="email"
-    name="email"
-    placeholder="Email Address"
-    required />
+    <div>🌍 Global Sisterhood</div>
 
-  <input
-    type="text"
-    name="country"
-    placeholder="Country" />
-
-  <input
-    type="text"
-    name="church"
-    placeholder="Church (Optional)" />
-
-  <select name="heard_about_us">
-    <option value="">How did you hear about us?</option>
-    <option>Instagram</option>
-    <option>Facebook</option>
-    <option>YouTube</option>
-    <option>Friend</option>
-    <option>Church</option>
-    <option>Google Search</option>
-    <option>Other</option>
-  </select>
-
-  <textarea
-    name="message"
-    rows="5"
-    placeholder="Tell us a little about yourself or share a prayer request"></textarea>
+  </div>
 
   <button
-    type="submit"
+    id="openJoinModal"
     class="btn-primary">
 
     Become a Virtuosa
 
   </button>
-
-</form>
 
 </div>
 
@@ -146,6 +112,8 @@ Become Part of the Community
 </div>
 
 </section>
+
+<JoinModal />
 
 <GrowInTheWord />
 

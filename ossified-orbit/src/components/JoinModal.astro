@@ -1,0 +1,96 @@
+<div id="joinModal" class="modal-overlay">
+
+  <div
+    class="modal-card"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="joinTitle">
+
+    <button
+      id="closeJoinModal"
+      class="modal-close"
+      aria-label="Close">
+
+      ×
+
+    </button>
+
+    <h2 id="joinTitle">
+      Become a Virtuosa
+    </h2>
+
+    <p>
+      We'd love to welcome you into our Christ-centred community.
+    </p>
+
+    <form
+      action="https://formspree.io/f/xdarjdzy"
+      method="POST">
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Virtuosa Registration" />
+
+      <input
+        type="hidden"
+        name="_next"
+        value="https://christian-women-community.vercel.app/thank-you" />
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required />
+
+      <input
+        type="text"
+        name="country"
+        placeholder="Country" />
+
+      <input
+        type="text"
+        name="church"
+        placeholder="Church (Optional)" />
+
+      <select name="heard_about_us">
+
+        <option value="">How did you hear about us?</option>
+        <option>Instagram</option>
+        <option>Facebook</option>
+        <option>YouTube</option>
+        <option>Friend</option>
+        <option>Church</option>
+        <option>Google Search</option>
+        <option>Other</option>
+
+      </select>
+
+      <textarea
+        rows="5"
+        name="message"
+        placeholder="Tell us a little about yourself or share a prayer request"></textarea>
+
+      <button
+        type="submit"
+        class="btn-primary">
+
+        Become a Virtuosa
+
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script>
+  import "../scripts/join-modal.js";
+</script>
