@@ -1,0 +1,19 @@
+---
+interface Props{
+icon:string;
+text:string;
+}
+
+const{
+icon,
+text
+}=Astro.props;
+---
+
+<div class="icon-badge">
+
+<span>{icon}</span>
+
+<p>{text}</p>
+
+</div>

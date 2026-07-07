@@ -1,0 +1,31 @@
+---
+interface Props{
+title:string;
+text:string;
+button:string;
+link:string;
+}
+
+const{
+title,
+text,
+button,
+link
+}=Astro.props;
+---
+
+<section class="cta">
+
+<div class="container">
+
+<h2>{title}</h2>
+
+<p>{text}</p>
+
+<a href={link} class="btn-primary">
+{button}
+</a>
+
+</div>
+
+</section>
