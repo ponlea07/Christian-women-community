@@ -1,51 +1,77 @@
+---
+import "../styles/navbar.css";
+---
+
 <header class="navbar">
+  <div class="container nav-container">
 
-    <div class="container nav-container">
+    <a href="/" class="brand">
+      <img src="/logo.jpg" alt="Christian Women Community Logo" />
 
-        <a href="/" class="brand">
+      <div class="brand-text">
+        <h2>Christian Women Community</h2>
 
-           <img src="/logo.jpg" alt="Christian Women Community Logo" />
-            <div class="brand-text">
+        <p>
+          Donna Virtuosa
+          <span>|</span>
+          More Than Rubies
+        </p>
+      </div>
+    </a>
 
-                <h2>Christian Women Community</h2>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open menu">
 
-                <p>
-                    Donna Virtuosa
-                    <span>|</span>
-                    More Than Rubies
-                </p>
+      ☰
 
-            </div>
+    </button>
 
-        </a>
+    <nav id="mobileNav">
 
+      <ul>
 
-        <nav>
+        <li><a href="/">Home</a></li>
 
-            <ul>
+        <li><a href="/about">About</a></li>
 
-                <li><a href="/">Home</a></li>
+        <li><a href="/programs">Programs</a></li>
 
-                <li><a href="/about">About</a></li>
+        <li><a href="/marketplace">Marketplace</a></li>
 
-                <li><a href="/programs">Programs</a></li>
+        <li><a href="/resources">Resources</a></li>
 
-                <li><a href="/marketplace">Marketplace</a></li>
+        <li><a href="/contact">Contact</a></li>
 
-                <li><a href="/resources">Resources</a></li>
+        <li>
 
-                <li><a href="/contact">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-        <a href="/join" class="join-btn">
+          <a href="/join" class="join-btn">
 
             Join Us
 
-        </a>
+          </a>
 
-    </div>
+        </li>
 
+      </ul>
+
+    </nav>
+
+  </div>
 </header>
+
+<script is:inline>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("mobileNav");
+
+  toggle?.addEventListener("click", () => {
+
+   nav?.classList.toggle("open");
+
+  });
+
+});
+</script>
