@@ -4,6 +4,13 @@ import SectionHeading from "../components/SectionHeading.astro";
 import BecomeVirtuosa from "../components/BecomeVirtuosa.astro";
 import GrowInTheWord from "../components/GrowInTheWord.astro";
 import { resources } from "../content/resources";
+
+import {
+  BookOpen,
+  BookMarked,
+  Users,
+  BriefcaseBusiness
+} from "@lucide/astro";
 ---
 
 <Layout title="Resources | Christian Women Community">
@@ -45,31 +52,64 @@ import { resources } from "../content/resources";
 
         {resources.map((resource) => (
 
-          <article class="resource-card">
+  <article class="resource-card">
 
-            <div class="resource-icon">
-              📖
-            </div>
+    <div class="resource-content">
 
-            <h3>
-              {resource.title}
-            </h3>
+      <div class="resource-icon">
 
-            <p>
-              {resource.description}
-            </p>
+        {resource.title === "Bible Studies" && (
+          <BookOpen size={48} stroke-width={1.8} />
+        )}
 
-            <a
-              href="/join"
-              class="btn-primary">
+        {resource.title === "Devotionals" && (
+          <BookMarked size={48} stroke-width={1.8} />
+        )}
 
-              Explore
+        {resource.title === "Leadership" && (
+          <Users size={48} stroke-width={1.8} />
+        )}
 
-            </a>
+        {resource.title === "Business" && (
+          <BriefcaseBusiness size={48} stroke-width={1.8} />
+        )}
 
-          </article>
+      </div>
 
-        ))}
+      <h3>{resource.title}</h3>
+
+      <p>{resource.description}</p>
+
+    </div>
+
+    {resource.title === "Bible Studies" && (
+      <a href="/join" class="btn-primary">
+        Join to Access
+      </a>
+    )}
+
+    {resource.title === "Business" && (
+      <a href="/join" class="btn-primary">
+        Join to Access
+      </a>
+    )}
+
+    {resource.title === "Devotionals" && (
+      <a href="/devotionals" class="btn-primary">
+        Explore
+      </a>
+    )}
+
+    {resource.title === "Leadership" && (
+      <button class="btn-primary btn-disabled" disabled>
+        Coming Soon
+      </button>
+    )}
+
+  </article>
+
+))}
+        ))
 
       </div>
 

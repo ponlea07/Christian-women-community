@@ -2,7 +2,8 @@ export const events = [
 
   {
     badge: "Featured",
-    date: "25 JUL",
+    day: "25",
+    month: "JUL",
     title: "Christian Women's Hangout",
     description:
       "Worship, networking, conversations and authentic sisterhood.",
@@ -13,7 +14,8 @@ export const events = [
 
   {
     badge: "Weekly",
-    date: "Every Tuesday",
+    day: "Tuesday",
+    month: "7 PM",
     title: "Bible Study",
     description:
       "Study God's Word together every Tuesday at 7:00 PM.",
@@ -24,7 +26,8 @@ export const events = [
 
   {
     badge: "Weekly",
-    date: "Every Thursday",
+    day: "Thursday",
+    month: "9 PM",
     title: "Prayer Meeting",
     description:
       "Weekly online Prayer Meeting at 9:00 PM to keep the altar burning.",
@@ -35,7 +38,8 @@ export const events = [
 
   {
     badge: "Coming Soon",
-    date: "2026",
+    day: "2026",
+    month: "",
     title: "Virtuosa Business Masterclass",
     description:
       "Learn practical Kingdom business principles from experienced Christian entrepreneurs.",

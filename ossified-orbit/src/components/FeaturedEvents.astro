@@ -2,6 +2,9 @@
 import SectionHeading from "./SectionHeading.astro";
 import EventCard from "./EventCard.astro";
 import { events } from "../content/events";
+
+// Ensure each event has a `date` property required by EventCard
+const enrichedEvents = events.map((e) => ({ ...e, date: `${e.day ?? ""} ${e.month ?? ""}`.trim() }));
 ---
 
 <section class="events">
@@ -16,7 +19,7 @@ import { events } from "../content/events";
 
     <div class="events-grid">
 
-      {events.map((event) => (
+      {enrichedEvents.map((event) => (
         <EventCard event={event} />
       ))}
 

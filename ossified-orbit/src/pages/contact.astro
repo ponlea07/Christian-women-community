@@ -3,35 +3,29 @@ import Layout from "../layouts/Layout.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import BecomeVirtuosa from "../components/BecomeVirtuosa.astro";
 import GrowInTheWord from "../components/GrowInTheWord.astro";
+import { Mail, HeartHandshake, BookOpen, Users } from "@lucide/astro";
 ---
 
 <Layout title="Contact | Christian Women Community">
 
   <section class="page-hero">
-
     <div class="container">
 
       <span class="page-eyebrow">
         LET'S CONNECT
       </span>
 
-      <h1>
-        We'd Love to Hear From You
-      </h1>
+      <h1>We'd Love to Hear From You</h1>
 
       <p>
-
-        Whether you have a question, prayer request or would like to
-        become part of our community, we'd love to connect with you.
-
+        Whether you have a question, a prayer request, or would like to become
+        part of our community, we'd love to connect with you.
       </p>
 
     </div>
-
   </section>
 
   <section class="contact-page">
-
     <div class="container">
 
       <SectionHeading
@@ -42,41 +36,105 @@ import GrowInTheWord from "../components/GrowInTheWord.astro";
 
       <div class="contact-grid">
 
+        <!-- Email -->
         <div class="contact-card">
+
+          <Mail size={30} class="contact-icon" />
 
           <h3>Email</h3>
 
-          <p>info@christianwomencommunity.org</p>
+          <p class="contact-label">General Enquiries</p>
+
+          <a
+            href="mailto:info@christianwomencommunity.org"
+            class="contact-email"
+          >
+            info@christianwomencommunity.org
+          </a>
+
+          <p class="contact-label">
+            Community Support & Membership
+          </p>
+
+          <a
+            href="mailto:christianwomencommunity@outlook.com"
+            class="contact-email"
+          >
+            christianwomencommunity@outlook.com
+          </a>
 
         </div>
 
+        <!-- Prayer Meetings -->
         <div class="contact-card">
+
+          <HeartHandshake size={30} class="contact-icon" />
 
           <h3>Prayer Meetings</h3>
 
-          <p>Every Thursday • 9:00 PM (UK)</p>
+          <p>
+            Every Thursday<br />
+            <strong>9:00 PM (UK)</strong>
+          </p>
 
         </div>
 
+        <!-- Bible Study -->
         <div class="contact-card">
+
+          <BookOpen size={30} class="contact-icon" />
 
           <h3>Bible Study</h3>
 
-          <p>Every Tuesday • 7:00 PM (UK)</p>
+          <p>
+            Every Tuesday<br />
+            <strong>7:00 PM (UK)</strong>
+          </p>
 
         </div>
 
+        <!-- Social Media -->
         <div class="contact-card">
 
-          <h3>Follow Us</h3>
+          <Users size={30} class="contact-icon" />
+
+          <h3>Connect With Us</h3>
 
           <p>
 
-            Facebook<br>
+            <span class="coming-soon">
+              Facebook (Coming Soon)
+            </span>
 
-            Instagram<br>
+            <br /><br />
 
-            YouTube
+            <a
+              href="https://www.instagram.com/christianwomen.community?igsh=MTh4NWdmcHgyenBicQ=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+
+            <br />
+
+            <a
+              href="https://t.me/+BrsZGGbViw1jMjFk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Telegram
+            </a>
+
+            <br />
+
+            <a
+              href="https://youtube.com/@christianwomencommunity-z8w?si=D5SBbxefhXNuSOyW"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube
+            </a>
 
           </p>
 
@@ -85,7 +143,6 @@ import GrowInTheWord from "../components/GrowInTheWord.astro";
       </div>
 
     </div>
-
   </section>
 
   <BecomeVirtuosa />
