@@ -1,0 +1,153 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getDailyVerse } from "../../lib/bible/dailyVerse";
+
+const verse = getDailyVerse();
+---
+
+<Layout title="Daily Verse">
+
+<section class="daily-verse">
+
+  <p class="eyebrow">Bible Hub</p>
+
+  <h1>Daily Verse</h1>
+
+  <p class="date">
+    Start your day with God's Word.
+  </p>
+
+  <div class="verse-card">
+
+    <blockquote>
+      “{verse.text}”
+    </blockquote>
+
+    <p class="reference">
+      {verse.reference}
+    </p>
+
+    <a
+      class="read-button"
+      href={`/bible/${verse.book}/${verse.chapter}`}
+    >
+      Read Full Chapter →
+    </a>
+
+  </div>
+
+</section>
+
+</Layout>
+
+<style>
+
+.daily-verse{
+  max-width:760px;
+  margin:0 auto;
+  padding:4rem 1.5rem;
+  text-align:center;
+}
+
+.eyebrow{
+  color:#D4AF37;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  font-size:.85rem;
+  margin-bottom:.5rem;
+}
+
+.daily-verse h1{
+  margin-bottom:.5rem;
+}
+
+.date{
+  color:#bbb;
+  margin-bottom:3rem;
+}
+
+.verse-card{
+
+  background:#fff;
+
+  color:#333;
+
+  padding:3rem;
+
+  border-radius:18px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+blockquote{
+
+  font-family:"Cormorant Garamond", serif;
+
+  font-size:2rem;
+
+  line-height:1.6;
+
+  margin:0;
+
+}
+
+.reference{
+
+  margin-top:2rem;
+
+  color:#0F6B73;
+
+  font-weight:700;
+
+  font-size:1.15rem;
+
+}
+
+.read-button{
+
+  display:inline-block;
+
+  margin-top:2rem;
+
+  background:#D4AF37;
+
+  color:white;
+
+  padding:.9rem 1.6rem;
+
+  border-radius:999px;
+
+  text-decoration:none;
+
+  font-weight:600;
+
+  transition:.2s;
+
+}
+
+.read-button:hover{
+
+  transform:translateY(-2px);
+
+  opacity:.95;
+
+}
+
+@media (max-width:768px){
+
+  .verse-card{
+
+    padding:2rem;
+
+  }
+
+  blockquote{
+
+    font-size:1.6rem;
+
+  }
+
+}
+
+</style>

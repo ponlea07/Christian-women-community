@@ -6,11 +6,11 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
+  "dev": "astro dev",
+  "build": "astro build",
+  "preview": "astro preview",
+  "build:search": "node scripts/build-search-index.mjs"
+},
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "@lucide/astro": "^1.23.0",
