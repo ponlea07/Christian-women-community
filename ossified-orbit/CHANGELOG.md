@@ -85,3 +85,16 @@ I would have:
 ✅ Git tag v1.1.0 (snapshot)
 ✅ GitHub Release (official announcement)
 ✅ CHANGELOG.md (version history)
+
+## Bible Hub v0.1.0
+
+### Added
+- World English Bible imported
+- Bible conversion pipeline
+- Dynamic Bible routing
+- Bible chapter reader
+- Previous/Next chapter navigation
+
+### Internal
+- Repository layer
+- Reusable BibleReader component

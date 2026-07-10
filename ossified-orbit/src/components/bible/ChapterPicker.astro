@@ -1,0 +1,60 @@
+---
+interface Props {
+  bookSlug: string;
+  chapterCount: number;
+  currentChapter: number;
+}
+
+const {
+  bookSlug,
+  chapterCount,
+  currentChapter,
+} = Astro.props;
+---
+
+<div class="chapter-picker">
+
+  <label for="chapter-select">Chapter</label>
+
+  <select
+    id="chapter-select"
+    onchange={`window.location.href='/bible/${bookSlug}/' + this.value`}
+  >
+    {
+      Array.from({ length: chapterCount }, (_, i) => i + 1).map((chapter) => (
+        <option
+          value={chapter}
+          selected={chapter === currentChapter}
+        >
+          Chapter {chapter}
+        </option>
+      ))
+    }
+  </select>
+
+</div>
+
+<style>
+.chapter-picker{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:.75rem;
+  margin:2rem 0;
+}
+
+.chapter-picker label{
+  color:#D4AF37;
+  font-weight:600;
+}
+
+.chapter-picker select{
+  background:white;
+  color:#0F6B73;
+  border:none;
+  border-radius:8px;
+  padding:.65rem 1rem;
+  font-size:1rem;
+  cursor:pointer;
+}
+</style>

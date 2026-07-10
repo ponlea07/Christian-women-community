@@ -1,11 +1,13 @@
 ---
-import ChapterNavigation from "../../../components/bible/ChapterNavigation.astro";
-import { getChapterNavigation } from "../../../lib/bible/navigation";
 import Layout from "../../../layouts/Layout.astro";
+
 import BibleReader from "../../../components/bible/BibleReader.astro";
+import ChapterNavigation from "../../../components/bible/ChapterNavigation.astro";
+import ReaderToolbar from "../../../components/bible/ReaderToolbar.astro";
 
 import { books } from "../../../content/bible/books";
 import { getBook } from "../../../lib/bible/repository";
+import { getChapterNavigation } from "../../../lib/bible/navigation";
 
 export async function getStaticPaths() {
   const paths = [];
@@ -39,28 +41,40 @@ if (!bibleBook) {
 }
 
 const chapterNumber = Number(chapter);
-const navigation = getChapterNavigation(book, chapterNumber);
 
 const verses = bibleBook.chapters[chapterNumber - 1];
 
 if (!verses) {
   return Astro.redirect("/404");
 }
+
+const navigation = getChapterNavigation(book, chapterNumber);
 ---
 
 <Layout title={`${metadata.name} ${chapterNumber}`}>
-  <section class="reader-page">
+
+<section class="reader-page">
 
   <h1>{metadata.name}</h1>
 
   <h2>Chapter {chapterNumber}</h2>
+
+  <ReaderToolbar
+  bookSlug={metadata.slug}
+  chapterCount={metadata.chapters}
+  currentChapter={chapterNumber}
+/>
 
   <ChapterNavigation
     previous={navigation.previous}
     next={navigation.next}
   />
 
+  <hr class="reader-divider" />
+
   <BibleReader verses={verses} />
+
+  <hr class="reader-divider" />
 
   <ChapterNavigation
     previous={navigation.previous}
@@ -68,23 +82,31 @@ if (!verses) {
   />
 
 </section>
+
 </Layout>
 
 <style>
 .reader-page{
-  max-width:900px;
-  margin:0 auto;
-  padding:4rem 1.5rem;
+    max-width:900px;
+    margin:0 auto;
+    padding:4rem 1.5rem;
 }
 
 .reader-page h1{
-  text-align:center;
-  margin-bottom:.25rem;
+    text-align:center;
+    margin-bottom:.25rem;
 }
 
 .reader-page h2{
-  text-align:center;
-  color:#D4AF37;
-  margin-bottom:3rem;
+    text-align:center;
+    color:#D4AF37;
+    margin-bottom:1rem;
+}
+
+.reader-divider{
+    border:none;
+    border-top:1px solid rgba(255,255,255,.15);
+    margin:2rem auto;
+    max-width:760px;
 }
 </style>
