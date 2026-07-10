@@ -1,0 +1,1 @@
+// Placeholder for future Bible feature implementation.

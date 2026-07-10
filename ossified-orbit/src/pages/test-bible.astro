@@ -1,0 +1,13 @@
+---
+import { getBook } from "../lib/bible/repository";
+
+const genesis = await getBook("genesis");
+---
+
+<html>
+  <body>
+    <h1>Bible Test</h1>
+
+    <pre>{JSON.stringify(genesis, null, 2)}</pre>
+  </body>
+</html>

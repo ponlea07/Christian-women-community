@@ -1,0 +1,61 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { books } from "../../../content/bible/books";
+
+export async function getStaticPaths() {
+  return books.map((book) => ({
+    params: {
+      book: book.slug
+    }
+  }));
+}
+
+const { book } = Astro.params;
+
+const currentBook = books.find(
+  (b) => b.slug === book
+);
+
+const chapters = currentBook?.chapters ?? 1;
+---
+
+<Layout title={`${book} | Bible`}>
+
+<section class="resources-page">
+
+<div class="container">
+
+<h1>{book}</h1>
+
+<p>{chapters} Chapters</p>
+
+<div class="resources-grid">
+
+{
+Array.from({ length: chapters }, (_, i) => (
+
+<article class="resource-card">
+
+<h3>Chapter {i + 1}</h3>
+
+<a
+href={`/bible/${book}/${i + 1}`}
+class="btn-primary"
+>
+
+Read →
+
+</a>
+
+</article>
+
+))
+}
+
+</div>
+
+</div>
+
+</section>
+
+</Layout>

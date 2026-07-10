@@ -1,0 +1,90 @@
+---
+import ChapterNavigation from "../../../components/bible/ChapterNavigation.astro";
+import { getChapterNavigation } from "../../../lib/bible/navigation";
+import Layout from "../../../layouts/Layout.astro";
+import BibleReader from "../../../components/bible/BibleReader.astro";
+
+import { books } from "../../../content/bible/books";
+import { getBook } from "../../../lib/bible/repository";
+
+export async function getStaticPaths() {
+  const paths = [];
+
+  for (const book of books) {
+    for (let chapter = 1; chapter <= book.chapters; chapter++) {
+      paths.push({
+        params: {
+          book: book.slug,
+          chapter: chapter.toString(),
+        },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { book, chapter } = Astro.params;
+
+const metadata = books.find((b) => b.slug === book);
+
+if (!metadata) {
+  return Astro.redirect("/404");
+}
+
+const bibleBook = await getBook(book);
+
+if (!bibleBook) {
+  return Astro.redirect("/404");
+}
+
+const chapterNumber = Number(chapter);
+const navigation = getChapterNavigation(book, chapterNumber);
+
+const verses = bibleBook.chapters[chapterNumber - 1];
+
+if (!verses) {
+  return Astro.redirect("/404");
+}
+---
+
+<Layout title={`${metadata.name} ${chapterNumber}`}>
+  <section class="reader-page">
+
+  <h1>{metadata.name}</h1>
+
+  <h2>Chapter {chapterNumber}</h2>
+
+  <ChapterNavigation
+    previous={navigation.previous}
+    next={navigation.next}
+  />
+
+  <BibleReader verses={verses} />
+
+  <ChapterNavigation
+    previous={navigation.previous}
+    next={navigation.next}
+  />
+
+</section>
+</Layout>
+
+<style>
+.reader-page{
+  max-width:900px;
+  margin:0 auto;
+  padding:4rem 1.5rem;
+}
+
+.reader-page h1{
+  text-align:center;
+  margin-bottom:.25rem;
+}
+
+.reader-page h2{
+  text-align:center;
+  color:#D4AF37;
+  margin-bottom:3rem;
+}
+</style>

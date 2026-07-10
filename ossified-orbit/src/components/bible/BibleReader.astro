@@ -1,0 +1,44 @@
+---
+import type { BibleChapter } from "../../content/bible/types";
+
+interface Props {
+  verses: BibleChapter;
+}
+
+const { verses } = Astro.props;
+---
+
+<div class="bible-reader">
+  {
+    verses.map((verse) => (
+      <p class="verse">
+        <sup>{verse.verse}</sup>
+        <span>{verse.text}</span>
+      </p>
+    ))
+  }
+</div>
+
+<style>
+.bible-reader{
+  max-width:760px;
+  margin:0 auto;
+  font-size:1.15rem;
+  line-height:2;
+}
+
+.verse{
+  margin-bottom:1rem;
+}
+
+.verse sup{
+  color:#D4AF37;
+  font-weight:700;
+  margin-right:.45rem;
+  font-size:.8rem;
+}
+
+.verse span{
+  color:white;
+}
+</style>

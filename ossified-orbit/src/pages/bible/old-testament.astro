@@ -1,0 +1,44 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { books, type Book } from "../../content/bible/books";
+
+const oldTestament = books.filter(
+  book => book.testament === "old"
+);
+---
+
+<Layout title="Old Testament">
+
+<section class="resources-page">
+
+<div class="container">
+
+<h1>Old Testament</h1>
+
+<div class="resources-grid">
+
+{oldTestament.map((book: Book) => (
+
+<article class="resource-card">
+
+<h3>{book.name}</h3>
+
+<p>{book.chapters} Chapters</p>
+
+<a href={`/bible/${book.slug}`} class="btn-primary">
+
+Read →
+
+</a>
+
+</article>
+
+))}
+
+</div>
+
+</div>
+
+</section>
+
+</Layout>

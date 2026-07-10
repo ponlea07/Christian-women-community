@@ -32,3 +32,56 @@ All notable changes to the Christian Women Community website will be documented 
 - Newsletter
 - Founder profile
 - Bible reading tracker
+
+# Changelog
+
+## v1.1.0 — July 2026
+
+### Added
+- Resources page improvements
+- Contact page redesign
+- Founder welcome section
+- Better event cards
+- Lucide icons
+
+### Changed
+- Responsive navigation
+- UI consistency
+- About page
+- Resources cards
+- Contact layout
+
+### Fixed
+- Mobile responsiveness
+- Styling inconsistencies
+- Astro component structure
+- Event layout issues
+
+---
+
+## v1.0.0
+
+Initial public launch.
+
+# Changelog
+
+## Christian Women Community — Version 1.1.0
+
+**Released:** 8 July 2026
+
+**Milestone:** First public production release on the custom domain.
+
+### Highlights
+- Official launch on https://christianwomencommunity.org
+- Responsive UI improvements
+- Events, Resources, Contact and About enhancements
+- Production deployment via Vercel
+
+If this were my project...
+
+I would have:
+
+✅ Git commits (development history)
+✅ Git tag v1.1.0 (snapshot)
+✅ GitHub Release (official announcement)
+✅ CHANGELOG.md (version history)

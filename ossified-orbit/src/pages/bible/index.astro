@@ -1,0 +1,76 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SectionHeading from "../../components/SectionHeading.astro";
+
+const testaments = [
+  {
+    title: "Old Testament",
+    description: "39 books from Genesis to Malachi",
+    href: "/bible/old-testament"
+  },
+  {
+    title: "New Testament",
+    description: "27 books from Matthew to Revelation",
+    href: "/bible/new-testament"
+  }
+];
+---
+
+<Layout title="Read the Bible | Christian Women Community">
+
+<section class="page-hero">
+
+  <div class="container">
+
+    <span class="page-eyebrow">
+      GOD'S WORD
+    </span>
+
+    <h1>Read the Bible</h1>
+
+    <p>
+      Read the Holy Bible online anytime.
+      Grow daily in God's Word.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="resources-page">
+
+<div class="container">
+
+<SectionHeading
+eyebrow="THE HOLY SCRIPTURES"
+title="Choose a Testament"
+text="Begin reading the Word of God."
+/>
+
+<div class="resources-grid">
+
+{testaments.map((item)=>(
+
+<article class="resource-card">
+
+<h3>{item.title}</h3>
+
+<p>{item.description}</p>
+
+<a href={item.href} class="btn-primary">
+
+Open →
+
+</a>
+
+</article>
+
+))}
+
+</div>
+
+</div>
+
+</section>
+
+</Layout>

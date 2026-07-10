@@ -1,0 +1,63 @@
+---
+interface Link {
+  book: string;
+  chapter: number;
+}
+
+interface Props {
+  previous: Link | null;
+  next: Link | null;
+}
+
+const { previous, next } = Astro.props;
+---
+
+<nav class="chapter-navigation">
+  <div class="nav-left">
+    {
+      previous ? (
+        <a href={`/bible/${previous.book}/${previous.chapter}`}>
+          ← Previous
+        </a>
+      ) : (
+        <span class="disabled">← Previous</span>
+      )
+    }
+  </div>
+
+  <div class="nav-right">
+    {
+      next ? (
+        <a href={`/bible/${next.book}/${next.chapter}`}>
+          Next →
+        </a>
+      ) : (
+        <span class="disabled">Next →</span>
+      )
+    }
+  </div>
+</nav>
+
+<style>
+.chapter-navigation {
+  max-width: 760px;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chapter-navigation a {
+  color: #D4AF37;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.chapter-navigation a:hover {
+  text-decoration: underline;
+}
+
+.disabled {
+  opacity: .35;
+}
+</style>
