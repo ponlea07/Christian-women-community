@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getDailyVerse } from "../../lib/bible/dailyVerse";
-
+import GoldFlourish from "../../components/GoldFlourish.astro";
 const verse = getDailyVerse();
 ---
 
@@ -9,23 +9,17 @@ const verse = getDailyVerse();
 
 <section class="daily-verse">
 
-  <p class="eyebrow">Bible Hub</p>
+  <p class="eyebrow">TODAY'S VERSE</p>
 
-  <h1>Daily Verse</h1>
+  <h1>{verse.reference}</h1>
 
-  <p class="date">
-    Start your day with God's Word.
-  </p>
+  <GoldFlourish />
 
   <div class="verse-card">
 
     <blockquote>
-      “{verse.text}”
+      {verse.text}
     </blockquote>
-
-    <p class="reference">
-      {verse.reference}
-    </p>
 
     <a
       class="read-button"
@@ -43,109 +37,112 @@ const verse = getDailyVerse();
 <style>
 
 .daily-verse{
-  max-width:760px;
+  max-width:960px;
   margin:0 auto;
-  padding:4rem 1.5rem;
+  padding:5rem 1.5rem 6rem;
   text-align:center;
+  animation:fadeUp .6s ease;
 }
 
 .eyebrow{
   color:#D4AF37;
   text-transform:uppercase;
-  letter-spacing:.15em;
+  letter-spacing:.22em;
   font-size:.85rem;
-  margin-bottom:.5rem;
+  font-weight:600;
+  margin-bottom:1rem;
 }
 
 .daily-verse h1{
-  margin-bottom:.5rem;
+  color:#ffffff;
+  font-family:"Cormorant Garamond", serif;
+  font-size:3.3rem;
+  font-weight:700;
+  margin:0;
 }
 
-.date{
-  color:#bbb;
-  margin-bottom:3rem;
+.gold-divider{
+  width:80px;
+  height:3px;
+  margin:2rem auto 3rem;
+  background:#D4AF37;
+  border-radius:999px;
 }
 
 .verse-card{
-
-  background:#fff;
-
-  color:#333;
-
-  padding:3rem;
-
-  border-radius:18px;
-
-  box-shadow:0 10px 30px rgba(0,0,0,.12);
-
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.05);
+  backdrop-filter:blur(8px);
+  border-radius:24px;
+  padding:5.5rem 3rem;
+  box-shadow:0 20px 50px rgba(0,0,0,.12);
 }
 
 blockquote{
-
+  margin:0 auto;
+  max-width:720px;
+  color:#ffffff;
   font-family:"Cormorant Garamond", serif;
-
-  font-size:2rem;
-
-  line-height:1.6;
-
-  margin:0;
-
-}
-
-.reference{
-
-  margin-top:2rem;
-
-  color:#0F6B73;
-
-  font-weight:700;
-
-  font-size:1.15rem;
-
+  font-size:2.3rem;
+  line-height:1.7;
+  font-style:normal;
+  overflow-wrap:break-word;
 }
 
 .read-button{
-
   display:inline-block;
-
-  margin-top:2rem;
-
+  margin-top:3.5rem;
+  padding:1.1rem 2.6rem;
   background:#D4AF37;
-
-  color:white;
-
-  padding:.9rem 1.6rem;
-
+  color:#ffffff;
   border-radius:999px;
-
   text-decoration:none;
-
   font-weight:600;
-
-  transition:.2s;
-
+  font-size:1rem;
+  transition:transform .25s ease, box-shadow .25s ease;
 }
 
 .read-button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(212,175,55,.35);
+}
 
-  transform:translateY(-2px);
+@keyframes fadeUp{
 
-  opacity:.95;
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 
 }
 
 @media (max-width:768px){
 
+  .daily-verse{
+    padding:4rem 1.25rem;
+  }
+
+  .daily-verse h1{
+    font-size:2.6rem;
+  }
+
   .verse-card{
-
-    padding:2rem;
-
+    padding:3rem 1.75rem;
   }
 
   blockquote{
+    font-size:1.8rem;
+    line-height:1.6;
+  }
 
-    font-size:1.6rem;
-
+  .read-button{
+    width:100%;
+    max-width:320px;
   }
 
 }

@@ -1,0 +1,63 @@
+<div id="continue-reading" class="continue-reading hidden">
+
+  <p class="eyebrow">CONTINUE READING</p>
+
+  <h2 id="continue-reference"></h2>
+
+  <a id="continue-link" class="btn-primary">
+    Continue →
+  </a>
+
+</div>
+
+<script>
+const container = document.getElementById("continue-reading");
+const heading = document.getElementById("continue-reference");
+const anchor = document.querySelector("#continue-link");
+
+const saved = localStorage.getItem("lastReading");
+
+if (
+  saved &&
+  container &&
+  heading instanceof HTMLHeadingElement &&
+  anchor instanceof HTMLAnchorElement
+) {
+  const reading = JSON.parse(saved);
+
+  heading.textContent = `${reading.bookName} ${reading.chapter}`;
+  anchor.href = reading.href;
+
+  container.classList.remove("hidden");
+}
+</script>
+
+<style>
+
+.continue-reading{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:2rem;
+  margin-bottom:3rem;
+  text-align:center;
+}
+
+.hidden{
+  display:none;
+}
+
+.eyebrow{
+  color:#D4AF37;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  font-size:.8rem;
+  margin-bottom:.5rem;
+}
+
+.continue-reading h2{
+  color:#fff;
+  margin:1rem 0 2rem;
+}
+
+</style>

@@ -1,0 +1,171 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { searchBible } from "../../lib/bible/search";
+
+const query = Astro.url.searchParams.get("q") ?? "";
+
+console.log(`Search query: ${query}`);
+
+const results = query
+  ? await searchBible(query)
+  : [];
+---
+<p>Query: {query}</p>
+<pre>{JSON.stringify(results.slice(0,5), null, 2)}</pre>
+<Layout title="Search Scripture">
+
+<section class="search-page">
+
+  <p class="eyebrow">Bible Hub</p>
+
+  <h1>Search Scripture</h1>
+
+  <p class="subtitle">
+    Search the Bible by word or phrase.
+  </p>
+
+  <form method="GET" class="search-form">
+
+    <input
+      type="text"
+      name="q"
+      value={query}
+      placeholder="Search the Bible..."
+      autocomplete="off"
+    />
+
+    <button type="submit">
+      Search
+    </button>
+
+  </form>
+
+  {
+    query && (
+      <p class="results-count">
+        {results.length} result{results.length !== 1 ? "s" : ""} found
+      </p>
+    )
+  }
+
+  <div class="results">
+
+    {
+      results.map(result => (
+
+        <article class="result-card">
+
+          <h3>
+            {result.bookName} {result.chapter}:{result.verse}
+          </h3>
+
+          <p>{result.text}</p>
+
+          <a href={result.href}>
+            Read →
+          </a>
+
+        </article>
+
+      ))
+    }
+
+  </div>
+
+</section>
+
+</Layout>
+
+<style>
+
+.search-page{
+  max-width:900px;
+  margin:0 auto;
+  padding:4rem 1.5rem;
+}
+
+.eyebrow{
+  color:#D4AF37;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  text-align:center;
+}
+
+.search-page h1{
+  text-align:center;
+  margin:.5rem 0;
+}
+
+.subtitle{
+  text-align:center;
+  color:#bbb;
+  margin-bottom:2rem;
+}
+
+.search-form{
+  display:flex;
+  gap:1rem;
+  margin-bottom:2rem;
+}
+
+.search-form input{
+  flex:1;
+  padding:1rem;
+  border-radius:12px;
+  border:none;
+  font-size:1rem;
+}
+
+.search-form button{
+  background:#D4AF37;
+  color:white;
+  border:none;
+  padding:1rem 1.5rem;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.results-count{
+  margin-bottom:1.5rem;
+  color:#D4AF37;
+}
+
+.results{
+  display:grid;
+  gap:1rem;
+}
+
+.result-card{
+  background:white;
+  color:#333;
+  padding:1.5rem;
+  border-radius:16px;
+}
+
+.result-card h3{
+  margin-top:0;
+  color:#0F6B73;
+}
+
+.result-card a{
+  display:inline-block;
+  margin-top:1rem;
+  color:#D4AF37;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.result-card a:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:768px){
+
+  .search-form{
+    flex-direction:column;
+  }
+
+}
+
+</style>

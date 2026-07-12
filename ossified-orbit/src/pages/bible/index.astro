@@ -1,6 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import SectionHeading from "../../components/SectionHeading.astro";
+import ContinueReading from "../../components/bible/ContinueReading.astro";
+import { getDailyVerse } from "../../lib/bible/dailyVerse";
+
+const verse = getDailyVerse();
 
 const testaments = [
   {
@@ -32,6 +36,29 @@ const testaments = [
       Read the Holy Bible online anytime.
       Grow daily in God's Word.
     </p>
+
+  </div>
+
+</section>
+<ContinueReading />
+
+<section class="daily-verse-preview">
+
+  <div class="container">
+
+    <SectionHeading
+  eyebrow="TODAY'S VERSE"
+  title={verse.reference}
+  text={verse.text}
+  theme="light"
+/>
+
+    <a
+      class="btn-primary"
+      href={`/bible/${verse.book}/${verse.chapter}`}
+    >
+      Read Full Chapter →
+    </a>
 
   </div>
 
@@ -74,3 +101,15 @@ Open →
 </section>
 
 </Layout>
+
+<style>
+.daily-verse-preview{
+  text-align:center;
+  padding:3rem 1.5rem;
+}
+
+.daily-verse-preview .btn-primary{
+  margin-top:1.5rem;
+  display:inline-block;
+}
+</style>

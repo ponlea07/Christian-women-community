@@ -28,7 +28,13 @@ for (const file of files) {
 
   book.chapters.forEach((chapter, chapterIndex) => {
 
+  // Skip empty chapters
+  if (!chapter) return;
+
   chapter.forEach((verse) => {
+
+    // Skip malformed verses
+    if (!verse || !verse.text) return;
 
     index.push({
 
@@ -52,9 +58,7 @@ for (const file of files) {
   });
 
 });
-
 }
-
 fs.writeFileSync(
   OUTPUT,
   JSON.stringify(index, null, 2)

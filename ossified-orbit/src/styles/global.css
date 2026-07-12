@@ -1124,6 +1124,21 @@ line-height:1.9;
 color:#666;
 
 }
+/*==========================================
+        LIGHT THEME
+==========================================*/
+
+.section-heading.light h2{
+  color:#FFFFFF;
+}
+
+.section-heading.light p{
+  color:rgba(255,255,255,.92);
+}
+
+.section-heading.light .eyebrow{
+  color:#D4AF37;
+}
 
 @media(max-width:768px){
 

@@ -82,7 +82,25 @@ const navigation = getChapterNavigation(book, chapterNumber);
   />
 
 </section>
+<script define:vars={{
+  book: metadata.slug,
+  bookName: metadata.name,
+  chapter: chapterNumber
+}}>
 
+localStorage.setItem("lastReading", JSON.stringify({
+
+  book,
+
+  bookName,
+
+  chapter,
+
+  href: `/bible/${book}/${chapter}`
+
+}));
+
+</script>
 </Layout>
 
 <style>

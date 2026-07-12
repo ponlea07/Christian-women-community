@@ -1,13 +1,13 @@
 ---
-import { getBook } from "../lib/bible/repository";
+import { searchBible } from "../lib/bible/search";
 
-const genesis = await getBook("genesis");
+const results = await searchBible("God");
 ---
 
 <html>
   <body>
-    <h1>Bible Test</h1>
+    <h1>Search Test</h1>
 
-    <pre>{JSON.stringify(genesis, null, 2)}</pre>
+    <pre>{JSON.stringify(results.slice(0, 5), null, 2)}</pre>
   </body>
 </html>
