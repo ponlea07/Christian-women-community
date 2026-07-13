@@ -1,0 +1,123 @@
+---
+interface Props {
+  title?: string;
+  text?: string;
+  icon?: string;
+}
+
+const {
+  title,
+  text,
+  icon
+} = Astro.props;
+---
+
+<article class="design-card">
+
+  {
+    icon && (
+      <div class="card-icon">
+        {icon}
+      </div>
+    )
+  }
+
+  {
+    title && (
+      <h3>
+        {title}
+      </h3>
+    )
+  }
+
+  {
+    text && (
+      <p>
+        {text}
+      </p>
+    )
+  }
+
+  <slot />
+
+</article>
+
+
+<style>
+
+.design-card{
+
+  background:#FFFFFF;
+
+  border-radius:24px;
+
+  padding:2.5rem;
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.08);
+
+  transition:
+  transform .25s ease,
+  box-shadow .25s ease;
+
+}
+
+
+.design-card:hover{
+
+  transform:translateY(-5px);
+
+  box-shadow:
+  0 25px 60px rgba(0,0,0,.12);
+
+}
+
+
+.card-icon{
+
+  width:55px;
+
+  height:55px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:rgba(212,175,55,.15);
+
+  color:#D4AF37;
+
+  border-radius:50%;
+
+  margin-bottom:1.5rem;
+
+  font-size:1.5rem;
+
+}
+
+
+.design-card h3{
+
+  font-family:"Cormorant Garamond", serif;
+
+  color:#0F6B73;
+
+  font-size:1.8rem;
+
+  margin-bottom:1rem;
+
+}
+
+
+.design-card p{
+
+  color:#6B7280;
+
+  line-height:1.8;
+
+}
+
+
+</style>

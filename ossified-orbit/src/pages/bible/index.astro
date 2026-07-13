@@ -3,7 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import SectionHeading from "../../components/SectionHeading.astro";
 import ContinueReading from "../../components/bible/ContinueReading.astro";
 import { getDailyVerse } from "../../lib/bible/dailyVerse";
-
+import ScriptureCard from "../../components/design/ScriptureCard.astro";
+import PrimaryButton from "../../components/design/PrimaryButton.astro";
 const verse = getDailyVerse();
 
 const testaments = [
@@ -47,23 +48,23 @@ const testaments = [
   <div class="container">
 
     <SectionHeading
-  eyebrow="TODAY'S VERSE"
-  title={verse.reference}
-  text={verse.text}
-  theme="light"
-/>
+      eyebrow="TODAY'S VERSE"
+      title="God's Word For Today"
+      theme="light"
+    />
 
-    <a
-      class="btn-primary"
-      href={`/bible/${verse.book}/${verse.chapter}`}
-    >
+    <ScriptureCard
+      reference={verse.reference}
+      text={verse.text}
+    />
+
+    <PrimaryButton href={`/bible/${verse.book}/${verse.chapter}`}>
       Read Full Chapter →
-    </a>
+    </PrimaryButton>
 
   </div>
 
 </section>
-
 <section class="resources-page">
 
 <div class="container">
@@ -108,8 +109,7 @@ Open →
   padding:3rem 1.5rem;
 }
 
-.daily-verse-preview .btn-primary{
-  margin-top:1.5rem;
-  display:inline-block;
+.daily-verse-preview .scripture-card{
+  margin-bottom:3rem;
 }
 </style>

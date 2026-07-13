@@ -1,0 +1,140 @@
+---
+interface Props {
+  reference: string;
+  text: string;
+  action?: string;
+  href?: string;
+}
+
+const {
+  reference,
+  text,
+  action,
+  href
+} = Astro.props;
+---
+
+<article class="scripture-card">
+
+  <p class="scripture-text">
+    “{text}”
+  </p>
+
+  <p class="reference">
+    {reference}
+  </p>
+
+  {
+    action && href && (
+      <a href={href} class="scripture-button">
+        {action}
+      </a>
+    )
+  }
+
+</article>
+
+
+<style>
+
+.scripture-card{
+max-width:900px;
+margin:0 auto;
+  background:
+  linear-gradient(
+    135deg,
+    rgba(15,107,115,.95),
+    rgba(18,108,117,.95)
+  );
+
+  border-radius:28px;
+
+  padding:3rem;
+
+  text-align:center;
+
+  color:white;
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.15);
+
+}
+
+
+.scripture-text{
+
+  font-family:"Cormorant Garamond", serif;
+
+  font-size:2.2rem;
+
+  line-height:1.6;
+
+  margin:0 auto 2rem;
+
+  max-width:750px;
+
+}
+
+
+.reference{
+
+  color:#D4AF37;
+
+  font-weight:700;
+
+  font-size:1.15rem;
+
+  margin-bottom:2rem;
+
+}
+
+
+.scripture-button{
+
+  display:inline-flex;
+
+  background:#D4AF37;
+
+  color:white;
+
+  padding:1rem 2rem;
+
+  border-radius:999px;
+
+  text-decoration:none;
+
+  font-weight:600;
+
+  transition:.25s ease;
+
+}
+
+
+.scripture-button:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 10px 25px rgba(212,175,55,.35);
+
+}
+
+
+@media(max-width:768px){
+
+  .scripture-card{
+
+    padding:2rem 1.5rem;
+
+  }
+
+
+  .scripture-text{
+
+    font-size:1.7rem;
+
+  }
+
+}
+
+</style>
