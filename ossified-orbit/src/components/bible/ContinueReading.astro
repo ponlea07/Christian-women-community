@@ -1,11 +1,28 @@
 <div id="continue-reading" class="continue-reading hidden">
 
-  <p class="eyebrow">CONTINUE READING</p>
+  <p class="eyebrow">
+    CONTINUE READING
+  </p>
+
+  <div class="flourish">
+    <span></span>
+    <span class="crown">♛</span>
+    <span></span>
+  </div>
+
+  <p class="continue-message">
+    Welcome back!<br />
+    Continue your journey through God's Word.
+  </p>
+
+  <p class="last-reading-label">
+    YOUR LAST READING
+  </p>
 
   <h2 id="continue-reference"></h2>
 
-  <a id="continue-link" class="btn-primary">
-    Continue →
+  <a id="continue-link">
+    Continue Reading →
   </a>
 
 </div>
@@ -13,7 +30,7 @@
 <script>
 const container = document.getElementById("continue-reading");
 const heading = document.getElementById("continue-reference");
-const anchor = document.querySelector("#continue-link");
+const anchor = document.getElementById("continue-link");
 
 const saved = localStorage.getItem("lastReading");
 
@@ -35,12 +52,21 @@ if (
 <style>
 
 .continue-reading{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:24px;
-  padding:2rem;
-  margin-bottom:3rem;
+
+  max-width:700px;
+
+  margin:0 auto 4rem;
+
+  padding:2.4rem 2rem;
+
   text-align:center;
+
+  background:rgba(255,255,255,.06);
+
+  border:1px solid rgba(255,255,255,.12);
+
+  border-radius:28px;
+
 }
 
 .hidden{
@@ -48,16 +74,125 @@ if (
 }
 
 .eyebrow{
+
   color:#D4AF37;
-  letter-spacing:.15em;
-  text-transform:uppercase;
+
   font-size:.8rem;
-  margin-bottom:.5rem;
+
+  font-weight:700;
+
+  letter-spacing:.2em;
+
+  text-transform:uppercase;
+
+}
+
+.flourish{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:14px;
+
+  margin:1.5rem 0;
+
+}
+
+.flourish span:not(.crown){
+
+  width:70px;
+
+  height:2px;
+
+  background:#D4AF37;
+
+}
+
+.crown{
+
+  color:#D4AF37;
+
+  font-size:1.1rem;
+
+}
+
+.continue-message{
+
+  color:#ffffff;
+
+  font-size:1rem;
+
+  line-height:1.8;
+
+  margin:1.5rem 0;
+
+}
+
+.last-reading-label{
+
+  color:#D4AF37;
+
+  text-transform:uppercase;
+
+  letter-spacing:.18em;
+
+  font-size:.75rem;
+
+  font-weight:700;
+
+  margin-top:2rem;
+
+  margin-bottom:.75rem;
+
+  opacity:.9;
+
 }
 
 .continue-reading h2{
-  color:#fff;
+
+  color:#ffffff;
+
+  font-family:"Cormorant Garamond", serif;
+
+  font-size:2.3rem;
+
   margin:1rem 0 2rem;
+
+}
+
+#continue-link{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:#D4AF37;
+
+  color:#ffffff;
+
+  padding:1rem 2.2rem;
+
+  border-radius:999px;
+
+  text-decoration:none;
+
+  font-weight:600;
+
+  transition:.25s ease;
+
+}
+
+#continue-link:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:0 10px 25px rgba(212,175,55,.35);
+
 }
 
 </style>
