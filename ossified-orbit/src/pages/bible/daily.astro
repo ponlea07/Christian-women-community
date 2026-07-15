@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { getDailyVerse } from "../../lib/bible/dailyVerse";
 import GoldFlourish from "../../components/GoldFlourish.astro";
+import ScriptureCard from "../../components/design/ScriptureCard.astro";
 const verse = getDailyVerse();
 ---
 
@@ -11,11 +12,14 @@ const verse = getDailyVerse();
 
   <p class="eyebrow">TODAY'S VERSE</p>
 
-  <h1>{verse.reference}</h1>
-
   <GoldFlourish />
 
-  <div class="verse-card">
+  <ScriptureCard
+    reference={verse.reference}
+    text={verse.text}
+    action="Read Full Chapter"
+    href={`/bible/${verse.book}/${verse.chapter}`}
+  >
 
     <blockquote>
       {verse.text}
@@ -28,7 +32,7 @@ const verse = getDailyVerse();
       Read Full Chapter →
     </a>
 
-  </div>
+  </ScriptureCard>
 
 </section>
 
