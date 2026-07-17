@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "numbers",
   "chapters": [
     [
       {
@@ -20,11 +20,7 @@
       },
       {
         "verse": 5,
-        "text": "These are the names of the men who shall stand with you:"
-      },
-      {
-        "verse": 5,
-        "text": "Of Reuben: Elizur the son of Shedeur."
+        "text": "These are the names of the men who shall stand with you:Of Reuben: Elizur the son of Shedeur. "
       },
       {
         "verse": 6,
@@ -440,11 +436,7 @@
       },
       {
         "verse": 20,
-        "text": "The sons of Merari by their families: Mahli and Mushi."
-      },
-      {
-        "verse": 20,
-        "text": "These are the families of the Levites according to their fathers’ houses."
+        "text": "The sons of Merari by their families: Mahli and Mushi.These are the families of the Levites according to their fathers’ houses. "
       },
       {
         "verse": 21,
@@ -986,7 +978,19 @@
       },
       {
         "verse": 23,
-        "text": "“Speak to Aaron and to his sons, saying, ‘This is how you shall bless the children of Israel.’ You shall tell them,"
+        "text": "“Speak to Aaron and to his sons, saying, ‘This is how you shall bless the children of Israel.’ You shall tell them, "
+      },
+      {
+        "verse": 24,
+        "text": "‘Yahweh bless you, and keep you."
+      },
+      {
+        "verse": 25,
+        "text": "Yahweh make his face to shine on you,and be gracious to you. "
+      },
+      {
+        "verse": 26,
+        "text": "Yahweh lift up his face toward you,and give you peace.’ "
       },
       {
         "verse": 27,
@@ -1044,15 +1048,7 @@
       },
       {
         "verse": 13,
-        "text": "and his offering was:"
-      },
-      {
-        "verse": 13,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 13,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "and his offering was:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 14,
@@ -1060,15 +1056,7 @@
       },
       {
         "verse": 15,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 15,
-        "text": "one ram,"
-      },
-      {
-        "verse": 15,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 16,
@@ -1084,15 +1072,7 @@
       },
       {
         "verse": 19,
-        "text": "He offered for his offering:"
-      },
-      {
-        "verse": 19,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 19,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "He offered for his offering:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 20,
@@ -1100,15 +1080,7 @@
       },
       {
         "verse": 21,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 21,
-        "text": "one ram,"
-      },
-      {
-        "verse": 21,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 22,
@@ -1124,15 +1096,7 @@
       },
       {
         "verse": 25,
-        "text": "gave his offering:"
-      },
-      {
-        "verse": 25,
-        "text": "one silver platter, the weight of which was a hundred and thirty shekels,"
-      },
-      {
-        "verse": 25,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "gave his offering:one silver platter, the weight of which was a hundred and thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 26,
@@ -1140,15 +1104,7 @@
       },
       {
         "verse": 27,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 27,
-        "text": "one ram,"
-      },
-      {
-        "verse": 27,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 28,
@@ -1164,15 +1120,7 @@
       },
       {
         "verse": 31,
-        "text": "gave his offering:"
-      },
-      {
-        "verse": 31,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 31,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "gave his offering:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 32,
@@ -1180,15 +1128,7 @@
       },
       {
         "verse": 33,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 33,
-        "text": "one ram,"
-      },
-      {
-        "verse": 33,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 34,
@@ -1204,15 +1144,7 @@
       },
       {
         "verse": 37,
-        "text": "gave his offering:"
-      },
-      {
-        "verse": 37,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 37,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "gave his offering:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 38,
@@ -1220,15 +1152,7 @@
       },
       {
         "verse": 39,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 39,
-        "text": "one ram,"
-      },
-      {
-        "verse": 39,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 40,
@@ -1244,15 +1168,7 @@
       },
       {
         "verse": 43,
-        "text": "gave his offering:"
-      },
-      {
-        "verse": 43,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 43,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "gave his offering:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 44,
@@ -1260,15 +1176,7 @@
       },
       {
         "verse": 45,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 45,
-        "text": "one ram,"
-      },
-      {
-        "verse": 45,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 46,
@@ -1284,15 +1192,7 @@
       },
       {
         "verse": 49,
-        "text": "gave his offering:"
-      },
-      {
-        "verse": 49,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 49,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "gave his offering:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 50,
@@ -1300,15 +1200,7 @@
       },
       {
         "verse": 51,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 51,
-        "text": "one ram,"
-      },
-      {
-        "verse": 51,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 52,
@@ -1324,15 +1216,7 @@
       },
       {
         "verse": 55,
-        "text": "gave his offering:"
-      },
-      {
-        "verse": 55,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 55,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "gave his offering:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 56,
@@ -1340,15 +1224,7 @@
       },
       {
         "verse": 57,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 57,
-        "text": "one ram,"
-      },
-      {
-        "verse": 57,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 58,
@@ -1364,15 +1240,7 @@
       },
       {
         "verse": 61,
-        "text": "gave his offering:"
-      },
-      {
-        "verse": 61,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 61,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "gave his offering:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 62,
@@ -1380,15 +1248,7 @@
       },
       {
         "verse": 63,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 63,
-        "text": "one ram,"
-      },
-      {
-        "verse": 63,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 64,
@@ -1404,15 +1264,7 @@
       },
       {
         "verse": 67,
-        "text": "gave his offering:"
-      },
-      {
-        "verse": 67,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 67,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "gave his offering:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 68,
@@ -1420,15 +1272,7 @@
       },
       {
         "verse": 69,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 69,
-        "text": "one ram,"
-      },
-      {
-        "verse": 69,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 70,
@@ -1444,15 +1288,7 @@
       },
       {
         "verse": 73,
-        "text": "gave his offering:"
-      },
-      {
-        "verse": 73,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 73,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "gave his offering:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 74,
@@ -1460,15 +1296,7 @@
       },
       {
         "verse": 75,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 75,
-        "text": "one ram,"
-      },
-      {
-        "verse": 75,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 76,
@@ -1484,15 +1312,7 @@
       },
       {
         "verse": 79,
-        "text": "gave his offering:"
-      },
-      {
-        "verse": 79,
-        "text": "one silver platter, the weight of which was one hundred thirty shekels,"
-      },
-      {
-        "verse": 79,
-        "text": "one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering;"
+        "text": "gave his offering:one silver platter, the weight of which was one hundred thirty shekels, one silver bowl of seventy shekels, according to the shekel of the sanctuary; both of them full of fine flour mixed with oil for a meal offering; "
       },
       {
         "verse": 80,
@@ -1500,15 +1320,7 @@
       },
       {
         "verse": 81,
-        "text": "one young bull,"
-      },
-      {
-        "verse": 81,
-        "text": "one ram,"
-      },
-      {
-        "verse": 81,
-        "text": "one male lamb a year old, for a burnt offering;"
+        "text": "one young bull,one ram, one male lamb a year old, for a burnt offering; "
       },
       {
         "verse": 82,
@@ -2046,11 +1858,7 @@
       },
       {
         "verse": 4,
-        "text": "Yahweh spoke suddenly to Moses, to Aaron, and to Miriam, “You three come out to the Tent of Meeting!”"
-      },
-      {
-        "verse": 4,
-        "text": "The three of them came out."
+        "text": "Yahweh spoke suddenly to Moses, to Aaron, and to Miriam, “You three come out to the Tent of Meeting!”The three of them came out.  "
       },
       {
         "verse": 5,
@@ -2116,7 +1924,71 @@
       },
       {
         "verse": 4,
-        "text": "These were their names:"
+        "text": "These were their names:Of the tribe of Reuben, Shammua the son of Zaccur. "
+      },
+      {
+        "verse": 5,
+        "text": "Of the tribe of Simeon, Shaphat the son of Hori."
+      },
+      {
+        "verse": 6,
+        "text": "Of the tribe of Judah, Caleb the son of Jephunneh."
+      },
+      {
+        "verse": 7,
+        "text": "Of the tribe of Issachar, Igal the son of Joseph."
+      },
+      {
+        "verse": 8,
+        "text": "Of the tribe of Ephraim, Hoshea the son of Nun."
+      },
+      {
+        "verse": 9,
+        "text": "Of the tribe of Benjamin, Palti the son of Raphu."
+      },
+      {
+        "verse": 10,
+        "text": "Of the tribe of Zebulun, Gaddiel the son of Sodi."
+      },
+      {
+        "verse": 11,
+        "text": "Of the tribe of Joseph, of the tribe of Manasseh, Gaddi the son of Susi."
+      },
+      {
+        "verse": 12,
+        "text": "Of the tribe of Dan, Ammiel the son of Gemalli."
+      },
+      {
+        "verse": 13,
+        "text": "Of the tribe of Asher, Sethur the son of Michael."
+      },
+      {
+        "verse": 14,
+        "text": "Of the tribe of Naphtali, Nahbi the son of Vophsi."
+      },
+      {
+        "verse": 15,
+        "text": "Of the tribe of Gad, Geuel the son of Machi."
+      },
+      {
+        "verse": 16,
+        "text": "These are the names of the men who Moses sent to spy out the land. Moses called Hoshea the son of Nun Joshua."
+      },
+      {
+        "verse": 17,
+        "text": "Moses sent them to spy out the land of Canaan, and said to them, “Go up this way by the South, and go up into the hill country."
+      },
+      {
+        "verse": 18,
+        "text": "See the land, what it is; and the people who dwell therein, whether they are strong or weak, whether they are few or many;"
+      },
+      {
+        "verse": 19,
+        "text": "and what the land is that they dwell in, whether it is good or bad; and what cities they are that they dwell in, whether in camps, or in strongholds;"
+      },
+      {
+        "verse": 20,
+        "text": "and what the land is, whether it is fertile or poor, whether there is wood therein, or not. Be courageous, and bring some of the fruit of the land.” Now the time was the time of the first-ripe grapes."
       },
       {
         "verse": 21,
@@ -2210,11 +2082,7 @@
       },
       {
         "verse": 10,
-        "text": "But all the congregation threatened to stone them with stones."
-      },
-      {
-        "verse": 10,
-        "text": "Yahweh’s glory appeared in the Tent of Meeting to all the children of Israel."
+        "text": "But all the congregation threatened to stone them with stones.Yahweh’s glory appeared in the Tent of Meeting to all the children of Israel.  "
       },
       {
         "verse": 11,
@@ -2598,11 +2466,7 @@
       },
       {
         "verse": 19,
-        "text": "Korah assembled all the congregation opposite them to the door of the Tent of Meeting."
-      },
-      {
-        "verse": 19,
-        "text": "Yahweh’s glory appeared to all the congregation."
+        "text": "Korah assembled all the congregation opposite them to the door of the Tent of Meeting.Yahweh’s glory appeared to all the congregation.  "
       },
       {
         "verse": 20,
@@ -3058,11 +2922,7 @@
       },
       {
         "verse": 14,
-        "text": "Moses sent messengers from Kadesh to the king of Edom, saying:"
-      },
-      {
-        "verse": 14,
-        "text": "“Your brother Israel says: You know all the travail that has happened to us;"
+        "text": "Moses sent messengers from Kadesh to the king of Edom, saying:“Your brother Israel says: You know all the travail that has happened to us;  "
       },
       {
         "verse": 15,
@@ -3192,11 +3052,11 @@
       },
       {
         "verse": 17,
-        "text": "Then Israel sang this song:"
+        "text": "Then Israel sang this song:“Spring up, well! Sing to it, "
       },
       {
         "verse": 18,
-        "text": "From the wilderness they traveled to Mattanah;"
+        "text": "the well, which the princes dug,which the nobles of the people dug, with the scepter, and with their poles.” From the wilderness they traveled to Mattanah;  "
       },
       {
         "verse": 19,
@@ -3232,7 +3092,19 @@
       },
       {
         "verse": 27,
-        "text": "Therefore those who speak in proverbs say,"
+        "text": "Therefore those who speak in proverbs say,“Come to Heshbon. Let the city of Sihon be built and established; "
+      },
+      {
+        "verse": 28,
+        "text": "for a fire has gone out of Heshbon,a flame from the city of Sihon. It has devoured Ar of Moab, The lords of the high places of the Arnon. "
+      },
+      {
+        "verse": 29,
+        "text": "Woe to you, Moab!You are undone, people of Chemosh! He has given his sons as fugitives, and his daughters into captivity, to Sihon king of the Amorites. "
+      },
+      {
+        "verse": 30,
+        "text": "We have shot at them.Heshbon has perished even to Dibon. We have laid waste even to Nophah, Which reaches to Medeba.” "
       },
       {
         "verse": 31,
@@ -3270,11 +3142,7 @@
       },
       {
         "verse": 4,
-        "text": "Moab said to the elders of Midian, “Now this multitude will lick up all that is around us, as the ox licks up the grass of the field.”"
-      },
-      {
-        "verse": 4,
-        "text": "Balak the son of Zippor was king of Moab at that time."
+        "text": "Moab said to the elders of Midian, “Now this multitude will lick up all that is around us, as the ox licks up the grass of the field.”Balak the son of Zippor was king of Moab at that time.  "
       },
       {
         "verse": 5,
@@ -3378,11 +3246,7 @@
       },
       {
         "verse": 30,
-        "text": "The donkey said to Balaam, “Am I not your donkey, on which you have ridden all your life long until today? Was I ever in the habit of doing so to you?”"
-      },
-      {
-        "verse": 30,
-        "text": "He said, “No.”"
+        "text": "The donkey said to Balaam, “Am I not your donkey, on which you have ridden all your life long until today? Was I ever in the habit of doing so to you?”He said, “No.” "
       },
       {
         "verse": 31,
@@ -3402,11 +3266,7 @@
       },
       {
         "verse": 35,
-        "text": "Yahweh’s angel said to Balaam, “Go with the men; but only the word that I shall speak to you, that you shall speak.”"
-      },
-      {
-        "verse": 35,
-        "text": "So Balaam went with the princes of Balak."
+        "text": "Yahweh’s angel said to Balaam, “Go with the men; but only the word that I shall speak to you, that you shall speak.”So Balaam went with the princes of Balak.  "
       },
       {
         "verse": 36,
@@ -3444,11 +3304,7 @@
       },
       {
         "verse": 3,
-        "text": "Balaam said to Balak, “Stand by your burnt offering, and I will go. Perhaps Yahweh will come to meet me. Whatever he shows me I will tell you.”"
-      },
-      {
-        "verse": 3,
-        "text": "He went to a bare height."
+        "text": "Balaam said to Balak, “Stand by your burnt offering, and I will go. Perhaps Yahweh will come to meet me. Whatever he shows me I will tell you.”He went to a bare height.  "
       },
       {
         "verse": 4,
@@ -3464,7 +3320,19 @@
       },
       {
         "verse": 7,
-        "text": "He took up his parable, and said,"
+        "text": "He took up his parable, and said,“From Aram has Balak brought me, the king of Moab from the mountains of the East. Come, curse Jacob for me. Come, defy Israel. "
+      },
+      {
+        "verse": 8,
+        "text": "How shall I curse whom God has not cursed?How shall I defy whom Yahweh has not defied? "
+      },
+      {
+        "verse": 9,
+        "text": "For from the top of the rocks I see him.From the hills I see him. Behold, it is a people that dwells alone, and shall not be listed among the nations. "
+      },
+      {
+        "verse": 10,
+        "text": "Who can count the dust of Jacob,or count the fourth part of Israel? Let me die the death of the righteous! Let my last end be like his!” "
       },
       {
         "verse": 11,
@@ -3496,7 +3364,31 @@
       },
       {
         "verse": 18,
-        "text": "He took up his parable, and said,"
+        "text": "He took up his parable, and said,“Rise up, Balak, and hear! Listen to me, you son of Zippor. "
+      },
+      {
+        "verse": 19,
+        "text": "God is not a man, that he should lie,nor a son of man, that he should repent. Has he said, and will he not do it? Or has he spoken, and will he not make it good? "
+      },
+      {
+        "verse": 20,
+        "text": "Behold, I have received a command to bless.He has blessed, and I can’t reverse it. "
+      },
+      {
+        "verse": 21,
+        "text": "He has not seen iniquity in Jacob.Neither has he seen perverseness in Israel. Yahweh his God is with him. The shout of a king is among them. "
+      },
+      {
+        "verse": 22,
+        "text": "God brings them out of Egypt.He has as it were the strength of the wild ox. "
+      },
+      {
+        "verse": 23,
+        "text": "Surely there is no enchantment with Jacob;Neither is there any divination with Israel. Now it shall be said of Jacob and of Israel, ‘What has God done!’ "
+      },
+      {
+        "verse": 24,
+        "text": "Behold, a people rises up as a lioness.As a lion he lifts himself up. He shall not lie down until he eats of the prey, and drinks the blood of the slain.” "
       },
       {
         "verse": 25,
@@ -3534,7 +3426,31 @@
       },
       {
         "verse": 3,
-        "text": "He took up his parable, and said,"
+        "text": "He took up his parable, and said,“Balaam the son of Beor says, the man whose eyes are open says; "
+      },
+      {
+        "verse": 4,
+        "text": "he says, who hears the words of God,who sees the vision of the Almighty, falling down, and having his eyes open: "
+      },
+      {
+        "verse": 5,
+        "text": "How goodly are your tents, Jacob,and your dwellings, Israel! "
+      },
+      {
+        "verse": 6,
+        "text": "As valleys they are spread out,as gardens by the riverside, as aloes which Yahweh has planted, as cedar trees beside the waters. "
+      },
+      {
+        "verse": 7,
+        "text": "Water shall flow from his buckets.His seed shall be in many waters. His king shall be higher than Agag. His kingdom shall be exalted. "
+      },
+      {
+        "verse": 8,
+        "text": "God brings him out of Egypt.He has as it were the strength of the wild ox. He shall consume the nations his adversaries, shall break their bones in pieces, and pierce them with his arrows. "
+      },
+      {
+        "verse": 9,
+        "text": "He couched, he lay down as a lion,as a lioness; who shall rouse him up? Everyone who blesses you is blessed. Everyone who curses you is cursed.” "
       },
       {
         "verse": 10,
@@ -3558,19 +3474,43 @@
       },
       {
         "verse": 15,
-        "text": "He took up his parable, and said,"
+        "text": "He took up his parable, and said,“Balaam the son of Beor says, the man whose eyes are open says; "
+      },
+      {
+        "verse": 16,
+        "text": "he says, who hears the words of God,knows the knowledge of the Most High, and who sees the vision of the Almighty, Falling down, and having his eyes open: "
+      },
+      {
+        "verse": 17,
+        "text": "I see him, but not now.I see him, but not near. A star will come out of Jacob. A scepter will rise out of Israel, and shall strike through the corners of Moab, and crush all the sons of Sheth. "
+      },
+      {
+        "verse": 18,
+        "text": "Edom shall be a possession.Seir, his enemies, also shall be a possession, while Israel does valiantly. "
+      },
+      {
+        "verse": 19,
+        "text": "Out of Jacob shall one have dominion,and shall destroy the remnant from the city.” "
       },
       {
         "verse": 20,
-        "text": "He looked at Amalek, and took up his parable, and said,"
+        "text": "He looked at Amalek, and took up his parable, and said,“Amalek was the first of the nations, But his latter end shall come to destruction.” "
       },
       {
         "verse": 21,
-        "text": "He looked at the Kenite, and took up his parable, and said,"
+        "text": "He looked at the Kenite, and took up his parable, and said,“Your dwelling place is strong. Your nest is set in the rock. "
+      },
+      {
+        "verse": 22,
+        "text": "Nevertheless Kain shall be wasted,until Asshur carries you away captive.” "
       },
       {
         "verse": 23,
-        "text": "He took up his parable, and said,"
+        "text": "He took up his parable, and said,“Alas, who shall live when God does this? "
+      },
+      {
+        "verse": 24,
+        "text": "But ships shall come from the coast of Kittim.They shall afflict Asshur, and shall afflict Eber. He also shall come to destruction.” "
       },
       {
         "verse": 25,
@@ -3666,11 +3606,7 @@
       },
       {
         "verse": 4,
-        "text": "“Take a census, from twenty years old and upward, as Yahweh commanded Moses and the children of Israel.”"
-      },
-      {
-        "verse": 4,
-        "text": "These are those that came out of the land of Egypt."
+        "text": "“Take a census, from twenty years old and upward, as Yahweh commanded Moses and the children of Israel.”These are those that came out of the land of Egypt.  "
       },
       {
         "verse": 5,

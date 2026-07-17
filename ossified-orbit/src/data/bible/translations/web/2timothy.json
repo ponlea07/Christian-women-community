@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "2timothy",
   "chapters": [
     [
       {
@@ -48,11 +48,7 @@
       },
       {
         "verse": 12,
-        "text": "For this cause I also suffer these things."
-      },
-      {
-        "verse": 12,
-        "text": "Yet I am not ashamed, for I know him whom I have believed, and I am persuaded that he is able to guard that which I have committed to him against that day."
+        "text": "For this cause I also suffer these things.Yet I am not ashamed, for I know him whom I have believed, and I am persuaded that he is able to guard that which I have committed to him against that day. "
       },
       {
         "verse": 13,
@@ -122,7 +118,15 @@
       },
       {
         "verse": 11,
-        "text": "This saying is trustworthy:"
+        "text": "This saying is trustworthy:“For if we died with him, we will also live with him. "
+      },
+      {
+        "verse": 12,
+        "text": "If we endure,we will also reign with him. If we deny him, he also will deny us. "
+      },
+      {
+        "verse": 13,
+        "text": "If we are faithless,he remains faithful; for he can’t deny himself.” "
       },
       {
         "verse": 14,

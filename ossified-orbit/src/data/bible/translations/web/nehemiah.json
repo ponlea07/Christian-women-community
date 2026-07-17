@@ -1,14 +1,10 @@
 {
-  "translation": "WEB",
+  "name": "nehemiah",
   "chapters": [
     [
       {
         "verse": 1,
-        "text": "The words of Nehemiah the son of Hacaliah."
-      },
-      {
-        "verse": 1,
-        "text": "Now in the month Chislev, in the twentieth year, as I was in Susa the palace,"
+        "text": "The words of Nehemiah the son of Hacaliah.Now in the month Chislev, in the twentieth year, as I was in Susa the palace,  "
       },
       {
         "verse": 2,
@@ -48,11 +44,7 @@
       },
       {
         "verse": 11,
-        "text": "Lord, I beg you, let your ear be attentive now to the prayer of your servant, and to the prayer of your servants, who delight to fear your name; and please prosper your servant today, and grant him mercy in the sight of this man.”"
-      },
-      {
-        "verse": 11,
-        "text": "Now I was cup bearer to the king."
+        "text": "Lord, I beg you, let your ear be attentive now to the prayer of your servant, and to the prayer of your servants, who delight to fear your name; and please prosper your servant today, and grant him mercy in the sight of this man.”Now I was cup bearer to the king. "
       }
     ],
     [
@@ -62,11 +54,7 @@
       },
       {
         "verse": 2,
-        "text": "The king said to me, “Why is your face sad, since you are not sick? This is nothing else but sorrow of heart.”"
-      },
-      {
-        "verse": 2,
-        "text": "Then I was very much afraid."
+        "text": "The king said to me, “Why is your face sad, since you are not sick? This is nothing else but sorrow of heart.”Then I was very much afraid.  "
       },
       {
         "verse": 3,
@@ -74,11 +62,7 @@
       },
       {
         "verse": 4,
-        "text": "Then the king said to me, “What is your request?”"
-      },
-      {
-        "verse": 4,
-        "text": "So I prayed to the God of heaven."
+        "text": "Then the king said to me, “What is your request?”So I prayed to the God of heaven.  "
       },
       {
         "verse": 5,
@@ -86,11 +70,7 @@
       },
       {
         "verse": 6,
-        "text": "The king said to me (the queen was also sitting by him), “How long will your journey be? When will you return?”"
-      },
-      {
-        "verse": 6,
-        "text": "So it pleased the king to send me, and I set a time for him."
+        "text": "The king said to me (the queen was also sitting by him), “How long will your journey be? When will you return?”So it pleased the king to send me, and I set a time for him.  "
       },
       {
         "verse": 7,
@@ -98,11 +78,7 @@
       },
       {
         "verse": 8,
-        "text": "and a letter to Asaph the keeper of the king’s forest, that he may give me timber to make beams for the gates of the citadel by the temple, for the wall of the city, and for the house that I will occupy.”"
-      },
-      {
-        "verse": 8,
-        "text": "The king granted my requests, because of the good hand of my God on me."
+        "text": "and a letter to Asaph the keeper of the king’s forest, that he may give me timber to make beams for the gates of the citadel by the temple, for the wall of the city, and for the house that I will occupy.”The king granted my requests, because of the good hand of my God on me.  "
       },
       {
         "verse": 9,
@@ -142,11 +118,7 @@
       },
       {
         "verse": 18,
-        "text": "I told them of the hand of my God which was good on me, as also of the king’s words that he had spoken to me."
-      },
-      {
-        "verse": 18,
-        "text": "They said, “Let’s rise up and build.” So they strengthened their hands for the good work."
+        "text": "I told them of the hand of my God which was good on me, as also of the king’s words that he had spoken to me.They said, “Let’s rise up and build.” So they strengthened their hands for the good work. "
       },
       {
         "verse": 19,
@@ -428,19 +400,11 @@
       },
       {
         "verse": 12,
-        "text": "Then they said, “We will restore them, and will require nothing of them. We will do so, even as you say.”"
-      },
-      {
-        "verse": 12,
-        "text": "Then I called the priests, and took an oath of them, that they would do according to this promise."
+        "text": "Then they said, “We will restore them, and will require nothing of them. We will do so, even as you say.”Then I called the priests, and took an oath of them, that they would do according to this promise.  "
       },
       {
         "verse": 13,
-        "text": "Also I shook out my lap, and said, “So may God shake out every man from his house, and from his labor, that doesn’t perform this promise; even may he be shaken out and emptied like this.”"
-      },
-      {
-        "verse": 13,
-        "text": "All the assembly said, “Amen,” and praised Yahweh. The people did according to this promise."
+        "text": "Also I shook out my lap, and said, “So may God shake out every man from his house, and from his labor, that doesn’t perform this promise; even may he be shaken out and emptied like this.”All the assembly said, “Amen,” and praised Yahweh. The people did according to this promise. "
       },
       {
         "verse": 14,
@@ -572,11 +536,159 @@
       },
       {
         "verse": 7,
-        "text": "who came with Zerubbabel, Jeshua, Nehemiah, Azariah, Raamiah, Nahamani, Mordecai, Bilshan, Mispereth, Bigvai, Nehum, Baanah."
+        "text": "who came with Zerubbabel, Jeshua, Nehemiah, Azariah, Raamiah, Nahamani, Mordecai, Bilshan, Mispereth, Bigvai, Nehum, Baanah.The number of the men of the people of Israel:  "
       },
       {
-        "verse": 7,
-        "text": "The number of the men of the people of Israel:"
+        "verse": 8,
+        "text": "The children of Parosh: two thousand one hundred seventy-two."
+      },
+      {
+        "verse": 9,
+        "text": "The children of Shephatiah: three hundred seventy-two."
+      },
+      {
+        "verse": 10,
+        "text": "The children of Arah: six hundred fifty-two."
+      },
+      {
+        "verse": 11,
+        "text": "The children of Pahathmoab, of the children of Jeshua and Joab: two thousand eight hundred eighteen."
+      },
+      {
+        "verse": 12,
+        "text": "The children of Elam: one thousand two hundred fifty-four."
+      },
+      {
+        "verse": 13,
+        "text": "The children of Zattu: eight hundred forty-five."
+      },
+      {
+        "verse": 14,
+        "text": "The children of Zaccai: seven hundred sixty."
+      },
+      {
+        "verse": 15,
+        "text": "The children of Binnui: six hundred forty-eight."
+      },
+      {
+        "verse": 16,
+        "text": "The children of Bebai: six hundred twenty-eight."
+      },
+      {
+        "verse": 17,
+        "text": "The children of Azgad: two thousand three hundred twenty-two."
+      },
+      {
+        "verse": 18,
+        "text": "The children of Adonikam: six hundred sixty-seven."
+      },
+      {
+        "verse": 19,
+        "text": "The children of Bigvai: two thousand sixty-seven."
+      },
+      {
+        "verse": 20,
+        "text": "The children of Adin: six hundred fifty-five."
+      },
+      {
+        "verse": 21,
+        "text": "The children of Ater: of Hezekiah, ninety-eight."
+      },
+      {
+        "verse": 22,
+        "text": "The children of Hashum: three hundred twenty-eight."
+      },
+      {
+        "verse": 23,
+        "text": "The children of Bezai: three hundred twenty-four."
+      },
+      {
+        "verse": 24,
+        "text": "The children of Hariph: one hundred twelve."
+      },
+      {
+        "verse": 25,
+        "text": "The children of Gibeon: ninety-five."
+      },
+      {
+        "verse": 26,
+        "text": "The men of Bethlehem and Netophah: one hundred eighty-eight."
+      },
+      {
+        "verse": 27,
+        "text": "The men of Anathoth: one hundred twenty-eight."
+      },
+      {
+        "verse": 28,
+        "text": "The men of Beth Azmaveth: forty-two."
+      },
+      {
+        "verse": 29,
+        "text": "The men of Kiriath Jearim, Chephirah, and Beeroth: seven hundred forty-three."
+      },
+      {
+        "verse": 30,
+        "text": "The men of Ramah and Geba: six hundred twenty-one."
+      },
+      {
+        "verse": 31,
+        "text": "The men of Michmas: one hundred twenty-two."
+      },
+      {
+        "verse": 32,
+        "text": "The men of Bethel and Ai: one hundred twenty-three."
+      },
+      {
+        "verse": 33,
+        "text": "The men of the other Nebo: fifty-two."
+      },
+      {
+        "verse": 34,
+        "text": "The children of the other Elam: one thousand two hundred fifty-four."
+      },
+      {
+        "verse": 35,
+        "text": "The children of Harim: three hundred twenty."
+      },
+      {
+        "verse": 36,
+        "text": "The children of Jericho: three hundred forty-five."
+      },
+      {
+        "verse": 37,
+        "text": "The children of Lod, Hadid, and Ono: seven hundred twenty-one."
+      },
+      {
+        "verse": 38,
+        "text": "The children of Senaah: three thousand nine hundred thirty. "
+      },
+      {
+        "verse": 39,
+        "text": "The priests: The children of Jedaiah, of the house of Jeshua: nine hundred seventy-three."
+      },
+      {
+        "verse": 40,
+        "text": "The children of Immer: one thousand fifty-two."
+      },
+      {
+        "verse": 41,
+        "text": "The children of Pashhur: one thousand two hundred forty-seven."
+      },
+      {
+        "verse": 42,
+        "text": "The children of Harim: one thousand seventeen. "
+      },
+      {
+        "verse": 43,
+        "text": "The Levites: the children of Jeshua, of Kadmiel, of the children of Hodevah: seventy-four."
+      },
+      {
+        "verse": 44,
+        "text": "The singers: the children of Asaph: one hundred forty-eight."
+      },
+      {
+        "verse": 45,
+        "text": "The gatekeepers: the children of Shallum, the children of Ater, the children of Talmon, the children of Akkub, the children of Hatita, the children of Shobai: one hundred thirty-eight."
       },
       {
         "verse": 46,
@@ -640,7 +752,15 @@
       },
       {
         "verse": 61,
-        "text": "These were those who went up from Tel Melah, Tel Harsha, Cherub, Addon, and Immer; but they could not show their fathers’ houses, nor their offspring, whether they were of Israel:"
+        "text": "These were those who went up from Tel Melah, Tel Harsha, Cherub, Addon, and Immer; but they could not show their fathers’ houses, nor their offspring, whether they were of Israel: "
+      },
+      {
+        "verse": 62,
+        "text": "The children of Delaiah, the children of Tobiah, the children of Nekoda: six hundred forty-two."
+      },
+      {
+        "verse": 63,
+        "text": "Of the priests: the children of Hobaiah, the children of Hakkoz, the children of Barzillai, who took a wife of the daughters of Barzillai the Gileadite, and was called after their name."
       },
       {
         "verse": 64,
@@ -680,11 +800,7 @@
       },
       {
         "verse": 73,
-        "text": "So the priests, the Levites, the gatekeepers, the singers, some of the people, the temple servants, and all Israel, lived in their cities."
-      },
-      {
-        "verse": 73,
-        "text": "When the seventh month had come, the children of Israel were in their cities."
+        "text": "So the priests, the Levites, the gatekeepers, the singers, some of the people, the temple servants, and all Israel, lived in their cities.When the seventh month had come, the children of Israel were in their cities. "
       }
     ],
     [
@@ -710,11 +826,7 @@
       },
       {
         "verse": 6,
-        "text": "Then Ezra blessed Yahweh, the great God."
-      },
-      {
-        "verse": 6,
-        "text": "All the people answered, “Amen, Amen,” with the lifting up of their hands. They bowed their heads, and worshiped Yahweh with their faces to the ground."
+        "text": "Then Ezra blessed Yahweh, the great God.All the people answered, “Amen, Amen,” with the lifting up of their hands. They bowed their heads, and worshiped Yahweh with their faces to the ground.  "
       },
       {
         "verse": 7,

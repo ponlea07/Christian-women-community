@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "revelation",
   "chapters": [
     [
       {
@@ -68,11 +68,7 @@
       },
       {
         "verse": 17,
-        "text": "When I saw him, I fell at his feet like a dead man."
-      },
-      {
-        "verse": 17,
-        "text": "He laid his right hand on me, saying, “Don’t be afraid. I am the first and the last,"
+        "text": "When I saw him, I fell at his feet like a dead man.He laid his right hand on me, saying, “Don’t be afraid. I am the first and the last,   "
       },
       {
         "verse": 18,
@@ -90,11 +86,7 @@
     [
       {
         "verse": 1,
-        "text": "“To the angel of the assembly in Ephesus write:"
-      },
-      {
-        "verse": 1,
-        "text": "“He who holds the seven stars in his right hand, he who walks among the seven golden lamp stands says these things:"
+        "text": "“To the angel of the assembly in Ephesus write:“He who holds the seven stars in his right hand, he who walks among the seven golden lamp stands says these things: "
       },
       {
         "verse": 2,
@@ -122,11 +114,7 @@
       },
       {
         "verse": 8,
-        "text": "“To the angel of the assembly in Smyrna write:"
-      },
-      {
-        "verse": 8,
-        "text": "“The first and the last, who was dead, and has come to life says these things:"
+        "text": "“To the angel of the assembly in Smyrna write:“The first and the last, who was dead, and has come to life says these things: "
       },
       {
         "verse": 9,
@@ -142,11 +130,7 @@
       },
       {
         "verse": 12,
-        "text": "“To the angel of the assembly in Pergamum write:"
-      },
-      {
-        "verse": 12,
-        "text": "“He who has the sharp two-edged sword says these things:"
+        "text": "“To the angel of the assembly in Pergamum write:“He who has the sharp two-edged sword says these things: "
       },
       {
         "verse": 13,
@@ -170,11 +154,7 @@
       },
       {
         "verse": 18,
-        "text": "“To the angel of the assembly in Thyatira write:"
-      },
-      {
-        "verse": 18,
-        "text": "“The Son of God, who has his eyes like a flame of fire, and his feet are like burnished brass, says these things:"
+        "text": "“To the angel of the assembly in Thyatira write:“The Son of God, who has his eyes like a flame of fire, and his feet are like burnished brass, says these things: "
       },
       {
         "verse": 19,
@@ -224,15 +204,7 @@
     [
       {
         "verse": 1,
-        "text": "“And to the angel of the assembly in Sardis write:"
-      },
-      {
-        "verse": 1,
-        "text": "“He who has the seven Spirits of God, and the seven stars says these things:"
-      },
-      {
-        "verse": 1,
-        "text": "“I know your works, that you have a reputation of being alive, but you are dead."
+        "text": "“And to the angel of the assembly in Sardis write:“He who has the seven Spirits of God, and the seven stars says these things: “I know your works, that you have a reputation of being alive, but you are dead.   "
       },
       {
         "verse": 2,
@@ -256,11 +228,7 @@
       },
       {
         "verse": 7,
-        "text": "“To the angel of the assembly in Philadelphia write:"
-      },
-      {
-        "verse": 7,
-        "text": "“He who is holy, he who is true, he who has the key of David, he who opens and no one can shut, and who shuts and no one opens, says these things:"
+        "text": "“To the angel of the assembly in Philadelphia write:“He who is holy, he who is true, he who has the key of David, he who opens and no one can shut, and who shuts and no one opens, says these things:  "
       },
       {
         "verse": 8,
@@ -288,11 +256,7 @@
       },
       {
         "verse": 14,
-        "text": "“To the angel of the assembly in Laodicea write:"
-      },
-      {
-        "verse": 14,
-        "text": "“The Amen, the Faithful and True Witness, the Beginning of God’s creation, says these things:"
+        "text": "“To the angel of the assembly in Laodicea write:“The Amen, the Faithful and True Witness, the Beginning of God’s creation, says these things: "
       },
       {
         "verse": 15,
@@ -408,7 +372,11 @@
       },
       {
         "verse": 9,
-        "text": "They sang a new song, saying,"
+        "text": "They sang a new song, saying,“You are worthy to take the book and to open its seals: for you were killed, and bought us for God with your blood out of every tribe, language, people, and nation, "
+      },
+      {
+        "verse": 10,
+        "text": "and made us kings and priests to our God,and we will reign on the earth.” "
       },
       {
         "verse": 11,
@@ -512,7 +480,23 @@
       },
       {
         "verse": 4,
-        "text": "I heard the number of those who were sealed, one hundred forty-four thousand, sealed out of every tribe of the children of Israel:"
+        "text": "I heard the number of those who were sealed, one hundred forty-four thousand, sealed out of every tribe of the children of Israel: "
+      },
+      {
+        "verse": 5,
+        "text": "of the tribe of Judah twelve thousand were sealed,of the tribe of Reuben twelve thousand, of the tribe of Gad twelve thousand, "
+      },
+      {
+        "verse": 6,
+        "text": "of the tribe of Asher twelve thousand,of the tribe of Naphtali twelve thousand, of the tribe of Manasseh twelve thousand, "
+      },
+      {
+        "verse": 7,
+        "text": "of the tribe of Simeon twelve thousand,of the tribe of Levi twelve thousand, of the tribe of Issachar twelve thousand, "
+      },
+      {
+        "verse": 8,
+        "text": "of the tribe of Zebulun twelve thousand,of the tribe of Joseph twelve thousand, and of the tribe of Benjamin twelve thousand were sealed. "
       },
       {
         "verse": 9,
@@ -536,11 +520,7 @@
       },
       {
         "verse": 14,
-        "text": "I told him, “My lord, you know.”"
-      },
-      {
-        "verse": 14,
-        "text": "He said to me, “These are those who came out of the great suffering.They washed their robes, and made them white in the Lamb’s blood."
+        "text": "I told him, “My lord, you know.”He said to me, “These are those who came out of the great suffering.They washed their robes, and made them white in the Lamb’s blood.  "
       },
       {
         "verse": 15,
@@ -730,11 +710,7 @@
       },
       {
         "verse": 9,
-        "text": "I went to the angel, telling him to give me the little book."
-      },
-      {
-        "verse": 9,
-        "text": "He said to me, “Take it, and eat it. It will make your stomach bitter, but in your mouth it will be as sweet as honey.”"
+        "text": "I went to the angel, telling him to give me the little book.He said to me, “Take it, and eat it. It will make your stomach bitter, but in your mouth it will be as sweet as honey.” "
       },
       {
         "verse": 10,
@@ -1018,11 +994,7 @@
       },
       {
         "verse": 13,
-        "text": "I heard a voice from heaven saying, “Write, ‘Blessed are the dead who die in the Lord from now on.’ ”"
-      },
-      {
-        "verse": 13,
-        "text": "“Yes,” says the Spirit, “that they may rest from their labors; for their works follow with them.”"
+        "text": "I heard a voice from heaven saying, “Write, ‘Blessed are the dead who die in the Lord from now on.’ ”“Yes,” says the Spirit, “that they may rest from their labors; for their works follow with them.” "
       },
       {
         "verse": 14,
@@ -1064,7 +1036,11 @@
       },
       {
         "verse": 3,
-        "text": "They sang the song of Moses, the servant of God, and the song of the Lamb, saying,"
+        "text": "They sang the song of Moses, the servant of God, and the song of the Lamb, saying,“Great and marvelous are your works, Lord God, the Almighty! Righteous and true are your ways, you King of the nations. "
+      },
+      {
+        "verse": 4,
+        "text": "Who wouldn’t fear you, Lord,and glorify your name? For you only are holy. For all the nations will come and worship before you. For your righteous acts have been revealed.” "
       },
       {
         "verse": 5,
@@ -1678,11 +1654,7 @@
       },
       {
         "verse": 20,
-        "text": "He who testifies these things says, “Yes, I come quickly.”"
-      },
-      {
-        "verse": 20,
-        "text": "Amen! Yes, come, Lord Jesus."
+        "text": "He who testifies these things says, “Yes, I come quickly.”Amen! Yes, come, Lord Jesus. "
       },
       {
         "verse": 21,

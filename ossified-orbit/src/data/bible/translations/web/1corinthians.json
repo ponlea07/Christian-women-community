@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "1corinthians",
   "chapters": [
     [
       {
@@ -76,7 +76,7 @@
       },
       {
         "verse": 19,
-        "text": "For it is written,"
+        "text": "For it is written,“I will destroy the wisdom of the wise. I will bring the discernment of the discerning to nothing.” "
       },
       {
         "verse": 20,
@@ -162,7 +162,7 @@
       },
       {
         "verse": 9,
-        "text": "But as it is written,"
+        "text": "But as it is written,“Things which an eye didn’t see, and an ear didn’t hear, which didn’t enter into the heart of man, these God has prepared for those who love him.” "
       },
       {
         "verse": 10,
@@ -1664,7 +1664,11 @@
       },
       {
         "verse": 54,
-        "text": "But when this perishable body will have become imperishable, and this mortal will have put on immortality, then what is written will happen: “Death is swallowed up in victory.”"
+        "text": "But when this perishable body will have become imperishable, and this mortal will have put on immortality, then what is written will happen: “Death is swallowed up in victory.” "
+      },
+      {
+        "verse": 55,
+        "text": "“Death, where is your sting?Hades, where is your victory?” "
       },
       {
         "verse": 56,

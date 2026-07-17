@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "mark",
   "chapters": [
     [
       {
@@ -8,7 +8,11 @@
       },
       {
         "verse": 2,
-        "text": "As it is written in the prophets,"
+        "text": "As it is written in the prophets,“Behold, I send my messenger before your face, who will prepare your way before you: "
+      },
+      {
+        "verse": 3,
+        "text": "the voice of one crying in the wilderness,‘Make ready the way of the Lord! Make his paths straight!’ ” "
       },
       {
         "verse": 4,
@@ -368,11 +372,7 @@
       },
       {
         "verse": 19,
-        "text": "and Judas Iscariot, who also betrayed him."
-      },
-      {
-        "verse": 19,
-        "text": "Then he came into a house."
+        "text": "and Judas Iscariot, who also betrayed him.Then he came into a house.  "
       },
       {
         "verse": 20,
@@ -640,11 +640,7 @@
       },
       {
         "verse": 9,
-        "text": "He asked him, “What is your name?”"
-      },
-      {
-        "verse": 9,
-        "text": "He said to him, “My name is Legion, for we are many.”"
+        "text": "He asked him, “What is your name?”He said to him, “My name is Legion, for we are many.”  "
       },
       {
         "verse": 10,
@@ -664,11 +660,7 @@
       },
       {
         "verse": 14,
-        "text": "Those who fed them fled, and told it in the city and in the country."
-      },
-      {
-        "verse": 14,
-        "text": "The people came to see what it was that had happened."
+        "text": "Those who fed them fled, and told it in the city and in the country.The people came to see what it was that had happened.  "
       },
       {
         "verse": 15,
@@ -810,11 +802,7 @@
       },
       {
         "verse": 6,
-        "text": "He marveled because of their unbelief."
-      },
-      {
-        "verse": 6,
-        "text": "He went around the villages teaching."
+        "text": "He marveled because of their unbelief.He went around the villages teaching.  "
       },
       {
         "verse": 7,
@@ -886,11 +874,7 @@
       },
       {
         "verse": 24,
-        "text": "She went out, and said to her mother, “What shall I ask?”"
-      },
-      {
-        "verse": 24,
-        "text": "She said, “The head of John the Baptizer.”"
+        "text": "She went out, and said to her mother, “What shall I ask?”She said, “The head of John the Baptizer.” "
       },
       {
         "verse": 25,
@@ -942,19 +926,11 @@
       },
       {
         "verse": 37,
-        "text": "But he answered them, “You give them something to eat.”"
-      },
-      {
-        "verse": 37,
-        "text": "They asked him, “Shall we go and buy two hundred denarii worth of bread, and give them something to eat?”"
+        "text": "But he answered them, “You give them something to eat.”They asked him, “Shall we go and buy two hundred denarii worth of bread, and give them something to eat?” "
       },
       {
         "verse": 38,
-        "text": "He said to them, “How many loaves do you have? Go see.”"
-      },
-      {
-        "verse": 38,
-        "text": "When they knew, they said, “Five, and two fish.”"
+        "text": "He said to them, “How many loaves do you have? Go see.”When they knew, they said, “Five, and two fish.” "
       },
       {
         "verse": 39,
@@ -1052,7 +1028,11 @@
       },
       {
         "verse": 6,
-        "text": "He answered them, “Well did Isaiah prophesy of you hypocrites, as it is written,"
+        "text": "He answered them, “Well did Isaiah prophesy of you hypocrites, as it is written,‘This people honors me with their lips, but their heart is far from me. "
+      },
+      {
+        "verse": 7,
+        "text": "But they worship me in vain,teaching as doctrines the commandments of men.’ "
       },
       {
         "verse": 8,
@@ -1194,11 +1174,7 @@
       },
       {
         "verse": 5,
-        "text": "He asked them, “How many loaves do you have?”"
-      },
-      {
-        "verse": 5,
-        "text": "They said, “Seven.”"
+        "text": "He asked them, “How many loaves do you have?”They said, “Seven.” "
       },
       {
         "verse": 6,
@@ -1254,19 +1230,11 @@
       },
       {
         "verse": 19,
-        "text": "When I broke the five loaves among the five thousand, how many baskets full of broken pieces did you take up?”"
-      },
-      {
-        "verse": 19,
-        "text": "They told him, “Twelve.”"
+        "text": "When I broke the five loaves among the five thousand, how many baskets full of broken pieces did you take up?”They told him, “Twelve.” "
       },
       {
         "verse": 20,
-        "text": "“When the seven loaves fed the four thousand, how many baskets full of broken pieces did you take up?”"
-      },
-      {
-        "verse": 20,
-        "text": "They told him, “Seven.”"
+        "text": "“When the seven loaves fed the four thousand, how many baskets full of broken pieces did you take up?”They told him, “Seven.” "
       },
       {
         "verse": 21,
@@ -1302,11 +1270,7 @@
       },
       {
         "verse": 29,
-        "text": "He said to them, “But who do you say that I am?”"
-      },
-      {
-        "verse": 29,
-        "text": "Peter answered, “You are the Christ.”"
+        "text": "He said to them, “But who do you say that I am?”Peter answered, “You are the Christ.” "
       },
       {
         "verse": 30,
@@ -1428,11 +1392,7 @@
       },
       {
         "verse": 21,
-        "text": "He asked his father, “How long has it been since this has come to him?”"
-      },
-      {
-        "verse": 21,
-        "text": "He said, “From childhood."
+        "text": "He asked his father, “How long has it been since this has come to him?”He said, “From childhood.  "
       },
       {
         "verse": 22,
@@ -1706,11 +1666,7 @@
       },
       {
         "verse": 39,
-        "text": "They said to him, “We are able.”"
-      },
-      {
-        "verse": 39,
-        "text": "Jesus said to them, “You shall indeed drink the cup that I drink, and you shall be baptized with the baptism that I am baptized with;"
+        "text": "They said to him, “We are able.”Jesus said to them, “You shall indeed drink the cup that I drink, and you shall be baptized with the baptism that I am baptized with;   "
       },
       {
         "verse": 40,
@@ -1750,11 +1706,7 @@
       },
       {
         "verse": 49,
-        "text": "Jesus stood still, and said, “Call him.”"
-      },
-      {
-        "verse": 49,
-        "text": "They called the blind man, saying to him, “Cheer up! Get up. He is calling you!”"
+        "text": "Jesus stood still, and said, “Call him.”They called the blind man, saying to him, “Cheer up! Get up. He is calling you!” "
       },
       {
         "verse": 50,
@@ -1762,11 +1714,7 @@
       },
       {
         "verse": 51,
-        "text": "Jesus asked him, “What do you want me to do for you?”"
-      },
-      {
-        "verse": 51,
-        "text": "The blind man said to him, “Rabboni, that I may see again.”"
+        "text": "Jesus asked him, “What do you want me to do for you?”The blind man said to him, “Rabboni, that I may see again.” "
       },
       {
         "verse": 52,
@@ -1904,11 +1852,7 @@
       },
       {
         "verse": 33,
-        "text": "They answered Jesus, “We don’t know.”"
-      },
-      {
-        "verse": 33,
-        "text": "Jesus said to them, “Neither do I tell you by what authority I do these things.”"
+        "text": "They answered Jesus, “We don’t know.”Jesus said to them, “Neither do I tell you by what authority I do these things.” "
       }
     ],
     [
@@ -1950,7 +1894,11 @@
       },
       {
         "verse": 10,
-        "text": "Haven’t you even read this Scripture:"
+        "text": "Haven’t you even read this Scripture:‘The stone which the builders rejected was made the head of the corner. "
+      },
+      {
+        "verse": 11,
+        "text": "This was from the Lord.It is marvelous in our eyes’?” "
       },
       {
         "verse": 12,
@@ -1966,31 +1914,15 @@
       },
       {
         "verse": 15,
-        "text": "Shall we give, or shall we not give?”"
-      },
-      {
-        "verse": 15,
-        "text": "But he, knowing their hypocrisy, said to them, “Why do you test me? Bring me a denarius, that I may see it.”"
+        "text": "Shall we give, or shall we not give?”But he, knowing their hypocrisy, said to them, “Why do you test me? Bring me a denarius, that I may see it.” "
       },
       {
         "verse": 16,
-        "text": "They brought it."
-      },
-      {
-        "verse": 16,
-        "text": "He said to them, “Whose is this image and inscription?”"
-      },
-      {
-        "verse": 16,
-        "text": "They said to him, “Caesar’s.”"
+        "text": "They brought it.He said to them, “Whose is this image and inscription?” They said to him, “Caesar’s.” "
       },
       {
         "verse": 17,
-        "text": "Jesus answered them, “Render to Caesar the things that are Caesar’s, and to God the things that are God’s.”"
-      },
-      {
-        "verse": 17,
-        "text": "They marveled greatly at him."
+        "text": "Jesus answered them, “Render to Caesar the things that are Caesar’s, and to God the things that are God’s.”They marveled greatly at him. "
       },
       {
         "verse": 18,
@@ -2058,11 +1990,7 @@
       },
       {
         "verse": 34,
-        "text": "When Jesus saw that he answered wisely, he said to him, “You are not far from God’s Kingdom.”"
-      },
-      {
-        "verse": 34,
-        "text": "No one dared ask him any question after that."
+        "text": "When Jesus saw that he answered wisely, he said to him, “You are not far from God’s Kingdom.”No one dared ask him any question after that.  "
       },
       {
         "verse": 35,
@@ -2070,15 +1998,11 @@
       },
       {
         "verse": 36,
-        "text": "For David himself said in the Holy Spirit,"
+        "text": "For David himself said in the Holy Spirit,‘The Lord said to my Lord, “Sit at my right hand, until I make your enemies the footstool of your feet.” ’ "
       },
       {
         "verse": 37,
-        "text": "Therefore David himself calls him Lord, so how can he be his son?”"
-      },
-      {
-        "verse": 37,
-        "text": "The common people heard him gladly."
+        "text": "Therefore David himself calls him Lord, so how can he be his son?”The common people heard him gladly.  "
       },
       {
         "verse": 38,
@@ -2200,11 +2124,7 @@
       },
       {
         "verse": 23,
-        "text": "But you watch."
-      },
-      {
-        "verse": 23,
-        "text": "“Behold, I have told you all things beforehand."
+        "text": "But you watch.“Behold, I have told you all things beforehand.   "
       },
       {
         "verse": 24,
@@ -2560,11 +2480,7 @@
       },
       {
         "verse": 2,
-        "text": "Pilate asked him, “Are you the King of the Jews?”"
-      },
-      {
-        "verse": 2,
-        "text": "He answered, “So you say.”"
+        "text": "Pilate asked him, “Are you the King of the Jews?”He answered, “So you say.” "
       },
       {
         "verse": 3,
@@ -2612,11 +2528,7 @@
       },
       {
         "verse": 14,
-        "text": "Pilate said to them, “Why, what evil has he done?”"
-      },
-      {
-        "verse": 14,
-        "text": "But they cried out exceedingly, “Crucify him!”"
+        "text": "Pilate said to them, “Why, what evil has he done?”But they cried out exceedingly, “Crucify him!” "
       },
       {
         "verse": 15,

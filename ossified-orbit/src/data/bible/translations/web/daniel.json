@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "daniel",
   "chapters": [
     [
       {
@@ -166,7 +166,19 @@
       },
       {
         "verse": 20,
-        "text": "Daniel answered,"
+        "text": "Daniel answered,“Blessed be the name of God forever and ever; for wisdom and might are his. "
+      },
+      {
+        "verse": 21,
+        "text": "He changes the times and the seasons.He removes kings, and sets up kings. He gives wisdom to the wise, and knowledge to those who have understanding. "
+      },
+      {
+        "verse": 22,
+        "text": "He reveals the deep and secret things.He knows what is in the darkness, and the light dwells with him. "
+      },
+      {
+        "verse": 23,
+        "text": "I thank you, and praise you,you God of my fathers, who have given me wisdom and might, and have now made known to me what we desired of you; for you have made known to us the king’s matter.” "
       },
       {
         "verse": 24,
@@ -368,11 +380,7 @@
       },
       {
         "verse": 24,
-        "text": "Then Nebuchadnezzar the king was astonished, and rose up in haste. He spoke and said to his counselors, “Didn’t we cast three men bound into the middle of the fire?”"
-      },
-      {
-        "verse": 24,
-        "text": "They answered the king, “True, O king.”"
+        "text": "Then Nebuchadnezzar the king was astonished, and rose up in haste. He spoke and said to his counselors, “Didn’t we cast three men bound into the middle of the fire?”They answered the king, “True, O king.” "
       },
       {
         "verse": 25,
@@ -380,11 +388,7 @@
       },
       {
         "verse": 26,
-        "text": "Then Nebuchadnezzar came near to the mouth of the burning fiery furnace. He spoke and said, “Shadrach, Meshach, and Abednego, you servants of the Most High God, come out, and come here!”"
-      },
-      {
-        "verse": 26,
-        "text": "Then Shadrach, Meshach, and Abednego came out of the middle of the fire."
+        "text": "Then Nebuchadnezzar came near to the mouth of the burning fiery furnace. He spoke and said, “Shadrach, Meshach, and Abednego, you servants of the Most High God, come out, and come here!”Then Shadrach, Meshach, and Abednego came out of the middle of the fire.  "
       },
       {
         "verse": 27,
@@ -406,19 +410,15 @@
     [
       {
         "verse": 1,
-        "text": "Nebuchadnezzar the king,"
-      },
-      {
-        "verse": 1,
-        "text": "to all the peoples, nations, and languages, who dwell in all the earth:"
-      },
-      {
-        "verse": 1,
-        "text": "Peace be multiplied to you."
+        "text": "Nebuchadnezzar the king,to all the peoples, nations, and languages, who dwell in all the earth: Peace be multiplied to you. "
       },
       {
         "verse": 2,
-        "text": "It has seemed good to me to show the signs and wonders that the Most High God has worked toward me."
+        "text": "It has seemed good to me to show the signs and wonders that the Most High God has worked toward me. "
+      },
+      {
+        "verse": 3,
+        "text": "How great are his signs!How mighty are his wonders! His kingdom is an everlasting kingdom. His dominion is from generation to generation. "
       },
       {
         "verse": 4,
@@ -482,11 +482,7 @@
       },
       {
         "verse": 19,
-        "text": "Then Daniel, whose name was Belteshazzar, was stricken mute for a while, and his thoughts troubled him. The king answered, “Belteshazzar, don’t let the dream, or the interpretation, trouble you.”"
-      },
-      {
-        "verse": 19,
-        "text": "Belteshazzar answered, “My lord, may the dream be for those who hate you, and its interpretation to your adversaries."
+        "text": "Then Daniel, whose name was Belteshazzar, was stricken mute for a while, and his thoughts troubled him. The king answered, “Belteshazzar, don’t let the dream, or the interpretation, trouble you.”Belteshazzar answered, “My lord, may the dream be for those who hate you, and its interpretation to your adversaries.  "
       },
       {
         "verse": 20,
@@ -546,7 +542,11 @@
       },
       {
         "verse": 34,
-        "text": "At the end of the days I, Nebuchadnezzar, lifted up my eyes to heaven, and my understanding returned to me, and I blessed the Most High, and I praised and honored him who lives forever;"
+        "text": "At the end of the days I, Nebuchadnezzar, lifted up my eyes to heaven, and my understanding returned to me, and I blessed the Most High, and I praised and honored him who lives forever;for his dominion is an everlasting dominion, and his kingdom from generation to generation. "
+      },
+      {
+        "verse": 35,
+        "text": "All the inhabitants of the earth are reputed as nothing;and he does according to his will in the army of heaven, and among the inhabitants of the earth; and no one can stop his hand, or ask him, “What are you doing?” "
       },
       {
         "verse": 36,
@@ -660,7 +660,15 @@
       },
       {
         "verse": 26,
-        "text": "“This is the interpretation of the thing:"
+        "text": "“This is the interpretation of the thing:MENE: God has counted your kingdom, and brought it to an end. "
+      },
+      {
+        "verse": 27,
+        "text": "TEKEL: you are weighed in the balances, and are found wanting."
+      },
+      {
+        "verse": 28,
+        "text": "PERES: your kingdom is divided, and given to the Medes and Persians.”"
       },
       {
         "verse": 29,
@@ -722,11 +730,7 @@
       },
       {
         "verse": 12,
-        "text": "Then they came near, and spoke before the king concerning the king’s decree: “Haven’t you signed a decree that every man who makes a petition to any god or man within thirty days, except to you, O king, shall be cast into the den of lions?”"
-      },
-      {
-        "verse": 12,
-        "text": "The king answered, “This thing is true, according to the law of the Medes and Persians, which doesn’t alter.”"
+        "text": "Then they came near, and spoke before the king concerning the king’s decree: “Haven’t you signed a decree that every man who makes a petition to any god or man within thirty days, except to you, O king, shall be cast into the den of lions?”The king answered, “This thing is true, according to the law of the Medes and Persians, which doesn’t alter.” "
       },
       {
         "verse": 13,
@@ -778,15 +782,15 @@
       },
       {
         "verse": 25,
-        "text": "Then king Darius wrote to all the peoples, nations, and languages, who dwell in all the earth:"
-      },
-      {
-        "verse": 25,
-        "text": "“Peace be multiplied to you."
+        "text": "Then king Darius wrote to all the peoples, nations, and languages, who dwell in all the earth:“Peace be multiplied to you. "
       },
       {
         "verse": 26,
-        "text": "“I make a decree that in all the dominion of my kingdom men tremble and fear before the God of Daniel;"
+        "text": "“I make a decree that in all the dominion of my kingdom men tremble and fear before the God of Daniel;“for he is the living God, and steadfast forever. His kingdom is that which will not be destroyed. His dominion will be even to the end. "
+      },
+      {
+        "verse": 27,
+        "text": "He delivers and rescues.He works signs and wonders in heaven and in earth, who has delivered Daniel from the power of the lions.” "
       },
       {
         "verse": 28,
@@ -824,7 +828,15 @@
       },
       {
         "verse": 8,
-        "text": "“I considered the horns, and behold, there came up among them another horn, a little one, before which three of the first horns were plucked up by the roots: and behold, in this horn were eyes like the eyes of a man, and a mouth speaking great things."
+        "text": "“I considered the horns, and behold, there came up among them another horn, a little one, before which three of the first horns were plucked up by the roots: and behold, in this horn were eyes like the eyes of a man, and a mouth speaking great things. "
+      },
+      {
+        "verse": 9,
+        "text": "“I watched until thrones were placed,and one who was ancient of days sat. His clothing was white as snow, and the hair of his head like pure wool. His throne was fiery flames, and its wheels burning fire. "
+      },
+      {
+        "verse": 10,
+        "text": "A fiery stream issued and came out from before him.Thousands of thousands ministered to him. Ten thousand times ten thousand stood before him. The judgment was set. The books were opened. "
       },
       {
         "verse": 11,
@@ -848,11 +860,7 @@
       },
       {
         "verse": 16,
-        "text": "I came near to one of those who stood by, and asked him the truth concerning all this."
-      },
-      {
-        "verse": 16,
-        "text": "“So he told me, and made me know the interpretation of the things."
+        "text": "I came near to one of those who stood by, and asked him the truth concerning all this.“So he told me, and made me know the interpretation of the things.  "
       },
       {
         "verse": 17,
@@ -1028,11 +1036,7 @@
       },
       {
         "verse": 4,
-        "text": "I prayed to Yahweh my God, and made confession, and said,"
-      },
-      {
-        "verse": 4,
-        "text": "“Oh, Lord, the great and dreadful God, who keeps covenant and loving kindness with those who love him and keep his commandments,"
+        "text": "I prayed to Yahweh my God, and made confession, and said,“Oh, Lord, the great and dreadful God, who keeps covenant and loving kindness with those who love him and keep his commandments,  "
       },
       {
         "verse": 5,
@@ -1060,11 +1064,7 @@
       },
       {
         "verse": 11,
-        "text": "Yes, all Israel have transgressed your law, turning aside, that they should not obey your voice."
-      },
-      {
-        "verse": 11,
-        "text": "“Therefore the curse and the oath written in the law of Moses the servant of God has been poured out on us; for we have sinned against him."
+        "text": "Yes, all Israel have transgressed your law, turning aside, that they should not obey your voice.“Therefore the curse and the oath written in the law of Moses the servant of God has been poured out on us; for we have sinned against him.  "
       },
       {
         "verse": 12,
@@ -1206,11 +1206,7 @@
       },
       {
         "verse": 19,
-        "text": "He said, “Greatly beloved man, don’t be afraid. Peace be to you. Be strong. Yes, be strong.”"
-      },
-      {
-        "verse": 19,
-        "text": "When he spoke to me, I was strengthened, and said, “Let my lord speak; for you have strengthened me.”"
+        "text": "He said, “Greatly beloved man, don’t be afraid. Peace be to you. Be strong. Yes, be strong.”When he spoke to me, I was strengthened, and said, “Let my lord speak; for you have strengthened me.” "
       },
       {
         "verse": 20,

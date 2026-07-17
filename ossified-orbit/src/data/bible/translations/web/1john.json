@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "1john",
   "chapters": [
     [
       {
@@ -94,23 +94,11 @@
       },
       {
         "verse": 13,
-        "text": "I write to you, fathers, because you know him who is from the beginning."
-      },
-      {
-        "verse": 13,
-        "text": "I write to you, young men, because you have overcome the evil one."
-      },
-      {
-        "verse": 13,
-        "text": "I write to you, little children, because you know the Father."
+        "text": "I write to you, fathers, because you know him who is from the beginning.I write to you, young men, because you have overcome the evil one. I write to you, little children, because you know the Father. "
       },
       {
         "verse": 14,
-        "text": "I have written to you, fathers, because you know him who is from the beginning."
-      },
-      {
-        "verse": 14,
-        "text": "I have written to you, young men, because you are strong, and the word of God remains in you, and you have overcome the evil one."
+        "text": "I have written to you, fathers, because you know him who is from the beginning.I have written to you, young men, because you are strong, and the word of God remains in you, and you have overcome the evil one. "
       },
       {
         "verse": 15,

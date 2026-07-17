@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "exodus",
   "chapters": [
     [
       {
@@ -122,19 +122,11 @@
       },
       {
         "verse": 8,
-        "text": "Pharaoh’s daughter said to her, “Go.”"
-      },
-      {
-        "verse": 8,
-        "text": "The young woman went and called the child’s mother."
+        "text": "Pharaoh’s daughter said to her, “Go.”The young woman went and called the child’s mother.  "
       },
       {
         "verse": 9,
-        "text": "Pharaoh’s daughter said to her, “Take this child away, and nurse him for me, and I will give you your wages.”"
-      },
-      {
-        "verse": 9,
-        "text": "The woman took the child, and nursed it."
+        "text": "Pharaoh’s daughter said to her, “Take this child away, and nurse him for me, and I will give you your wages.”The woman took the child, and nursed it.  "
       },
       {
         "verse": 10,
@@ -154,11 +146,7 @@
       },
       {
         "verse": 14,
-        "text": "He said, “Who made you a prince and a judge over us? Do you plan to kill me, as you killed the Egyptian?”"
-      },
-      {
-        "verse": 14,
-        "text": "Moses was afraid, and said, “Surely this thing is known.”"
+        "text": "He said, “Who made you a prince and a judge over us? Do you plan to kill me, as you killed the Egyptian?”Moses was afraid, and said, “Surely this thing is known.”  "
       },
       {
         "verse": 15,
@@ -220,11 +208,7 @@
       },
       {
         "verse": 4,
-        "text": "When Yahweh saw that he came over to see, God called to him out of the middle of the bush, and said, “Moses! Moses!”"
-      },
-      {
-        "verse": 4,
-        "text": "He said, “Here I am.”"
+        "text": "When Yahweh saw that he came over to see, God called to him out of the middle of the bush, and said, “Moses! Moses!”He said, “Here I am.” "
       },
       {
         "verse": 5,
@@ -232,11 +216,7 @@
       },
       {
         "verse": 6,
-        "text": "Moreover he said, “I am the God of your father, the God of Abraham, the God of Isaac, and the God of Jacob.”"
-      },
-      {
-        "verse": 6,
-        "text": "Moses hid his face because he was afraid to look at God."
+        "text": "Moreover he said, “I am the God of your father, the God of Abraham, the God of Isaac, and the God of Jacob.”Moses hid his face because he was afraid to look at God. "
       },
       {
         "verse": 7,
@@ -310,27 +290,15 @@
       },
       {
         "verse": 2,
-        "text": "Yahweh said to him, “What is that in your hand?”"
-      },
-      {
-        "verse": 2,
-        "text": "He said, “A rod.”"
+        "text": "Yahweh said to him, “What is that in your hand?”He said, “A rod.” "
       },
       {
         "verse": 3,
-        "text": "He said, “Throw it on the ground.”"
-      },
-      {
-        "verse": 3,
-        "text": "He threw it on the ground, and it became a snake; and Moses ran away from it."
+        "text": "He said, “Throw it on the ground.”He threw it on the ground, and it became a snake; and Moses ran away from it. "
       },
       {
         "verse": 4,
-        "text": "Yahweh said to Moses, “Stretch out your hand, and take it by the tail.”"
-      },
-      {
-        "verse": 4,
-        "text": "He stretched out his hand, and took hold of it, and it became a rod in his hand."
+        "text": "Yahweh said to Moses, “Stretch out your hand, and take it by the tail.”He stretched out his hand, and took hold of it, and it became a rod in his hand. "
       },
       {
         "verse": 5,
@@ -338,19 +306,11 @@
       },
       {
         "verse": 6,
-        "text": "Yahweh said furthermore to him, “Now put your hand inside your cloak.”"
-      },
-      {
-        "verse": 6,
-        "text": "He put his hand inside his cloak, and when he took it out, behold, his hand was leprous, as white as snow."
+        "text": "Yahweh said furthermore to him, “Now put your hand inside your cloak.”He put his hand inside his cloak, and when he took it out, behold, his hand was leprous, as white as snow. "
       },
       {
         "verse": 7,
-        "text": "He said, “Put your hand inside your cloak again.”"
-      },
-      {
-        "verse": 7,
-        "text": "He put his hand inside his cloak again, and when he took it out of his cloak, behold, it had turned again as his other flesh."
+        "text": "He said, “Put your hand inside your cloak again.”He put his hand inside his cloak again, and when he took it out of his cloak, behold, it had turned again as his other flesh. "
       },
       {
         "verse": 8,
@@ -394,11 +354,7 @@
       },
       {
         "verse": 18,
-        "text": "Moses went and returned to Jethro his father-in-law, and said to him, “Please let me go and return to my brothers who are in Egypt, and see whether they are still alive.”"
-      },
-      {
-        "verse": 18,
-        "text": "Jethro said to Moses, “Go in peace.”"
+        "text": "Moses went and returned to Jethro his father-in-law, and said to him, “Please let me go and return to my brothers who are in Egypt, and see whether they are still alive.”Jethro said to Moses, “Go in peace.” "
       },
       {
         "verse": 19,
@@ -434,11 +390,7 @@
       },
       {
         "verse": 27,
-        "text": "Yahweh said to Aaron, “Go into the wilderness to meet Moses.”"
-      },
-      {
-        "verse": 27,
-        "text": "He went, and met him on God’s mountain, and kissed him."
+        "text": "Yahweh said to Aaron, “Go into the wilderness to meet Moses.”He went, and met him on God’s mountain, and kissed him.  "
       },
       {
         "verse": 28,
@@ -814,11 +766,7 @@
       },
       {
         "verse": 10,
-        "text": "Pharaoh said, “Tomorrow.”"
-      },
-      {
-        "verse": 10,
-        "text": "Moses said, “Let it be according to your word, that you may know that there is no one like Yahweh our God."
+        "text": "Pharaoh said, “Tomorrow.”Moses said, “Let it be according to your word, that you may know that there is no one like Yahweh our God.  "
       },
       {
         "verse": 11,
@@ -1318,11 +1266,7 @@
       },
       {
         "verse": 27,
-        "text": "that you shall say, ‘It is the sacrifice of Yahweh’s Passover, who passed over the houses of the children of Israel in Egypt, when he struck the Egyptians, and spared our houses.’ ”"
-      },
-      {
-        "verse": 27,
-        "text": "The people bowed their heads and worshiped."
+        "text": "that you shall say, ‘It is the sacrifice of Yahweh’s Passover, who passed over the houses of the children of Israel in Egypt, when he struck the Egyptians, and spared our houses.’ ”The people bowed their heads and worshiped.  "
       },
       {
         "verse": 28,
@@ -1640,7 +1584,75 @@
     [
       {
         "verse": 1,
-        "text": "Then Moses and the children of Israel sang this song to Yahweh, and said,"
+        "text": "Then Moses and the children of Israel sang this song to Yahweh, and said,“I will sing to Yahweh, for he has triumphed gloriously. He has thrown the horse and his rider into the sea. "
+      },
+      {
+        "verse": 2,
+        "text": "Yah is my strength and song.He has become my salvation. This is my God, and I will praise him; my father’s God, and I will exalt him. "
+      },
+      {
+        "verse": 3,
+        "text": "Yahweh is a man of war.Yahweh is his name. "
+      },
+      {
+        "verse": 4,
+        "text": "He has cast Pharaoh’s chariots and his army into the sea.His chosen captains are sunk in the Red Sea. "
+      },
+      {
+        "verse": 5,
+        "text": "The deeps cover them.They went down into the depths like a stone. "
+      },
+      {
+        "verse": 6,
+        "text": "Your right hand, Yahweh, is glorious in power.Your right hand, Yahweh, dashes the enemy in pieces. "
+      },
+      {
+        "verse": 7,
+        "text": "In the greatness of your excellency, you overthrow those who rise up against you.You send out your wrath. It consumes them as stubble. "
+      },
+      {
+        "verse": 8,
+        "text": "With the blast of your nostrils, the waters were piled up.The floods stood upright as a heap. The deeps were congealed in the heart of the sea. "
+      },
+      {
+        "verse": 9,
+        "text": "The enemy said, ‘I will pursue. I will overtake. I will divide the plunder.My desire will be satisfied on them. I will draw my sword. My hand will destroy them.’ "
+      },
+      {
+        "verse": 10,
+        "text": "You blew with your wind.The sea covered them. They sank like lead in the mighty waters. "
+      },
+      {
+        "verse": 11,
+        "text": "Who is like you, Yahweh, among the gods?Who is like you, glorious in holiness, fearful in praises, doing wonders? "
+      },
+      {
+        "verse": 12,
+        "text": "You stretched out your right hand.The earth swallowed them. "
+      },
+      {
+        "verse": 13,
+        "text": "“You, in your loving kindness, have led the people that you have redeemed.You have guided them in your strength to your holy habitation. "
+      },
+      {
+        "verse": 14,
+        "text": "The peoples have heard.They tremble. Pangs have taken hold of the inhabitants of Philistia. "
+      },
+      {
+        "verse": 15,
+        "text": "Then the chiefs of Edom were dismayed.Trembling takes hold of the mighty men of Moab. All the inhabitants of Canaan have melted away. "
+      },
+      {
+        "verse": 16,
+        "text": "Terror and dread falls on them.By the greatness of your arm they are as still as a stone, until your people pass over, Yahweh, until the people you have purchased pass over. "
+      },
+      {
+        "verse": 17,
+        "text": "You will bring them in, and plant them in the mountain of your inheritance,the place, Yahweh, which you have made for yourself to dwell in; the sanctuary, Lord, which your hands have established. "
+      },
+      {
+        "verse": 18,
+        "text": "Yahweh will reign forever and ever.”"
       },
       {
         "verse": 19,
@@ -1652,7 +1664,7 @@
       },
       {
         "verse": 21,
-        "text": "Miriam answered them,"
+        "text": "Miriam answered them,“Sing to Yahweh, for he has triumphed gloriously. The horse and his rider he has thrown into the sea.” "
       },
       {
         "verse": 22,
@@ -1832,11 +1844,7 @@
       },
       {
         "verse": 2,
-        "text": "Therefore the people quarreled with Moses, and said, “Give us water to drink.”"
-      },
-      {
-        "verse": 2,
-        "text": "Moses said to them, “Why do you quarrel with me? Why do you test Yahweh?”"
+        "text": "Therefore the people quarreled with Moses, and said, “Give us water to drink.”Moses said to them, “Why do you quarrel with me? Why do you test Yahweh?” "
       },
       {
         "verse": 3,
@@ -2036,11 +2044,7 @@
       },
       {
         "verse": 8,
-        "text": "All the people answered together, and said, “All that Yahweh has spoken we will do.”"
-      },
-      {
-        "verse": 8,
-        "text": "Moses reported the words of the people to Yahweh."
+        "text": "All the people answered together, and said, “All that Yahweh has spoken we will do.”Moses reported the words of the people to Yahweh.  "
       },
       {
         "verse": 9,
@@ -2478,11 +2482,7 @@
       },
       {
         "verse": 29,
-        "text": "“You shall not delay to offer from your harvest and from the outflow of your presses."
-      },
-      {
-        "verse": 29,
-        "text": "“You shall give the firstborn of your sons to me."
+        "text": "“You shall not delay to offer from your harvest and from the outflow of your presses.“You shall give the firstborn of your sons to me.  "
       },
       {
         "verse": 30,
@@ -2568,11 +2568,7 @@
       },
       {
         "verse": 19,
-        "text": "You shall bring the first of the first fruits of your ground into the house of Yahweh your God."
-      },
-      {
-        "verse": 19,
-        "text": "“You shall not boil a young goat in its mother’s milk."
+        "text": "You shall bring the first of the first fruits of your ground into the house of Yahweh your God.“You shall not boil a young goat in its mother’s milk. "
       },
       {
         "verse": 20,
@@ -3794,11 +3790,7 @@
       },
       {
         "verse": 26,
-        "text": "then Moses stood in the gate of the camp, and said, “Whoever is on Yahweh’s side, come to me!”"
-      },
-      {
-        "verse": 26,
-        "text": "All the sons of Levi gathered themselves together to him."
+        "text": "then Moses stood in the gate of the camp, and said, “Whoever is on Yahweh’s side, come to me!”All the sons of Levi gathered themselves together to him.  "
       },
       {
         "verse": 27,
@@ -4034,11 +4026,7 @@
       },
       {
         "verse": 26,
-        "text": "“You shall bring the first of the first fruits of your ground to the house of Yahweh your God."
-      },
-      {
-        "verse": 26,
-        "text": "“You shall not boil a young goat in its mother’s milk.”"
+        "text": "“You shall bring the first of the first fruits of your ground to the house of Yahweh your God.“You shall not boil a young goat in its mother’s milk.” "
       },
       {
         "verse": 27,

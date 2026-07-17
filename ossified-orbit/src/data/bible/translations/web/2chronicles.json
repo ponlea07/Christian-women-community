@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "2chronicles",
   "chapters": [
     [
       {
@@ -258,11 +258,7 @@
       },
       {
         "verse": 11,
-        "text": "Huram made the pots, the shovels, and the basins."
-      },
-      {
-        "verse": 11,
-        "text": "So Huram finished doing the work that he did for king Solomon in God’s house:"
+        "text": "Huram made the pots, the shovels, and the basins.So Huram finished doing the work that he did for king Solomon in God’s house:  "
       },
       {
         "verse": 12,
@@ -360,7 +356,11 @@
       },
       {
         "verse": 13,
-        "text": "when the trumpeters and singers were as one, to make one sound to be heard in praising and thanking Yahweh; and when they lifted up their voice with the trumpets and cymbals and instruments of music, and praised Yahweh, saying,"
+        "text": "when the trumpeters and singers were as one, to make one sound to be heard in praising and thanking Yahweh; and when they lifted up their voice with the trumpets and cymbals and instruments of music, and praised Yahweh, saying,“For he is good; for his loving kindness endures forever!” then the house was filled with a cloud, even Yahweh’s house,  "
+      },
+      {
+        "verse": 14,
+        "text": "so that the priests could not stand to minister by reason of the cloud; for Yahweh’s glory filled God’s house."
       }
     ],
     [
@@ -544,7 +544,7 @@
       },
       {
         "verse": 3,
-        "text": "All the children of Israel looked on, when the fire came down, and Yahweh’s glory was on the house. They bowed themselves with their faces to the ground on the pavement, worshiped, and gave thanks to Yahweh, saying,"
+        "text": "All the children of Israel looked on, when the fire came down, and Yahweh’s glory was on the house. They bowed themselves with their faces to the ground on the pavement, worshiped, and gave thanks to Yahweh, saying,“For he is good; for his loving kindness endures forever.” "
       },
       {
         "verse": 4,
@@ -842,11 +842,7 @@
       },
       {
         "verse": 5,
-        "text": "He said to them, “Come again to me after three days.”"
-      },
-      {
-        "verse": 5,
-        "text": "So the people departed."
+        "text": "He said to them, “Come again to me after three days.”So the people departed.  "
       },
       {
         "verse": 6,
@@ -1442,11 +1438,7 @@
       },
       {
         "verse": 3,
-        "text": "Ahab king of Israel said to Jehoshaphat king of Judah, “Will you go with me to Ramoth Gilead?”"
-      },
-      {
-        "verse": 3,
-        "text": "He answered him, “I am as you are, and my people as your people. We will be with you in the war.”"
+        "text": "Ahab king of Israel said to Jehoshaphat king of Judah, “Will you go with me to Ramoth Gilead?”He answered him, “I am as you are, and my people as your people. We will be with you in the war.”  "
       },
       {
         "verse": 4,
@@ -1454,11 +1446,7 @@
       },
       {
         "verse": 5,
-        "text": "Then the king of Israel gathered the prophets together, four hundred men, and said to them, “Shall we go to Ramoth Gilead to battle, or shall I forbear?”"
-      },
-      {
-        "verse": 5,
-        "text": "They said, “Go up; for God will deliver it into the hand of the king.”"
+        "text": "Then the king of Israel gathered the prophets together, four hundred men, and said to them, “Shall we go to Ramoth Gilead to battle, or shall I forbear?”They said, “Go up; for God will deliver it into the hand of the king.” "
       },
       {
         "verse": 6,
@@ -1466,11 +1454,7 @@
       },
       {
         "verse": 7,
-        "text": "The king of Israel said to Jehoshaphat, “There is yet one man by whom we may inquire of Yahweh; but I hate him, for he never prophesies good concerning me, but always evil. He is Micaiah the son of Imla.”"
-      },
-      {
-        "verse": 7,
-        "text": "Jehoshaphat said, “Don’t let the king say so.”"
+        "text": "The king of Israel said to Jehoshaphat, “There is yet one man by whom we may inquire of Yahweh; but I hate him, for he never prophesies good concerning me, but always evil. He is Micaiah the son of Imla.”Jehoshaphat said, “Don’t let the king say so.” "
       },
       {
         "verse": 8,
@@ -1498,11 +1482,7 @@
       },
       {
         "verse": 14,
-        "text": "When he had come to the king, the king said to him, “Micaiah, shall we go to Ramoth Gilead to battle, or shall I forbear?”"
-      },
-      {
-        "verse": 14,
-        "text": "He said, “Go up, and prosper. They shall be delivered into your hand.”"
+        "text": "When he had come to the king, the king said to him, “Micaiah, shall we go to Ramoth Gilead to battle, or shall I forbear?”He said, “Go up, and prosper. They shall be delivered into your hand.” "
       },
       {
         "verse": 15,
@@ -1526,19 +1506,11 @@
       },
       {
         "verse": 20,
-        "text": "A spirit came out, stood before Yahweh, and said, ‘I will entice him.’"
-      },
-      {
-        "verse": 20,
-        "text": "“Yahweh said to him, ‘How?’"
+        "text": "A spirit came out, stood before Yahweh, and said, ‘I will entice him.’“Yahweh said to him, ‘How?’ "
       },
       {
         "verse": 21,
-        "text": "“He said, ‘I will go, and will be a lying spirit in the mouth of all his prophets.’"
-      },
-      {
-        "verse": 21,
-        "text": "“He said, ‘You will entice him, and will prevail also. Go and do so.’"
+        "text": "“He said, ‘I will go, and will be a lying spirit in the mouth of all his prophets.’“He said, ‘You will entice him, and will prevail also. Go and do so.’ "
       },
       {
         "verse": 22,
@@ -2152,11 +2124,7 @@
       },
       {
         "verse": 9,
-        "text": "Amaziah said to the man of God, “But what shall we do for the hundred talents which I have given to the army of Israel?”"
-      },
-      {
-        "verse": 9,
-        "text": "The man of God answered, “Yahweh is able to give you much more than this.”"
+        "text": "Amaziah said to the man of God, “But what shall we do for the hundred talents which I have given to the army of Israel?”The man of God answered, “Yahweh is able to give you much more than this.” "
       },
       {
         "verse": 10,
@@ -2184,11 +2152,7 @@
       },
       {
         "verse": 16,
-        "text": "As he talked with him, the king said to him, “Have we made you one of the king’s counselors? Stop! Why should you be struck down?”"
-      },
-      {
-        "verse": 16,
-        "text": "Then the prophet stopped, and said, “I know that God has determined to destroy you, because you have done this, and have not listened to my counsel.”"
+        "text": "As he talked with him, the king said to him, “Have we made you one of the king’s counselors? Stop! Why should you be struck down?”Then the prophet stopped, and said, “I know that God has determined to destroy you, because you have done this, and have not listened to my counsel.” "
       },
       {
         "verse": 17,
@@ -3170,11 +3134,7 @@
       },
       {
         "verse": 28,
-        "text": "“Behold, I will gather you to your fathers, and you will be gathered to your grave in peace. Your eyes won’t see all the evil that I will bring on this place and on its inhabitants.” ’ ”"
-      },
-      {
-        "verse": 28,
-        "text": "They brought back word to the king."
+        "text": "“Behold, I will gather you to your fathers, and you will be gathered to your grave in peace. Your eyes won’t see all the evil that I will bring on this place and on its inhabitants.” ’ ”They brought back word to the king. "
       },
       {
         "verse": 29,

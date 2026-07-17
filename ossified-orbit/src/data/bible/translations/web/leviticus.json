@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "leviticus",
   "chapters": [
     [
       {
@@ -958,11 +958,7 @@
       },
       {
         "verse": 3,
-        "text": "Then Moses said to Aaron, “This is what Yahweh spoke of, saying,"
-      },
-      {
-        "verse": 3,
-        "text": "Aaron held his peace."
+        "text": "Then Moses said to Aaron, “This is what Yahweh spoke of, saying,‘I will show myself holy to those who come near me, and before all the people I will be glorified.’ ” Aaron held his peace.  "
       },
       {
         "verse": 4,
@@ -1250,11 +1246,7 @@
       },
       {
         "verse": 7,
-        "text": "He shall offer it before Yahweh, and make atonement for her; then she shall be cleansed from the fountain of her blood."
-      },
-      {
-        "verse": 7,
-        "text": "“ ‘This is the law for her who bears, whether a male or a female."
+        "text": "He shall offer it before Yahweh, and make atonement for her; then she shall be cleansed from the fountain of her blood.“ ‘This is the law for her who bears, whether a male or a female.  "
       },
       {
         "verse": 8,
@@ -1726,11 +1718,7 @@
       },
       {
         "verse": 57,
-        "text": "to teach when it is unclean, and when it is clean."
-      },
-      {
-        "verse": 57,
-        "text": "This is the law of leprosy."
+        "text": "to teach when it is unclean, and when it is clean.This is the law of leprosy. "
       }
     ],
     [
@@ -2002,11 +1990,7 @@
       },
       {
         "verse": 34,
-        "text": "“This shall be an everlasting statute for you, to make atonement for the children of Israel once in the year because of all their sins.”"
-      },
-      {
-        "verse": 34,
-        "text": "It was done as Yahweh commanded Moses."
+        "text": "“This shall be an everlasting statute for you, to make atonement for the children of Israel once in the year because of all their sins.”It was done as Yahweh commanded Moses. "
       }
     ],
     [
@@ -2240,15 +2224,7 @@
       },
       {
         "verse": 11,
-        "text": "“ ‘You shall not steal."
-      },
-      {
-        "verse": 11,
-        "text": "“ ‘You shall not lie."
-      },
-      {
-        "verse": 11,
-        "text": "“ ‘You shall not deceive one another."
+        "text": "“ ‘You shall not steal.“ ‘You shall not lie. “ ‘You shall not deceive one another. "
       },
       {
         "verse": 12,
@@ -2256,11 +2232,7 @@
       },
       {
         "verse": 13,
-        "text": "“ ‘You shall not oppress your neighbor, nor rob him."
-      },
-      {
-        "verse": 13,
-        "text": "“ ‘The wages of a hired servant shall not remain with you all night until the morning."
+        "text": "“ ‘You shall not oppress your neighbor, nor rob him.“ ‘The wages of a hired servant shall not remain with you all night until the morning. "
       },
       {
         "verse": 14,
@@ -2272,11 +2244,7 @@
       },
       {
         "verse": 16,
-        "text": "“ ‘You shall not go around as a slanderer among your people."
-      },
-      {
-        "verse": 16,
-        "text": "“ ‘You shall not endanger the life of your neighbor. I am Yahweh."
+        "text": "“ ‘You shall not go around as a slanderer among your people.“ ‘You shall not endanger the life of your neighbor. I am Yahweh. "
       },
       {
         "verse": 17,
@@ -2288,19 +2256,7 @@
       },
       {
         "verse": 19,
-        "text": "“ ‘You shall keep my statutes."
-      },
-      {
-        "verse": 19,
-        "text": "“ ‘You shall not cross-breed different kinds of animals."
-      },
-      {
-        "verse": 19,
-        "text": "“ ‘You shall not sow your field with two kinds of seed;"
-      },
-      {
-        "verse": 19,
-        "text": "“ ‘Don’t wear a garment made of two kinds of material."
+        "text": "“ ‘You shall keep my statutes.“ ‘You shall not cross-breed different kinds of animals. “ ‘You shall not sow your field with two kinds of seed; “ ‘Don’t wear a garment made of two kinds of material. "
       },
       {
         "verse": 20,

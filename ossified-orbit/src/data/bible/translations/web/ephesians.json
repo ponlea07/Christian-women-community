@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "ephesians",
   "chapters": [
     [
       {
@@ -302,7 +302,15 @@
       },
       {
         "verse": 8,
-        "text": "Therefore he says,"
+        "text": "Therefore he says,“When he ascended on high, he led captivity captive, and gave gifts to people.” "
+      },
+      {
+        "verse": 9,
+        "text": "Now this, “He ascended”, what is it but that he also first descended into the lower parts of the earth?"
+      },
+      {
+        "verse": 10,
+        "text": "He who descended is the one who also ascended far above all the heavens, that he might fill all things."
       },
       {
         "verse": 11,

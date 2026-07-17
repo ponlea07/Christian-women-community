@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "luke",
   "chapters": [
     [
       {
@@ -152,11 +152,7 @@
       },
       {
         "verse": 38,
-        "text": "Mary said, “Behold, the servant of the Lord; let it be done to me according to your word.”"
-      },
-      {
-        "verse": 38,
-        "text": "The angel departed from her."
+        "text": "Mary said, “Behold, the servant of the Lord; let it be done to me according to your word.”The angel departed from her. "
       },
       {
         "verse": 39,
@@ -188,7 +184,43 @@
       },
       {
         "verse": 46,
-        "text": "Mary said,"
+        "text": "Mary said,“My soul magnifies the Lord. "
+      },
+      {
+        "verse": 47,
+        "text": "My spirit has rejoiced in God my Savior,"
+      },
+      {
+        "verse": 48,
+        "text": "for he has looked at the humble state of his servant.For behold, from now on, all generations will call me blessed. "
+      },
+      {
+        "verse": 49,
+        "text": "For he who is mighty has done great things for me.Holy is his name. "
+      },
+      {
+        "verse": 50,
+        "text": "His mercy is for generations of generations on those who fear him."
+      },
+      {
+        "verse": 51,
+        "text": "He has shown strength with his arm.He has scattered the proud in the imagination of their hearts. "
+      },
+      {
+        "verse": 52,
+        "text": "He has put down princes from their thrones,and has exalted the lowly. "
+      },
+      {
+        "verse": 53,
+        "text": "He has filled the hungry with good things.He has sent the rich away empty. "
+      },
+      {
+        "verse": 54,
+        "text": "He has given help to Israel, his servant, that he might remember mercy,"
+      },
+      {
+        "verse": 55,
+        "text": "as he spoke to our fathers,to Abraham and his offspring forever.” "
       },
       {
         "verse": 56,
@@ -220,11 +252,7 @@
       },
       {
         "verse": 63,
-        "text": "He asked for a writing tablet, and wrote, “His name is John.”"
-      },
-      {
-        "verse": 63,
-        "text": "They all marveled."
+        "text": "He asked for a writing tablet, and wrote, “His name is John.”They all marveled.  "
       },
       {
         "verse": 64,
@@ -240,7 +268,55 @@
       },
       {
         "verse": 67,
-        "text": "His father Zacharias was filled with the Holy Spirit, and prophesied, saying,"
+        "text": "His father Zacharias was filled with the Holy Spirit, and prophesied, saying, "
+      },
+      {
+        "verse": 68,
+        "text": "“Blessed be the Lord, the God of Israel,for he has visited and redeemed his people; "
+      },
+      {
+        "verse": 69,
+        "text": "and has raised up a horn of salvation for us in the house of his servant David"
+      },
+      {
+        "verse": 70,
+        "text": "(as he spoke by the mouth of his holy prophets who have been from of old),"
+      },
+      {
+        "verse": 71,
+        "text": "salvation from our enemies and from the hand of all who hate us;"
+      },
+      {
+        "verse": 72,
+        "text": "to show mercy toward our fathers,to remember his holy covenant, "
+      },
+      {
+        "verse": 73,
+        "text": "the oath which he swore to Abraham our father,"
+      },
+      {
+        "verse": 74,
+        "text": "to grant to us that we, being delivered out of the hand of our enemies,should serve him without fear, "
+      },
+      {
+        "verse": 75,
+        "text": "in holiness and righteousness before him all the days of our life."
+      },
+      {
+        "verse": 76,
+        "text": "And you, child, will be called a prophet of the Most High;for you will go before the face of the Lord to prepare his ways, "
+      },
+      {
+        "verse": 77,
+        "text": "to give knowledge of salvation to his people by the remission of their sins,"
+      },
+      {
+        "verse": 78,
+        "text": "because of the tender mercy of our God,by which the dawn from on high will visit us, "
+      },
+      {
+        "verse": 79,
+        "text": "to shine on those who sit in darkness and the shadow of death;to guide our feet into the way of peace.” "
       },
       {
         "verse": 80,
@@ -298,7 +374,11 @@
       },
       {
         "verse": 13,
-        "text": "Suddenly, there was with the angel a multitude of the heavenly army praising God, and saying,"
+        "text": "Suddenly, there was with the angel a multitude of the heavenly army praising God, and saying, "
+      },
+      {
+        "verse": 14,
+        "text": "“Glory to God in the highest,on earth peace, good will toward men.” "
       },
       {
         "verse": 15,
@@ -354,7 +434,23 @@
       },
       {
         "verse": 28,
-        "text": "then he received him into his arms, and blessed God, and said,"
+        "text": "then he received him into his arms, and blessed God, and said, "
+      },
+      {
+        "verse": 29,
+        "text": "“Now you are releasing your servant, Master,according to your word, in peace; "
+      },
+      {
+        "verse": 30,
+        "text": "for my eyes have seen your salvation,"
+      },
+      {
+        "verse": 31,
+        "text": "which you have prepared before the face of all peoples;"
+      },
+      {
+        "verse": 32,
+        "text": "a light for revelation to the nations,and the glory of your people Israel.” "
       },
       {
         "verse": 33,
@@ -452,7 +548,15 @@
       },
       {
         "verse": 4,
-        "text": "As it is written in the book of the words of Isaiah the prophet,"
+        "text": "As it is written in the book of the words of Isaiah the prophet,“The voice of one crying in the wilderness, ‘Make ready the way of the Lord. Make his paths straight. "
+      },
+      {
+        "verse": 5,
+        "text": "Every valley will be filled.Every mountain and hill will be brought low. The crooked will become straight, and the rough ways smooth. "
+      },
+      {
+        "verse": 6,
+        "text": "All flesh will see God’s salvation.’ ”"
       },
       {
         "verse": 7,
@@ -484,11 +588,7 @@
       },
       {
         "verse": 14,
-        "text": "Soldiers also asked him, saying, “What about us? What must we do?”"
-      },
-      {
-        "verse": 14,
-        "text": "He said to them, “Extort from no one by violence, neither accuse anyone wrongfully. Be content with your wages.”"
+        "text": "Soldiers also asked him, saying, “What about us? What must we do?”He said to them, “Extort from no one by violence, neither accuse anyone wrongfully. Be content with your wages.” "
       },
       {
         "verse": 15,
@@ -626,11 +726,11 @@
       },
       {
         "verse": 10,
-        "text": "for it is written,"
+        "text": "for it is written,‘He will put his angels in charge of you, to guard you;’ "
       },
       {
         "verse": 11,
-        "text": "and,"
+        "text": "and,‘On their hands they will bear you up, lest perhaps you dash your foot against a stone.’ ” "
       },
       {
         "verse": 12,
@@ -654,7 +754,15 @@
       },
       {
         "verse": 17,
-        "text": "The book of the prophet Isaiah was handed to him. He opened the book, and found the place where it was written,"
+        "text": "The book of the prophet Isaiah was handed to him. He opened the book, and found the place where it was written, "
+      },
+      {
+        "verse": 18,
+        "text": "“The Spirit of the Lord is on me,because he has anointed me to preach good news to the poor. He has sent me to heal the broken hearted, to proclaim release to the captives, recovering of sight to the blind, to deliver those who are crushed, "
+      },
+      {
+        "verse": 19,
+        "text": "and to proclaim the acceptable year of the Lord.”"
       },
       {
         "verse": 20,
@@ -796,11 +904,7 @@
       },
       {
         "verse": 10,
-        "text": "and so also were James and John, sons of Zebedee, who were partners with Simon."
-      },
-      {
-        "verse": 10,
-        "text": "Jesus said to Simon, “Don’t be afraid. From now on you will be catching people alive.”"
+        "text": "and so also were James and John, sons of Zebedee, who were partners with Simon.Jesus said to Simon, “Don’t be afraid. From now on you will be catching people alive.” "
       },
       {
         "verse": 11,
@@ -812,11 +916,7 @@
       },
       {
         "verse": 13,
-        "text": "He stretched out his hand, and touched him, saying, “I want to. Be made clean.”"
-      },
-      {
-        "verse": 13,
-        "text": "Immediately the leprosy left him."
+        "text": "He stretched out his hand, and touched him, saying, “I want to. Be made clean.”Immediately the leprosy left him.  "
       },
       {
         "verse": 14,
@@ -1002,7 +1102,31 @@
       },
       {
         "verse": 20,
-        "text": "He lifted up his eyes to his disciples, and said,"
+        "text": "He lifted up his eyes to his disciples, and said,“Blessed are you who are poor, God’s Kingdom is yours. "
+      },
+      {
+        "verse": 21,
+        "text": "Blessed are you who hunger now,for you will be filled. Blessed are you who weep now, for you will laugh. "
+      },
+      {
+        "verse": 22,
+        "text": "Blessed are you when men hate you, and when they exclude and mock you, and throw out your name as evil, for the Son of Man’s sake."
+      },
+      {
+        "verse": 23,
+        "text": "Rejoice in that day, and leap for joy, for behold, your reward is great in heaven, for their fathers did the same thing to the prophets. "
+      },
+      {
+        "verse": 24,
+        "text": "“But woe to you who are rich!For you have received your consolation. "
+      },
+      {
+        "verse": 25,
+        "text": "Woe to you, you who are full now,for you will be hungry. Woe to you who laugh now, for you will mourn and weep. "
+      },
+      {
+        "verse": 26,
+        "text": "Woe, when men speak well of you,for their fathers did the same thing to the false prophets. "
       },
       {
         "verse": 27,
@@ -1038,7 +1162,15 @@
       },
       {
         "verse": 35,
-        "text": "But love your enemies, and do good, and lend, expecting nothing back; and your reward will be great, and you will be children of the Most High; for he is kind toward the unthankful and evil."
+        "text": "But love your enemies, and do good, and lend, expecting nothing back; and your reward will be great, and you will be children of the Most High; for he is kind toward the unthankful and evil. "
+      },
+      {
+        "verse": 36,
+        "text": "“Therefore be merciful,even as your Father is also merciful. "
+      },
+      {
+        "verse": 37,
+        "text": "Don’t judge,and you won’t be judged. Don’t condemn, and you won’t be condemned. Set free, and you will be set free. "
       },
       {
         "verse": 38,
@@ -1196,7 +1328,7 @@
       },
       {
         "verse": 27,
-        "text": "This is he of whom it is written,"
+        "text": "This is he of whom it is written,‘Behold, I send my messenger before your face, who will prepare your way before you.’ "
       },
       {
         "verse": 28,
@@ -1248,11 +1380,7 @@
       },
       {
         "verse": 40,
-        "text": "Jesus answered him, “Simon, I have something to tell you.”"
-      },
-      {
-        "verse": 40,
-        "text": "He said, “Teacher, say on.”"
+        "text": "Jesus answered him, “Simon, I have something to tell you.”He said, “Teacher, say on.” "
       },
       {
         "verse": 41,
@@ -1264,11 +1392,7 @@
       },
       {
         "verse": 43,
-        "text": "Simon answered, “He, I suppose, to whom he forgave the most.”"
-      },
-      {
-        "verse": 43,
-        "text": "He said to him, “You have judged correctly.”"
+        "text": "Simon answered, “He, I suppose, to whom he forgave the most.”He said to him, “You have judged correctly.”  "
       },
       {
         "verse": 44,
@@ -1418,11 +1542,7 @@
       },
       {
         "verse": 30,
-        "text": "Jesus asked him, “What is your name?”"
-      },
-      {
-        "verse": 30,
-        "text": "He said, “Legion,” for many demons had entered into him."
+        "text": "Jesus asked him, “What is your name?”He said, “Legion,” for many demons had entered into him.  "
       },
       {
         "verse": 31,
@@ -1482,11 +1602,7 @@
       },
       {
         "verse": 45,
-        "text": "Jesus said, “Who touched me?”"
-      },
-      {
-        "verse": 45,
-        "text": "When all denied it, Peter and those with him said, “Master, the multitudes press and jostle you, and you say, ‘Who touched me?’”"
+        "text": "Jesus said, “Who touched me?”When all denied it, Peter and those with him said, “Master, the multitudes press and jostle you, and you say, ‘Who touched me?’” "
       },
       {
         "verse": 46,
@@ -1572,11 +1688,7 @@
       },
       {
         "verse": 10,
-        "text": "The apostles, when they had returned, told him what things they had done."
-      },
-      {
-        "verse": 10,
-        "text": "He took them and withdrew apart to a desert region of a city called Bethsaida."
+        "text": "The apostles, when they had returned, told him what things they had done.He took them and withdrew apart to a desert region of a city called Bethsaida.  "
       },
       {
         "verse": 11,
@@ -1588,19 +1700,11 @@
       },
       {
         "verse": 13,
-        "text": "But he said to them, “You give them something to eat.”"
-      },
-      {
-        "verse": 13,
-        "text": "They said, “We have no more than five loaves and two fish, unless we should go and buy food for all these people.”"
+        "text": "But he said to them, “You give them something to eat.”They said, “We have no more than five loaves and two fish, unless we should go and buy food for all these people.”  "
       },
       {
         "verse": 14,
-        "text": "For they were about five thousand men."
-      },
-      {
-        "verse": 14,
-        "text": "He said to his disciples, “Make them sit down in groups of about fifty each.”"
+        "text": "For they were about five thousand men.He said to his disciples, “Make them sit down in groups of about fifty each.”  "
       },
       {
         "verse": 15,
@@ -1624,11 +1728,7 @@
       },
       {
         "verse": 20,
-        "text": "He said to them, “But who do you say that I am?”"
-      },
-      {
-        "verse": 20,
-        "text": "Peter answered, “The Christ of God.”"
+        "text": "He said to them, “But who do you say that I am?”Peter answered, “The Christ of God.” "
       },
       {
         "verse": 21,
@@ -1720,11 +1820,7 @@
       },
       {
         "verse": 43,
-        "text": "They were all astonished at the majesty of God."
-      },
-      {
-        "verse": 43,
-        "text": "But while all were marveling at all the things which Jesus did, he said to his disciples,"
+        "text": "They were all astonished at the majesty of God.But while all were marveling at all the things which Jesus did, he said to his disciples,  "
       },
       {
         "verse": 44,
@@ -1776,11 +1872,7 @@
       },
       {
         "verse": 56,
-        "text": "For the Son of Man didn’t come to destroy men’s lives, but to save them.”"
-      },
-      {
-        "verse": 56,
-        "text": "They went to another village."
+        "text": "For the Son of Man didn’t come to destroy men’s lives, but to save them.”They went to another village.  "
       },
       {
         "verse": 57,
@@ -1792,11 +1884,7 @@
       },
       {
         "verse": 59,
-        "text": "He said to another, “Follow me!”"
-      },
-      {
-        "verse": 59,
-        "text": "But he said, “Lord, allow me first to go and bury my father.”"
+        "text": "He said to another, “Follow me!”But he said, “Lord, allow me first to go and bury my father.” "
       },
       {
         "verse": 60,
@@ -1958,11 +2046,7 @@
       },
       {
         "verse": 37,
-        "text": "He said, “He who showed mercy on him.”"
-      },
-      {
-        "verse": 37,
-        "text": "Then Jesus said to him, “Go and do likewise.”"
+        "text": "He said, “He who showed mercy on him.”Then Jesus said to him, “Go and do likewise.” "
       },
       {
         "verse": 38,
@@ -1992,7 +2076,15 @@
       },
       {
         "verse": 2,
-        "text": "He said to them, “When you pray, say,"
+        "text": "He said to them, “When you pray, say,‘Our Father in heaven, may your name be kept holy. May your Kingdom come. May your will be done on earth, as it is in heaven. "
+      },
+      {
+        "verse": 3,
+        "text": "Give us day by day our daily bread."
+      },
+      {
+        "verse": 4,
+        "text": "Forgive us our sins,for we ourselves also forgive everyone who is indebted to us.  Bring us not into temptation, but deliver us from the evil one.’ ” "
       },
       {
         "verse": 5,
@@ -2524,11 +2616,7 @@
       },
       {
         "verse": 23,
-        "text": "One said to him, “Lord, are they few who are saved?”"
-      },
-      {
-        "verse": 23,
-        "text": "He said to them,"
+        "text": "One said to him, “Lord, are they few who are saved?”He said to them,  "
       },
       {
         "verse": 24,
@@ -2594,11 +2682,7 @@
       },
       {
         "verse": 4,
-        "text": "But they were silent."
-      },
-      {
-        "verse": 4,
-        "text": "He took him, and healed him, and let him go."
+        "text": "But they were silent.He took him, and healed him, and let him go.  "
       },
       {
         "verse": 5,
@@ -2654,11 +2738,7 @@
       },
       {
         "verse": 18,
-        "text": "They all as one began to make excuses."
-      },
-      {
-        "verse": 18,
-        "text": "“The first said to him, ‘I have bought a field, and I must go and see it. Please have me excused.’"
+        "text": "They all as one began to make excuses.“The first said to him, ‘I have bought a field, and I must go and see it. Please have me excused.’ "
       },
       {
         "verse": 19,
@@ -3132,11 +3212,7 @@
       },
       {
         "verse": 37,
-        "text": "They, answering, asked him, “Where, Lord?”"
-      },
-      {
-        "verse": 37,
-        "text": "He said to them, “Where the body is, there the vultures will also be gathered together.”"
+        "text": "They, answering, asked him, “Where, Lord?”He said to them, “Where the body is, there the vultures will also be gathered together.” "
       }
     ],
     [
@@ -3302,11 +3378,7 @@
       },
       {
         "verse": 41,
-        "text": "“What do you want me to do?”"
-      },
-      {
-        "verse": 41,
-        "text": "He said, “Lord, that I may see again.”"
+        "text": "“What do you want me to do?”He said, “Lord, that I may see again.” "
       },
       {
         "verse": 42,
@@ -3574,15 +3646,15 @@
       },
       {
         "verse": 16,
-        "text": "He will come and destroy these farmers, and will give the vineyard to others.”"
-      },
-      {
-        "verse": 16,
-        "text": "When they heard that, they said, “May that never be!”"
+        "text": "He will come and destroy these farmers, and will give the vineyard to others.”When they heard that, they said, “May that never be!” "
       },
       {
         "verse": 17,
-        "text": "But he looked at them and said, “Then what is this that is written,"
+        "text": "But he looked at them and said, “Then what is this that is written,‘The stone which the builders rejected was made the chief cornerstone?’ "
+      },
+      {
+        "verse": 18,
+        "text": "Everyone who falls on that stone will be broken to pieces,but it will crush whomever it falls on to dust.” "
       },
       {
         "verse": 19,
@@ -3606,11 +3678,7 @@
       },
       {
         "verse": 24,
-        "text": "Show me a denarius. Whose image and inscription are on it?”"
-      },
-      {
-        "verse": 24,
-        "text": "They answered, “Caesar’s.”"
+        "text": "Show me a denarius. Whose image and inscription are on it?”They answered, “Caesar’s.” "
       },
       {
         "verse": 25,
@@ -3682,7 +3750,11 @@
       },
       {
         "verse": 42,
-        "text": "David himself says in the book of Psalms,"
+        "text": "David himself says in the book of Psalms,‘The Lord said to my Lord, “Sit at my right hand, "
+      },
+      {
+        "verse": 43,
+        "text": "until I make your enemies the footstool of your feet.” ’"
       },
       {
         "verse": 44,
@@ -3994,11 +4066,7 @@
       },
       {
         "verse": 35,
-        "text": "He said to them, “When I sent you out without purse, wallet, and sandals, did you lack anything?”"
-      },
-      {
-        "verse": 35,
-        "text": "They said, “Nothing.”"
+        "text": "He said to them, “When I sent you out without purse, wallet, and sandals, did you lack anything?”They said, “Nothing.” "
       },
       {
         "verse": 36,
@@ -4010,11 +4078,7 @@
       },
       {
         "verse": 38,
-        "text": "They said, “Lord, behold, here are two swords.”"
-      },
-      {
-        "verse": 38,
-        "text": "He said to them, “That is enough.”"
+        "text": "They said, “Lord, behold, here are two swords.”He said to them, “That is enough.” "
       },
       {
         "verse": 39,
@@ -4094,11 +4158,7 @@
       },
       {
         "verse": 58,
-        "text": "After a little while someone else saw him, and said, “You also are one of them!”"
-      },
-      {
-        "verse": 58,
-        "text": "But Peter answered, “Man, I am not!”"
+        "text": "After a little while someone else saw him, and said, “You also are one of them!”But Peter answered, “Man, I am not!” "
       },
       {
         "verse": 59,
@@ -4134,11 +4194,7 @@
       },
       {
         "verse": 67,
-        "text": "“If you are the Christ, tell us.”"
-      },
-      {
-        "verse": 67,
-        "text": "But he said to them, “If I tell you, you won’t believe,"
+        "text": "“If you are the Christ, tell us.”But he said to them, “If I tell you, you won’t believe,   "
       },
       {
         "verse": 68,
@@ -4150,11 +4206,7 @@
       },
       {
         "verse": 70,
-        "text": "They all said, “Are you then the Son of God?”"
-      },
-      {
-        "verse": 70,
-        "text": "He said to them, “You say it, because I am.”"
+        "text": "They all said, “Are you then the Son of God?”He said to them, “You say it, because I am.” "
       },
       {
         "verse": 71,
@@ -4172,11 +4224,7 @@
       },
       {
         "verse": 3,
-        "text": "Pilate asked him, “Are you the King of the Jews?”"
-      },
-      {
-        "verse": 3,
-        "text": "He answered him, “So you say.”"
+        "text": "Pilate asked him, “Are you the King of the Jews?”He answered him, “So you say.” "
       },
       {
         "verse": 4,
@@ -4300,11 +4348,7 @@
       },
       {
         "verse": 34,
-        "text": "Jesus said, “Father, forgive them, for they don’t know what they are doing.”"
-      },
-      {
-        "verse": 34,
-        "text": "Dividing his garments among them, they cast lots."
+        "text": "Jesus said, “Father, forgive them, for they don’t know what they are doing.”Dividing his garments among them, they cast lots.  "
       },
       {
         "verse": 35,
@@ -4414,11 +4458,7 @@
       },
       {
         "verse": 5,
-        "text": "Becoming terrified, they bowed their faces down to the earth."
-      },
-      {
-        "verse": 5,
-        "text": "They said to them, “Why do you seek the living among the dead?"
+        "text": "Becoming terrified, they bowed their faces down to the earth.They said to them, “Why do you seek the living among the dead?  "
       },
       {
         "verse": 6,
@@ -4474,11 +4514,7 @@
       },
       {
         "verse": 19,
-        "text": "He said to them, “What things?”"
-      },
-      {
-        "verse": 19,
-        "text": "They said to him, “The things concerning Jesus, the Nazarene, who was a prophet mighty in deed and word before God and all the people;"
+        "text": "He said to them, “What things?”They said to him, “The things concerning Jesus, the Nazarene, who was a prophet mighty in deed and word before God and all the people;  "
       },
       {
         "verse": 20,
@@ -4518,11 +4554,7 @@
       },
       {
         "verse": 29,
-        "text": "They urged him, saying, “Stay with us, for it is almost evening, and the day is almost over.”"
-      },
-      {
-        "verse": 29,
-        "text": "He went in to stay with them."
+        "text": "They urged him, saying, “Stay with us, for it is almost evening, and the day is almost over.”He went in to stay with them.  "
       },
       {
         "verse": 30,

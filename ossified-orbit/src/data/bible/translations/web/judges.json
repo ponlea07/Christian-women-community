@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "judges",
   "chapters": [
     [
       {
@@ -316,11 +316,7 @@
       },
       {
         "verse": 19,
-        "text": "But he himself turned back from the stone idols that were by Gilgal, and said, “I have a secret message for you, O king.”"
-      },
-      {
-        "verse": 19,
-        "text": "The king said, “Keep silence!” All who stood by him left him."
+        "text": "But he himself turned back from the stone idols that were by Gilgal, and said, “I have a secret message for you, O king.”The king said, “Keep silence!” All who stood by him left him. "
       },
       {
         "verse": 20,
@@ -446,11 +442,7 @@
       },
       {
         "verse": 19,
-        "text": "He said to her, “Please give me a little water to drink; for I am thirsty.”"
-      },
-      {
-        "verse": 19,
-        "text": "She opened a container of milk, and gave him a drink, and covered him."
+        "text": "He said to her, “Please give me a little water to drink; for I am thirsty.”She opened a container of milk, and gave him a drink, and covered him. "
       },
       {
         "verse": 20,
@@ -476,11 +468,127 @@
     [
       {
         "verse": 1,
-        "text": "Then Deborah and Barak the son of Abinoam sang on that day, saying,"
+        "text": "Then Deborah and Barak the son of Abinoam sang on that day, saying, "
+      },
+      {
+        "verse": 2,
+        "text": "“Because the leaders took the lead in Israel,because the people offered themselves willingly, be blessed, Yahweh!  "
+      },
+      {
+        "verse": 3,
+        "text": "“Hear, you kings!Give ear, you princes! I, even I, will sing to Yahweh. I will sing praise to Yahweh, the God of Israel.  "
+      },
+      {
+        "verse": 4,
+        "text": "“Yahweh, when you went out of Seir,when you marched out of the field of Edom, the earth trembled, the sky also dropped. Yes, the clouds dropped water. "
+      },
+      {
+        "verse": 5,
+        "text": "The mountains quaked Yahweh’s presence,even Sinai at the presence of Yahweh, the God of Israel.  "
+      },
+      {
+        "verse": 6,
+        "text": "“In the days of Shamgar the son of Anath,in the days of Jael, the highways were unoccupied. The travelers walked through byways. "
+      },
+      {
+        "verse": 7,
+        "text": "The rulers ceased in Israel.They ceased until I, Deborah, arose; Until I arose a mother in Israel. "
+      },
+      {
+        "verse": 8,
+        "text": "They chose new gods.Then war was in the gates. Was there a shield or spear seen among forty thousand in Israel? "
+      },
+      {
+        "verse": 9,
+        "text": "My heart is toward the governors of Israel,who offered themselves willingly among the people. Bless Yahweh!  "
+      },
+      {
+        "verse": 10,
+        "text": "“Speak, you who ride on white donkeys,you who sit on rich carpets, and you who walk by the way. "
+      },
+      {
+        "verse": 11,
+        "text": "Far from the noise of archers, in the places of drawing water,there they will rehearse Yahweh’s righteous acts, the righteous acts of his rule in Israel. “Then Yahweh’s people went down to the gates. "
+      },
+      {
+        "verse": 12,
+        "text": "‘Awake, awake, Deborah!Awake, awake, utter a song! Arise, Barak, and lead away your captives, you son of Abinoam.’  "
+      },
+      {
+        "verse": 13,
+        "text": "“Then a remnant of the nobles and the people came down.Yahweh came down for me against the mighty. "
+      },
+      {
+        "verse": 14,
+        "text": "Those whose root is in Amalek came out of Ephraim,after you, Benjamin, among your peoples. Governors come down out of Machir. Those who handle the marshal’s staff came out of Zebulun. "
+      },
+      {
+        "verse": 15,
+        "text": "The princes of Issachar were with Deborah.As was Issachar, so was Barak. They rushed into the valley at his feet. By the watercourses of Reuben, there were great resolves of heart. "
+      },
+      {
+        "verse": 16,
+        "text": "Why did you sit among the sheepfolds?To hear the whistling for the flocks? At the watercourses of Reuben, there were great searchings of heart. "
+      },
+      {
+        "verse": 17,
+        "text": "Gilead lived beyond the Jordan.Why did Dan remain in ships? Asher sat still at the haven of the sea, and lived by his creeks. "
+      },
+      {
+        "verse": 18,
+        "text": "Zebulun was a people that jeopardized their lives to the death;Naphtali also, on the high places of the field.  "
+      },
+      {
+        "verse": 19,
+        "text": "“The kings came and fought,then the kings of Canaan fought at Taanach by the waters of Megiddo. They took no plunder of silver. "
+      },
+      {
+        "verse": 20,
+        "text": "From the sky the stars fought.From their courses, they fought against Sisera. "
+      },
+      {
+        "verse": 21,
+        "text": "The river Kishon swept them away,that ancient river, the river Kishon. My soul, march on with strength. "
+      },
+      {
+        "verse": 22,
+        "text": "Then the horse hoofs stamped because of the prancing,the prancing of their strong ones. "
+      },
+      {
+        "verse": 23,
+        "text": "‘Curse Meroz,’ said Yahweh’s angel.‘Curse bitterly its inhabitants, because they didn’t come to help Yahweh, to help Yahweh against the mighty.’  "
+      },
+      {
+        "verse": 24,
+        "text": "“Jael shall be blessed above women,the wife of Heber the Kenite; blessed shall she be above women in the tent. "
+      },
+      {
+        "verse": 25,
+        "text": "He asked for water.She gave him milk. She brought him butter in a lordly dish. "
+      },
+      {
+        "verse": 26,
+        "text": "She put her hand to the tent peg,and her right hand to the workmen’s hammer. With the hammer she struck Sisera. She struck through his head. Yes, she pierced and struck through his temples. "
+      },
+      {
+        "verse": 27,
+        "text": "At her feet he bowed, he fell, he lay.At her feet he bowed, he fell. Where he bowed, there he fell down dead.  "
+      },
+      {
+        "verse": 28,
+        "text": "“Through the window she looked out, and cried:Sisera’s mother looked through the lattice. ‘Why is his chariot so long in coming? Why do the wheels of his chariots wait?’ "
+      },
+      {
+        "verse": 29,
+        "text": "Her wise ladies answered her,Yes, she returned answer to herself, "
+      },
+      {
+        "verse": 30,
+        "text": "‘Have they not found, have they not divided the plunder?A lady, two ladies to every man; to Sisera a plunder of dyed garments, a plunder of dyed garments embroidered, of dyed garments embroidered on both sides, on the necks of the plunder?’  "
       },
       {
         "verse": 31,
-        "text": "Then the land had rest forty years."
+        "text": "“So let all your enemies perish, Yahweh,but let those who love him be as the sun when it rises in its strength.” Then the land had rest forty years. "
       }
     ],
     [
@@ -554,11 +662,7 @@
       },
       {
         "verse": 18,
-        "text": "Please don’t go away until I come to you, and bring out my present, and lay it before you.”"
-      },
-      {
-        "verse": 18,
-        "text": "He said, “I will wait until you come back.”"
+        "text": "Please don’t go away until I come to you, and bring out my present, and lay it before you.”He said, “I will wait until you come back.” "
       },
       {
         "verse": 19,
@@ -566,11 +670,7 @@
       },
       {
         "verse": 20,
-        "text": "The angel of God said to him, “Take the meat and the unleavened cakes, and lay them on this rock, and pour out the broth.”"
-      },
-      {
-        "verse": 20,
-        "text": "He did so."
+        "text": "The angel of God said to him, “Take the meat and the unleavened cakes, and lay them on this rock, and pour out the broth.”He did so.  "
       },
       {
         "verse": 21,
@@ -606,11 +706,7 @@
       },
       {
         "verse": 29,
-        "text": "They said to one another, “Who has done this thing?”"
-      },
-      {
-        "verse": 29,
-        "text": "When they inquired and asked, they said, “Gideon the son of Joash has done this thing.”"
+        "text": "They said to one another, “Who has done this thing?”When they inquired and asked, they said, “Gideon the son of Joash has done this thing.” "
       },
       {
         "verse": 30,
@@ -830,11 +926,7 @@
       },
       {
         "verse": 18,
-        "text": "Then he said to Zebah and Zalmunna, “What kind of men were they whom you killed at Tabor?”"
-      },
-      {
-        "verse": 18,
-        "text": "They answered, “They were like you. They all resembled the children of a king.”"
+        "text": "Then he said to Zebah and Zalmunna, “What kind of men were they whom you killed at Tabor?”They answered, “They were like you. They all resembled the children of a king.” "
       },
       {
         "verse": 19,
@@ -1048,11 +1140,7 @@
       },
       {
         "verse": 36,
-        "text": "When Gaal saw the people, he said to Zebul, “Behold, people are coming down from the tops of the mountains.”"
-      },
-      {
-        "verse": 36,
-        "text": "Zebul said to him, “You see the shadows of the mountains as if they were men.”"
+        "text": "When Gaal saw the people, he said to Zebul, “Behold, people are coming down from the tops of the mountains.”Zebul said to him, “You see the shadows of the mountains as if they were men.” "
       },
       {
         "verse": 37,
@@ -1480,11 +1568,7 @@
       },
       {
         "verse": 11,
-        "text": "Manoah arose and followed his wife, and came to the man, and said to him, “Are you the man who spoke to my wife?”"
-      },
-      {
-        "verse": 11,
-        "text": "He said, “I am.”"
+        "text": "Manoah arose and followed his wife, and came to the man, and said to him, “Are you the man who spoke to my wife?”He said, “I am.” "
       },
       {
         "verse": 12,
@@ -1554,11 +1638,7 @@
       },
       {
         "verse": 3,
-        "text": "Then his father and his mother said to him, “Isn’t there a woman among your brothers’ daughters, or among all my people, that you go to take a wife of the uncircumcised Philistines?”"
-      },
-      {
-        "verse": 3,
-        "text": "Samson said to his father, “Get her for me, for she pleases me well.”"
+        "text": "Then his father and his mother said to him, “Isn’t there a woman among your brothers’ daughters, or among all my people, that you go to take a wife of the uncircumcised Philistines?”Samson said to his father, “Get her for me, for she pleases me well.” "
       },
       {
         "verse": 4,
@@ -1598,19 +1678,11 @@
       },
       {
         "verse": 13,
-        "text": "but if you can’t tell me the answer, then you shall give me thirty linen garments and thirty changes of clothing.”"
-      },
-      {
-        "verse": 13,
-        "text": "They said to him, “Tell us your riddle, that we may hear it.”"
+        "text": "but if you can’t tell me the answer, then you shall give me thirty linen garments and thirty changes of clothing.”They said to him, “Tell us your riddle, that we may hear it.” "
       },
       {
         "verse": 14,
-        "text": "He said to them,"
-      },
-      {
-        "verse": 14,
-        "text": "They couldn’t in three days declare the riddle."
+        "text": "He said to them,“Out of the eater came out food. Out of the strong came out sweetness.” They couldn’t in three days declare the riddle.  "
       },
       {
         "verse": 15,
@@ -1618,11 +1690,7 @@
       },
       {
         "verse": 16,
-        "text": "Samson’s wife wept before him, and said, “You just hate me, and don’t love me. You’ve told a riddle to the children of my people, and haven’t told it to me.”"
-      },
-      {
-        "verse": 16,
-        "text": "He said to her, “Behold, I haven’t told my father or my mother, so why should I tell you?”"
+        "text": "Samson’s wife wept before him, and said, “You just hate me, and don’t love me. You’ve told a riddle to the children of my people, and haven’t told it to me.”He said to her, “Behold, I haven’t told my father or my mother, so why should I tell you?” "
       },
       {
         "verse": 17,
@@ -1630,11 +1698,7 @@
       },
       {
         "verse": 18,
-        "text": "The men of the city said to him on the seventh day before the sun went down, “What is sweeter than honey? What is stronger than a lion?”"
-      },
-      {
-        "verse": 18,
-        "text": "He said to them,"
+        "text": "The men of the city said to him on the seventh day before the sun went down, “What is sweeter than honey? What is stronger than a lion?”He said to them, “If you hadn’t plowed with my heifer, you wouldn’t have found out my riddle.” "
       },
       {
         "verse": 19,
@@ -1648,11 +1712,7 @@
     [
       {
         "verse": 1,
-        "text": "But after a while, in the time of wheat harvest, Samson visited his wife with a young goat. He said, “I will go in to my wife’s room.”"
-      },
-      {
-        "verse": 1,
-        "text": "But her father wouldn’t allow him to go in."
+        "text": "But after a while, in the time of wheat harvest, Samson visited his wife with a young goat. He said, “I will go in to my wife’s room.”But her father wouldn’t allow him to go in.  "
       },
       {
         "verse": 2,
@@ -1672,11 +1732,7 @@
       },
       {
         "verse": 6,
-        "text": "Then the Philistines said, “Who has done this?”"
-      },
-      {
-        "verse": 6,
-        "text": "They said, “Samson, the son-in-law of the Timnite, because he has taken his wife and given her to his companion.” The Philistines came up, and burned her and her father with fire."
+        "text": "Then the Philistines said, “Who has done this?”They said, “Samson, the son-in-law of the Timnite, because he has taken his wife and given her to his companion.” The Philistines came up, and burned her and her father with fire. "
       },
       {
         "verse": 7,
@@ -1692,27 +1748,15 @@
       },
       {
         "verse": 10,
-        "text": "The men of Judah said, “Why have you come up against us?”"
-      },
-      {
-        "verse": 10,
-        "text": "They said, “We have come up to bind Samson, to do to him as he has done to us.”"
+        "text": "The men of Judah said, “Why have you come up against us?”They said, “We have come up to bind Samson, to do to him as he has done to us.” "
       },
       {
         "verse": 11,
-        "text": "Then three thousand men of Judah went down to the cave in Etam’s rock, and said to Samson, “Don’t you know that the Philistines are rulers over us? What then is this that you have done to us?”"
-      },
-      {
-        "verse": 11,
-        "text": "He said to them, “As they did to me, so I have done to them.”"
+        "text": "Then three thousand men of Judah went down to the cave in Etam’s rock, and said to Samson, “Don’t you know that the Philistines are rulers over us? What then is this that you have done to us?”He said to them, “As they did to me, so I have done to them.” "
       },
       {
         "verse": 12,
-        "text": "They said to him, “We have come down to bind you, that we may deliver you into the hand of the Philistines.”"
-      },
-      {
-        "verse": 12,
-        "text": "Samson said to them, “Swear to me that you will not attack me yourselves.”"
+        "text": "They said to him, “We have come down to bind you, that we may deliver you into the hand of the Philistines.”Samson said to them, “Swear to me that you will not attack me yourselves.” "
       },
       {
         "verse": 13,
@@ -1798,11 +1842,7 @@
       },
       {
         "verse": 13,
-        "text": "Delilah said to Samson, “Until now, you have mocked me and told me lies. Tell me with what you might be bound.”"
-      },
-      {
-        "verse": 13,
-        "text": "He said to her, “If you weave the seven locks of my head with the fabric on the loom.”"
+        "text": "Delilah said to Samson, “Until now, you have mocked me and told me lies. Tell me with what you might be bound.”He said to her, “If you weave the seven locks of my head with the fabric on the loom.” "
       },
       {
         "verse": 14,
@@ -1830,11 +1870,7 @@
       },
       {
         "verse": 20,
-        "text": "She said, “The Philistines are upon you, Samson!”"
-      },
-      {
-        "verse": 20,
-        "text": "He awoke out of his sleep, and said, “I will go out as at other times, and shake myself free.” But he didn’t know that Yahweh had departed from him."
+        "text": "She said, “The Philistines are upon you, Samson!”He awoke out of his sleep, and said, “I will go out as at other times, and shake myself free.” But he didn’t know that Yahweh had departed from him.  "
       },
       {
         "verse": 21,
@@ -1888,11 +1924,7 @@
       },
       {
         "verse": 2,
-        "text": "He said to his mother, “The eleven hundred pieces of silver that were taken from you, about which you uttered a curse, and also spoke it in my ears—behold, the silver is with me. I took it.”"
-      },
-      {
-        "verse": 2,
-        "text": "His mother said, “May Yahweh bless my son!”"
+        "text": "He said to his mother, “The eleven hundred pieces of silver that were taken from you, about which you uttered a curse, and also spoke it in my ears—behold, the silver is with me. I took it.”His mother said, “May Yahweh bless my son!” "
       },
       {
         "verse": 3,
@@ -1920,11 +1952,7 @@
       },
       {
         "verse": 9,
-        "text": "Micah said to him, “Where did you come from?”"
-      },
-      {
-        "verse": 9,
-        "text": "He said to him, “I am a Levite of Bethlehem Judah, and I am looking for a place to live.”"
+        "text": "Micah said to him, “Where did you come from?”He said to him, “I am a Levite of Bethlehem Judah, and I am looking for a place to live.” "
       },
       {
         "verse": 10,
@@ -1950,11 +1978,7 @@
       },
       {
         "verse": 2,
-        "text": "The children of Dan sent five men of their family from their whole number, men of valor, from Zorah and from Eshtaol, to spy out the land and to search it. They said to them, “Go, explore the land!”"
-      },
-      {
-        "verse": 2,
-        "text": "They came to the hill country of Ephraim, to the house of Micah, and lodged there."
+        "text": "The children of Dan sent five men of their family from their whole number, men of valor, from Zorah and from Eshtaol, to spy out the land and to search it. They said to them, “Go, explore the land!”They came to the hill country of Ephraim, to the house of Micah, and lodged there.  "
       },
       {
         "verse": 3,
@@ -2246,11 +2270,7 @@
       },
       {
         "verse": 13,
-        "text": "Now therefore deliver up the men, the wicked fellows who are in Gibeah, that we may put them to death and put away evil from Israel.”"
-      },
-      {
-        "verse": 13,
-        "text": "But Benjamin would not listen to the voice of their brothers, the children of Israel."
+        "text": "Now therefore deliver up the men, the wicked fellows who are in Gibeah, that we may put them to death and put away evil from Israel.”But Benjamin would not listen to the voice of their brothers, the children of Israel.  "
       },
       {
         "verse": 14,
@@ -2270,11 +2290,7 @@
       },
       {
         "verse": 18,
-        "text": "The children of Israel arose, went up to Bethel, and asked counsel of God. They asked, “Who shall go up for us first to battle against the children of Benjamin?”"
-      },
-      {
-        "verse": 18,
-        "text": "Yahweh said, “Judah first.”"
+        "text": "The children of Israel arose, went up to Bethel, and asked counsel of God. They asked, “Who shall go up for us first to battle against the children of Benjamin?”Yahweh said, “Judah first.” "
       },
       {
         "verse": 19,
@@ -2294,11 +2310,7 @@
       },
       {
         "verse": 23,
-        "text": "The children of Israel went up and wept before Yahweh until evening; and they asked of Yahweh, saying, “Shall I again draw near to battle against the children of Benjamin my brother?”"
-      },
-      {
-        "verse": 23,
-        "text": "Yahweh said, “Go up against him.”"
+        "text": "The children of Israel went up and wept before Yahweh until evening; and they asked of Yahweh, saying, “Shall I again draw near to battle against the children of Benjamin my brother?”Yahweh said, “Go up against him.” "
       },
       {
         "verse": 24,
@@ -2318,11 +2330,7 @@
       },
       {
         "verse": 28,
-        "text": "and Phinehas, the son of Eleazar, the son of Aaron, stood before it in those days), saying, “Shall I yet again go out to battle against the children of Benjamin my brother, or shall I cease?”"
-      },
-      {
-        "verse": 28,
-        "text": "Yahweh said, “Go up; for tomorrow I will deliver him into your hand.”"
+        "text": "and Phinehas, the son of Eleazar, the son of Aaron, stood before it in those days), saying, “Shall I yet again go out to battle against the children of Benjamin my brother, or shall I cease?”Yahweh said, “Go up; for tomorrow I will deliver him into your hand.” "
       },
       {
         "verse": 29,

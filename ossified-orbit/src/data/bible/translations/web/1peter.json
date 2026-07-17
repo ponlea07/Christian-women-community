@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "1peter",
   "chapters": [
     [
       {
@@ -96,11 +96,11 @@
       },
       {
         "verse": 24,
-        "text": "For,"
+        "text": "For,“All flesh is like grass, and all of man’s glory like the flower in the grass. The grass withers, and its flower falls; "
       },
       {
         "verse": 25,
-        "text": "This is the word of Good News which was preached to you."
+        "text": "but the Lord’s word endures forever.”This is the word of Good News which was preached to you. "
       }
     ],
     [
@@ -126,19 +126,15 @@
       },
       {
         "verse": 6,
-        "text": "Because it is contained in Scripture,"
+        "text": "Because it is contained in Scripture,“Behold, I lay in Zion a chief cornerstone, chosen and precious: He who believes in him will not be disappointed.” "
       },
       {
         "verse": 7,
-        "text": "For you who believe therefore is the honor, but for those who are disobedient,"
+        "text": "For you who believe therefore is the honor, but for those who are disobedient,“The stone which the builders rejected has become the chief cornerstone,” "
       },
       {
         "verse": 8,
-        "text": "and,"
-      },
-      {
-        "verse": 8,
-        "text": "For they stumble at the word, being disobedient, to which also they were appointed."
+        "text": "and,“a stumbling stone and a rock of offense.” For they stumble at the word, being disobedient, to which also they were appointed.  "
       },
       {
         "verse": 9,
@@ -248,7 +244,15 @@
       },
       {
         "verse": 10,
-        "text": "For,"
+        "text": "For,“He who would love life and see good days, let him keep his tongue from evil and his lips from speaking deceit. "
+      },
+      {
+        "verse": 11,
+        "text": "Let him turn away from evil and do good.Let him seek peace and pursue it. "
+      },
+      {
+        "verse": 12,
+        "text": "For the eyes of the Lord are on the righteous,and his ears open to their prayer; but the face of the Lord is against those who do evil.” "
       },
       {
         "verse": 13,
@@ -424,11 +428,7 @@
       },
       {
         "verse": 14,
-        "text": "Greet one another with a kiss of love."
-      },
-      {
-        "verse": 14,
-        "text": "Peace be to all of you who are in Christ Jesus. Amen."
+        "text": "Greet one another with a kiss of love.Peace be to all of you who are in Christ Jesus. Amen. "
       }
     ]
   ]

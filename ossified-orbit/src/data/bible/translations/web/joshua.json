@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "joshua",
   "chapters": [
     [
       {
@@ -396,11 +396,7 @@
       },
       {
         "verse": 14,
-        "text": "He said, “No; but I have come now as commander of Yahweh’s army.”"
-      },
-      {
-        "verse": 14,
-        "text": "Joshua fell on his face to the earth, and worshiped, and asked him, “What does my lord say to his servant?”"
+        "text": "He said, “No; but I have come now as commander of Yahweh’s army.”Joshua fell on his face to the earth, and worshiped, and asked him, “What does my lord say to his servant?” "
       },
       {
         "verse": 15,
@@ -524,11 +520,7 @@
       },
       {
         "verse": 2,
-        "text": "Joshua sent men from Jericho to Ai, which is beside Beth Aven, on the east side of Bethel, and spoke to them, saying, “Go up and spy out the land.”"
-      },
-      {
-        "verse": 2,
-        "text": "The men went up and spied out Ai."
+        "text": "Joshua sent men from Jericho to Ai, which is beside Beth Aven, on the east side of Bethel, and spoke to them, saying, “Go up and spy out the land.”The men went up and spied out Ai.  "
       },
       {
         "verse": 3,
@@ -698,11 +690,7 @@
       },
       {
         "verse": 18,
-        "text": "Yahweh said to Joshua, “Stretch out the javelin that is in your hand toward Ai, for I will give it into your hand.”"
-      },
-      {
-        "verse": 18,
-        "text": "Joshua stretched out the javelin that was in his hand toward the city."
+        "text": "Yahweh said to Joshua, “Stretch out the javelin that is in your hand toward Ai, for I will give it into your hand.”Joshua stretched out the javelin that was in his hand toward the city.  "
       },
       {
         "verse": 19,
@@ -804,11 +792,7 @@
       },
       {
         "verse": 8,
-        "text": "They said to Joshua, “We are your servants.”"
-      },
-      {
-        "verse": 8,
-        "text": "Joshua said to them, “Who are you? Where do you come from?”"
+        "text": "They said to Joshua, “We are your servants.”Joshua said to them, “Who are you? Where do you come from?” "
       },
       {
         "verse": 9,
@@ -982,11 +966,7 @@
       },
       {
         "verse": 24,
-        "text": "When they brought those kings out to Joshua, Joshua called for all the men of Israel, and said to the chiefs of the men of war who went with him, “Come near. Put your feet on the necks of these kings.”"
-      },
-      {
-        "verse": 24,
-        "text": "They came near, and put their feet on their necks."
+        "text": "When they brought those kings out to Joshua, Joshua called for all the men of Israel, and said to the chiefs of the men of war who went with him, “Come near. Put your feet on the necks of these kings.”They came near, and put their feet on their necks. "
       },
       {
         "verse": 25,
@@ -1190,7 +1170,71 @@
       },
       {
         "verse": 8,
-        "text": "in the hill country, and in the lowland, and in the Arabah, and in the slopes, and in the wilderness, and in the South; the Hittite, the Amorite, and the Canaanite, the Perizzite, the Hivite, and the Jebusite:"
+        "text": "in the hill country, and in the lowland, and in the Arabah, and in the slopes, and in the wilderness, and in the South; the Hittite, the Amorite, and the Canaanite, the Perizzite, the Hivite, and the Jebusite: "
+      },
+      {
+        "verse": 9,
+        "text": "the king of Jericho, one;the king of Ai, which is beside Bethel, one; "
+      },
+      {
+        "verse": 10,
+        "text": "the king of Jerusalem, one;the king of Hebron, one; "
+      },
+      {
+        "verse": 11,
+        "text": "the king of Jarmuth, one;the king of Lachish, one; "
+      },
+      {
+        "verse": 12,
+        "text": "the king of Eglon, one;the king of Gezer, one; "
+      },
+      {
+        "verse": 13,
+        "text": "the king of Debir, one;the king of Geder, one; "
+      },
+      {
+        "verse": 14,
+        "text": "the king of Hormah, one;the king of Arad, one; "
+      },
+      {
+        "verse": 15,
+        "text": "the king of Libnah, one;the king of Adullam, one; "
+      },
+      {
+        "verse": 16,
+        "text": "the king of Makkedah, one;the king of Bethel, one; "
+      },
+      {
+        "verse": 17,
+        "text": "the king of Tappuah, one;the king of Hepher, one; "
+      },
+      {
+        "verse": 18,
+        "text": "the king of Aphek, one;the king of Lassharon, one; "
+      },
+      {
+        "verse": 19,
+        "text": "the king of Madon, one;the king of Hazor, one; "
+      },
+      {
+        "verse": 20,
+        "text": "the king of Shimron Meron, one;the king of Achshaph, one; "
+      },
+      {
+        "verse": 21,
+        "text": "the king of Taanach, one;the king of Megiddo, one; "
+      },
+      {
+        "verse": 22,
+        "text": "the king of Kedesh, one;the king of Jokneam in Carmel, one; "
+      },
+      {
+        "verse": 23,
+        "text": "the king of Dor in the height of Dor, one;the king of Goiim in Gilgal, one; "
+      },
+      {
+        "verse": 24,
+        "text": "the king of Tirzah, one:all the kings thirty-one. "
       }
     ],
     [
@@ -1464,11 +1508,7 @@
       },
       {
         "verse": 19,
-        "text": "She said, “Give me a blessing. Because you have set me in the land of the South, give me also springs of water.”"
-      },
-      {
-        "verse": 19,
-        "text": "So he gave her the upper springs and the lower springs."
+        "text": "She said, “Give me a blessing. Because you have set me in the land of the South, give me also springs of water.”So he gave her the upper springs and the lower springs. "
       },
       {
         "verse": 20,
@@ -1520,7 +1560,127 @@
       },
       {
         "verse": 32,
-        "text": "Lebaoth, Shilhim, Ain, and Rimmon. All the cities are twenty-nine, with their villages."
+        "text": "Lebaoth, Shilhim, Ain, and Rimmon. All the cities are twenty-nine, with their villages. "
+      },
+      {
+        "verse": 33,
+        "text": "In the lowland, Eshtaol, Zorah, Ashnah,"
+      },
+      {
+        "verse": 34,
+        "text": "Zanoah, En Gannim, Tappuah, Enam,"
+      },
+      {
+        "verse": 35,
+        "text": "Jarmuth, Adullam, Socoh, Azekah,"
+      },
+      {
+        "verse": 36,
+        "text": "Shaaraim, Adithaim and Gederah (or Gederothaim); fourteen cities with their villages."
+      },
+      {
+        "verse": 37,
+        "text": "Zenan, Hadashah, Migdal Gad,"
+      },
+      {
+        "verse": 38,
+        "text": "Dilean, Mizpah, Joktheel,"
+      },
+      {
+        "verse": 39,
+        "text": "Lachish, Bozkath, Eglon,"
+      },
+      {
+        "verse": 40,
+        "text": "Cabbon, Lahmam, Chitlish,"
+      },
+      {
+        "verse": 41,
+        "text": "Gederoth, Beth Dagon, Naamah, and Makkedah; sixteen cities with their villages."
+      },
+      {
+        "verse": 42,
+        "text": "Libnah, Ether, Ashan,"
+      },
+      {
+        "verse": 43,
+        "text": "Iphtah, Ashnah, Nezib,"
+      },
+      {
+        "verse": 44,
+        "text": "Keilah, Achzib, and Mareshah; nine cities with their villages."
+      },
+      {
+        "verse": 45,
+        "text": "Ekron, with its towns and its villages;"
+      },
+      {
+        "verse": 46,
+        "text": "from Ekron even to the sea, all that were by the side of Ashdod, with their villages."
+      },
+      {
+        "verse": 47,
+        "text": "Ashdod, its towns and its villages; Gaza, its towns and its villages; to the brook of Egypt, and the great sea with its coastline."
+      },
+      {
+        "verse": 48,
+        "text": "In the hill country, Shamir, Jattir, Socoh,"
+      },
+      {
+        "verse": 49,
+        "text": "Dannah, Kiriath Sannah (which is Debir),"
+      },
+      {
+        "verse": 50,
+        "text": "Anab, Eshtemoh, Anim,"
+      },
+      {
+        "verse": 51,
+        "text": "Goshen, Holon, and Giloh; eleven cities with their villages."
+      },
+      {
+        "verse": 52,
+        "text": "Arab, Dumah, Eshan,"
+      },
+      {
+        "verse": 53,
+        "text": "Janim, Beth Tappuah, Aphekah,"
+      },
+      {
+        "verse": 54,
+        "text": "Humtah, Kiriath Arba (also called Hebron), and Zior; nine cities with their villages."
+      },
+      {
+        "verse": 55,
+        "text": "Maon, Carmel, Ziph, Jutah,"
+      },
+      {
+        "verse": 56,
+        "text": "Jezreel, Jokdeam, Zanoah,"
+      },
+      {
+        "verse": 57,
+        "text": "Kain, Gibeah, and Timnah; ten cities with their villages."
+      },
+      {
+        "verse": 58,
+        "text": "Halhul, Beth Zur, Gedor,"
+      },
+      {
+        "verse": 59,
+        "text": "Maarath, Beth Anoth, and Eltekon; six cities with their villages."
+      },
+      {
+        "verse": 60,
+        "text": "Kiriath Baal (also called Kiriath Jearim), and Rabbah; two cities with their villages."
+      },
+      {
+        "verse": 61,
+        "text": "In the wilderness, Beth Arabah, Middin, Secacah,"
+      },
+      {
+        "verse": 62,
+        "text": "Nibshan, the City of Salt, and En Gedi; six cities with their villages."
       },
       {
         "verse": 63,
@@ -2474,11 +2634,7 @@
       },
       {
         "verse": 22,
-        "text": "Joshua said to the people, “You are witnesses against yourselves that you have chosen Yahweh yourselves, to serve him.”"
-      },
-      {
-        "verse": 22,
-        "text": "They said, “We are witnesses.”"
+        "text": "Joshua said to the people, “You are witnesses against yourselves that you have chosen Yahweh yourselves, to serve him.”They said, “We are witnesses.” "
       },
       {
         "verse": 23,

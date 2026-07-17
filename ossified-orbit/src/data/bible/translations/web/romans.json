@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "romans",
   "chapters": [
     [
       {
@@ -264,7 +264,7 @@
       },
       {
         "verse": 4,
-        "text": "May it never be! Yes, let God be found true, but every man a liar. As it is written,"
+        "text": "May it never be! Yes, let God be found true, but every man a liar. As it is written,“that you might be justified in your words, and might prevail when you come into judgment.” "
       },
       {
         "verse": 5,
@@ -288,7 +288,39 @@
       },
       {
         "verse": 10,
-        "text": "As it is written,"
+        "text": "As it is written,“There is no one righteous; no, not one. "
+      },
+      {
+        "verse": 11,
+        "text": "There is no one who understands.There is no one who seeks after God. "
+      },
+      {
+        "verse": 12,
+        "text": "They have all turned away.They have together become unprofitable. There is no one who does good, no, not so much as one.” "
+      },
+      {
+        "verse": 13,
+        "text": "“Their throat is an open tomb.With their tongues they have used deceit.” “The poison of vipers is under their lips.” "
+      },
+      {
+        "verse": 14,
+        "text": "“Their mouth is full of cursing and bitterness.”"
+      },
+      {
+        "verse": 15,
+        "text": "“Their feet are swift to shed blood."
+      },
+      {
+        "verse": 16,
+        "text": "Destruction and misery are in their ways."
+      },
+      {
+        "verse": 17,
+        "text": "The way of peace, they haven’t known.”"
+      },
+      {
+        "verse": 18,
+        "text": "“There is no fear of God before their eyes.”"
       },
       {
         "verse": 19,
@@ -366,7 +398,15 @@
       },
       {
         "verse": 6,
-        "text": "Even as David also pronounces blessing on the man to whom God counts righteousness apart from works,"
+        "text": "Even as David also pronounces blessing on the man to whom God counts righteousness apart from works, "
+      },
+      {
+        "verse": 7,
+        "text": "“Blessed are they whose iniquities are forgiven,whose sins are covered. "
+      },
+      {
+        "verse": 8,
+        "text": "Blessed is the man whom the Lord will by no means charge with sin.”"
       },
       {
         "verse": 9,
@@ -862,7 +902,19 @@
       },
       {
         "verse": 36,
-        "text": "Even as it is written,"
+        "text": "Even as it is written,“For your sake we are killed all day long. We were accounted as sheep for the slaughter.” "
+      },
+      {
+        "verse": 37,
+        "text": "No, in all these things, we are more than conquerors through him who loved us."
+      },
+      {
+        "verse": 38,
+        "text": "For I am persuaded that neither death, nor life, nor angels, nor principalities, nor things present, nor things to come, nor powers,"
+      },
+      {
+        "verse": 39,
+        "text": "nor height, nor depth, nor any other created thing will be able to separate us from God’s love which is in Christ Jesus our Lord."
       }
     ],
     [
@@ -964,15 +1016,23 @@
       },
       {
         "verse": 25,
-        "text": "As he says also in Hosea,"
+        "text": "As he says also in Hosea,“I will call them ‘my people,’ which were not my people; and her ‘beloved,’ who was not beloved.” "
+      },
+      {
+        "verse": 26,
+        "text": "“It will be that in the place where it was said to them, ‘You are not my people,’there they will be called ‘children of the living God.’ ” "
       },
       {
         "verse": 27,
-        "text": "Isaiah cries concerning Israel,"
+        "text": "Isaiah cries concerning Israel,“If the number of the children of Israel are as the sand of the sea, it is the remnant who will be saved; "
+      },
+      {
+        "verse": 28,
+        "text": "for He will finish the work and cut it short in righteousness,because the LORD will make a short work upon the earth.” "
       },
       {
         "verse": 29,
-        "text": "As Isaiah has said before,"
+        "text": "As Isaiah has said before,“Unless the Lord of Armies had left us a seed, we would have become like Sodom, and would have been made like Gomorrah.” "
       },
       {
         "verse": 30,
@@ -988,7 +1048,7 @@
       },
       {
         "verse": 33,
-        "text": "even as it is written,"
+        "text": "even as it is written,“Behold, I lay in Zion a stumbling stone and a rock of offense; and no one who believes in him will be disappointed.” "
       }
     ],
     [
@@ -1050,7 +1110,7 @@
       },
       {
         "verse": 15,
-        "text": "And how will they preach unless they are sent? As it is written:"
+        "text": "And how will they preach unless they are sent? As it is written:“How beautiful are the feet of those who preach the Good News of peace, who bring glad tidings of good things!” "
       },
       {
         "verse": 16,
@@ -1062,15 +1122,15 @@
       },
       {
         "verse": 18,
-        "text": "But I say, didn’t they hear? Yes, most certainly,"
+        "text": "But I say, didn’t they hear? Yes, most certainly,“Their sound went out into all the earth, their words to the ends of the world.” "
       },
       {
         "verse": 19,
-        "text": "But I ask, didn’t Israel know? First Moses says,"
+        "text": "But I ask, didn’t Israel know? First Moses says,“I will provoke you to jealousy with that which is no nation. I will make you angry with a nation void of understanding.” "
       },
       {
         "verse": 20,
-        "text": "Isaiah is very bold and says,"
+        "text": "Isaiah is very bold and says,“I was found by those who didn’t seek me. I was revealed to those who didn’t ask for me.” "
       },
       {
         "verse": 21,
@@ -1112,7 +1172,11 @@
       },
       {
         "verse": 9,
-        "text": "David says,"
+        "text": "David says,“Let their table be made a snare, a trap, a stumbling block, and a retribution to them. "
+      },
+      {
+        "verse": 10,
+        "text": "Let their eyes be darkened, that they may not see.Always keep their backs bent.” "
       },
       {
         "verse": 11,
@@ -1176,7 +1240,11 @@
       },
       {
         "verse": 26,
-        "text": "and so all Israel will be saved. Even as it is written,"
+        "text": "and so all Israel will be saved. Even as it is written,“There will come out of Zion the Deliverer, and he will turn away ungodliness from Jacob. "
+      },
+      {
+        "verse": 27,
+        "text": "This is my covenant with them,when I will take away their sins.” "
       },
       {
         "verse": 28,
@@ -1200,7 +1268,15 @@
       },
       {
         "verse": 33,
-        "text": "Oh the depth of the riches both of the wisdom and the knowledge of God! How unsearchable are his judgments, and his ways past tracing out!"
+        "text": "Oh the depth of the riches both of the wisdom and the knowledge of God! How unsearchable are his judgments, and his ways past tracing out! "
+      },
+      {
+        "verse": 34,
+        "text": "“For who has known the mind of the Lord?Or who has been his counselor?” "
+      },
+      {
+        "verse": 35,
+        "text": "“Or who has first given to him,and it will be repaid to him again?” "
       },
       {
         "verse": 36,
@@ -1286,7 +1362,7 @@
       },
       {
         "verse": 20,
-        "text": "Therefore"
+        "text": "Therefore“If your enemy is hungry, feed him. If he is thirsty, give him a drink; for in doing so, you will heap coals of fire on his head.” "
       },
       {
         "verse": 21,
@@ -1394,7 +1470,7 @@
       },
       {
         "verse": 11,
-        "text": "For it is written,"
+        "text": "For it is written,“ ‘As I live,’ says the Lord, ‘to me every knee will bow. Every tongue will confess to God.’ ” "
       },
       {
         "verse": 12,
@@ -1492,19 +1568,19 @@
       },
       {
         "verse": 9,
-        "text": "and that the Gentiles might glorify God for his mercy. As it is written,"
+        "text": "and that the Gentiles might glorify God for his mercy. As it is written,“Therefore I will give praise to you among the Gentiles and sing to your name.” "
       },
       {
         "verse": 10,
-        "text": "Again he says,"
+        "text": "Again he says,“Rejoice, you Gentiles, with his people.” "
       },
       {
         "verse": 11,
-        "text": "Again,"
+        "text": "Again,“Praise the Lord, all you Gentiles! Let all the peoples praise him.” "
       },
       {
         "verse": 12,
-        "text": "Again, Isaiah says,"
+        "text": "Again, Isaiah says,“There will be the root of Jesse, he who arises to rule over the Gentiles; in him the Gentiles will hope.” "
       },
       {
         "verse": 13,
@@ -1540,7 +1616,7 @@
       },
       {
         "verse": 21,
-        "text": "But, as it is written,"
+        "text": "But, as it is written,“They will see, to whom no news of him came. They who haven’t heard will understand.” "
       },
       {
         "verse": 22,
@@ -1670,11 +1746,7 @@
       },
       {
         "verse": 20,
-        "text": "And the God of peace will quickly crush Satan under your feet."
-      },
-      {
-        "verse": 20,
-        "text": "The grace of our Lord Jesus Christ be with you."
+        "text": "And the God of peace will quickly crush Satan under your feet.The grace of our Lord Jesus Christ be with you. "
       },
       {
         "verse": 21,

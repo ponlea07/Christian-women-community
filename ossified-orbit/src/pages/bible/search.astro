@@ -1,78 +1,39 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { searchBible } from "../../lib/bible/search";
-
-const query = Astro.url.searchParams.get("q") ?? "";
-
-console.log(`Search query: ${query}`);
-
-const results = query
-  ? await searchBible(query)
-  : [];
 ---
-<p>Query: {query}</p>
-<pre>{JSON.stringify(results.slice(0,5), null, 2)}</pre>
+
 <Layout title="Search Scripture">
 
-<section class="search-page">
+  <section class="search-page">
 
-  <p class="eyebrow">Bible Hub</p>
+    <p class="eyebrow">Bible Hub</p>
 
-  <h1>Search Scripture</h1>
+    <h1>Search Scripture</h1>
 
-  <p class="subtitle">
-    Search the Bible by word or phrase.
-  </p>
+    <p class="subtitle">
+      Search the Bible by word, phrase, book, or reference.
+    </p>
 
-  <form method="GET" class="search-form">
+    <form id="search-form" class="search-form">
 
-    <input
-      type="text"
-      name="q"
-      value={query}
-      placeholder="Search the Bible..."
-      autocomplete="off"
-    />
+      <input
+        id="search-input"
+        type="search"
+        placeholder="Example: love, Genesis, John 3:16"
+        autocomplete="off"
+      />
 
-    <button type="submit">
-      Search
-    </button>
+      <button type="submit">
+        Search
+      </button>
 
-  </form>
+    </form>
 
-  {
-    query && (
-      <p class="results-count">
-        {results.length} result{results.length !== 1 ? "s" : ""} found
-      </p>
-    )
-  }
+    <p id="results-count" class="results-count"></p>
 
-  <div class="results">
+    <div id="results" class="results"></div>
 
-    {
-      results.map(result => (
-
-        <article class="result-card">
-
-          <h3>
-            {result.bookName} {result.chapter}:{result.verse}
-          </h3>
-
-          <p>{result.text}</p>
-
-          <a href={result.href}>
-            Read →
-          </a>
-
-        </article>
-
-      ))
-    }
-
-  </div>
-
-</section>
+  </section>
 
 </Layout>
 
@@ -126,9 +87,14 @@ const results = query
   font-weight:600;
 }
 
+.search-form button:hover{
+  opacity:.9;
+}
+
 .results-count{
   margin-bottom:1.5rem;
   color:#D4AF37;
+  font-weight:600;
 }
 
 .results{
@@ -141,19 +107,25 @@ const results = query
   color:#333;
   padding:1.5rem;
   border-radius:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
 }
 
 .result-card h3{
-  margin-top:0;
+  margin:0 0 .75rem;
   color:#0F6B73;
+}
+
+.result-card p{
+  margin:0;
+  line-height:1.7;
 }
 
 .result-card a{
   display:inline-block;
   margin-top:1rem;
   color:#D4AF37;
-  font-weight:600;
   text-decoration:none;
+  font-weight:600;
 }
 
 .result-card a:hover{
@@ -169,3 +141,158 @@ const results = query
 }
 
 </style>
+
+<script is:inline>
+
+const form = document.getElementById("search-form");
+const input = document.getElementById("search-input");
+const results = document.getElementById("results");
+const resultsCount = document.getElementById("results-count");
+
+let bibleIndex = [];
+
+async function loadBibleIndex(){
+
+  if(bibleIndex.length){
+    return;
+  }
+
+  const response = await fetch("/data/bible/search-index.json");
+
+  if(!response.ok){
+    throw new Error("Unable to load Bible search index.");
+  }
+
+  bibleIndex = await response.json();
+
+}
+
+function render(matches){
+
+  results.innerHTML = "";
+
+  if(matches.length === 0){
+
+    resultsCount.textContent = "No verses found.";
+
+    return;
+
+  }
+
+  resultsCount.textContent =
+    `${matches.length} result${matches.length === 1 ? "" : "s"} found`;
+
+  for(const verse of matches){
+
+    results.insertAdjacentHTML(
+      "beforeend",
+      `
+      <article class="result-card">
+
+        <h3>${verse.reference}</h3>
+
+        <p>${verse.text}</p>
+
+        <a href="${verse.href}">
+          Read Chapter →
+        </a>
+
+      </article>
+      `
+    );
+
+  }
+
+}
+
+async function search(query){
+
+  const term = query.trim().toLowerCase();
+
+  if(!term){
+
+    results.innerHTML = "";
+    resultsCount.textContent = "";
+
+    history.replaceState({}, "", "/bible/search");
+
+    return;
+
+  }
+
+  resultsCount.textContent = "Searching...";
+
+  await loadBibleIndex();
+
+  const matches = bibleIndex
+    .filter(verse => {
+
+      const searchable = [
+        verse.bookName,
+        verse.reference,
+        verse.text
+      ]
+      .join(" ")
+      .toLowerCase();
+
+      return searchable.includes(term);
+
+    })
+    .slice(0,100);
+
+  render(matches);
+
+  history.replaceState(
+    {},
+    "",
+    `/bible/search?q=${encodeURIComponent(query)}`
+  );
+
+}
+
+form.addEventListener("submit", async (event) => {
+
+  event.preventDefault();
+
+  try{
+
+    await search(input.value);
+
+  }catch(error){
+
+    console.error(error);
+
+    results.innerHTML = "";
+
+    resultsCount.textContent =
+      "Unable to search the Bible. Please try again.";
+
+  }
+
+});
+
+window.addEventListener("DOMContentLoaded", async () => {
+
+  const params = new URLSearchParams(window.location.search);
+
+  const query = params.get("q");
+
+  if(query){
+
+    input.value = query;
+
+    try{
+
+      await search(query);
+
+    }catch(error){
+
+      console.error(error);
+
+    }
+
+  }
+
+});
+
+</script>

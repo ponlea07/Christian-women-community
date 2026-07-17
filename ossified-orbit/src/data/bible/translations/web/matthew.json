@@ -1,5 +1,5 @@
 {
-  "translation": "WEB",
+  "name": "matthew",
   "chapters": [
     [
       {
@@ -88,7 +88,11 @@
       },
       {
         "verse": 22,
-        "text": "Now all this has happened that it might be fulfilled which was spoken by the Lord through the prophet, saying,"
+        "text": "Now all this has happened that it might be fulfilled which was spoken by the Lord through the prophet, saying, "
+      },
+      {
+        "verse": 23,
+        "text": "“Behold, the virgin shall be with child,and shall give birth to a son. They shall call his name Immanuel;” which is, being interpreted, “God with us.” "
       },
       {
         "verse": 24,
@@ -118,7 +122,11 @@
       },
       {
         "verse": 5,
-        "text": "They said to him, “In Bethlehem of Judea, for this is written through the prophet,"
+        "text": "They said to him, “In Bethlehem of Judea, for this is written through the prophet, "
+      },
+      {
+        "verse": 6,
+        "text": "‘You Bethlehem, land of Judah,are in no way least among the princes of Judah: for out of you shall come a governor, who shall shepherd my people, Israel.’ ” "
       },
       {
         "verse": 7,
@@ -162,7 +170,11 @@
       },
       {
         "verse": 17,
-        "text": "Then that which was spoken by Jeremiah the prophet was fulfilled, saying,"
+        "text": "Then that which was spoken by Jeremiah the prophet was fulfilled, saying, "
+      },
+      {
+        "verse": 18,
+        "text": "“A voice was heard in Ramah,lamentation, weeping and great mourning, Rachel weeping for her children; she wouldn’t be comforted, because they are no more.” "
       },
       {
         "verse": 19,
@@ -196,7 +208,7 @@
       },
       {
         "verse": 3,
-        "text": "For this is he who was spoken of by Isaiah the prophet, saying,"
+        "text": "For this is he who was spoken of by Isaiah the prophet, saying,“The voice of one crying in the wilderness, make the way of the Lord ready! Make his paths straight!” "
       },
       {
         "verse": 4,
@@ -278,7 +290,7 @@
       },
       {
         "verse": 6,
-        "text": "and said to him, “If you are the Son of God, throw yourself down, for it is written, ‘He will command his angels concerning you,’ and,"
+        "text": "and said to him, “If you are the Son of God, throw yourself down, for it is written, ‘He will command his angels concerning you,’ and,‘On their hands they will bear you up, so that you don’t dash your foot against a stone.’ ” "
       },
       {
         "verse": 7,
@@ -310,7 +322,15 @@
       },
       {
         "verse": 14,
-        "text": "that it might be fulfilled which was spoken through Isaiah the prophet, saying,"
+        "text": "that it might be fulfilled which was spoken through Isaiah the prophet, saying, "
+      },
+      {
+        "verse": 15,
+        "text": "“The land of Zebulun and the land of Naphtali,toward the sea, beyond the Jordan, Galilee of the Gentiles, "
+      },
+      {
+        "verse": 16,
+        "text": "the people who sat in darkness saw a great light,to those who sat in the region and shadow of death, to them light has dawned.” "
       },
       {
         "verse": 17,
@@ -356,7 +376,39 @@
       },
       {
         "verse": 2,
-        "text": "He opened his mouth and taught them, saying,"
+        "text": "He opened his mouth and taught them, saying, "
+      },
+      {
+        "verse": 3,
+        "text": "“Blessed are the poor in spirit,for theirs is the Kingdom of Heaven. "
+      },
+      {
+        "verse": 4,
+        "text": "Blessed are those who mourn,for they shall be comforted. "
+      },
+      {
+        "verse": 5,
+        "text": "Blessed are the gentle,for they shall inherit the earth. "
+      },
+      {
+        "verse": 6,
+        "text": "Blessed are those who hunger and thirst after righteousness,for they shall be filled. "
+      },
+      {
+        "verse": 7,
+        "text": "Blessed are the merciful,for they shall obtain mercy. "
+      },
+      {
+        "verse": 8,
+        "text": "Blessed are the pure in heart,for they shall see God. "
+      },
+      {
+        "verse": 9,
+        "text": "Blessed are the peacemakers,for they shall be called children of God. "
+      },
+      {
+        "verse": 10,
+        "text": "Blessed are those who have been persecuted for righteousness’ sake,for theirs is the Kingdom of Heaven. "
       },
       {
         "verse": 11,
@@ -894,11 +946,7 @@
       },
       {
         "verse": 32,
-        "text": "He said to them, “Go!”"
-      },
-      {
-        "verse": 32,
-        "text": "They came out, and went into the herd of pigs: and behold, the whole herd of pigs rushed down the cliff into the sea, and died in the water."
+        "text": "He said to them, “Go!”They came out, and went into the herd of pigs: and behold, the whole herd of pigs rushed down the cliff into the sea, and died in the water.  "
       },
       {
         "verse": 33,
@@ -1004,11 +1052,7 @@
       },
       {
         "verse": 24,
-        "text": "he said to them, “Make room, because the girl isn’t dead, but sleeping.”"
-      },
-      {
-        "verse": 24,
-        "text": "They were ridiculing him."
+        "text": "he said to them, “Make room, because the girl isn’t dead, but sleeping.”They were ridiculing him.  "
       },
       {
         "verse": 25,
@@ -1024,11 +1068,7 @@
       },
       {
         "verse": 28,
-        "text": "When he had come into the house, the blind men came to him. Jesus said to them, “Do you believe that I am able to do this?”"
-      },
-      {
-        "verse": 28,
-        "text": "They told him, “Yes, Lord.”"
+        "text": "When he had come into the house, the blind men came to him. Jesus said to them, “Do you believe that I am able to do this?”They told him, “Yes, Lord.” "
       },
       {
         "verse": 29,
@@ -1430,7 +1470,23 @@
       },
       {
         "verse": 17,
-        "text": "that it might be fulfilled which was spoken through Isaiah the prophet, saying,"
+        "text": "that it might be fulfilled which was spoken through Isaiah the prophet, saying, "
+      },
+      {
+        "verse": 18,
+        "text": "“Behold, my servant whom I have chosen;my beloved in whom my soul is well pleased: I will put my Spirit on him. He will proclaim justice to the nations. "
+      },
+      {
+        "verse": 19,
+        "text": "He will not strive, nor shout;neither will anyone hear his voice in the streets. "
+      },
+      {
+        "verse": 20,
+        "text": "He won’t break a bruised reed.He won’t quench a smoking flax, until he leads justice to victory. "
+      },
+      {
+        "verse": 21,
+        "text": "In his name, the nations will hope.”"
       },
       {
         "verse": 22,
@@ -1604,7 +1660,11 @@
       },
       {
         "verse": 14,
-        "text": "In them the prophecy of Isaiah is fulfilled, which says,"
+        "text": "In them the prophecy of Isaiah is fulfilled, which says,‘By hearing you will hear, and will in no way understand; Seeing you will see, and will in no way perceive: "
+      },
+      {
+        "verse": 15,
+        "text": "for this people’s heart has grown callous,their ears are dull of hearing, they have closed their eyes; or else perhaps they might perceive with their eyes, hear with their ears, understand with their heart, and would turn again; and I would heal them.’ "
       },
       {
         "verse": 16,
@@ -1656,11 +1716,7 @@
       },
       {
         "verse": 28,
-        "text": "“He said to them, ‘An enemy has done this.’"
-      },
-      {
-        "verse": 28,
-        "text": "“The servants asked him, ‘Do you want us to go and gather them up?’"
+        "text": "“He said to them, ‘An enemy has done this.’“The servants asked him, ‘Do you want us to go and gather them up?’  "
       },
       {
         "verse": 29,
@@ -1688,7 +1744,7 @@
       },
       {
         "verse": 35,
-        "text": "that it might be fulfilled which was spoken through the prophet, saying,"
+        "text": "that it might be fulfilled which was spoken through the prophet, saying,“I will open my mouth in parables; I will utter things hidden from the foundation of the world.” "
       },
       {
         "verse": 36,
@@ -1752,11 +1808,7 @@
       },
       {
         "verse": 51,
-        "text": "Jesus said to them, “Have you understood all these things?”"
-      },
-      {
-        "verse": 51,
-        "text": "They answered him, “Yes, Lord.”"
+        "text": "Jesus said to them, “Have you understood all these things?”They answered him, “Yes, Lord.” "
       },
       {
         "verse": 52,
@@ -1780,11 +1832,7 @@
       },
       {
         "verse": 57,
-        "text": "They were offended by him."
-      },
-      {
-        "verse": 57,
-        "text": "But Jesus said to them, “A prophet is not without honor, except in his own country, and in his own house.”"
+        "text": "They were offended by him.But Jesus said to them, “A prophet is not without honor, except in his own country, and in his own house.”  "
       },
       {
         "verse": 58,
@@ -1906,11 +1954,7 @@
       },
       {
         "verse": 29,
-        "text": "He said, “Come!”"
-      },
-      {
-        "verse": 29,
-        "text": "Peter stepped down from the boat, and walked on the waters to come to Jesus."
+        "text": "He said, “Come!”Peter stepped down from the boat, and walked on the waters to come to Jesus.  "
       },
       {
         "verse": 30,
@@ -1968,7 +2012,15 @@
       },
       {
         "verse": 7,
-        "text": "You hypocrites! Well did Isaiah prophesy of you, saying,"
+        "text": "You hypocrites! Well did Isaiah prophesy of you, saying, "
+      },
+      {
+        "verse": 8,
+        "text": "‘These people draw near to me with their mouth,and honor me with their lips; but their heart is far from me. "
+      },
+      {
+        "verse": 9,
+        "text": "And in vain do they worship me,teaching as doctrine rules made by men.’ ” "
       },
       {
         "verse": 10,
@@ -2024,11 +2076,7 @@
       },
       {
         "verse": 23,
-        "text": "But he answered her not a word."
-      },
-      {
-        "verse": 23,
-        "text": "His disciples came and begged him, saying, “Send her away; for she cries after us.”"
+        "text": "But he answered her not a word.His disciples came and begged him, saying, “Send her away; for she cries after us.” "
       },
       {
         "verse": 24,
@@ -2072,11 +2120,7 @@
       },
       {
         "verse": 34,
-        "text": "Jesus said to them, “How many loaves do you have?”"
-      },
-      {
-        "verse": 34,
-        "text": "They said, “Seven, and a few small fish.”"
+        "text": "Jesus said to them, “How many loaves do you have?”They said, “Seven, and a few small fish.” "
       },
       {
         "verse": 35,
@@ -2114,11 +2158,7 @@
       },
       {
         "verse": 4,
-        "text": "An evil and adulterous generation seeks after a sign, and there will be no sign given to it, except the sign of the prophet Jonah.”"
-      },
-      {
-        "verse": 4,
-        "text": "He left them, and departed."
+        "text": "An evil and adulterous generation seeks after a sign, and there will be no sign given to it, except the sign of the prophet Jonah.”He left them, and departed.  "
       },
       {
         "verse": 5,
@@ -2308,11 +2348,7 @@
       },
       {
         "verse": 23,
-        "text": "and they will kill him, and the third day he will be raised up.”"
-      },
-      {
-        "verse": 23,
-        "text": "They were exceedingly sorry."
+        "text": "and they will kill him, and the third day he will be raised up.”They were exceedingly sorry. "
       },
       {
         "verse": 24,
@@ -2320,19 +2356,11 @@
       },
       {
         "verse": 25,
-        "text": "He said, “Yes.”"
-      },
-      {
-        "verse": 25,
-        "text": "When he came into the house, Jesus anticipated him, saying, “What do you think, Simon? From whom do the kings of the earth receive toll or tribute? From their children, or from strangers?”"
+        "text": "He said, “Yes.”When he came into the house, Jesus anticipated him, saying, “What do you think, Simon? From whom do the kings of the earth receive toll or tribute? From their children, or from strangers?” "
       },
       {
         "verse": 26,
-        "text": "Peter said to him, “From strangers.”"
-      },
-      {
-        "verse": 26,
-        "text": "Jesus said to him, “Therefore the children are exempt."
+        "text": "Peter said to him, “From strangers.”Jesus said to him, “Therefore the children are exempt.   "
       },
       {
         "verse": 27,
@@ -2552,11 +2580,7 @@
       },
       {
         "verse": 18,
-        "text": "He said to him, “Which ones?”"
-      },
-      {
-        "verse": 18,
-        "text": "Jesus said, “ ‘You shall not murder.’ ‘You shall not commit adultery.’ ‘You shall not steal.’ ‘You shall not offer false testimony.’"
+        "text": "He said to him, “Which ones?”Jesus said, “ ‘You shall not murder.’ ‘You shall not commit adultery.’ ‘You shall not steal.’ ‘You shall not offer false testimony.’   "
       },
       {
         "verse": 19,
@@ -2634,11 +2658,7 @@
       },
       {
         "verse": 7,
-        "text": "“They said to him, ‘Because no one has hired us.’"
-      },
-      {
-        "verse": 7,
-        "text": "“He said to them, ‘You also go into the vineyard, and you will receive whatever is right.’"
+        "text": "“They said to him, ‘Because no one has hired us.’“He said to them, ‘You also go into the vineyard, and you will receive whatever is right.’   "
       },
       {
         "verse": 8,
@@ -2694,19 +2714,11 @@
       },
       {
         "verse": 21,
-        "text": "He said to her, “What do you want?”"
-      },
-      {
-        "verse": 21,
-        "text": "She said to him, “Command that these, my two sons, may sit, one on your right hand, and one on your left hand, in your Kingdom.”"
+        "text": "He said to her, “What do you want?”She said to him, “Command that these, my two sons, may sit, one on your right hand, and one on your left hand, in your Kingdom.” "
       },
       {
         "verse": 22,
-        "text": "But Jesus answered, “You don’t know what you are asking. Are you able to drink the cup that I am about to drink, and be baptized with the baptism that I am baptized with?”"
-      },
-      {
-        "verse": 22,
-        "text": "They said to him, “We are able.”"
+        "text": "But Jesus answered, “You don’t know what you are asking. Are you able to drink the cup that I am about to drink, and be baptized with the baptism that I am baptized with?”They said to him, “We are able.” "
       },
       {
         "verse": 23,
@@ -2772,7 +2784,11 @@
       },
       {
         "verse": 4,
-        "text": "All this was done, that it might be fulfilled which was spoken through the prophet, saying,"
+        "text": "All this was done, that it might be fulfilled which was spoken through the prophet, saying, "
+      },
+      {
+        "verse": 5,
+        "text": "“Tell the daughter of Zion,behold, your King comes to you, humble, and riding on a donkey, on a colt, the foal of a donkey.” "
       },
       {
         "verse": 6,
@@ -2816,11 +2832,7 @@
       },
       {
         "verse": 16,
-        "text": "and said to him, “Do you hear what these are saying?”"
-      },
-      {
-        "verse": 16,
-        "text": "Jesus said to them, “Yes. Did you never read, ‘Out of the mouth of babes and nursing babies you have perfected praise?’ ”"
+        "text": "and said to him, “Do you hear what these are saying?”Jesus said to them, “Yes. Did you never read, ‘Out of the mouth of babes and nursing babies you have perfected praise?’ ” "
       },
       {
         "verse": 17,
@@ -2832,11 +2844,7 @@
       },
       {
         "verse": 19,
-        "text": "Seeing a fig tree by the road, he came to it, and found nothing on it but leaves. He said to it, “Let there be no fruit from you forever!”"
-      },
-      {
-        "verse": 19,
-        "text": "Immediately the fig tree withered away."
+        "text": "Seeing a fig tree by the road, he came to it, and found nothing on it but leaves. He said to it, “Let there be no fruit from you forever!”Immediately the fig tree withered away.  "
       },
       {
         "verse": 20,
@@ -2860,11 +2868,7 @@
       },
       {
         "verse": 25,
-        "text": "The baptism of John, where was it from? From heaven or from men?”"
-      },
-      {
-        "verse": 25,
-        "text": "They reasoned with themselves, saying, “If we say, ‘From heaven,’ he will ask us, ‘Why then did you not believe him?’"
+        "text": "The baptism of John, where was it from? From heaven or from men?”They reasoned with themselves, saying, “If we say, ‘From heaven,’ he will ask us, ‘Why then did you not believe him?’  "
       },
       {
         "verse": 26,
@@ -2872,11 +2876,7 @@
       },
       {
         "verse": 27,
-        "text": "They answered Jesus, and said, “We don’t know.”"
-      },
-      {
-        "verse": 27,
-        "text": "He also said to them, “Neither will I tell you by what authority I do these things."
+        "text": "They answered Jesus, and said, “We don’t know.”He also said to them, “Neither will I tell you by what authority I do these things.   "
       },
       {
         "verse": 28,
@@ -2892,15 +2892,7 @@
       },
       {
         "verse": 31,
-        "text": "Which of the two did the will of his father?”"
-      },
-      {
-        "verse": 31,
-        "text": "They said to him, “The first.”"
-      },
-      {
-        "verse": 31,
-        "text": "Jesus said to them, “Most certainly I tell you that the tax collectors and the prostitutes are entering into God’s Kingdom before you."
+        "text": "Which of the two did the will of his father?”They said to him, “The first.” Jesus said to them, “Most certainly I tell you that the tax collectors and the prostitutes are entering into God’s Kingdom before you.   "
       },
       {
         "verse": 32,
@@ -2944,7 +2936,7 @@
       },
       {
         "verse": 42,
-        "text": "Jesus said to them, “Did you never read in the Scriptures,"
+        "text": "Jesus said to them, “Did you never read in the Scriptures,‘The stone which the builders rejected was made the head of the corner. This was from the Lord. It is marvelous in our eyes?’ "
       },
       {
         "verse": 43,
@@ -3038,11 +3030,7 @@
       },
       {
         "verse": 19,
-        "text": "Show me the tax money.”"
-      },
-      {
-        "verse": 19,
-        "text": "They brought to him a denarius."
+        "text": "Show me the tax money.”They brought to him a denarius. "
       },
       {
         "verse": 20,
@@ -3050,11 +3038,7 @@
       },
       {
         "verse": 21,
-        "text": "They said to him, “Caesar’s.”"
-      },
-      {
-        "verse": 21,
-        "text": "Then he said to them, “Give therefore to Caesar the things that are Caesar’s, and to God the things that are God’s.”"
+        "text": "They said to him, “Caesar’s.”Then he said to them, “Give therefore to Caesar the things that are Caesar’s, and to God the things that are God’s.” "
       },
       {
         "verse": 22,
@@ -3138,15 +3122,15 @@
       },
       {
         "verse": 42,
-        "text": "saying, “What do you think of the Christ? Whose son is he?”"
-      },
-      {
-        "verse": 42,
-        "text": "They said to him, “Of David.”"
+        "text": "saying, “What do you think of the Christ? Whose son is he?”They said to him, “Of David.” "
       },
       {
         "verse": 43,
-        "text": "He said to them, “How then does David in the Spirit call him Lord, saying,"
+        "text": "He said to them, “How then does David in the Spirit call him Lord, saying, "
+      },
+      {
+        "verse": 44,
+        "text": "‘The Lord said to my Lord,sit on my right hand, until I make your enemies a footstool for your feet?’ "
       },
       {
         "verse": 45,
@@ -3806,11 +3790,7 @@
       },
       {
         "verse": 25,
-        "text": "Judas, who betrayed him, answered, “It isn’t me, is it, Rabbi?”"
-      },
-      {
-        "verse": 25,
-        "text": "He said to him, “You said it.”"
+        "text": "Judas, who betrayed him, answered, “It isn’t me, is it, Rabbi?”He said to him, “You said it.” "
       },
       {
         "verse": 26,
@@ -3934,11 +3914,7 @@
       },
       {
         "verse": 56,
-        "text": "But all this has happened that the Scriptures of the prophets might be fulfilled.”"
-      },
-      {
-        "verse": 56,
-        "text": "Then all the disciples left him and fled."
+        "text": "But all this has happened that the Scriptures of the prophets might be fulfilled.”Then all the disciples left him and fled.  "
       },
       {
         "verse": 57,
@@ -3978,11 +3954,7 @@
       },
       {
         "verse": 66,
-        "text": "What do you think?”"
-      },
-      {
-        "verse": 66,
-        "text": "They answered, “He is worthy of death!”"
+        "text": "What do you think?”They answered, “He is worthy of death!”  "
       },
       {
         "verse": 67,
@@ -4014,11 +3986,7 @@
       },
       {
         "verse": 74,
-        "text": "Then he began to curse and to swear, “I don’t know the man!”"
-      },
-      {
-        "verse": 74,
-        "text": "Immediately the rooster crowed."
+        "text": "Then he began to curse and to swear, “I don’t know the man!”Immediately the rooster crowed.  "
       },
       {
         "verse": 75,
@@ -4040,11 +4008,7 @@
       },
       {
         "verse": 4,
-        "text": "saying, “I have sinned in that I betrayed innocent blood.”"
-      },
-      {
-        "verse": 4,
-        "text": "But they said, “What is that to us? You see to it.”"
+        "text": "saying, “I have sinned in that I betrayed innocent blood.”But they said, “What is that to us? You see to it.” "
       },
       {
         "verse": 5,
@@ -4064,15 +4028,15 @@
       },
       {
         "verse": 9,
-        "text": "Then that which was spoken through Jeremiah the prophet was fulfilled, saying,"
+        "text": "Then that which was spoken through Jeremiah the prophet was fulfilled, saying,“They took the thirty pieces of silver, the price of him upon whom a price had been set, whom some of the children of Israel priced, "
+      },
+      {
+        "verse": 10,
+        "text": "and they gave them for the potter’s field,as the Lord commanded me.” "
       },
       {
         "verse": 11,
-        "text": "Now Jesus stood before the governor: and the governor asked him, saying, “Are you the King of the Jews?”"
-      },
-      {
-        "verse": 11,
-        "text": "Jesus said to him, “So you say.”"
+        "text": "Now Jesus stood before the governor: and the governor asked him, saying, “Are you the King of the Jews?”Jesus said to him, “So you say.” "
       },
       {
         "verse": 12,
@@ -4112,27 +4076,15 @@
       },
       {
         "verse": 21,
-        "text": "But the governor answered them, “Which of the two do you want me to release to you?”"
-      },
-      {
-        "verse": 21,
-        "text": "They said, “Barabbas!”"
+        "text": "But the governor answered them, “Which of the two do you want me to release to you?”They said, “Barabbas!” "
       },
       {
         "verse": 22,
-        "text": "Pilate said to them, “What then shall I do to Jesus, who is called Christ?”"
-      },
-      {
-        "verse": 22,
-        "text": "They all said to him, “Let him be crucified!”"
+        "text": "Pilate said to them, “What then shall I do to Jesus, who is called Christ?”They all said to him, “Let him be crucified!” "
       },
       {
         "verse": 23,
-        "text": "But the governor said, “Why? What evil has he done?”"
-      },
-      {
-        "verse": 23,
-        "text": "But they cried out exceedingly, saying, “Let him be crucified!”"
+        "text": "But the governor said, “Why? What evil has he done?”But they cried out exceedingly, saying, “Let him be crucified!” "
       },
       {
         "verse": 24,
@@ -4342,11 +4294,7 @@
       },
       {
         "verse": 9,
-        "text": "As they went to tell his disciples, behold, Jesus met them, saying, “Rejoice!”"
-      },
-      {
-        "verse": 9,
-        "text": "They came and took hold of his feet, and worshiped him."
+        "text": "As they went to tell his disciples, behold, Jesus met them, saying, “Rejoice!”They came and took hold of his feet, and worshiped him. "
       },
       {
         "verse": 10,
