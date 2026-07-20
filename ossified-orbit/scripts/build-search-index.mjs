@@ -9,18 +9,7 @@ const OUTPUT = path.resolve(
   "public/data/bible/search-index.json"
 );
 
-// Ensure output directory exists
 fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
-
-// Convert a slug like "1chronicles" -> "1 Chronicles"
-function formatBookName(slug) {
-  return slug
-    .replace(/^1([a-z])/, "1 $1")
-    .replace(/^2([a-z])/, "2 $1")
-    .replace(/^3([a-z])/, "3 $1")
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, c => c.toUpperCase());
-}
 
 const files = fs
   .readdirSync(RAW_BIBLE)
@@ -28,6 +17,21 @@ const files = fs
   .sort();
 
 const index = [];
+
+// Convert filename to route slug
+function toRouteSlug(fileSlug) {
+  return fileSlug.replace(/^([123])([a-z])/, "$1-$2");
+}
+
+// Convert filename to display name
+function toDisplayName(fileSlug) {
+  return fileSlug
+    .replace(/^1([a-z])/, "1 $1")
+    .replace(/^2([a-z])/, "2 $1")
+    .replace(/^3([a-z])/, "3 $1")
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
 
 for (const file of files) {
 
@@ -39,8 +43,10 @@ for (const file of files) {
     fs.readFileSync(fullPath, "utf8")
   );
 
-  const slug = file.replace(".json", "");
-  const displayName = formatBookName(slug);
+  const fileSlug = file.replace(".json", "");
+
+  const slug = toRouteSlug(fileSlug);
+  const displayName = toDisplayName(fileSlug);
 
   bibleBook.chapters.forEach((chapter, chapterIndex) => {
 
@@ -51,21 +57,13 @@ for (const file of files) {
       if (!verse || !verse.text) return;
 
       index.push({
-
         book: slug,
-
         bookName: displayName,
-
         chapter: chapterIndex + 1,
-
         verse: verse.verse,
-
         reference: `${displayName} ${chapterIndex + 1}:${verse.verse}`,
-
         text: verse.text,
-
         href: `/bible/${slug}/${chapterIndex + 1}`
-
       });
 
     });
