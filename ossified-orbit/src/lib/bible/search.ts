@@ -21,6 +21,12 @@ export async function searchBible(query: string): Promise<SearchResult[]> {
 
   for (const metadata of books) {
     const bibleBook = await getBook(metadata.slug);
+    console.log("Slug:", metadata.slug);
+console.log("Loaded:", !!bibleBook);
+
+if (bibleBook) {
+  console.log("First verse:", bibleBook.chapters?.[0]?.[0]);
+}
 
     if (!bibleBook) continue;
 

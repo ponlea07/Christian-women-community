@@ -53,78 +53,79 @@ const navigation = getChapterNavigation(book, chapterNumber);
 
 <Layout title={`${metadata.name} ${chapterNumber}`}>
 
-<section class="reader-page">
+  <section class="reader-page">
 
-  <h1>{metadata.name}</h1>
+    <h1>{metadata.name}</h1>
 
-  <h2>Chapter {chapterNumber}</h2>
+    <h2>Chapter {chapterNumber}</h2>
 
-  <ReaderToolbar
-  bookSlug={metadata.slug}
-  chapterCount={metadata.chapters}
-  currentChapter={chapterNumber}
-/>
+    <ReaderToolbar
+      bookSlug={metadata.slug}
+      chapterCount={metadata.chapters}
+      currentChapter={chapterNumber}
+    />
 
-  <ChapterNavigation
-    previous={navigation.previous}
-    next={navigation.next}
-  />
+    <ChapterNavigation
+      previous={navigation.previous}
+      next={navigation.next}
+    />
 
-  <hr class="reader-divider" />
+    <hr class="reader-divider" />
 
-  <BibleReader verses={verses} />
+    <BibleReader verses={verses} />
 
-  <hr class="reader-divider" />
+    <hr class="reader-divider" />
 
-  <ChapterNavigation
-    previous={navigation.previous}
-    next={navigation.next}
-  />
+    <ChapterNavigation
+      previous={navigation.previous}
+      next={navigation.next}
+    />
 
-</section>
-<script define:vars={{
-  book: metadata.slug,
-  bookName: metadata.name,
-  chapter: chapterNumber
-}}>
+  </section>
 
-localStorage.setItem("lastReading", JSON.stringify({
+  <script
+    is:inline
+    define:vars={{
+      book: metadata.slug,
+      bookName: metadata.name,
+      chapter: chapterNumber,
+    }}
+  >
+    localStorage.setItem(
+      "lastReading",
+      JSON.stringify({
+        book,
+        bookName,
+        chapter,
+        href: `/bible/${book}/${chapter}`,
+      })
+    );
+  </script>
 
-  book,
-
-  bookName,
-
-  chapter,
-
-  href: `/bible/${book}/${chapter}`
-
-}));
-
-</script>
 </Layout>
 
 <style>
-.reader-page{
-    max-width:900px;
-    margin:0 auto;
-    padding:4rem 1.5rem;
+.reader-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
 }
 
-.reader-page h1{
-    text-align:center;
-    margin-bottom:.25rem;
+.reader-page h1 {
+  text-align: center;
+  margin-bottom: 0.25rem;
 }
 
-.reader-page h2{
-    text-align:center;
-    color:#D4AF37;
-    margin-bottom:1rem;
+.reader-page h2 {
+  text-align: center;
+  color: #D4AF37;
+  margin-bottom: 1rem;
 }
 
-.reader-divider{
-    border:none;
-    border-top:1px solid rgba(255,255,255,.15);
-    margin:2rem auto;
-    max-width:760px;
+.reader-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 2rem auto;
+  max-width: 760px;
 }
 </style>
