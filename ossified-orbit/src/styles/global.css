@@ -3708,4 +3708,14 @@ transform:translateY(-3px);
     }
 
 }
-    
+/* =========================
+   SEARCH HIGHLIGHTS
+========================= */
+
+mark {
+  background-color: #D4AF37;
+  color: #111;
+  padding: 0 0.15rem;
+  border-radius: 3px;
+  font-weight: 600;
+}    

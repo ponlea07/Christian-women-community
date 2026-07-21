@@ -1,7 +1,7 @@
 export interface PaginationResult<T> {
   items: T[];
 
-  page: number;
+  currentPage: number;
 
   pageSize: number;
 
@@ -16,4 +16,8 @@ export interface PaginationResult<T> {
   hasPrevious: boolean;
 
   hasNext: boolean;
+
+  visiblePages: PaginationItem[];
 }
+
+export type PaginationItem = number | "...";

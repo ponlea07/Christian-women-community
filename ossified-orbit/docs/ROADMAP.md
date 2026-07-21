@@ -50,3 +50,58 @@ Update every page automatically
 - [ ] Performance
 - [ ] Accessibility
 - [ ] Production Deployment
+
+
+# Project Logos Roadmap
+
+## Version 0.1 — Foundation ✅
+
+- Bible Reader
+- Search Engine
+- Search Index
+- Pagination
+- Navigation
+- Static Architecture
+
+---
+
+## Version 0.2 — Polish 🚧
+
+- Search Highlighting
+- URL Pagination
+- Better Search Ranking
+- Empty State
+- Documentation
+
+---
+
+## Version 0.3
+
+- Cross References
+- Footnotes
+- Dictionaries
+- Concordance
+
+---
+
+## Version 0.4
+
+- Notes
+- Highlights
+- Bookmarks
+- Reading History
+- Reading Progress
+
+---
+
+## Version 0.5
+
+- Progressive Web App
+- Offline Reading
+- Offline Search
+
+---
+
+## Version 1.0
+
+Public release of Project Logos.

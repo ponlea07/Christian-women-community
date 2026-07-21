@@ -1,0 +1,144 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+}
+
+const {
+  currentPage,
+  totalPages,
+  baseUrl,
+} = Astro.props;
+
+function pageUrl(page: number): string {
+  return `${baseUrl}&page=${page}`;
+}
+
+const pages = Array.from(
+  { length: totalPages },
+  (_, index) => index + 1
+);
+---
+
+{
+  totalPages > 1 && (
+    <nav class="pagination" aria-label="Pagination">
+
+      <a
+        href={pageUrl(1)}
+        class:list={{
+          disabled: currentPage === 1,
+        }}
+      >
+        « First
+      </a>
+
+      <a
+        href={pageUrl(Math.max(1, currentPage - 1))}
+        class:list={{
+          disabled: currentPage === 1,
+        }}
+      >
+        ‹ Previous
+      </a>
+
+      <div class="pages">
+        {
+          pages.map((page) => (
+            <a
+              href={pageUrl(page)}
+              class:list={{
+                active: page === currentPage,
+              }}
+            >
+              {page}
+            </a>
+          ))
+        }
+      </div>
+
+      <a
+        href={pageUrl(
+          Math.min(totalPages, currentPage + 1)
+        )}
+        class:list={{
+          disabled: currentPage === totalPages,
+        }}
+      >
+        Next ›
+      </a>
+
+      <a
+        href={pageUrl(totalPages)}
+        class:list={{
+          disabled: currentPage === totalPages,
+        }}
+      >
+        Last »
+      </a>
+
+    </nav>
+  )
+}
+
+<style>
+
+.pagination{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin-top:2rem;
+}
+
+.pages{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+}
+
+.pagination a{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-width:42px;
+  padding:.6rem .9rem;
+  text-decoration:none;
+  border-radius:10px;
+  background:#ffffff;
+  color:#0F6B73;
+  font-weight:600;
+  transition:.2s ease;
+}
+
+.pagination a:hover{
+  background:#D4AF37;
+  color:#fff;
+}
+
+.pagination a.active{
+  background:#0F6B73;
+  color:#fff;
+}
+
+.pagination a.disabled{
+  opacity:.45;
+  pointer-events:none;
+}
+
+@media (max-width:768px){
+
+  .pagination{
+    gap:.4rem;
+  }
+
+  .pagination a{
+    padding:.55rem .75rem;
+    font-size:.9rem;
+  }
+
+}
+
+</style>

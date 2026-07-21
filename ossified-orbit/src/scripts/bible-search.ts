@@ -1,5 +1,9 @@
-import { paginate } from "../lib/pagination";
-
+import {
+  paginate,
+  renderPagination,
+} from "../lib/pagination";
+import { rankByQuery } from "../lib/ranking";
+import { highlightText } from "../lib/highlight";
 interface SearchVerse {
   book: string;
   bookName: string;
@@ -26,10 +30,11 @@ const form = getElement<HTMLFormElement>("search-form");
 const input = getElement<HTMLInputElement>("search-input");
 const results = getElement<HTMLDivElement>("results");
 const resultsCount = getElement<HTMLParagraphElement>("results-count");
-
+const pagination = getElement<HTMLDivElement>("pagination");
 let bibleIndex: SearchVerse[] = [];
 let currentMatches: SearchVerse[] = [];
 let currentPage = 1;
+let currentSearchTerm = "";
 
 async function loadBibleIndex(): Promise<void> {
   if (bibleIndex.length > 0) {
@@ -45,7 +50,10 @@ async function loadBibleIndex(): Promise<void> {
   bibleIndex = (await response.json()) as SearchVerse[];
 }
 
-function render(matches: SearchVerse[]): void {
+function render(
+  matches: SearchVerse[],
+  searchTerm: string
+): void {
   results.innerHTML = "";
 
   if (matches.length === 0) {
@@ -54,13 +62,21 @@ function render(matches: SearchVerse[]): void {
   }
 
   for (const verse of matches) {
+    const highlightedText = highlightText(
+  verse.text,
+  searchTerm,
+  {
+    wholeWord: true,
+  }
+);
+
     results.insertAdjacentHTML(
       "beforeend",
       `
       <article class="result-card">
         <h3>${verse.reference}</h3>
 
-        <p>${verse.text}</p>
+        <p>${highlightedText}</p>
 
         <a href="${verse.href}">
           Read Chapter →
@@ -81,20 +97,36 @@ function renderPage(): void {
   resultsCount.textContent =
     `Showing ${page.startItem}–${page.endItem} of ${page.totalItems} result${page.totalItems === 1 ? "" : "s"}`;
 
-  render(page.items);
+  render(page.items, currentSearchTerm);
+
+  renderPagination({
+    container: pagination,
+    pagination: page,
+    onPageChange(pageNumber) {
+      currentPage = pageNumber;
+      renderPage();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+  });
 }
-
 async function search(query: string): Promise<void> {
-  const term = query.trim().toLowerCase();
+  currentSearchTerm = query.trim();
 
-  if (!term) {
-    results.innerHTML = "";
-    resultsCount.textContent = "";
+const term = currentSearchTerm.toLowerCase();
+ if (!term) {
+  currentSearchTerm = "";
+  results.innerHTML = "";
+  resultsCount.textContent = "";
+  pagination.innerHTML = "";
 
-    history.replaceState({}, "", "/bible/search");
+  history.replaceState({}, "", "/bible/search");
 
-    return;
-  }
+  return;
+}
 
   resultsCount.textContent = "Searching...";
 
@@ -112,7 +144,29 @@ async function search(query: string): Promise<void> {
     return searchable.includes(term);
   });
 
-  currentPage = 1;
+
+const ranked = rankByQuery(
+  currentMatches,
+  currentSearchTerm,
+  (verse) => ({
+    reference: verse.reference,
+    book: verse.bookName,
+    text: verse.text,
+  }),
+  {
+    wholeWord: true,
+    weights: {
+      reference: 200,
+      book: 100,
+      text: 40,
+    },
+  }
+);
+
+
+currentMatches = ranked.map((result) => result.item);
+ 
+currentPage = 1;
 
   renderPage();
 

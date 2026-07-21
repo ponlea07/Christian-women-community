@@ -1,11 +1,11 @@
 import type { PaginationResult } from "./types";
 import { DEFAULT_PAGE_SIZE } from "./constants";
+import { getVisiblePages } from "./getVisiblePages";
 export function paginate<T>(
   items: T[],
   page = 1,
   pageSize = DEFAULT_PAGE_SIZE
 ): PaginationResult<T> {
-
   const totalItems = items.length;
 
   const totalPages = Math.max(
@@ -19,14 +19,12 @@ export function paginate<T>(
   );
 
   const startIndex = (currentPage - 1) * pageSize;
-
   const endIndex = startIndex + pageSize;
 
   return {
-
     items: items.slice(startIndex, endIndex),
 
-    page: currentPage,
+    currentPage,
 
     pageSize,
 
@@ -34,18 +32,14 @@ export function paginate<T>(
 
     totalPages,
 
-    startItem:
-      totalItems === 0 ? 0 : startIndex + 1,
+    startItem: totalItems === 0 ? 0 : startIndex + 1,
 
-    endItem:
-      Math.min(endIndex, totalItems),
+    endItem: Math.min(endIndex, totalItems),
 
-    hasPrevious:
-      currentPage > 1,
+    hasPrevious: currentPage > 1,
 
-    hasNext:
-      currentPage < totalPages
+    hasNext: currentPage < totalPages,
 
+    visiblePages: getVisiblePages(currentPage, totalPages),
   };
-
 }
