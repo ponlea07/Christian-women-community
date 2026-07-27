@@ -4,6 +4,7 @@ import Layout from "../../../layouts/Layout.astro";
 import BibleReader from "../../../components/bible/BibleReader.astro";
 import ChapterNavigation from "../../../components/bible/ChapterNavigation.astro";
 import ReaderToolbar from "../../../components/bible/ReaderToolbar.astro";
+import BookmarkButton from "../../../components/bible/BookmarkButton.astro";
 
 import { books } from "../../../content/bible/books";
 import { getBook } from "../../../lib/bible/repository";
@@ -52,18 +53,27 @@ const navigation = getChapterNavigation(book, chapterNumber);
 ---
 
 <Layout title={`${metadata.name} ${chapterNumber}`}>
-<div
-  id="reading-progress"
-  data-book={metadata.slug}
-  data-book-name={metadata.name}
-  data-chapter={chapterNumber}
-  data-href={`/bible/${metadata.slug}/${chapterNumber}`}
-></div>
+
+  <div
+    id="reading-progress"
+    data-book={metadata.slug}
+    data-book-name={metadata.name}
+    data-chapter={chapterNumber}
+    data-href={`/bible/${metadata.slug}/${chapterNumber}`}
+  ></div>
+
   <section class="reader-page">
 
     <h1>{metadata.name}</h1>
 
     <h2>Chapter {chapterNumber}</h2>
+
+    <BookmarkButton
+      book={metadata.slug}
+      bookName={metadata.name}
+      chapter={chapterNumber}
+      href={`/bible/${metadata.slug}/${chapterNumber}`}
+    />
 
     <ReaderToolbar
       bookSlug={metadata.slug}
@@ -89,7 +99,6 @@ const navigation = getChapterNavigation(book, chapterNumber);
 
   </section>
 
-
 </Layout>
 
 <style>
@@ -112,11 +121,21 @@ const navigation = getChapterNavigation(book, chapterNumber);
 
 .reader-divider {
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255,255,255,.15);
   margin: 2rem auto;
   max-width: 760px;
 }
+
+.reader-page .bookmark-button {
+  display: flex;
+  margin: 0 auto 1.5rem;
+}
 </style>
+
 <script>
   import "../../../scripts/reading-progress";
+</script>
+
+<script>
+  import "../../../scripts/bookmark";
 </script>

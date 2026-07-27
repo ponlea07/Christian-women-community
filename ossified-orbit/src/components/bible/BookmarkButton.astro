@@ -1,0 +1,60 @@
+---
+interface Props {
+  book: string;
+  bookName: string;
+  chapter: number;
+  href: string;
+}
+
+const {
+  book,
+  bookName,
+  chapter,
+  href,
+} = Astro.props;
+
+const reference = `${bookName} ${chapter}`;
+---
+
+<button
+  id="bookmark-button"
+  class="bookmark-button"
+  type="button"
+  data-book={book}
+  data-book-name={bookName}
+  data-chapter={chapter}
+  data-reference={reference}
+  data-href={href}
+  aria-pressed="false"
+>
+  📑 Bookmark
+</button>
+
+<style>
+.bookmark-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+
+  padding: .75rem 1rem;
+
+  border: none;
+  border-radius: .75rem;
+
+  background: var(--color-primary);
+  color: white;
+
+  cursor: pointer;
+  font: inherit;
+
+  transition: opacity .2s ease;
+}
+
+.bookmark-button:hover {
+  opacity: .9;
+}
+
+.bookmark-button.is-bookmarked {
+  background: var(--color-success, #2e7d32);
+}
+</style>
