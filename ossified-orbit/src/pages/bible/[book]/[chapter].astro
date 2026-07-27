@@ -52,7 +52,13 @@ const navigation = getChapterNavigation(book, chapterNumber);
 ---
 
 <Layout title={`${metadata.name} ${chapterNumber}`}>
-
+<div
+  id="reading-progress"
+  data-book={metadata.slug}
+  data-book-name={metadata.name}
+  data-chapter={chapterNumber}
+  data-href={`/bible/${metadata.slug}/${chapterNumber}`}
+></div>
   <section class="reader-page">
 
     <h1>{metadata.name}</h1>
@@ -83,24 +89,6 @@ const navigation = getChapterNavigation(book, chapterNumber);
 
   </section>
 
-  <script
-    is:inline
-    define:vars={{
-      book: metadata.slug,
-      bookName: metadata.name,
-      chapter: chapterNumber,
-    }}
-  >
-    localStorage.setItem(
-      "lastReading",
-      JSON.stringify({
-        book,
-        bookName,
-        chapter,
-        href: `/bible/${book}/${chapter}`,
-      })
-    );
-  </script>
 
 </Layout>
 
@@ -129,3 +117,6 @@ const navigation = getChapterNavigation(book, chapterNumber);
   max-width: 760px;
 }
 </style>
+<script>
+  import "../../../scripts/reading-progress";
+</script>
