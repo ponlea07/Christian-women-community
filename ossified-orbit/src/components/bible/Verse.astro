@@ -1,0 +1,54 @@
+---
+import type { BibleVerse } from "../../content/bible/types";
+import VerseActions from "./VerseActions.astro";
+
+interface Props {
+  verse: BibleVerse;
+  book: string;
+  bookName: string;
+  chapter: number;
+}
+
+const {
+  verse,
+  book,
+  bookName,
+  chapter,
+} = Astro.props;
+---
+
+<article class="verse" tabindex="0">
+  <p class="verse-text">
+    <sup>{verse.verse}</sup>
+    <span>{verse.text}</span>
+  </p>
+
+  <VerseActions
+  verse={verse}
+  book={book}
+  bookName={bookName}
+  chapter={chapter}
+/>
+</article>
+
+<style>
+.verse {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.verse-text {
+  margin: 0;
+}
+
+.verse-text sup {
+  margin-right: 0.45rem;
+  color: #d4af37;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.verse-text span {
+  color: #fff;
+}
+</style>

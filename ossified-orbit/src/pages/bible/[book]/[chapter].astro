@@ -5,6 +5,7 @@ import BibleReader from "../../../components/bible/BibleReader.astro";
 import ChapterNavigation from "../../../components/bible/ChapterNavigation.astro";
 import ReaderToolbar from "../../../components/bible/ReaderToolbar.astro";
 import BookmarkButton from "../../../components/bible/BookmarkButton.astro";
+import NoteDialog from "../../../components/bible/NoteDialog.astro";
 
 import { books } from "../../../content/bible/books";
 import { getBook } from "../../../lib/bible/repository";
@@ -53,17 +54,15 @@ const navigation = getChapterNavigation(book, chapterNumber);
 ---
 
 <Layout title={`${metadata.name} ${chapterNumber}`}>
-
   <div
     id="reading-progress"
     data-book={metadata.slug}
     data-book-name={metadata.name}
     data-chapter={chapterNumber}
     data-href={`/bible/${metadata.slug}/${chapterNumber}`}
-  ></div>
+  />
 
   <section class="reader-page">
-
     <h1>{metadata.name}</h1>
 
     <h2>Chapter {chapterNumber}</h2>
@@ -88,7 +87,12 @@ const navigation = getChapterNavigation(book, chapterNumber);
 
     <hr class="reader-divider" />
 
-    <BibleReader verses={verses} />
+   <BibleReader
+  verses={verses}
+  book={metadata.slug}
+  bookName={metadata.name}
+  chapter={chapterNumber}
+/>
 
     <hr class="reader-divider" />
 
@@ -96,10 +100,12 @@ const navigation = getChapterNavigation(book, chapterNumber);
       previous={navigation.previous}
       next={navigation.next}
     />
-
   </section>
 
+  <NoteDialog />
+
 </Layout>
+
 
 <style>
 .reader-page {
@@ -109,21 +115,21 @@ const navigation = getChapterNavigation(book, chapterNumber);
 }
 
 .reader-page h1 {
-  text-align: center;
   margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 .reader-page h2 {
-  text-align: center;
-  color: #D4AF37;
   margin-bottom: 1rem;
+  color: #d4af37;
+  text-align: center;
 }
 
 .reader-divider {
-  border: none;
-  border-top: 1px solid rgba(255,255,255,.15);
-  margin: 2rem auto;
   max-width: 760px;
+  margin: 2rem auto;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .reader-page .bookmark-button {
@@ -139,3 +145,8 @@ const navigation = getChapterNavigation(book, chapterNumber);
 <script>
   import "../../../scripts/bookmark";
 </script>
+
+<script>
+  import "../../../scripts/verse-actions";
+</script>
+

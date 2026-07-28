@@ -1,0 +1,83 @@
+---
+import { NotebookPen } from "@lucide/astro";
+import type { BibleVerse } from "../../content/bible/types";
+
+interface Props {
+  verse: BibleVerse;
+  book: string;
+  bookName: string;
+  chapter: number;
+}
+
+const {
+  verse,
+  book,
+  bookName,
+  chapter,
+} = Astro.props;
+---
+
+<nav
+  class="verse-actions"
+  aria-label={`Verse ${verse.verse} actions`}
+>
+  <button
+    type="button"
+    class="verse-action"
+    aria-label={`Add a note to verse ${verse.verse}`}
+    title="Add note"
+    data-book={book}
+    data-book-name={bookName}
+    data-chapter={chapter}
+    data-verse={verse.verse}
+  >
+    <NotebookPen size={18} />
+  </button>
+</nav>
+
+<style>
+.verse-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-top: 0.35rem;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.2s ease;
+}
+
+.verse-actions.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.verse-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.35rem;
+
+  background: transparent;
+  border: none;
+  border-radius: 0.5rem;
+
+  color: inherit;
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.verse-action:hover,
+.verse-action:focus-visible {
+  color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.08);
+  outline: none;
+}
+</style>

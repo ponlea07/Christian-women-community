@@ -1,44 +1,40 @@
 ---
 import type { BibleChapter } from "../../content/bible/types";
+import Verse from "./Verse.astro";
 
 interface Props {
   verses: BibleChapter;
+  book: string;
+  bookName: string;
+  chapter: number;
 }
 
-const { verses } = Astro.props;
+const {
+  verses,
+  book,
+  bookName,
+  chapter,
+} = Astro.props;
 ---
 
 <div class="bible-reader">
   {
     verses.map((verse) => (
-      <p class="verse">
-        <sup>{verse.verse}</sup>
-        <span>{verse.text}</span>
-      </p>
+      <Verse
+        verse={verse}
+        book={book}
+        bookName={bookName}
+        chapter={chapter}
+      />
     ))
   }
 </div>
 
 <style>
-.bible-reader{
-  max-width:760px;
-  margin:0 auto;
-  font-size:1.15rem;
-  line-height:2;
-}
-
-.verse{
-  margin-bottom:1rem;
-}
-
-.verse sup{
-  color:#D4AF37;
-  font-weight:700;
-  margin-right:.45rem;
-  font-size:.8rem;
-}
-
-.verse span{
-  color:white;
+.bible-reader {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 2;
 }
 </style>

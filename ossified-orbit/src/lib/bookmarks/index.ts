@@ -6,5 +6,6 @@ export { removeBookmark } from "./bookmarks";
 
 export { sortBookmarks } from "./helpers";
 export { renderBookmark } from "./render";
+export { formatRelativeDate } from "./date";
 
 export type { Bookmark } from "./types";

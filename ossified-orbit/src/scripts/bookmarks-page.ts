@@ -2,6 +2,7 @@ import {
   getBookmarks,
   sortBookmarks,
   removeBookmark,
+  formatRelativeDate,
 } from "../lib/bookmarks";
 
 const container = document.getElementById("bookmarks-list");
@@ -36,6 +37,10 @@ function render(): void {
             <h3>${bookmark.reference}</h3>
 
             <p>${bookmark.bookName} • Chapter ${bookmark.chapter}</p>
+
+            <small class="bookmark-date">
+              ${formatRelativeDate(bookmark.createdAt)}
+            </small>
           </div>
 
           <div class="bookmark-actions">
@@ -50,6 +55,7 @@ function render(): void {
               type="button"
               class="bookmark-delete"
               data-id="${bookmark.id}"
+              aria-label="Delete bookmark for ${bookmark.reference}"
             >
               Delete
             </button>
@@ -59,22 +65,21 @@ function render(): void {
     )
     .join("");
 
-  const deleteButtons =
-    container.querySelectorAll<HTMLButtonElement>(".bookmark-delete");
+  container
+    .querySelectorAll<HTMLButtonElement>(".bookmark-delete")
+    .forEach((button) => {
+      button.addEventListener("click", () => {
+        const id = button.dataset.id;
 
-  deleteButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const id = button.dataset.id;
+        if (!id) {
+          return;
+        }
 
-      if (!id) {
-        return;
-      }
+        removeBookmark(id);
 
-      removeBookmark(id);
-
-      render();
+        render();
+      });
     });
-  });
 }
 
 render();
