@@ -1,0 +1,125 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="My Bookmarks">
+
+  <section class="bookmarks-page">
+
+    <h1>📚 My Bookmarks</h1>
+
+    <p>
+      Quickly return to the passages you've saved.
+    </p>
+
+    <div id="bookmarks-list"></div>
+
+  </section>
+
+</Layout>
+
+<style>
+.bookmarks-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.bookmarks-page h1 {
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.bookmarks-page p {
+  text-align: center;
+  opacity: .8;
+  margin-bottom: 2rem;
+}
+#bookmarks-list{
+  display:grid;
+  gap:1rem;
+}
+
+.bookmark-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  padding:1.25rem;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  background:rgba(255,255,255,.03);
+}
+
+.bookmark-content h3{
+  margin:0 0 .35rem;
+}
+
+.bookmark-content p{
+  margin:0;
+  opacity:.75;
+}
+
+.bookmark-actions{
+  display:flex;
+  gap:.75rem;
+}
+
+.bookmark-open,
+.bookmark-delete{
+  padding:.6rem 1rem;
+  border-radius:8px;
+  cursor:pointer;
+  text-decoration:none;
+  font:inherit;
+}
+
+.bookmark-open{
+  background:#0F6B73;
+  color:white;
+}
+
+.bookmark-delete{
+  border:1px solid #c0392b;
+  color:#c0392b;
+  background:transparent;
+}
+
+.bookmark-delete:hover{
+  background:#c0392b;
+  color:white;
+}
+
+.empty-bookmarks{
+  text-align:center;
+  padding:4rem 1rem;
+}
+
+.empty-icon{
+  font-size:3rem;
+  margin-bottom:1rem;
+}
+
+@media (max-width:700px){
+
+.bookmark-card{
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.bookmark-actions{
+  width:100%;
+}
+
+.bookmark-open,
+.bookmark-delete{
+  flex:1;
+  text-align:center;
+}
+
+}
+</style>
+
+<script>
+  import "../../scripts/bookmarks-page";
+</script>
