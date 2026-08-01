@@ -12,6 +12,12 @@ export function getNotes(): Note[] {
   );
 }
 
+export function getNote(reference: string): Note | undefined {
+  return getNotes().find(
+    (note) => note.reference === reference
+  );
+}
+
 export function addNote(note: Note): void {
   const notes = getNotes();
 

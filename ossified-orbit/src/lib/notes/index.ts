@@ -1,6 +1,7 @@
 export {
   addNote,
   clearNotes,
+  getNote,
   getNotes,
   removeNote,
 } from "./notes";

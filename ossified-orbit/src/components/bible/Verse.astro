@@ -17,7 +17,11 @@ const {
 } = Astro.props;
 ---
 
-<article class="verse" tabindex="0">
+<article
+  id={`verse-${verse.verse}`}
+  class="verse"
+  tabindex="0"
+>
   <p class="verse-text">
     <sup>{verse.verse}</sup>
     <span>{verse.text}</span>
@@ -35,6 +39,15 @@ const {
 .verse {
   position: relative;
   margin-bottom: 1.5rem;
+
+  /* Ensures anchored verses are not hidden behind sticky headers */
+  scroll-margin-top: 6rem;
+}
+
+.verse:target {
+  background: rgba(212, 175, 55, 0.12);
+  border-radius: 0.5rem;
+  transition: background 0.25s ease;
 }
 
 .verse-text {

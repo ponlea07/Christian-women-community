@@ -1,0 +1,128 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="My Verse Notes | Christian Women Community">
+  <section class="notes-page">
+    <div class="container">
+      <header class="notes-header">
+        <h1>My Verse Notes</h1>
+
+        <p>
+          Your personal reflections and study notes as you journey through
+          Scripture.
+        </p>
+      </header>
+
+      <div id="notes-root"></div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.notes-page {
+  padding: 4rem 1.5rem;
+}
+
+.notes-header {
+  margin-bottom: 2rem;
+}
+
+.notes-header h1 {
+  margin-bottom: .5rem;
+}
+
+.notes-header p {
+  max-width: 640px;
+}
+
+.notes-empty {
+  padding: 4rem 2rem;
+
+  text-align: center;
+
+  border: 1px dashed rgba(255,255,255,.2);
+  border-radius: 1rem;
+}
+
+.notes-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.note-card {
+  padding: 1.5rem;
+
+  border-radius: 1rem;
+
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.note-card__header {
+  margin-bottom: 1rem;
+}
+
+.note-card__header h2 {
+  margin: 0;
+  color: #D4AF37;
+}
+
+.note-card__date {
+  display: block;
+  margin-top: .35rem;
+  opacity: .7;
+  font-size: .875rem;
+}
+
+.note-card__preview {
+  margin: 1rem 0 1.5rem;
+  line-height: 1.6;
+}
+
+.note-card__actions {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.note-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: .65rem 1rem;
+
+  border-radius: .65rem;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.note-button--primary {
+  background: #D4AF37;
+  color: #103D43;
+  font-weight: 600;
+}
+
+.note-button--secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+@media (max-width:640px) {
+  .note-card__actions {
+    flex-direction: column;
+  }
+
+  .note-button {
+    width: 100%;
+  }
+}
+</style>
+
+<script>
+  import "../../scripts/notes-page";
+</script>
