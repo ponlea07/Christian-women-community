@@ -17,21 +17,20 @@ const {
   <label for="chapter-select">Chapter</label>
 
   <select
-    id="chapter-select"
-    onchange={`window.location.href='/bible/${bookSlug}/' + this.value`}
-  >
-    {
-      Array.from({ length: chapterCount }, (_, i) => i + 1).map((chapter) => (
-        <option
-          value={chapter}
-          selected={chapter === currentChapter}
-        >
-          Chapter {chapter}
-        </option>
-      ))
-    }
-  </select>
-
+  id="chapter-select"
+  data-book={bookSlug}
+>
+  {
+    Array.from({ length: chapterCount }, (_, i) => i + 1).map((chapter) => (
+      <option
+        value={chapter}
+        selected={chapter === currentChapter}
+      >
+        Chapter {chapter}
+      </option>
+    ))
+  }
+</select>
 </div>
 
 <style>

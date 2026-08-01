@@ -12,7 +12,10 @@ interface Props {
 const { previous, next } = Astro.props;
 ---
 
-<nav class="chapter-navigation">
+<nav
+  class="chapter-navigation"
+  aria-label="Chapter navigation"
+>
   <div class="nav-left">
     {
       previous ? (
