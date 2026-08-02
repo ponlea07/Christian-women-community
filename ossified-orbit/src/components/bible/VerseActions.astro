@@ -1,5 +1,10 @@
 ---
-import { NotebookPen, Copy } from "@lucide/astro";
+import {
+  Copy,
+  NotebookPen,
+  Share2,
+} from "@lucide/astro";
+
 import type { BibleVerse } from "../../content/bible/types";
 
 interface Props {
@@ -26,15 +31,31 @@ const {
     type="button"
     class="verse-action"
     data-action="copy"
-    aria-label={`Copy verse ${verse.verse}`}
-    title="Copy verse"
     data-book={book}
     data-book-name={bookName}
     data-chapter={chapter}
     data-verse={verse.verse}
     data-text={verse.text}
+    aria-label={`Copy verse ${verse.verse}`}
+    title="Copy verse"
   >
     <Copy size={18} />
+  </button>
+
+  <!-- Share Verse -->
+  <button
+    type="button"
+    class="verse-action"
+    data-action="share"
+    data-book={book}
+    data-book-name={bookName}
+    data-chapter={chapter}
+    data-verse={verse.verse}
+    data-text={verse.text}
+    aria-label={`Share verse ${verse.verse}`}
+    title="Share verse"
+  >
+    <Share2 size={18} />
   </button>
 
   <!-- Add Note -->
@@ -42,12 +63,12 @@ const {
     type="button"
     class="verse-action"
     data-action="note"
-    aria-label={`Add a note to verse ${verse.verse}`}
-    title="Add note"
     data-book={book}
     data-book-name={bookName}
     data-chapter={chapter}
     data-verse={verse.verse}
+    aria-label={`Add a note to verse ${verse.verse}`}
+    title="Add note"
   >
     <NotebookPen size={18} />
   </button>
@@ -78,7 +99,10 @@ const {
   align-items: center;
   justify-content: center;
 
-  padding: 0.35rem;
+  width: 2rem;
+  height: 2rem;
+
+  padding: 0;
 
   background: transparent;
   border: none;
@@ -89,7 +113,8 @@ const {
 
   transition:
     color 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.2s ease,
+    transform 0.15s ease;
 }
 
 .verse-action:hover,
@@ -97,5 +122,9 @@ const {
   color: #d4af37;
   background-color: rgba(212, 175, 55, 0.08);
   outline: none;
+}
+
+.verse-action:active {
+  transform: scale(0.95);
 }
 </style>
