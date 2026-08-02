@@ -18,20 +18,46 @@ function initializeVerseActions() {
     verse.addEventListener("focusin", () => showActions(verse));
     verse.addEventListener("focusout", () => hideActions(verse));
 
-    const noteButton =
-      verse.querySelector<HTMLButtonElement>(".verse-action");
+    const buttons =
+      verse.querySelectorAll<HTMLButtonElement>(".verse-action");
 
-    noteButton?.addEventListener("click", () => {
-      document.dispatchEvent(
-        new CustomEvent("bible:note-open", {
-          detail: {
-            book: noteButton.dataset.book!,
-            bookName: noteButton.dataset.bookName!,
-            chapter: Number(noteButton.dataset.chapter),
-            verse: Number(noteButton.dataset.verse),
-          },
-        })
-      );
+    buttons.forEach((button) => {
+      button.addEventListener("click", async () => {
+        const action = button.dataset.action;
+
+        switch (action) {
+          case "note":
+            document.dispatchEvent(
+              new CustomEvent("bible:note-open", {
+                detail: {
+                  book: button.dataset.book!,
+                  bookName: button.dataset.bookName!,
+                  chapter: Number(button.dataset.chapter),
+                  verse: Number(button.dataset.verse),
+                },
+              })
+            );
+            break;
+
+          case "copy": {
+            const reference =
+              `${button.dataset.bookName} ${button.dataset.chapter}:${button.dataset.verse}`;
+
+            const text =
+              `${reference}\n\n${button.dataset.text}\n\nWorld English Bible (WEB)`;
+
+            try {
+              await navigator.clipboard.writeText(text);
+
+              console.log("Verse copied.");
+            } catch (error) {
+              console.error("Unable to copy verse.", error);
+            }
+
+            break;
+          }
+        }
+      });
     });
   });
 }

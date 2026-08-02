@@ -1,5 +1,5 @@
 ---
-import { NotebookPen } from "@lucide/astro";
+import { NotebookPen, Copy } from "@lucide/astro";
 import type { BibleVerse } from "../../content/bible/types";
 
 interface Props {
@@ -21,9 +21,27 @@ const {
   class="verse-actions"
   aria-label={`Verse ${verse.verse} actions`}
 >
+  <!-- Copy Verse -->
   <button
     type="button"
     class="verse-action"
+    data-action="copy"
+    aria-label={`Copy verse ${verse.verse}`}
+    title="Copy verse"
+    data-book={book}
+    data-book-name={bookName}
+    data-chapter={chapter}
+    data-verse={verse.verse}
+    data-text={verse.text}
+  >
+    <Copy size={18} />
+  </button>
+
+  <!-- Add Note -->
+  <button
+    type="button"
+    class="verse-action"
+    data-action="note"
     aria-label={`Add a note to verse ${verse.verse}`}
     title="Add note"
     data-book={book}
