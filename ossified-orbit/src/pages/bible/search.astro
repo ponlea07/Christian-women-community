@@ -1,0 +1,212 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Search Scripture">
+
+  <section class="search-page">
+
+    <p class="eyebrow">Bible Hub</p>
+
+    <h1>Search Scripture</h1>
+
+    <p class="subtitle">
+      Search the Bible by word, phrase, book, or reference.
+    </p>
+
+    <form id="search-form" class="search-form">
+
+      <input
+        id="search-input"
+        type="search"
+        placeholder="Example: love, Genesis, John 3:16"
+        autocomplete="off"
+      />
+
+      <button type="submit">
+        Search
+      </button>
+
+    </form>
+
+    <p id="results-count" class="results-count"></p>
+
+    <div id="results" class="results"></div>
+
+<div id="pagination" class="pagination"></div>
+  </section>
+
+</Layout>
+
+<style>
+
+.search-page{
+  max-width:900px;
+  margin:0 auto;
+  padding:4rem 1.5rem;
+}
+
+.eyebrow{
+  color:#D4AF37;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  text-align:center;
+}
+
+.search-page h1{
+  text-align:center;
+  margin:.5rem 0;
+}
+
+.subtitle{
+  text-align:center;
+  color:#bbb;
+  margin-bottom:2rem;
+}
+
+.search-form{
+  display:flex;
+  gap:1rem;
+  margin-bottom:2rem;
+}
+
+.search-form input{
+  flex:1;
+  padding:1rem;
+  border-radius:12px;
+  border:none;
+  font-size:1rem;
+}
+
+.search-form button{
+  background:#D4AF37;
+  color:white;
+  border:none;
+  padding:1rem 1.5rem;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.search-form button:hover{
+  opacity:.9;
+}
+
+.results-count{
+  margin-bottom:1.5rem;
+  color:#D4AF37;
+  font-weight:600;
+}
+
+.results{
+  display:grid;
+  gap:1rem;
+}
+
+.result-card{
+  background:white;
+  color:#333;
+  padding:1.5rem;
+  border-radius:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.result-card h3{
+  margin:0 0 .75rem;
+  color:#0F6B73;
+}
+
+.result-card p{
+  margin:0;
+  line-height:1.7;
+}
+
+.result-card a{
+  display:inline-block;
+  margin-top:1rem;
+  color:#D4AF37;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.result-card a:hover{
+  text-decoration:underline;
+}
+:global(.pagination) {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+:global(.pagination-nav) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+:global(.pagination-nav button) {
+  min-width: 42px;
+  height: 42px;
+  padding: 0 0.9rem;
+
+  border: none;
+  border-radius: 10px;
+
+  background: white;
+  color: #0F6B73;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+:global(.pagination-nav button:hover:not(:disabled)) {
+  background: #D4AF37;
+  color: white;
+}
+
+:global(.pagination-nav button.active) {
+  background: #D4AF37;
+  color: #111;
+  border: 2px solid #fff;
+  font-weight: 700;
+}
+
+:global(.pagination-nav button:disabled) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+:global(.pagination-nav span) {
+  padding: 0 0.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .pagination-nav {
+    gap: 0.35rem;
+  }
+
+  .pagination-nav button {
+    min-width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    padding: 0 0.75rem;
+  }
+}
+
+@media (max-width:768px){
+
+  .search-form{
+    flex-direction:column;
+  }
+
+}
+
+</style>
+
+<script>
+  import "../../scripts/bible-search";
+</script>

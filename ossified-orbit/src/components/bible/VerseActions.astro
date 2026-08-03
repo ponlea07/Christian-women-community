@@ -1,0 +1,130 @@
+---
+import {
+  Copy,
+  NotebookPen,
+  Share2,
+} from "@lucide/astro";
+
+import type { BibleVerse } from "../../content/bible/types";
+
+interface Props {
+  verse: BibleVerse;
+  book: string;
+  bookName: string;
+  chapter: number;
+}
+
+const {
+  verse,
+  book,
+  bookName,
+  chapter,
+} = Astro.props;
+---
+
+<nav
+  class="verse-actions"
+  aria-label={`Verse ${verse.verse} actions`}
+>
+  <!-- Copy Verse -->
+  <button
+    type="button"
+    class="verse-action"
+    data-action="copy"
+    data-book={book}
+    data-book-name={bookName}
+    data-chapter={chapter}
+    data-verse={verse.verse}
+    data-text={verse.text}
+    aria-label={`Copy verse ${verse.verse}`}
+    title="Copy verse"
+  >
+    <Copy size={18} />
+  </button>
+
+  <!-- Share Verse -->
+  <button
+    type="button"
+    class="verse-action"
+    data-action="share"
+    data-book={book}
+    data-book-name={bookName}
+    data-chapter={chapter}
+    data-verse={verse.verse}
+    data-text={verse.text}
+    aria-label={`Share verse ${verse.verse}`}
+    title="Share verse"
+  >
+    <Share2 size={18} />
+  </button>
+
+  <!-- Add Note -->
+  <button
+    type="button"
+    class="verse-action"
+    data-action="note"
+    data-book={book}
+    data-book-name={bookName}
+    data-chapter={chapter}
+    data-verse={verse.verse}
+    aria-label={`Add a note to verse ${verse.verse}`}
+    title="Add note"
+  >
+    <NotebookPen size={18} />
+  </button>
+</nav>
+
+<style>
+.verse-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-top: 0.35rem;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.2s ease;
+}
+
+.verse-actions.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.verse-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2rem;
+  height: 2rem;
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 0.5rem;
+
+  color: inherit;
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.verse-action:hover,
+.verse-action:focus-visible {
+  color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.08);
+  outline: none;
+}
+
+.verse-action:active {
+  transform: scale(0.95);
+}
+</style>

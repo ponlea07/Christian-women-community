@@ -1,0 +1,42 @@
+---
+interface Props {
+  size?: number;
+}
+
+const {
+  size = 28
+} = Astro.props;
+---
+
+<span
+  class="crown-icon"
+  style={`--size:${size}px`}
+  aria-hidden="true"
+>
+  ♛
+</span>
+
+
+<style>
+
+.crown-icon{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  width:var(--size);
+
+  height:var(--size);
+
+  color:#D4AF37;
+
+  font-size:calc(var(--size) * .8);
+
+  line-height:1;
+
+}
+
+</style>

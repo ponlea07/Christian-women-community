@@ -1,0 +1,88 @@
+---
+import ChapterPicker from "./ChapterPicker.astro";
+
+interface Props {
+  bookSlug: string;
+  chapterCount: number;
+  currentChapter: number;
+}
+
+const {
+  bookSlug,
+  chapterCount,
+  currentChapter,
+} = Astro.props;
+---
+
+<div class="reader-toolbar">
+
+  <a href="/bible/books" class="toolbar-button">
+    📚 Books
+  </a>
+
+  <ChapterPicker
+    bookSlug={bookSlug}
+    chapterCount={chapterCount}
+    currentChapter={currentChapter}
+  />
+
+  <a href="/bible/search" class="toolbar-button">
+    🔍 Search
+  </a>
+
+</div>
+
+<style>
+.reader-toolbar{
+  max-width:760px;
+  margin:2rem auto;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:1rem;
+}
+
+.toolbar-button{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+
+  background:#ffffff;
+  color:#0F6B73;
+
+  border:none;
+  border-radius:8px;
+
+  padding:.75rem 1rem;
+
+  font-weight:600;
+
+  transition:.2s ease;
+}
+
+.toolbar-button:hover{
+  background:#D4AF37;
+  color:white;
+}
+
+.reader-toolbar .toolbar-button:first-child{
+  justify-self:start;
+}
+
+.reader-toolbar .toolbar-button:last-child{
+  justify-self:end;
+}
+
+@media (max-width:768px){
+
+  .reader-toolbar{
+    grid-template-columns:1fr;
+  }
+
+  .toolbar-button{
+    width:100%;
+  }
+
+}
+</style>

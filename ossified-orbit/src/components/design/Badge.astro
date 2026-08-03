@@ -1,0 +1,58 @@
+---
+interface Props {
+  variant?: "gold" | "teal";
+}
+
+const {
+  variant = "gold"
+} = Astro.props;
+---
+
+<span class={`badge ${variant}`}>
+  <slot />
+</span>
+
+
+<style>
+
+.badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  padding:.45rem 1rem;
+
+  border-radius:999px;
+
+  font-family:"Poppins", sans-serif;
+
+  font-size:.8rem;
+
+  font-weight:600;
+
+  letter-spacing:.05em;
+
+  text-transform:uppercase;
+
+}
+
+
+.gold{
+
+  background:rgba(212,175,55,.15);
+
+  color:#D4AF37;
+
+}
+
+
+.teal{
+
+  background:rgba(15,107,115,.12);
+
+  color:#0F6B73;
+
+}
+
+</style>

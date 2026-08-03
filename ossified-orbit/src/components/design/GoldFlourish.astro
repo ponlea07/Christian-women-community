@@ -1,0 +1,63 @@
+---
+import CrownIcon from "./CrownIcon.astro";
+
+interface Props {
+  width?: number;
+  margin?: string;
+}
+
+const {
+  width = 70,
+  margin = "2rem auto 3rem"
+} = Astro.props;
+---
+
+<div
+  class="gold-flourish"
+  style={`--line-width:${width}px; --margin:${margin};`}
+  aria-hidden="true"
+>
+
+  <span class="line"></span>
+
+  <CrownIcon size={26} />
+
+  <span class="line"></span>
+
+</div>
+
+
+<style>
+
+.gold-flourish{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:1rem;
+
+  margin:var(--margin);
+
+}
+
+
+.line{
+
+  width:var(--line-width);
+
+  height:2px;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    #D4AF37,
+    transparent
+  );
+
+}
+
+
+</style>

@@ -1,0 +1,13 @@
+---
+import { searchBible } from "../lib/bible/search";
+
+const results = await searchBible("God");
+---
+
+<html>
+  <body>
+    <h1>Search Test</h1>
+
+    <pre>{JSON.stringify(results.slice(0, 5), null, 2)}</pre>
+  </body>
+</html>

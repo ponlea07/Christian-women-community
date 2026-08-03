@@ -1,0 +1,45 @@
+---
+export interface Props {
+  reference: string;
+}
+
+const { reference } = Astro.props;
+---
+
+<button
+  type="button"
+  class="verse-note-button"
+  data-reference={reference}
+  aria-label={`Add or edit a note for ${reference}`}
+>
+  📝 Note
+</button>
+
+<style>
+.verse-note-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+
+  padding: .5rem .85rem;
+
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: .6rem;
+
+  background: transparent;
+  color: inherit;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.verse-note-button:hover,
+.verse-note-button:focus-visible {
+  background: rgba(255,255,255,.08);
+  border-color: #D4AF37;
+  outline: none;
+}
+</style>

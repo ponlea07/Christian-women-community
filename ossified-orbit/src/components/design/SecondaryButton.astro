@@ -1,0 +1,71 @@
+---
+interface Props {
+  href?: string;
+  type?: "button" | "submit";
+}
+
+const {
+  href,
+  type = "button"
+} = Astro.props;
+---
+
+{
+  href ? (
+    <a href={href} class="secondary-button">
+      <slot />
+    </a>
+  ) : (
+    <button type={type} class="secondary-button">
+      <slot />
+    </button>
+  )
+}
+
+<style>
+
+.secondary-button{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:transparent;
+
+  color:#D4AF37;
+
+  padding:1rem 2.2rem;
+
+  border:2px solid #D4AF37;
+
+  border-radius:999px;
+
+  font-family:"Poppins", sans-serif;
+
+  font-weight:600;
+
+  text-decoration:none;
+
+  cursor:pointer;
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease;
+
+}
+
+
+.secondary-button:hover{
+
+  background:#D4AF37;
+
+  color:white;
+
+  transform:translateY(-3px);
+
+}
+
+</style>

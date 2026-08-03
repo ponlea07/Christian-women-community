@@ -1,0 +1,98 @@
+---
+import { books } from "../../content/bible/books";
+
+interface Props {
+  open?: boolean;
+}
+
+const { open = false } = Astro.props;
+
+const oldTestament = books.filter(book => book.testament === "old");
+const newTestament = books.filter(book => book.testament === "new");
+---
+
+<div class={`book-picker ${open ? "open" : ""}`}>
+
+  <div class="book-picker-card">
+
+    <h2>Select a Book</h2>
+
+    <h3>Old Testament</h3>
+
+    <div class="book-grid">
+      {
+        oldTestament.map(book => (
+          <a href={`/bible/${book.slug}/1`}>
+            {book.name}
+          </a>
+        ))
+      }
+    </div>
+
+    <h3>New Testament</h3>
+
+    <div class="book-grid">
+      {
+        newTestament.map(book => (
+          <a href={`/bible/${book.slug}/1`}>
+            {book.name}
+          </a>
+        ))
+      }
+    </div>
+
+  </div>
+
+</div>
+
+<style>
+.book-picker{
+  display:none;
+}
+
+.book-picker.open{
+  display:block;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  z-index:999;
+  overflow:auto;
+}
+
+.book-picker-card{
+  width:min(900px,95%);
+  margin:3rem auto;
+  background:white;
+  border-radius:16px;
+  padding:2rem;
+}
+
+.book-picker h2{
+  text-align:center;
+  margin-bottom:2rem;
+  color:#0F6B73;
+}
+
+.book-picker h3{
+  color:#D4AF37;
+  margin:2rem 0 1rem;
+}
+
+.book-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:.75rem;
+}
+
+.book-grid a{
+  text-decoration:none;
+  color:#0F6B73;
+  padding:.6rem .8rem;
+  border-radius:8px;
+  transition:.2s;
+}
+
+.book-grid a:hover{
+  background:#F4F4F4;
+}
+</style>

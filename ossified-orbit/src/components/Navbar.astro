@@ -6,7 +6,10 @@ import "../styles/navbar.css";
   <div class="container nav-container">
 
     <a href="/" class="brand">
-      <img src="/logo.jpg" alt="Christian Women Community Logo" />
+      <img
+        src="/logo.jpg"
+        alt="Christian Women Community Logo"
+      />
 
       <div class="brand-text">
         <h2>Christian Women Community</h2>
@@ -22,21 +25,22 @@ import "../styles/navbar.css";
     <button
       class="menu-toggle"
       id="menuToggle"
-      aria-label="Open menu">
-
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mobileNav"
+    >
       ☰
-
     </button>
 
-    <nav id="mobileNav">
-
+    <nav id="mobileNav" aria-label="Primary Navigation">
       <ul>
-
         <li><a href="/">Home</a></li>
 
         <li><a href="/about">About</a></li>
 
         <li><a href="/programs">Programs</a></li>
+
+        <li><a href="/bible">Bible Hub</a></li>
 
         <li><a href="/marketplace">Marketplace</a></li>
 
@@ -45,17 +49,11 @@ import "../styles/navbar.css";
         <li><a href="/contact">Contact</a></li>
 
         <li>
-
           <a href="/join" class="join-btn">
-
             Join Us
-
           </a>
-
         </li>
-
       </ul>
-
     </nav>
 
   </div>
@@ -63,15 +61,21 @@ import "../styles/navbar.css";
 
 <script is:inline>
 document.addEventListener("DOMContentLoaded", () => {
-
   const toggle = document.getElementById("menuToggle");
   const nav = document.getElementById("mobileNav");
 
-  toggle?.addEventListener("click", () => {
+  if (!toggle || !nav) return;
 
-   nav?.classList.toggle("open");
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
 
+    const expanded =
+      toggle.getAttribute("aria-expanded") === "true";
+
+    toggle.setAttribute(
+      "aria-expanded",
+      String(!expanded)
+    );
   });
-
 });
 </script>

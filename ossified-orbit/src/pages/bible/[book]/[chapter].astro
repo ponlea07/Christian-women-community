@@ -1,0 +1,159 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import BibleReader from "../../../components/bible/BibleReader.astro";
+import ChapterNavigation from "../../../components/bible/ChapterNavigation.astro";
+import ReaderToolbar from "../../../components/bible/ReaderToolbar.astro";
+import BookmarkButton from "../../../components/bible/BookmarkButton.astro";
+import NoteDialog from "../../../components/bible/NoteDialog.astro";
+
+import { books } from "../../../content/bible/books";
+import { getBook } from "../../../lib/bible/repository";
+import { getChapterNavigation } from "../../../lib/bible/navigation";
+
+export async function getStaticPaths() {
+  const paths = [];
+
+  for (const book of books) {
+    for (let chapter = 1; chapter <= book.chapters; chapter++) {
+      paths.push({
+        params: {
+          book: book.slug,
+          chapter: chapter.toString(),
+        },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { book, chapter } = Astro.params;
+
+const metadata = books.find((b) => b.slug === book);
+
+if (!metadata) {
+  return Astro.redirect("/404");
+}
+
+const bibleBook = await getBook(book);
+
+if (!bibleBook) {
+  return Astro.redirect("/404");
+}
+
+const chapterNumber = Number(chapter);
+
+const verses = bibleBook.chapters[chapterNumber - 1];
+
+if (!verses) {
+  return Astro.redirect("/404");
+}
+
+const navigation = getChapterNavigation(book, chapterNumber);
+---
+
+<Layout title={`${metadata.name} ${chapterNumber}`}>
+  <div
+    id="reading-progress"
+    data-book={metadata.slug}
+    data-book-name={metadata.name}
+    data-chapter={chapterNumber}
+    data-href={`/bible/${metadata.slug}/${chapterNumber}`}
+  />
+
+  <section class="reader-page">
+    <h1>{metadata.name}</h1>
+
+    <h2>Chapter {chapterNumber}</h2>
+
+    <BookmarkButton
+      book={metadata.slug}
+      bookName={metadata.name}
+      chapter={chapterNumber}
+      href={`/bible/${metadata.slug}/${chapterNumber}`}
+    />
+
+    <ReaderToolbar
+      bookSlug={metadata.slug}
+      chapterCount={metadata.chapters}
+      currentChapter={chapterNumber}
+    />
+
+    <ChapterNavigation
+      previous={navigation.previous}
+      next={navigation.next}
+    />
+
+    <hr class="reader-divider" />
+
+   <BibleReader
+  verses={verses}
+  book={metadata.slug}
+  bookName={metadata.name}
+  chapter={chapterNumber}
+/>
+
+    <hr class="reader-divider" />
+
+    <ChapterNavigation
+      previous={navigation.previous}
+      next={navigation.next}
+    />
+  </section>
+
+  <NoteDialog />
+
+</Layout>
+
+
+<style>
+.reader-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.reader-page h1 {
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.reader-page h2 {
+  margin-bottom: 1rem;
+  color: #d4af37;
+  text-align: center;
+}
+
+.reader-divider {
+  max-width: 760px;
+  margin: 2rem auto;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.reader-page .bookmark-button {
+  display: flex;
+  margin: 0 auto 1.5rem;
+}
+</style>
+
+<script>
+  import "../../../scripts/reading-progress";
+</script>
+
+<script>
+  import "../../../scripts/bookmark";
+</script>
+
+<script>
+  import "../../../scripts/verse-actions";
+</script>
+
+<script>
+  import "../../../scripts/note-dialog";
+</script>
+
+<script>
+  import "../../../scripts/chapter-picker";
+</script>

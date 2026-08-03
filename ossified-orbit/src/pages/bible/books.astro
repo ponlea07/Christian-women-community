@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { books } from "../../content/bible/books";
+
+const oldTestament = books.filter(book => book.testament === "old");
+const newTestament = books.filter(book => book.testament === "new");
+---
+
+<Layout title="Bible Books">
+
+<section class="books-page">
+
+    <h1>Bible Books</h1>
+
+    <p class="intro">
+        Choose a book to begin reading.
+    </p>
+
+    <section class="testament">
+
+        <h2>Old Testament</h2>
+
+        <div class="book-grid">
+
+            {
+                oldTestament.map(book => (
+                    <a href={`/bible/${book.slug}`}>
+                        {book.name}
+                    </a>
+                ))
+            }
+
+        </div>
+
+    </section>
+
+    <section class="testament">
+
+        <h2>New Testament</h2>
+
+        <div class="book-grid">
+
+            {
+                newTestament.map(book => (
+                    <a href={`/bible/${book.slug}`}>
+                        {book.name}
+                    </a>
+                ))
+            }
+
+        </div>
+
+    </section>
+
+</section>
+
+</Layout>
+
+<style>
+
+.books-page{
+    max-width:1100px;
+    margin:auto;
+    padding:4rem 1.5rem;
+}
+
+.books-page h1{
+    text-align:center;
+    margin-bottom:.5rem;
+}
+
+.intro{
+    text-align:center;
+    margin-bottom:3rem;
+}
+
+.testament{
+    margin-bottom:4rem;
+}
+
+.testament h2{
+    color:#D4AF37;
+    margin-bottom:1.5rem;
+}
+
+.book-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:1rem;
+}
+
+.book-grid a{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:60px;
+
+    text-decoration:none;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:12px;
+
+    color:white;
+
+    transition:.2s;
+}
+
+.book-grid a:hover{
+
+    background:white;
+
+    color:#0F6B73;
+
+}
+
+</style>

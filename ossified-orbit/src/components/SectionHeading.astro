@@ -3,18 +3,24 @@ interface Props {
   eyebrow: string;
   title: string;
   text?: string;
+  theme?: "light" | "dark";
 }
 
-const { eyebrow, title, text } = Astro.props;
+const {
+  eyebrow,
+  title,
+  text,
+  theme = "dark"
+} = Astro.props;
 ---
 
-<div class="section-heading">
+<div class={`section-heading ${theme}`}>
 
-  <span class="section-eyebrow">
+  <span class="eyebrow">
     {eyebrow}
   </span>
 
-  <div class="section-flourish">
+  <div class="gold-flourish">
 
     <span></span>
 

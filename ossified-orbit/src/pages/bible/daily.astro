@@ -1,0 +1,154 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getDailyVerse } from "../../lib/bible/dailyVerse";
+import GoldFlourish from "../../components/GoldFlourish.astro";
+import ScriptureCard from "../../components/design/ScriptureCard.astro";
+const verse = getDailyVerse();
+---
+
+<Layout title="Daily Verse">
+
+<section class="daily-verse">
+
+  <p class="eyebrow">TODAY'S VERSE</p>
+
+  <GoldFlourish />
+
+  <ScriptureCard
+    reference={verse.reference}
+    text={verse.text}
+    action="Read Full Chapter"
+    href={`/bible/${verse.book}/${verse.chapter}`}
+  >
+
+    <blockquote>
+      {verse.text}
+    </blockquote>
+
+    <a
+      class="read-button"
+      href={`/bible/${verse.book}/${verse.chapter}`}
+    >
+      Read Full Chapter →
+    </a>
+
+  </ScriptureCard>
+
+</section>
+
+</Layout>
+
+<style>
+
+.daily-verse{
+  max-width:960px;
+  margin:0 auto;
+  padding:5rem 1.5rem 6rem;
+  text-align:center;
+  animation:fadeUp .6s ease;
+}
+
+.eyebrow{
+  color:#D4AF37;
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:.85rem;
+  font-weight:600;
+  margin-bottom:1rem;
+}
+
+.daily-verse h1{
+  color:#ffffff;
+  font-family:"Cormorant Garamond", serif;
+  font-size:3.3rem;
+  font-weight:700;
+  margin:0;
+}
+
+.gold-divider{
+  width:80px;
+  height:3px;
+  margin:2rem auto 3rem;
+  background:#D4AF37;
+  border-radius:999px;
+}
+
+.verse-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.05);
+  backdrop-filter:blur(8px);
+  border-radius:24px;
+  padding:5.5rem 3rem;
+  box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+blockquote{
+  margin:0 auto;
+  max-width:720px;
+  color:#ffffff;
+  font-family:"Cormorant Garamond", serif;
+  font-size:2.3rem;
+  line-height:1.7;
+  font-style:normal;
+  overflow-wrap:break-word;
+}
+
+.read-button{
+  display:inline-block;
+  margin-top:3.5rem;
+  padding:1.1rem 2.6rem;
+  background:#D4AF37;
+  color:#ffffff;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:1rem;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.read-button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(212,175,55,.35);
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+@media (max-width:768px){
+
+  .daily-verse{
+    padding:4rem 1.25rem;
+  }
+
+  .daily-verse h1{
+    font-size:2.6rem;
+  }
+
+  .verse-card{
+    padding:3rem 1.75rem;
+  }
+
+  blockquote{
+    font-size:1.8rem;
+    line-height:1.6;
+  }
+
+  .read-button{
+    width:100%;
+    max-width:320px;
+  }
+
+}
+
+</style>
