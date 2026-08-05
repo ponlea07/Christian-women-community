@@ -27,28 +27,6 @@
 
 </div>
 
-<script>
-const container = document.getElementById("continue-reading");
-const heading = document.getElementById("continue-reference");
-const anchor = document.getElementById("continue-link");
-
-const saved = localStorage.getItem("lastReading");
-
-if (
-  saved &&
-  container &&
-  heading instanceof HTMLHeadingElement &&
-  anchor instanceof HTMLAnchorElement
-) {
-  const reading = JSON.parse(saved);
-
-  heading.textContent = `${reading.bookName} ${reading.chapter}`;
-  anchor.href = reading.href;
-
-  container.classList.remove("hidden");
-}
-</script>
-
 <style>
 
 .continue-reading{
@@ -121,7 +99,7 @@ if (
 
 .continue-message{
 
-  color:#ffffff;
+ color:#ffffff;
 
   font-size:1rem;
 

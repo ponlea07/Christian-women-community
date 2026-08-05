@@ -31,17 +31,70 @@ const testaments = [
       GOD'S WORD
     </span>
 
-    <h1>Read the Bible</h1>
+    <h1>Bible Hub</h1>
 
-    <p>
-      Read the Holy Bible online anytime.
-      Grow daily in God's Word.
-    </p>
+<p>
+  Read, search and study God's Word in one beautiful experience.
+</p>
 
   </div>
 
 </section>
 <ContinueReading />
+
+<section class="quick-access">
+
+  <div class="container">
+
+    <SectionHeading
+      eyebrow="QUICK ACCESS"
+      title="Everything You Need"
+      text="Continue where you left off or jump straight into your favourite Bible tools."
+    />
+
+    <div class="resources-grid">
+
+      <article class="resource-card">
+
+        <h3>🔍 Search Scripture</h3>
+
+        <p>Find any verse or passage instantly.</p>
+
+        <a href="/bible/search" class="btn-primary">
+          Open →
+        </a>
+
+      </article>
+
+      <article class="resource-card">
+
+        <h3>⭐ Bookmarks</h3>
+
+        <p>Your saved verses and chapters.</p>
+
+        <a href="/bible/bookmarks" class="btn-primary">
+          Open →
+        </a>
+
+      </article>
+
+      <article class="resource-card">
+
+        <h3>📝 Notes</h3>
+
+        <p>Your personal Bible study notes.</p>
+
+        <a href="/bible/notes" class="btn-primary">
+          Open →
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
 
 <section class="daily-verse-preview">
 
@@ -71,8 +124,8 @@ const testaments = [
 
 <SectionHeading
 eyebrow="THE HOLY SCRIPTURES"
-title="Choose a Testament"
-text="Begin reading the Word of God."
+title="Start Reading the Bible Today"
+text="Choose where you'd like to begin your journey through Scripture."
 />
 
 <div class="resources-grid">
@@ -112,7 +165,19 @@ Open →
 .daily-verse-preview .scripture-card{
   margin-bottom:3rem;
 }
+.quick-access{
+  padding:3rem 0;
+}
+
+.quick-access .resources-grid{
+  margin-top:2rem;
+}
+
+.quick-access .section-heading p{
+    color:var(--color-text);
+}
 </style>
 <script>
   import "../../scripts/continue-reading";
 </script>
+
