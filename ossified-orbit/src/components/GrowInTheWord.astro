@@ -1,74 +1,65 @@
+---
+import monthlyVerse from "../content/featured/monthly-verse";
+---
+
 <section class="grow-word">
 
   <div class="container">
 
     <div class="word-grid">
 
-      <!-- Left -->
+      <!-- Verse of the Month -->
 
       <div class="verse-card">
 
         <span class="eyebrow">
-
           VERSE OF THE MONTH
-
         </span>
 
         <h2>
-
-          "She is clothed with strength and dignity;
-          she can laugh at the days to come."
-
+          "{monthlyVerse.text}"
         </h2>
 
         <p class="reference">
-
-          Proverbs 31:25
-
+          {monthlyVerse.reference}
         </p>
 
         <p>
-
-          This month, we invite every Virtuosa to meditate on this
-          Scripture, pray through it, and allow God's Word to shape
-          every area of your life.
-
+          {monthlyVerse.meditation}
         </p>
+
+        <a
+          href={`/bible/${monthlyVerse.book}/${monthlyVerse.chapter}`}
+          class="btn-primary"
+        >
+          Read Full Chapter →
+        </a>
 
       </div>
 
-      <!-- Right -->
+      <!-- Bible Hub -->
 
-      <div class="bible-card">
+      <div class="bible-hub-card">
 
         <h3>
+  Take Bible Hub With You
+</h3>
 
-          Grow in the Word
+<p class="bible-hub-card-text">
+  Scan to continue reading, searching and studying God's Word wherever you are.
+</p>
 
-        </h3>
+<img
+  src="/images/bible-hub-qr.png"
+  alt="Scan to open Bible Hub"
+  class="bible-qr"
+  loading="lazy"
+  decoding="async"
+/>
 
-        <p>
-
-          Read the Bible anytime using your phone.
-
-          Scan the QR code or click below.
-
-        </p>
-
-        <div class="qr-placeholder">
-
-          QR
-
-        </div>
-
-        <a
-          href="https://www.bible.com"
-          target="_blank"
-          class="btn-primary">
-
-          Read the Bible Online
-
-        </a>
+<a href="/bible" class="btn-primary">
+  Open Bible Hub →
+</a>
 
       </div>
 
