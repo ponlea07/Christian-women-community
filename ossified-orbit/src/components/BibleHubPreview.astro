@@ -1,32 +1,39 @@
+---
+import { BookOpen } from "@lucide/astro";
+---
 
 <section class="bible-hub-preview">
+
   <div class="container">
 
     <div class="preview-grid">
 
+      <!-- LEFT -->
+
       <div class="preview-content">
 
         <span class="section-tag">
-          📖 New
+          <BookOpen size={16} />
+          New
         </span>
 
         <h2>
-          Grow deeper in God's Word every day.
+          Read, Search & Study the Bible.
         </h2>
 
         <p class="lead">
-  Read, search and study God's Word with confidence. Whether you're
-  following a Bible reading plan, preparing for Bible study, or
-  exploring a passage during prayer, Bible Hub brings Scripture and
-  trusted study tools together in one beautiful experience.
-</p>
+          Read, search and study God's Word with confidence. Whether you're
+          following a Bible reading plan, preparing for Bible study, or
+          exploring a passage during prayer, Bible Hub brings Scripture and
+          trusted study tools together in one beautiful experience.
+        </p>
 
         <ul class="feature-list">
-  <li>Read every book and chapter</li>
-  <li>Search Scripture instantly</li>
-  <li>Navigate books with ease</li>
-  <li>Study in a distraction-free experience</li>
-</ul>
+          <li>Read every book and chapter of the Bible</li>
+          <li>Search Scripture instantly</li>
+          <li>Navigate books with ease</li>
+          <li>Clean, distraction-free reading experience</li>
+        </ul>
 
         <a href="/bible" class="btn-primary">
           Explore Bible Hub
@@ -34,7 +41,25 @@
 
       </div>
 
+      <!-- RIGHT -->
+
       <div class="preview-image">
+
+        <div class="preview-header">
+
+          <span class="preview-badge">
+            Bible Hub
+          </span>
+
+          <h3>
+            Read • Search • Study
+          </h3>
+
+          <p>
+            Everything you need to explore God's Word in one beautiful experience.
+          </p>
+
+        </div>
 
         <img
           src="/images/bible-hub-preview.webp"
@@ -48,79 +73,136 @@
     </div>
 
   </div>
+
 </section>
 
 <style>
-.bible-hub-preview {
-  padding: 3rem 0 5rem;
+
+.bible-hub-preview{
+  padding:2rem 0 5rem;
 }
 
-.preview-grid {
-  display: grid;
-  grid-template-columns: 45% 55%;
-  gap: 4rem;
-  align-items: center;
+.preview-grid{
+  display:grid;
+  grid-template-columns:42% 58%;
+  gap:3rem;
+  align-items:center;
 }
 
-.preview-content h2 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  line-height: 1.2;
-  margin: 0.75rem 0 1rem;
-  color: var(--color-heading);
+/* LEFT */
+
+.preview-content h2{
+  font-size:clamp(2rem,4vw,2.8rem);
+  line-height:1.2;
+  margin:.75rem 0 1rem;
+  color:var(--color-heading);
 }
 
-.preview-content .lead {
-  margin-bottom: 1.75rem;
-  color: var(--color-text);
-  line-height: 1.8;
+.preview-content .lead{
+  margin-bottom:1.75rem;
+  color:var(--color-text);
+  line-height:1.8;
 }
 
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 2rem;
-  display: grid;
-  gap: 0.9rem;
+.feature-list{
+  list-style:none;
+  padding:0;
+  margin:0 0 2rem;
+  display:grid;
+  gap:.9rem;
 }
 
-.feature-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  color: var(--color-text);
-  line-height: 1.6;
+.feature-list li{
+  display:flex;
+  gap:.75rem;
+  line-height:1.6;
+  color:var(--color-text);
 }
 
-.feature-list li::before {
-  content: "✓";
-  color: var(--color-primary);
-  font-weight: 700;
-  flex-shrink: 0;
+.feature-list li::before{
+  content:"✓";
+  color:var(--color-primary);
+  font-weight:700;
+  flex-shrink:0;
 }
 
-.preview-image img {
-  width: 100%;
-  display: block;
-  border-radius: 1.25rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+/* RIGHT */
+
+.preview-image{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-@media (max-width: 900px) {
-  .bible-hub-preview {
-    padding: 3rem 0;
+.preview-header{
+  text-align:center;
+  margin-bottom:1.5rem;
+}
+
+.preview-badge{
+  display:inline-block;
+  background:#0F6B73;
+  color:#D4AF37;
+
+  padding:.45rem 1rem;
+
+  border-radius:999px;
+
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  margin-bottom:1rem;
+}
+
+.preview-header h3{
+  margin:0 0 .75rem;
+  color:#0F6B73;
+  font-family:"Cormorant Garamond",serif;
+  font-size:2rem;
+}
+
+.preview-header p{
+  margin:0 auto;
+  max-width:360px;
+  color:#666;
+  line-height:1.7;
+}
+
+.preview-image img{
+  width:100%;
+  display:block;
+
+  background:white;
+  padding:.75rem;
+
+  border-radius:1.5rem;
+
+  box-shadow:0 20px 60px rgba(0,0,0,.12);
+}
+
+/* MOBILE */
+
+@media (max-width:900px){
+
+  .bible-hub-preview{
+    padding:3rem 0;
   }
 
-  .preview-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+  .preview-grid{
+    grid-template-columns:1fr;
+    gap:2.5rem;
   }
 
-  .preview-content {
-    order: 2;
+  .preview-content{
+    order:2;
   }
 
-  .preview-image {
-    order: 1;
+  .preview-image{
+    order:1;
   }
+
 }
+
 </style>
