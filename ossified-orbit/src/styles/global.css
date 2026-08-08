@@ -3884,3 +3884,59 @@ FEATURED BIBLE HUB
     }
 
 }
+/* ==========================================
+   Bible Reader - Verse Actions
+========================================== */
+
+.verse-actions {
+    display:flex;
+    gap:.5rem;
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:opacity .2s ease;
+}
+
+.verse:hover .verse-actions,
+.verse:focus-within .verse-actions {
+    opacity:1;
+    pointer-events:auto;
+}
+
+.verse:hover .verse-actions,
+.verse:focus-within .verse-actions {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.verse-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  background: transparent;
+
+  border: none;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.verse-action:hover {
+  color: #d4af37;
+  transform: scale(1.15);
+}
+
+.verse-action svg {
+  width: 18px;
+  height: 18px;
+
+  stroke: currentColor;
+}

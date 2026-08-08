@@ -22,32 +22,32 @@ const {
   class="verse"
   tabindex="0"
 >
-  <p class="verse-text">
-    <sup>{verse.verse}</sup>
-    <span>{verse.text}</span>
-  </p>
+  <div class="verse-content">
+    <p class="verse-text">
+      <sup>{verse.verse}</sup>
+      <span>{verse.text}</span>
+    </p>
 
-  <VerseActions
-  verse={verse}
-  book={book}
-  bookName={bookName}
-  chapter={chapter}
-/>
+    <VerseActions
+      verse={verse}
+      book={book}
+      bookName={bookName}
+      chapter={chapter}
+    />
+  </div>
 </article>
 
 <style>
 .verse {
-  position: relative;
   margin-bottom: 1rem;
-
-  /* Ensures anchored verses are not hidden behind sticky headers */
   scroll-margin-top: 6rem;
 }
 
-.verse:target {
-  background: rgba(212, 175, 55, 0.12);
-  border-radius: 0.5rem;
-  transition: background 0.25s ease;
+.verse-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: start;
 }
 
 .verse-text {
@@ -55,13 +55,18 @@ const {
 }
 
 .verse-text sup {
-  margin-right: 0.45rem;
+  margin-right: .45rem;
   color: #d4af37;
-  font-size: 0.8rem;
+  font-size: .8rem;
   font-weight: 700;
 }
 
 .verse-text span {
   color: #fff;
+}
+
+.verse:target {
+  background: rgba(212,175,55,.12);
+  border-radius: .5rem;
 }
 </style>

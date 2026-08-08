@@ -1,3 +1,5 @@
+import { toggleHighlight } from "../content/bible/verse-highlights";
+
 function showActions(verse: HTMLElement) {
   verse
     .querySelector<HTMLElement>(".verse-actions")
@@ -58,6 +60,48 @@ async function shareVerse(button: HTMLButtonElement) {
   console.log("Sharing unavailable. Verse copied.");
 }
 
+function highlightVerse(button: HTMLButtonElement) {
+  const highlighted = toggleHighlight({
+    book: button.dataset.book!,
+    bookName: button.dataset.bookName!,
+    chapter: Number(button.dataset.chapter),
+    verse: Number(button.dataset.verse),
+    text: button.dataset.text ?? "",
+  });
+
+  showHighlightMessage(
+    highlighted
+      ? "❤️ Verse highlighted."
+      : "🗑️ Highlight removed."
+  );
+}
+function showHighlightMessage(message: string) {
+  const existing = document.querySelector(".highlight-toast");
+
+  if (existing) {
+    existing.remove();
+  }
+
+  const toast = document.createElement("div");
+
+  toast.className = "highlight-toast";
+  toast.textContent = message;
+
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    toast.classList.add("is-visible");
+  });
+
+  setTimeout(() => {
+    toast.classList.remove("is-visible");
+
+    setTimeout(() => {
+      toast.remove();
+    }, 250);
+  }, 1800);
+}
+
 function initializeVerseActions() {
   const verses = document.querySelectorAll<HTMLElement>(".verse");
 
@@ -76,21 +120,25 @@ function initializeVerseActions() {
 
         try {
           switch (action) {
-            case "note":
-              openNote(button);
-              break;
+  case "highlight":
+    highlightVerse(button);
+    break;
 
-            case "copy":
-              await copyVerse(button);
-              break;
+  case "note":
+    openNote(button);
+    break;
 
-            case "share":
-              await shareVerse(button);
-              break;
+  case "copy":
+    await copyVerse(button);
+    break;
 
-            default:
-              console.warn(`Unknown verse action: ${action}`);
-          }
+  case "share":
+    await shareVerse(button);
+    break;
+
+  default:
+    console.warn(`Unknown verse action: ${action}`);
+}
         } catch (error) {
           console.error(`Failed to execute "${action}" action.`, error);
         }
@@ -104,3 +152,39 @@ if (document.readyState === "loading") {
 } else {
   initializeVerseActions();
 }
+const toastStyles = document.createElement("style");
+
+toastStyles.textContent = `
+.highlight-toast{
+  position:fixed;
+  bottom:2rem;
+  left:50%;
+  transform:translateX(-50%) translateY(20px);
+
+  background:#0F6B73;
+  color:white;
+
+  padding:.9rem 1.4rem;
+
+  border-radius:999px;
+
+  font-family:Poppins,sans-serif;
+
+  font-size:.95rem;
+
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+  opacity:0;
+
+  transition:all .25s ease;
+
+  z-index:9999;
+}
+
+.highlight-toast.is-visible{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+}
+`;
+
+document.head.appendChild(toastStyles);

@@ -21,8 +21,7 @@ const testaments = [
 ];
 ---
 
-<Layout title="Read the Bible | Christian Women Community">
-
+<Layout title="Bible Hub | Christian Women Community">
 <section class="page-hero">
 
   <div class="container">
@@ -47,51 +46,57 @@ const testaments = [
   <div class="container">
 
     <SectionHeading
-  eyebrow="QUICK ACCESS"
-  title="Everything You Need"
-  text="Continue where you left off or jump straight into your favourite Bible tools."
+  eyebrow="TOOLS"
+  title="Study & Explore"
+  text="Everything you need to read, search and study God's Word."
   theme="light"
 />
 
-    <div class="resources-grid">
+<div class="resources-grid">
 
-      <article class="resource-card">
+  <article class="resource-card">
 
-        <h3>🔍 Search Scripture</h3>
+  <h3>🔍 Search Scripture</h3>
 
-        <p>Find any verse or passage instantly.</p>
+  <p>
+    Quickly find verses, passages and keywords across the Bible.
+  </p>
 
-        <a href="/bible/search" class="btn-primary">
-          Open →
-        </a>
+  <a href="/bible/search" class="btn-primary">
+    Open →
+  </a>
 
-      </article>
+</article>
 
-      <article class="resource-card">
+<article class="resource-card">
 
-        <h3>⭐ Bookmarks</h3>
+  <h3>⭐ Bookmarks</h3>
 
-        <p>Your saved verses and chapters.</p>
+  <p>
+    Save your favourite chapters and verses for easy access anytime.
+  </p>
 
-        <a href="/bible/bookmarks" class="btn-primary">
-          Open →
-        </a>
+  <a href="/bible/bookmarks" class="btn-primary">
+    Open →
+  </a>
 
-      </article>
+</article>
 
-      <article class="resource-card">
+<article class="resource-card">
 
-        <h3>📝 Notes</h3>
+  <h3>📝 Notes</h3>
 
-        <p>Your personal Bible study notes.</p>
+  <p>
+    Capture personal reflections and insights as you study Scripture.
+  </p>
 
-        <a href="/bible/notes" class="btn-primary">
-          Open →
-        </a>
+  <a href="/bible/notes" class="btn-primary">
+    Open →
+  </a>
 
-      </article>
+</article>
 
-    </div>
+</div>
 
   </div>
 
@@ -155,6 +160,57 @@ Open →
 
 </section>
 
+<section class="quick-access">
+
+  <div class="container">
+
+    <SectionHeading
+      eyebrow="COMING NEXT"
+      title="More Bible Study Tools"
+      text="We're continually adding new features to make your Bible study experience richer and more meaningful."
+      theme="light"
+    />
+
+    <div class="resources-grid">
+
+      <!-- Reading Plans -->
+      <article class="resource-card">
+
+        <h3>📅 Reading Plans</h3>
+
+        <p>
+          Follow guided Bible reading plans designed to help you stay
+          consistent in God's Word.
+        </p>
+
+        <span class="coming-soon-badge">
+          Coming Soon
+        </span>
+
+      </article>
+
+      <!-- Verse Highlights -->
+      <article class="resource-card">
+
+        <h3>❤️ Verse Highlights</h3>
+
+        <p>
+          Highlight meaningful verses using different colours and revisit
+          them whenever you need encouragement.
+        </p>
+
+        <span class="coming-soon-badge">
+          Coming Soon
+        </span>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
 </Layout>
 
 <style>
@@ -176,6 +232,18 @@ Open →
 
 .quick-access .section-heading p{
     color:var(--color-text);
+}
+.coming-soon-badge{
+    display:inline-block;
+    margin-top:1.5rem;
+    padding:.45rem 1rem;
+    background:#0F6B73;
+    color:#D4AF37;
+    border-radius:999px;
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 </style>
 <script>

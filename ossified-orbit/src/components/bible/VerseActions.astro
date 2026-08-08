@@ -3,6 +3,7 @@ import {
   Copy,
   NotebookPen,
   Share2,
+  Highlighter,
 } from "@lucide/astro";
 
 import type { BibleVerse } from "../../content/bible/types";
@@ -22,11 +23,9 @@ const {
 } = Astro.props;
 ---
 
-<nav
-  class="verse-actions"
-  aria-label={`Verse ${verse.verse} actions`}
->
-  <!-- Copy Verse -->
+<div class="verse-actions">
+
+  <!-- Copy -->
   <button
     type="button"
     class="verse-action"
@@ -42,7 +41,7 @@ const {
     <Copy size={18} />
   </button>
 
-  <!-- Share Verse -->
+  <!-- Share -->
   <button
     type="button"
     class="verse-action"
@@ -58,7 +57,7 @@ const {
     <Share2 size={18} />
   </button>
 
-  <!-- Add Note -->
+  <!-- Note -->
   <button
     type="button"
     class="verse-action"
@@ -72,59 +71,21 @@ const {
   >
     <NotebookPen size={18} />
   </button>
-</nav>
 
-<style>
-.verse-actions {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.5rem;
+  <!-- Highlight -->
+  <button
+    type="button"
+    class="verse-action"
+    data-action="highlight"
+    data-book={book}
+    data-book-name={bookName}
+    data-chapter={chapter}
+    data-verse={verse.verse}
+    data-text={verse.text}
+    aria-label={`Highlight verse ${verse.verse}`}
+    title="Highlight verse"
+  >
+    <Highlighter size={18} />
+  </button>
 
-  margin-top: 0.35rem;
-
-  opacity: 0;
-  pointer-events: none;
-
-  transition: opacity 0.2s ease;
-}
-
-.verse-actions.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.verse-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 2rem;
-  height: 2rem;
-
-  padding: 0;
-
-  background: transparent;
-  border: none;
-  border-radius: 0.5rem;
-
-  color: inherit;
-  cursor: pointer;
-
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease,
-    transform 0.15s ease;
-}
-
-.verse-action:hover,
-.verse-action:focus-visible {
-  color: #d4af37;
-  background-color: rgba(212, 175, 55, 0.08);
-  outline: none;
-}
-
-.verse-action:active {
-  transform: scale(0.95);
-}
-</style>
+</div>
