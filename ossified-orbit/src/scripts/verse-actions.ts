@@ -1,4 +1,8 @@
-import { toggleHighlight } from "../content/bible/verse-highlights";
+import {
+  toggleHighlight,
+  isHighlighted,
+} from "../content/bible/verse-highlights";
+
 
 function showActions(verse: HTMLElement) {
   verse
@@ -69,12 +73,28 @@ function highlightVerse(button: HTMLButtonElement) {
     text: button.dataset.text ?? "",
   });
 
+  updateVerseHighlight(button, highlighted);
+
   showHighlightMessage(
     highlighted
       ? "❤️ Verse highlighted."
       : "🗑️ Highlight removed."
   );
 }
+function updateVerseHighlight(
+  button: HTMLButtonElement,
+  highlighted: boolean
+) {
+  const verse = button.closest<HTMLElement>(".verse");
+
+  if (!verse) return;
+
+  verse.classList.toggle(
+    "verse-highlighted",
+    highlighted
+  );
+}
+
 function showHighlightMessage(message: string) {
   const existing = document.querySelector(".highlight-toast");
 
@@ -106,13 +126,28 @@ function initializeVerseActions() {
   const verses = document.querySelectorAll<HTMLElement>(".verse");
 
   verses.forEach((verse) => {
+    // Show / hide actions
     verse.addEventListener("mouseenter", () => showActions(verse));
     verse.addEventListener("mouseleave", () => hideActions(verse));
 
     verse.addEventListener("focusin", () => showActions(verse));
     verse.addEventListener("focusout", () => hideActions(verse));
 
-    const buttons = verse.querySelectorAll<HTMLButtonElement>(".verse-action");
+    // Restore saved highlight
+    const highlighted = isHighlighted(
+      verse.dataset.book!,
+      Number(verse.dataset.chapter),
+      Number(verse.dataset.verse)
+    );
+
+    verse.classList.toggle(
+      "verse-highlighted",
+      highlighted
+    );
+
+    // Wire up action buttons
+    const buttons =
+      verse.querySelectorAll<HTMLButtonElement>(".verse-action");
 
     buttons.forEach((button) => {
       button.addEventListener("click", async () => {
@@ -120,32 +155,38 @@ function initializeVerseActions() {
 
         try {
           switch (action) {
-  case "highlight":
-    highlightVerse(button);
-    break;
+            case "highlight":
+              highlightVerse(button);
+              break;
 
-  case "note":
-    openNote(button);
-    break;
+            case "note":
+              openNote(button);
+              break;
 
-  case "copy":
-    await copyVerse(button);
-    break;
+            case "copy":
+              await copyVerse(button);
+              break;
 
-  case "share":
-    await shareVerse(button);
-    break;
+            case "share":
+              await shareVerse(button);
+              break;
 
-  default:
-    console.warn(`Unknown verse action: ${action}`);
-}
+            default:
+              console.warn(
+                `Unknown verse action: ${action}`
+              );
+          }
         } catch (error) {
-          console.error(`Failed to execute "${action}" action.`, error);
+          console.error(
+            `Failed to execute "${action}" action.`,
+            error
+          );
         }
       });
     });
   });
 }
+
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initializeVerseActions);

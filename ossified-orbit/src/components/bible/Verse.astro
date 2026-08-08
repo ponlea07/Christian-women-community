@@ -21,20 +21,21 @@ const {
   id={`verse-${verse.verse}`}
   class="verse"
   tabindex="0"
+  data-book={book}
+  data-chapter={chapter}
+  data-verse={verse.verse}
 >
-  <div class="verse-content">
-    <p class="verse-text">
-      <sup>{verse.verse}</sup>
-      <span>{verse.text}</span>
-    </p>
+  <p class="verse-text">
+    <sup>{verse.verse}</sup>
+    <span>{verse.text}</span>
+  </p>
 
-    <VerseActions
-      verse={verse}
-      book={book}
-      bookName={bookName}
-      chapter={chapter}
-    />
-  </div>
+  <VerseActions
+    verse={verse}
+    book={book}
+    bookName={bookName}
+    chapter={chapter}
+  />
 </article>
 
 <style>
@@ -69,4 +70,12 @@ const {
   background: rgba(212,175,55,.12);
   border-radius: .5rem;
 }
+.verse-highlighted {
+  background: rgba(212, 175, 55, 0.12);
+  border-left: 4px solid #D4AF37;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.2s ease;
+}
+
 </style>
