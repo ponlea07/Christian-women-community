@@ -14,20 +14,26 @@ function render(): void {
 
   const bookmarks = sortBookmarks(getBookmarks());
 
-  if (bookmarks.length === 0) {
-    container.innerHTML = `
-      <div class="empty-bookmarks">
-        <div class="empty-icon">🔖</div>
-
-        <h2>No bookmarks yet</h2>
-
-        <p>
-          As you read Scripture, click the bookmark button to save passages for quick access.
-        </p>
+ if (bookmarks.length === 0) {
+  container.innerHTML = `
+    <div class="bookmark-empty">
+      <div
+        class="bookmark-empty-icon"
+        aria-hidden="true"
+      >
+        ✦
       </div>
-    `;
-    return;
-  }
+
+      <h2>No bookmarks yet</h2>
+
+      <p>
+        As you read Scripture, click the bookmark button to save passages for quick access.
+      </p>
+    </div>
+  `;
+
+  return;
+}
 
   container.innerHTML = bookmarks
     .map(

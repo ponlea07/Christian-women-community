@@ -1,4 +1,5 @@
 ---
+
 interface Props {
   book: string;
   bookName: string;
@@ -6,55 +7,212 @@ interface Props {
   href: string;
 }
 
-const {
-  book,
-  bookName,
-  chapter,
-  href,
-} = Astro.props;
+const { book, bookName, chapter, href } = Astro.props;
 
 const reference = `${bookName} ${chapter}`;
 ---
 
 <button
-  id="bookmark-button"
-  class="bookmark-button"
   type="button"
+  class="bookmark-button"
   data-book={book}
   data-book-name={bookName}
   data-chapter={chapter}
   data-reference={reference}
   data-href={href}
+  aria-label={`Bookmark ${reference}`}
   aria-pressed="false"
 >
-  📑 Bookmark
+  <svg
+    class="bookmark-icon"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path
+      d="M6 3.75A1.75 1.75 0 0 1 7.75 2h8.5A1.75 1.75 0 0 1 18 3.75v17.5a.75.75 0 0 1-1.2.6L12 18.25l-4.8 3.6a.75.75 0 0 1-1.2-.6V3.75Z"
+    />
+  </svg>
+
+  <span class="bookmark-label">Bookmark</span>
 </button>
 
+<script>
+  import {
+    addBookmark,
+    getBookmarks,
+    removeBookmark,
+  } from "../../lib/bookmarks";
+
+  const buttons =
+    document.querySelectorAll<HTMLButtonElement>(
+      ".bookmark-button"
+    );
+
+  buttons.forEach((button) => {
+    const book = button.dataset.book;
+    const bookName = button.dataset.bookName;
+    const chapter = Number(button.dataset.chapter);
+    const reference = button.dataset.reference;
+    const href = button.dataset.href;
+
+    if (
+      !book ||
+      !bookName ||
+      !chapter ||
+      !reference ||
+      !href
+    ) {
+      return;
+    }
+
+    function updateState() {
+      const bookmarks = getBookmarks();
+
+      const bookmark = bookmarks.find(
+        (item) => item.reference === reference
+      );
+
+      const bookmarked = Boolean(bookmark);
+
+      button.classList.toggle(
+        "is-bookmarked",
+        bookmarked
+      );
+
+      button.setAttribute(
+        "aria-pressed",
+        String(bookmarked)
+      );
+
+      button.setAttribute(
+        "aria-label",
+        bookmarked
+          ? `Remove bookmark from ${reference}`
+          : `Bookmark ${reference}`
+      );
+
+      const label =
+        button.querySelector<HTMLSpanElement>(
+          ".bookmark-label"
+        );
+
+      if (label) {
+        label.textContent = bookmarked
+          ? "Bookmarked"
+          : "Bookmark";
+      }
+    }
+
+    button.addEventListener("click", () => {
+      const bookmarks = getBookmarks();
+
+      const existing = bookmarks.find(
+        (item) => item.reference === reference
+      );
+
+      if (existing) {
+        removeBookmark(existing.id);
+      } else {
+        const bookmark = {
+          id: crypto.randomUUID(),
+          book,
+          bookName,
+          chapter,
+          reference,
+          href,
+          createdAt: new Date().toISOString(),
+        };
+
+        addBookmark(bookmark);
+      }
+
+      updateState();
+    });
+
+    updateState();
+  });
+</script>
+
 <style>
-.bookmark-button {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
+  .bookmark-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
 
-  padding: .75rem 1rem;
+    min-height: 42px;
+    padding: 0.65rem 1rem;
 
-  border: none;
-  border-radius: .75rem;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 999px;
 
-  background: var(--color-primary);
-  color: white;
+    background: transparent;
 
-  cursor: pointer;
-  font: inherit;
+    color: #d4af37;
 
-  transition: opacity .2s ease;
-}
+    font-family: "Poppins", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
 
-.bookmark-button:hover {
-  opacity: .9;
-}
+    line-height: 1;
 
-.bookmark-button.is-bookmarked {
-  background: var(--color-success, #2e7d32);
-}
+    cursor: pointer;
+
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .bookmark-button:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: #d4af37;
+    transform: translateY(-1px);
+  }
+
+  .bookmark-icon {
+    display: block;
+
+    width: 18px;
+    height: 18px;
+
+    flex: 0 0 18px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .bookmark-label {
+    display: inline-block;
+
+    line-height: 1;
+  }
+
+  .bookmark-button.is-bookmarked {
+    background: #d4af37;
+    border-color: #d4af37;
+    color: #ffffff;
+  }
+
+  .bookmark-button.is-bookmarked:hover {
+    background: #c9a431;
+    border-color: #c9a431;
+  }
+
+  @media (max-width: 640px) {
+    .bookmark-button {
+      min-height: 40px;
+      padding: 0.6rem 0.9rem;
+    }
+
+    .bookmark-icon {
+      width: 17px;
+      height: 17px;
+      flex-basis: 17px;
+    }
+  }
 </style>
