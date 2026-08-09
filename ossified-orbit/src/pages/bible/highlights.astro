@@ -1,0 +1,462 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PrimaryButton from "../../components/design/PrimaryButton.astro";
+---
+
+<Layout title="My Highlights">
+  <main class="highlights-page">
+    <section class="highlights-hero">
+  <div class="highlights-heading">
+    <h1>🖍️ My Highlights</h1>
+
+    <p>
+      Save and revisit the verses that have touched your heart.
+    </p>
+
+    <div class="highlights-flourish" aria-hidden="true">
+      <span></span>
+      <strong>✦</strong>
+      <span></span>
+    </div>
+  </div>
+</section>
+
+    <section class="highlights-content">
+      <div id="highlights-list" class="highlights-list"></div>
+
+      <div id="highlights-empty" class="highlights-empty" hidden>
+        <div class="empty-icon">✦</div>
+
+        <h2>No highlights yet</h2>
+
+        <p>
+          As you read Scripture, highlight verses that encourage,
+          challenge, and inspire you.
+        </p>
+
+        <PrimaryButton href="/bible">
+          Explore the Bible
+        </PrimaryButton>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  import {
+    getHighlights,
+    toggleHighlight,
+  } from "../../content/bible/verse-highlights";
+
+  interface HighlightItem {
+    id: string;
+    book: string;
+    bookName: string;
+    chapter: number;
+    verse: number;
+    reference: string;
+    text: string;
+    color: string;
+    createdAt: string;
+  }
+
+  function createHighlightCard(
+    highlight: HighlightItem
+  ): HTMLElement {
+    const card = document.createElement("article");
+
+    card.className = "highlight-card";
+    card.dataset.id = highlight.id;
+
+    const reference = document.createElement("h2");
+    reference.className = "highlight-reference";
+    reference.textContent = `📖 ${highlight.reference}`;
+
+    const verseText = document.createElement("p");
+    verseText.className = "highlight-text";
+    verseText.textContent = highlight.text;
+
+    const actions = document.createElement("div");
+    actions.className = "highlight-actions";
+
+    const readButton = document.createElement("a");
+
+    readButton.className = "primary-button";
+    readButton.href = `/bible/${highlight.book}/${highlight.chapter}`;
+    readButton.textContent = "Read Chapter";
+
+    const removeButton = document.createElement("button");
+
+    removeButton.type = "button";
+    removeButton.className = "remove-highlight";
+    removeButton.textContent = "Remove Highlight";
+    removeButton.setAttribute(
+      "aria-label",
+      `Remove highlight from ${highlight.reference}`
+    );
+
+    removeButton.addEventListener("click", () => {
+      toggleHighlight({
+        book: highlight.book,
+        bookName: highlight.bookName,
+        chapter: highlight.chapter,
+        verse: highlight.verse,
+        text: highlight.text,
+      });
+
+      card.remove();
+
+      updateEmptyState();
+    });
+
+    actions.append(readButton, removeButton);
+    card.append(reference, verseText, actions);
+
+    return card;
+  }
+
+  function renderHighlights() {
+    const list = document.querySelector<HTMLDivElement>(
+      "#highlights-list"
+    );
+
+    if (!list) return;
+
+    list.innerHTML = "";
+
+    const highlights = getHighlights();
+
+    highlights.sort(
+      (a, b) =>
+        new Date(b.createdAt).getTime() -
+        new Date(a.createdAt).getTime()
+    );
+
+    highlights.forEach((highlight) => {
+      list.appendChild(
+        createHighlightCard(highlight)
+      );
+    });
+
+    updateEmptyState();
+  }
+
+  function updateEmptyState() {
+    const list = document.querySelector<HTMLDivElement>(
+      "#highlights-list"
+    );
+
+    const emptyState = document.querySelector<HTMLDivElement>(
+      "#highlights-empty"
+    );
+
+    if (!list || !emptyState) return;
+
+    const hasHighlights =
+      list.children.length > 0;
+
+    emptyState.hidden = hasHighlights;
+  }
+
+  renderHighlights();
+</script>
+
+<style>
+  .highlights-page {
+    min-height: 100vh;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .highlights-hero {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+  }
+.highlights-heading {
+  text-align: center;
+}
+
+.highlights-heading h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+
+  line-height: 1.1;
+}
+
+.highlights-heading p {
+  max-width: 620px;
+
+  margin: 1rem auto 0;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+.highlights-flourish {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  width: min(270px, 80%);
+
+  margin: 1.5rem auto 0;
+}
+
+.highlights-flourish span {
+  flex: 1;
+
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d4af37
+  );
+}
+
+.highlights-flourish span:last-child {
+  background: linear-gradient(
+    to left,
+    transparent,
+    #d4af37
+  );
+}
+
+.highlights-flourish strong {
+  color: #d4af37;
+
+  font-size: 1.2rem;
+
+  font-weight: 400;
+}
+
+
+  .highlights-content {
+    width: min(900px, 100%);
+    margin: 0 auto;
+  }
+
+  .highlights-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  /* -------------------------------------------------
+     Dynamically rendered highlight cards
+     ------------------------------------------------- */
+
+  .highlights-list :global(.highlight-card) {
+    position: relative;
+
+    padding: 2rem;
+
+    border-radius: 1rem;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(212, 175, 55, 0.22);
+
+    border-left: 4px solid #d4af37;
+
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .highlights-list :global(.highlight-reference) {
+    margin: 0 0 1rem;
+
+    color: #d4af37;
+
+    font-family:
+      "Cormorant Garamond",
+      Georgia,
+      serif;
+
+    font-size: 1.5rem;
+  }
+
+  .highlights-list :global(.highlight-text) {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+      "Poppins",
+      sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .highlights-list :global(.highlight-actions) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 1.75rem;
+
+    flex-wrap: wrap;
+  }
+
+  .highlights-list :global(.highlight-read-button) {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.75rem 1.5rem;
+
+    background: #d4af37;
+
+    color: #ffffff;
+
+    border-radius: 999px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .highlights-list :global(.highlight-read-button:hover) {
+    transform: translateY(-2px);
+
+    box-shadow:
+      0 10px 24px rgba(212, 175, 55, 0.3);
+  }
+
+  .highlights-list :global(.remove-highlight) {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.75rem 1.25rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 999px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .highlights-list :global(.remove-highlight:hover) {
+    background: rgba(212, 175, 55, 0.12);
+
+    border-color: #d4af37;
+
+    color: #d4af37;
+  }
+
+  /* -------------------------------------------------
+     Empty state
+     ------------------------------------------------- */
+
+  .highlights-empty {
+    padding: 4rem 2rem;
+
+    text-align: center;
+
+    border-radius: 1rem;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .empty-icon {
+    margin-bottom: 1rem;
+
+    color: #d4af37;
+
+    font-size: 2rem;
+  }
+
+  .highlights-empty h2 {
+    margin: 0 0 0.75rem;
+
+    color: #ffffff;
+
+    font-family:
+      "Cormorant Garamond",
+      Georgia,
+      serif;
+
+    font-size: 2rem;
+  }
+
+  .highlights-empty p {
+    max-width: 520px;
+
+    margin: 0 auto 1.75rem;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    line-height: 1.7;
+  }
+
+  /* -------------------------------------------------
+     Mobile
+     ------------------------------------------------- */
+
+  @media (max-width: 640px) {
+    .highlights-page {
+      padding: 3rem 1rem 4rem;
+    }
+
+    .highlights-list :global(.highlight-card) {
+      padding: 1.5rem;
+    }
+
+    .highlights-list :global(.highlight-actions) {
+      align-items: stretch;
+
+      flex-direction: column;
+    }
+
+    .highlights-list :global(.highlight-read-button),
+    .highlights-list :global(.remove-highlight) {
+      width: 100%;
+    }
+  }
+</style>
