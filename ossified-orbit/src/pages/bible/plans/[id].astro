@@ -1,0 +1,1060 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { readingPlans } from "../../../content/bible/reading-plans/plans";
+
+export function getStaticPaths() {
+  return readingPlans.map((plan) => ({
+    params: {
+      id: plan.id,
+    },
+    props: {
+      plan,
+    },
+  }));
+}
+
+const { plan } = Astro.props;
+
+const totalChapters = plan.days.reduce(
+  (total, day) => 
+  total + day.readings.length,
+  0
+);
+
+const firstDay = plan.days[0];
+const firstReading = firstDay?.readings[0];
+---
+
+<Layout title={plan.title}>
+  <main class="plan-page">
+
+    <!-- PLAN HEADER -->
+    <section class="plan-header">
+      <div class="plan-icon" aria-hidden="true">
+        {plan.icon}
+      </div>
+
+      <span class="plan-category">
+        {plan.category}
+      </span>
+
+      <h1>{plan.title}</h1>
+
+      <p>{plan.description}</p>
+
+      <div class="plan-meta">
+        <span>📅 {plan.durationLabel}</span>
+       
+        <span>
+            📖 {totalChapters.toLocaleString()} chapters
+        </span>
+      </div>
+    </section>
+
+    <!-- READING EXPERIENCE -->
+    <section class="reading-plan-card">
+
+      <div class="plan-card-heading">
+        <span class="section-eyebrow">
+          YOUR READING JOURNEY
+        </span>
+
+        <h2>Today's Reading</h2>
+
+        <p>
+          Choose a day below and continue your journey
+          through God's Word.
+        </p>
+      </div>
+
+      <!-- DAY NAVIGATION -->
+      <div class="day-navigation">
+
+        <button
+          id="previous-day"
+          class="day-nav-button"
+          type="button"
+          disabled
+        >
+          ← Previous
+        </button>
+
+        <div class="day-selector">
+          <label for="day-select">
+            Reading Day
+          </label>
+
+          <select id="day-select">
+            {
+              plan.days.map((day) => (
+                <option value={day.day}>
+                  Day {day.day}
+                </option>
+              ))
+            }
+          </select>
+        </div>
+
+        <button
+          id="next-day"
+          class="day-nav-button"
+          type="button"
+        >
+          Next →
+        </button>
+
+      </div>
+
+      <!-- CURRENT DAY -->
+      <div
+        id="current-day"
+        class="current-day"
+      >
+
+        <div
+          id="day-label"
+          class="day-label"
+        >
+          DAY 1
+        </div>
+
+        <h3 id="day-title">
+          {firstDay?.title}
+        </h3>
+
+        <div
+          id="day-readings"
+          class="day-readings"
+        >
+          {
+            firstDay?.readings.map((reading) => (
+              <a
+                class="reading-link"
+                href={reading.href}
+              >
+                <span class="reading-book">
+                  {reading.bookName}
+                </span>
+
+                <span class="reading-chapter">
+                  Chapter {reading.chapter}
+                </span>
+              </a>
+            ))
+          }
+        </div>
+
+        {
+          firstReading && (
+            <a
+              id="start-reading"
+              class="start-reading-button"
+              href={firstReading.href}
+            >
+              Start Today's Reading →
+            </a>
+          )
+        }
+
+        <button
+          id="complete-day"
+          class="complete-day-button"
+          type="button"
+          aria-pressed="false"
+        >
+          ✓ Mark Day Complete
+        </button>
+
+      </div>
+
+      <!-- PLAN PROGRESS -->
+      <div class="plan-position">
+
+        <div class="progress-summary">
+          <span id="completion-text">
+            0% complete
+          </span>
+
+          <span id="completed-days">
+            0 of {plan.duration} days
+          </span>
+        </div>
+
+        <div class="progress-track">
+          <div
+            id="plan-progress"
+            class="progress-fill"
+            style="width: 0%"
+          ></div>
+        </div>
+
+        <span id="day-position">
+          Day 1 of {plan.duration}
+        </span>
+
+      </div>
+
+    </section>
+
+  </main>
+</Layout>
+
+<!-- DATA FOR THE BROWSER -->
+<div
+  id="reading-plan-data"
+  data-plan={JSON.stringify({
+    planId: plan.id,
+    days: plan.days,
+    duration: plan.duration,
+  })}
+  hidden
+></div>
+
+<script>
+  import type { ReadingPlanDay } from "../../../content/bible/reading-plans/types";
+
+  import {
+    getReadingPlanProgress,
+    markDayComplete,
+    markDayIncomplete,
+  } from "../../../lib/reading/progress";
+
+  const dataElement =
+    document.getElementById("reading-plan-data");
+
+  const daySelect =
+    document.getElementById(
+      "day-select"
+    ) as HTMLSelectElement | null;
+
+  const previousButton =
+    document.getElementById(
+      "previous-day"
+    ) as HTMLButtonElement | null;
+
+  const nextButton =
+    document.getElementById(
+      "next-day"
+    ) as HTMLButtonElement | null;
+
+  const dayLabel =
+    document.getElementById(
+      "day-label"
+    ) as HTMLElement | null;
+
+  const dayTitle =
+    document.getElementById(
+      "day-title"
+    ) as HTMLElement | null;
+
+  const dayReadings =
+    document.getElementById(
+      "day-readings"
+    ) as HTMLElement | null;
+
+  const startReading =
+    document.getElementById(
+      "start-reading"
+    ) as HTMLAnchorElement | null;
+
+  const completeDayButton =
+    document.getElementById(
+      "complete-day"
+    ) as HTMLButtonElement | null;
+
+  const completionText =
+    document.getElementById(
+      "completion-text"
+    ) as HTMLElement | null;
+
+  const completedDaysText =
+    document.getElementById(
+      "completed-days"
+    ) as HTMLElement | null;
+
+  const dayPosition =
+    document.getElementById(
+      "day-position"
+    ) as HTMLElement | null;
+
+  const planProgress =
+    document.getElementById(
+      "plan-progress"
+    ) as HTMLElement | null;
+
+  if (
+    dataElement instanceof HTMLElement &&
+    daySelect &&
+    previousButton &&
+    nextButton &&
+    dayLabel &&
+    dayTitle &&
+    dayReadings &&
+    dayPosition &&
+    planProgress
+  ) {
+    const planData = JSON.parse(
+      dataElement.dataset.plan ?? "{}"
+    ) as {
+      planId: string;
+      days: ReadingPlanDay[];
+      duration: number;
+    };
+
+    const planId = planData.planId;
+    const days = planData.days;
+    const duration = planData.duration;
+
+    let currentDay = 1;
+
+    let progress =
+      getReadingPlanProgress(planId);
+
+    function renderProgress(): void {
+      const completedCount =
+        progress.completedDays.length;
+
+      const percentage =
+        duration > 0
+          ? Math.round(
+              (completedCount / duration) * 100
+            )
+          : 0;
+
+      if (completionText) {
+        completionText.textContent =
+          `${percentage}% complete`;
+      }
+
+      if (completedDaysText) {
+        completedDaysText.textContent =
+          `${completedCount} of ${duration} days`;
+      }
+
+      planProgress!.style.width =
+        `${Math.min(percentage, 100)}%`;
+    }
+
+    function renderDay(
+      dayNumber: number
+    ): void {
+      const day = days.find(
+        (item) =>
+          item.day === dayNumber
+      );
+
+      if (!day) {
+        return;
+      }
+
+      currentDay = dayNumber;
+
+      if (daySelect) {
+        daySelect.value =
+          String(dayNumber);
+      }
+
+      if (dayLabel) {
+        dayLabel.textContent =
+          `DAY ${dayNumber}`;
+      }
+
+      if (dayTitle) {
+        dayTitle.textContent =
+          day.title;
+      }
+
+      if (dayReadings) {
+        dayReadings.innerHTML =
+          day.readings
+            .map(
+              (reading) => `
+                <a
+                  class="reading-link"
+                  href="${reading.href}"
+                >
+                  <span class="reading-book">
+                    ${reading.bookName}
+                  </span>
+
+                  <span class="reading-chapter">
+                    Chapter ${reading.chapter}
+                  </span>
+                </a>
+              `
+            )
+            .join("");
+      }
+
+      const firstReading =
+        day.readings[0];
+
+      if (startReading) {
+        if (firstReading) {
+          startReading.href =
+            firstReading.href;
+
+          startReading.style.display =
+            "inline-flex";
+        } else {
+          startReading.style.display =
+            "none";
+        }
+      }
+
+      if (previousButton) {
+        previousButton.disabled =
+          currentDay === 1;
+      }
+
+      if (nextButton) {
+        nextButton.disabled =
+          currentDay === duration;
+      }
+
+      if (dayPosition) {
+        dayPosition.textContent =
+          `Day ${currentDay} of ${duration}`;
+      }
+
+      const isComplete =
+        progress.completedDays.includes(
+          currentDay
+        );
+
+      if (completeDayButton) {
+        completeDayButton.textContent =
+          isComplete
+            ? "✓ Day Completed"
+            : "✓ Mark Day Complete";
+
+        completeDayButton.classList.toggle(
+          "completed",
+          isComplete
+        );
+
+        completeDayButton.setAttribute(
+          "aria-pressed",
+          String(isComplete)
+        );
+      }
+    }
+
+    daySelect.addEventListener(
+      "change",
+      () => {
+        renderDay(
+          Number(daySelect.value)
+        );
+      }
+    );
+
+    previousButton.addEventListener(
+      "click",
+      () => {
+        if (currentDay > 1) {
+          renderDay(
+            currentDay - 1
+          );
+        }
+      }
+    );
+
+    nextButton.addEventListener(
+      "click",
+      () => {
+        if (currentDay < duration) {
+          renderDay(
+            currentDay + 1
+          );
+        }
+      }
+    );
+
+    completeDayButton?.addEventListener(
+      "click",
+      () => {
+        const isComplete =
+          progress.completedDays.includes(
+            currentDay
+          );
+
+        if (isComplete) {
+          markDayIncomplete(
+            planId,
+            currentDay
+          );
+        } else {
+          markDayComplete(
+            planId,
+            currentDay
+          );
+        }
+
+        progress =
+          getReadingPlanProgress(
+            planId
+          );
+
+        renderProgress();
+        renderDay(currentDay);
+
+        /*
+         * After completing a day,
+         * automatically move to the
+         * next day unless this is
+         * the final day.
+         */
+        if (
+          !isComplete &&
+          currentDay < duration
+        ) {
+          renderDay(
+            currentDay + 1
+          );
+        }
+      }
+    );
+
+    renderDay(1);
+    renderProgress();
+  }
+</script>
+
+<style>
+  .plan-page {
+    min-height: 100vh;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  /* ------------------------------
+     PLAN HEADER
+  ------------------------------ */
+
+  .plan-header {
+    width: min(850px, 100%);
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+
+  .plan-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.25rem;
+
+    border-radius: 50%;
+
+    background: rgba(212, 175, 55, 0.12);
+
+    font-size: 1.8rem;
+  }
+
+  .plan-category {
+    color: #d4af37;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .plan-header h1 {
+    margin: 0.75rem 0 1rem;
+
+    color: #ffffff;
+
+    font-family:
+      "Cormorant Garamond",
+      Georgia,
+      serif;
+
+    font-size: clamp(2.4rem, 5vw, 3.7rem);
+
+    line-height: 1.05;
+  }
+
+  .plan-header p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-family: "Poppins", sans-serif;
+
+    line-height: 1.7;
+  }
+
+  .plan-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    margin-top: 1.5rem;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.9rem;
+  }
+
+  /* ------------------------------
+     READING PLAN CARD
+  ------------------------------ */
+
+  .reading-plan-card {
+    width: min(900px, 100%);
+    margin: 0 auto;
+
+    padding: clamp(1.5rem, 4vw, 3rem);
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 1.25rem;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    box-shadow:
+      0 18px 45px rgba(0, 0, 0, 0.08);
+  }
+
+  .plan-card-heading {
+    text-align: center;
+
+    margin-bottom: 2rem;
+  }
+
+  .section-eyebrow {
+    color: #d4af37;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+  }
+
+  .plan-card-heading h2 {
+    margin: 0.5rem 0;
+
+    color: #ffffff;
+
+    font-family:
+      "Cormorant Garamond",
+      Georgia,
+      serif;
+
+    font-size: 2.2rem;
+  }
+
+  .plan-card-heading p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-family: "Poppins", sans-serif;
+
+    line-height: 1.7;
+  }
+
+  /* ------------------------------
+     DAY NAVIGATION
+  ------------------------------ */
+
+  .day-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: end;
+
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .day-nav-button {
+    padding: 0.7rem 1rem;
+
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 999px;
+
+    background: transparent;
+
+    color: #d4af37;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  .day-nav-button:first-child {
+    justify-self: start;
+  }
+
+  .day-nav-button:last-child {
+    justify-self: end;
+  }
+
+  .day-nav-button:hover:not(:disabled) {
+    background: rgba(212, 175, 55, 0.1);
+
+    border-color: #d4af37;
+  }
+
+  .day-nav-button:disabled {
+    opacity: 0.35;
+
+    cursor: not-allowed;
+  }
+
+  .day-selector {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.35rem;
+  }
+
+  .day-selector label {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .day-selector select {
+    min-width: 150px;
+
+    padding: 0.7rem 1rem;
+
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 0.6rem;
+
+    background: #ffffff;
+
+    color: #0f6b73;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.85rem;
+
+    cursor: pointer;
+  }
+
+  /* ------------------------------
+     CURRENT DAY
+  ------------------------------ */
+
+  .current-day {
+    padding: 2rem;
+
+    border-radius: 1rem;
+
+    background: rgba(15, 107, 115, 0.35);
+
+    border: 1px solid rgba(212, 175, 55, 0.18);
+
+    text-align: center;
+  }
+
+  .day-label {
+    color: #d4af37;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+  }
+
+  .current-day h3 {
+    margin: 0.5rem 0 1.5rem;
+
+    color: #ffffff;
+
+    font-family:
+      "Cormorant Garamond",
+      Georgia,
+      serif;
+
+    font-size: 2rem;
+  }
+
+  .day-readings {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 0.75rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .reading-link {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 145px;
+
+    padding: 0.85rem 1rem;
+
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 0.75rem;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .reading-link:hover {
+    transform: translateY(-2px);
+
+    border-color: #d4af37;
+
+    background: rgba(212, 175, 55, 0.08);
+  }
+
+  .reading-book {
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+
+  .reading-chapter {
+    margin-top: 0.25rem;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.72rem;
+  }
+
+  .start-reading-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.85rem 1.6rem;
+
+    border-radius: 999px;
+
+    background: #d4af37;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.88rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .start-reading-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+      0 10px 25px rgba(212, 175, 55, 0.3);
+  }
+
+  /* ------------------------------
+     COMPLETE DAY
+  ------------------------------ */
+
+  .complete-day-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0.75rem;
+
+    padding: 0.8rem 1.5rem;
+
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 999px;
+
+    background: transparent;
+
+    color: #d4af37;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .complete-day-button:hover {
+    background: rgba(212, 175, 55, 0.1);
+
+    border-color: #d4af37;
+  }
+
+  .complete-day-button.completed {
+    background: #d4af37;
+
+    border-color: #d4af37;
+
+    color: #ffffff;
+  }
+
+  /* ------------------------------
+     PLAN PROGRESS
+  ------------------------------ */
+
+  .plan-position {
+    margin-top: 2rem;
+
+    text-align: center;
+  }
+
+  .progress-summary {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 0.65rem;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.8rem;
+  }
+
+  #completion-text {
+    color: #d4af37;
+
+    font-weight: 700;
+  }
+
+  #day-position {
+    display: block;
+
+    margin-top: 0.75rem;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.8rem;
+  }
+
+  .progress-track {
+    width: 100%;
+    height: 5px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .progress-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #d4af37;
+
+    transition: width 0.25s ease;
+  }
+
+  /* ------------------------------
+     MOBILE
+  ------------------------------ */
+
+  @media (max-width: 640px) {
+    .plan-page {
+      padding: 3rem 1rem 4rem;
+    }
+
+    .day-navigation {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .day-selector {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      order: -1;
+    }
+
+    .day-nav-button:first-child,
+    .day-nav-button:last-child {
+      justify-self: stretch;
+    }
+
+    .day-nav-button {
+      width: 100%;
+    }
+
+    .current-day {
+      padding: 1.5rem 1rem;
+    }
+
+    .reading-link {
+      width: 100%;
+    }
+
+    .progress-summary {
+      flex-direction: column;
+
+      gap: 0.25rem;
+    }
+  }
+</style>

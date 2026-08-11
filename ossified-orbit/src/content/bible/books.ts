@@ -274,6 +274,5 @@ export const books: BibleBook[] = [
   {
       name: "Revelation", slug: "revelation", testament: "new", chapters: 22,
     
-  }
-
-];
+  },
+  ];

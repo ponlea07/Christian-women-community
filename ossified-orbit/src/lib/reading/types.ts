@@ -6,3 +6,8 @@ export interface ReadingProgress {
   verse?: number;
   updatedAt: string;
 }
+export interface ReadingPlanProgress {
+  planId: string;
+  completedDays: number[];
+  updatedAt: string;
+}
