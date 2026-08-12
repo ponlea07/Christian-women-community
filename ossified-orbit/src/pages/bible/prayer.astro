@@ -1,0 +1,828 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SectionHeading from "../../components/SectionHeading.astro";
+---
+
+<Layout title="Prayer Journal | Bible Hub">
+  <main class="prayer-page">
+    <section class="prayer-hero">
+      <SectionHeading
+        eyebrow="BIBLE HUB"
+        title="Prayer Journal"
+        text="Keep track of the prayers you're bringing before God."
+        theme="light"
+      />
+    </section>
+
+    <section class="prayer-content">
+      <div class="container">
+        <div class="prayer-toolbar">
+          <div>
+            <h2>Your Prayers</h2>
+            <p>Your personal prayers, kept privately in this browser.</p>
+          </div>
+
+          <button
+            type="button"
+            id="new-prayer-button"
+            class="btn primary"
+          >
+            + New Prayer
+          </button>
+        </div>
+
+        <div
+          id="prayer-form-container"
+          class="prayer-form-container"
+          hidden
+        >
+          <div class="card prayer-form-card">
+            <div class="prayer-form-header">
+              <div>
+                <span class="prayer-form-eyebrow">PERSONAL PRAYER</span>
+                <h2>Write a Prayer</h2>
+                <p>
+                  Take a moment to write down what you are bringing before God.
+                </p>
+              </div>
+
+              <button
+                type="button"
+                id="cancel-prayer-button"
+                class="prayer-close-button"
+                aria-label="Close prayer form"
+              >
+                ×
+              </button>
+            </div>
+
+            <form id="prayer-form">
+              <div class="prayer-field">
+                <label for="prayer-title">Title</label>
+                <input
+                  id="prayer-title"
+                  name="title"
+                  type="text"
+                  placeholder="e.g. Family, Morning Prayer, Guidance"
+                  maxlength="120"
+                  required
+                />
+              </div>
+
+              <div class="prayer-field">
+                <label for="prayer-content">Prayer</label>
+                <textarea
+                  id="prayer-content"
+                  name="content"
+                  rows="10"
+                  placeholder="Write your prayer here..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="prayer-form-actions">
+                <button
+                  type="button"
+                  id="cancel-prayer-button-bottom"
+                  class="btn secondary"
+                >
+                  Cancel
+                </button>
+
+                <button
+                  type="submit"
+                  class="btn primary"
+                >
+                  Save Prayer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+<div
+  id="delete-confirmation"
+  class="delete-confirmation"
+  hidden
+>
+  <div class="delete-confirmation__card">
+    <span class="delete-confirmation__eyebrow">
+      DELETE PRAYER
+    </span>
+
+    <h2>Delete this prayer?</h2>
+
+    <p>
+      This prayer will be permanently removed from this browser.
+      This action cannot be undone.
+    </p>
+
+    <div class="delete-confirmation__actions">
+      <button
+        type="button"
+        id="cancel-delete-button"
+        class="btn secondary"
+      >
+        Cancel
+      </button>
+
+      <button
+        type="button"
+        id="confirm-delete-button"
+        class="delete-button"
+      >
+        Delete Prayer
+      </button>
+    </div>
+  </div>
+</div>
+        <div id="prayer-root">
+          <div class="prayer-empty-state">
+            <div class="prayer-empty-icon" aria-hidden="true">
+              ♡
+            </div>
+
+            <h2>Begin Your Prayer Journal</h2>
+
+            <p>
+              Record the prayers you're bringing before God and keep track of
+              how He leads you through each season.
+            </p>
+
+            <button
+              type="button"
+              id="empty-new-prayer-button"
+              class="btn primary"
+            >
+              + Write Your First Prayer
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .prayer-content {
+    padding: 80px 0 100px;
+    background: #fdfbf7;
+  }
+
+  .prayer-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .prayer-toolbar h2 {
+    margin: 0 0 8px;
+    color: #0f6b73;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.4rem;
+  }
+
+  .prayer-toolbar p {
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+  }
+
+  .prayer-form-container {
+    margin-bottom: 40px;
+  }
+
+  .prayer-form-card {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .prayer-form-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .prayer-form-eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #d4af37;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .prayer-form-header h2 {
+    margin: 0 0 8px;
+    color: #0f6b73;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.3rem;
+  }
+
+  .prayer-form-header p {
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+  }
+
+  .prayer-close-button {
+    border: 0;
+    background: transparent;
+    color: #0f6b73;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .prayer-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .prayer-field label {
+    color: #0f6b73;
+    font-weight: 600;
+  }
+
+  .prayer-field input,
+  .prayer-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    padding: 15px 16px;
+    color: #333;
+    font: inherit;
+  }
+
+  .prayer-field input:focus,
+  .prayer-field textarea:focus {
+    outline: 2px solid rgba(212, 175, 55, 0.35);
+    border-color: #d4af37;
+  }
+
+  .prayer-field textarea {
+    min-height: 220px;
+    resize: vertical;
+    line-height: 1.7;
+  }
+
+  .prayer-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+  }
+
+  .prayer-empty-state {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 70px 40px;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+
+  .prayer-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.12);
+    color: #d4af37;
+    font-size: 2rem;
+  }
+
+  .prayer-empty-state h2 {
+    margin: 0 0 14px;
+    color: #0f6b73;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+  }
+
+  .prayer-empty-state p {
+    max-width: 520px;
+    margin: 0 auto 30px;
+    color: #666;
+    line-height: 1.8;
+  }
+:global(.prayer-list) {
+    display: grid;
+    gap: 24px;
+  }
+
+  :global(.prayer-card) {
+    color: #333;
+  }
+
+  :global(.prayer-card h3) {
+    margin: 0 0 14px;
+    color: #0f6b73;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+  }
+
+  :global(.prayer-card p) {
+    margin: 0 0 20px;
+    color: #555;
+    line-height: 1.8;
+    white-space: pre-wrap;
+  }
+
+  :global(.prayer-date) {
+    display: block;
+    color: #888;
+    font-size: 0.9rem;
+  }
+    :global(.prayer-card-actions) {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+:global(.prayer-card-actions .btn.secondary) {
+  border: 2px solid #d4af37;
+  background: transparent;
+  color: #0f6b73;
+  padding: 10px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+:global(.prayer-card-actions .btn.secondary:hover) {
+  background: #d4af37;
+  color: #0f6b73;
+}
+:global(.delete-confirmation__actions .btn.secondary) {
+  border: 2px solid #d4af37;
+  background: transparent;
+  color: #0f6b73;
+  padding: 10px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+:global(.delete-confirmation__actions .btn.secondary:hover) {
+  background: #d4af37;
+  color: #0f6b73;
+}
+:global(.prayer-empty-state) {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 70px 40px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+:global(.prayer-empty-icon) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.12);
+  color: #d4af37;
+  font-size: 2rem;
+}
+
+:global(.prayer-empty-state h2) {
+  margin: 0 0 14px;
+  color: #0f6b73;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+}
+
+:global(.prayer-empty-state p) {
+  max-width: 520px;
+  margin: 0 auto 30px;
+  color: #666;
+  line-height: 1.8;
+}
+  @media (max-width: 700px) {
+    .prayer-content {
+      padding: 60px 0 80px;
+    }
+
+    .prayer-toolbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .prayer-form-card,
+    .prayer-empty-state {
+      padding: 30px;
+    }
+
+    .prayer-form-actions {
+      flex-direction: column-reverse;
+    }
+
+    .prayer-form-actions .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+      .delete-confirmation {
+    margin-bottom: 40px;
+  }
+
+  .delete-confirmation__card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+
+  .delete-confirmation__eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #d4af37;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .delete-confirmation__card h2 {
+    margin: 0 0 14px;
+    color: #0f6b73;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.4rem;
+  }
+
+  .delete-confirmation__card p {
+    max-width: 480px;
+    margin: 0 auto 28px;
+    color: #666;
+    line-height: 1.7;
+  }
+
+  .delete-confirmation__actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  :global(.delete-button) {
+    border: 2px solid #a33a3a;
+    border-radius: 999px;
+    background: #a33a3a;
+    color: #fff;
+    padding: 10px 24px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  :global(.delete-button:hover){
+    background: #8c3030;
+    border-color: #8c3030;
+  }
+
+  @media (max-width: 700px) {
+    .delete-confirmation__card {
+      padding: 30px;
+    }
+
+    .delete-confirmation__actions {
+      flex-direction: column;
+    }
+
+    .delete-confirmation__actions button {
+      width: 100%;
+    }
+  }
+
+</style>
+<script>
+  import {
+  addPrayer,
+  getPrayers,
+  removePrayer,
+  updatePrayer,
+} from "../../lib/prayer";
+  import type { PrayerEntry } from "../../lib/prayer";
+
+  const formContainer = document.querySelector<HTMLElement>(
+    "#prayer-form-container"
+  );
+
+  const prayerForm = document.querySelector<HTMLFormElement>(
+    "#prayer-form"
+  );
+
+  const newPrayerButton = document.querySelector<HTMLButtonElement>(
+    "#new-prayer-button"
+  );
+
+  const emptyNewPrayerButton = document.querySelector<HTMLButtonElement>(
+    "#empty-new-prayer-button"
+  );
+
+  const cancelPrayerButton = document.querySelector<HTMLButtonElement>(
+    "#cancel-prayer-button"
+  );
+
+  const cancelPrayerButtonBottom =
+    document.querySelector<HTMLButtonElement>(
+      "#cancel-prayer-button-bottom"
+    );
+
+  const prayerRoot =
+    document.querySelector<HTMLElement>("#prayer-root");
+const deleteConfirmation =
+  document.querySelector<HTMLElement>(
+    "#delete-confirmation"
+  );
+
+const cancelDeleteButton =
+  document.querySelector<HTMLButtonElement>(
+    "#cancel-delete-button"
+  );
+
+const confirmDeleteButton =
+  document.querySelector<HTMLButtonElement>(
+    "#confirm-delete-button"
+  );
+
+let deletingPrayerId: string | null = null;
+  const titleInput =
+    document.querySelector<HTMLInputElement>("#prayer-title");
+
+  const contentInput =
+    document.querySelector<HTMLTextAreaElement>("#prayer-content");
+
+  const submitButton =
+    prayerForm?.querySelector<HTMLButtonElement>(
+      'button[type="submit"]'
+    );
+
+  let editingPrayerId: string | null = null;
+
+  function openPrayerForm(): void {
+    if (!formContainer) {
+      return;
+    }
+
+    editingPrayerId = null;
+
+    if (submitButton) {
+      submitButton.textContent = "Save Prayer";
+    }
+
+    formContainer.hidden = false;
+    titleInput?.focus();
+  }
+
+  function openEditForm(prayer: PrayerEntry): void {
+    if (!formContainer || !titleInput || !contentInput) {
+      return;
+    }
+
+    editingPrayerId = prayer.id;
+
+    titleInput.value = prayer.title;
+    contentInput.value = prayer.content;
+
+    if (submitButton) {
+      submitButton.textContent = "Save Changes";
+    }
+
+    formContainer.hidden = false;
+    titleInput.focus();
+  }
+
+  function closePrayerForm(): void {
+    if (!formContainer) {
+      return;
+    }
+
+    formContainer.hidden = true;
+    editingPrayerId = null;
+
+    prayerForm?.reset();
+
+    if (submitButton) {
+      submitButton.textContent = "Save Prayer";
+    }
+  }
+function openDeleteConfirmation(prayer: PrayerEntry): void {
+  if (!deleteConfirmation) {
+    return;
+  }
+
+  deletingPrayerId = prayer.id;
+
+  deleteConfirmation.hidden = false;
+
+  deleteConfirmation.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+  });
+}
+
+function closeDeleteConfirmation(): void {
+  if (!deleteConfirmation) {
+    return;
+  }
+
+  deleteConfirmation.hidden = true;
+  deletingPrayerId = null;
+}
+
+function confirmDelete(): void {
+  if (!deletingPrayerId) {
+    return;
+  }
+
+  removePrayer(deletingPrayerId);
+
+  closeDeleteConfirmation();
+  renderPrayers();
+}
+
+  function formatDate(dateString: string): string {
+    return new Intl.DateTimeFormat("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }).format(new Date(dateString));
+  }
+
+  function renderPrayers(): void {
+    if (!prayerRoot) {
+      return;
+    }
+
+    const prayers = getPrayers();
+
+    prayerRoot.innerHTML = "";
+
+    if (prayers.length === 0) {
+      const emptyState = document.createElement("div");
+
+      emptyState.className = "prayer-empty-state";
+
+      const icon = document.createElement("div");
+      icon.className = "prayer-empty-icon";
+      icon.setAttribute("aria-hidden", "true");
+      icon.textContent = "♡";
+
+      const heading = document.createElement("h2");
+      heading.textContent = "Begin Your Prayer Journal";
+
+      const text = document.createElement("p");
+      text.textContent =
+        "Record the prayers you're bringing before God and keep track of how He leads you through each season.";
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "btn primary";
+      button.textContent = "+ Write Your First Prayer";
+
+      button.addEventListener("click", openPrayerForm);
+
+      emptyState.append(icon, heading, text, button);
+      prayerRoot.appendChild(emptyState);
+
+      return;
+    }
+
+    const list = document.createElement("div");
+    list.className = "prayer-list";
+
+    prayers.forEach((prayer: PrayerEntry) => {
+      const card = document.createElement("article");
+      card.className = "card prayer-card";
+
+      const heading = document.createElement("h3");
+      heading.textContent = prayer.title;
+
+      const content = document.createElement("p");
+      content.textContent = prayer.content;
+
+      const date = document.createElement("span");
+      date.className = "prayer-date";
+      date.textContent = `Updated ${formatDate(prayer.updatedAt)}`;
+
+      const actions = document.createElement("div");
+      actions.className = "prayer-card-actions";
+
+      const editButton = document.createElement("button");
+
+editButton.type = "button";
+editButton.className = "btn secondary";
+editButton.textContent = "Edit";
+
+editButton.addEventListener("click", () => {
+  openEditForm(prayer);
+});
+
+const deleteButton = document.createElement("button");
+
+deleteButton.type = "button";
+deleteButton.className = "delete-button";
+deleteButton.textContent = "Delete";
+
+deleteButton.addEventListener("click", () => {
+  openDeleteConfirmation(prayer);
+});
+
+actions.append(editButton, deleteButton);
+
+      card.append(
+        heading,
+        content,
+        date,
+        actions
+      );
+
+      list.appendChild(card);
+    });
+
+    prayerRoot.appendChild(list);
+  }
+
+  newPrayerButton?.addEventListener(
+    "click",
+    openPrayerForm
+  );
+
+  emptyNewPrayerButton?.addEventListener(
+    "click",
+    openPrayerForm
+  );
+
+  cancelPrayerButton?.addEventListener(
+    "click",
+    closePrayerForm
+  );
+
+  cancelPrayerButtonBottom?.addEventListener(
+    "click",
+    closePrayerForm
+  );
+cancelDeleteButton?.addEventListener(
+  "click",
+  closeDeleteConfirmation
+);
+
+confirmDeleteButton?.addEventListener(
+  "click",
+  confirmDelete
+);
+  prayerForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!titleInput || !contentInput) {
+      return;
+    }
+
+    const title = titleInput.value.trim();
+    const content = contentInput.value.trim();
+
+    if (!title || !content) {
+      return;
+    }
+
+    if (editingPrayerId) {
+      updatePrayer(editingPrayerId, {
+        title,
+        content,
+      });
+    } else {
+      const now = new Date().toISOString();
+
+      const prayer: PrayerEntry = {
+        id: crypto.randomUUID(),
+        title,
+        content,
+        createdAt: now,
+        updatedAt: now,
+      };
+
+      addPrayer(prayer);
+    }
+
+    closePrayerForm();
+    renderPrayers();
+  });
+
+  renderPrayers();
+</script>
