@@ -1,0 +1,398 @@
+﻿---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Reading History">
+  <main class="history-page">
+    <section class="history-hero">
+      <div class="container">
+        <span class="history-eyebrow">BIBLE HUB</span>
+
+        <h1>Reading History</h1>
+
+        <p>
+          Return to the chapters you have recently spent time reading.
+        </p>
+      </div>
+    </section>
+
+    <section class="history-section">
+      <div class="container">
+        <div class="history-header">
+          <div>
+            <span class="section-eyebrow">YOUR JOURNEY</span>
+            <h2>Recently Read</h2>
+          </div>
+
+          <button
+            type="button"
+            id="clear-history"
+            class="history-clear"
+            hidden
+          >
+            Clear History
+          </button>
+        </div>
+
+        <div id="history-root"></div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  import {
+    clearReadingHistory,
+    getReadingHistory,
+    removeReadingHistory,
+  } from "../../lib/reading";
+
+  const root = document.getElementById("history-root");
+  const clearButton =
+    document.getElementById("clear-history");
+
+  function formatReadAt(value: string): string {
+    const date = new Date(value);
+
+    if (Number.isNaN(date.getTime())) {
+      return "Recently read";
+    }
+
+    return new Intl.DateTimeFormat(undefined, {
+      dateStyle: "medium",
+      timeStyle: "short",
+    }).format(date);
+  }
+
+  function renderHistory(): void {
+    if (!(root instanceof HTMLElement)) {
+      return;
+    }
+
+    const history = getReadingHistory();
+
+    if (clearButton instanceof HTMLButtonElement) {
+      clearButton.hidden = history.length === 0;
+    }
+
+    if (history.length === 0) {
+      root.innerHTML = `
+        <div class="history-empty">
+          <div class="history-empty-icon" aria-hidden="true">
+            📖
+          </div>
+
+          <h3>No reading history yet</h3>
+
+          <p>
+            Chapters you read will appear here so you can
+            easily return to them later.
+          </p>
+
+          <a href="/bible/books" class="history-button">
+            Explore the Bible
+          </a>
+        </div>
+      `;
+
+      return;
+    }
+
+    root.innerHTML = `
+      <div class="history-list">
+        ${history
+          .map(
+            (entry) => `
+              <article class="history-card">
+                <div class="history-card-content">
+                  <span class="history-card-label">
+                    Recently Read
+                  </span>
+
+                  <h3>
+                    <a href="${entry.href}">
+                      ${entry.bookName} ${entry.chapter}
+                    </a>
+                  </h3>
+
+                  <p>
+                    Read ${formatReadAt(entry.readAt)}
+                  </p>
+                </div>
+
+                <div class="history-card-actions">
+                  <a
+                    href="${entry.href}"
+                    class="history-open"
+                  >
+                    Read Chapter
+                  </a>
+
+                  <button
+                    type="button"
+                    class="history-remove"
+                    data-history-id="${entry.id}"
+                    aria-label="Remove ${entry.bookName} ${entry.chapter} from reading history"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    `;
+
+    root
+      .querySelectorAll<HTMLButtonElement>(
+        "[data-history-id]"
+      )
+      .forEach((button) => {
+        button.addEventListener("click", () => {
+          const id = button.dataset.historyId;
+
+          if (!id) {
+            return;
+          }
+
+          removeReadingHistory(id);
+          renderHistory();
+        });
+      });
+  }
+
+  clearButton?.addEventListener("click", () => {
+    const confirmed = window.confirm(
+      "Clear your entire reading history?"
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    clearReadingHistory();
+    renderHistory();
+  });
+
+  renderHistory();
+</script>
+
+<style is:global>
+  .history-page {
+    min-height: 70vh;
+  }
+
+  .history-hero {
+    padding: 6rem 1.5rem 5rem;
+    background: #0f6b73;
+    color: #fff;
+    text-align: center;
+  }
+
+  .history-hero .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .history-eyebrow,
+  .section-eyebrow {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    color: #d4af37;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .history-hero h1 {
+    margin: 0 0 1rem;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.7rem, 6vw, 4.5rem);
+  }
+
+  .history-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+  }
+
+  .history-section {
+    padding: 4rem 1.5rem 6rem;
+    background: #0f6b73;
+  }
+
+  .history-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .history-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .history-header h2 {
+    margin: 0;
+    color: #fff;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+  }
+
+  .history-clear {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    padding: 0.75rem 1.2rem;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+  }
+
+  .history-clear:hover {
+    background: rgba(212, 175, 55, 0.12);
+    border-color: #d4af37;
+    color: #d4af37;
+  }
+
+  .history-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .history-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    border-left: 4px solid #d4af37;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  }
+
+  .history-card-label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #d4af37;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .history-card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.35rem;
+  }
+
+  .history-card h3 a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .history-card h3 a:hover {
+    text-decoration: underline;
+  }
+
+  .history-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+  }
+
+  .history-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .history-open {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.7rem 1.1rem;
+    background: #d4af37;
+    color: #103d43;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .history-remove {
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.9rem;
+  }
+
+  .history-remove:hover {
+    color: #d4af37;
+  }
+
+  .history-empty {
+    padding: 4rem 2rem;
+    border: 1px dashed rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    text-align: center;
+  }
+
+  .history-empty-icon {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .history-empty h3 {
+    margin: 0 0 0.75rem;
+    color: #fff;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+  }
+
+  .history-empty p {
+    max-width: 520px;
+    margin: 0 auto 1.5rem;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .history-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.8rem 1.3rem;
+    background: #d4af37;
+    color: #103d43;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  @media (max-width: 700px) {
+    .history-header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .history-card {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .history-card-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+</style>
