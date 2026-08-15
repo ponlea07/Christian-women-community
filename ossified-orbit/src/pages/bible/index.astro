@@ -96,6 +96,46 @@ const testaments = [
 
 </article>
 
+<article class="resource-card">
+
+  <h3> 🖍️Verse Highlights</h3>
+
+  <p>
+    Revisit verses you have highlighted while reading Scripture.
+  </p>
+
+  <a href="/bible/highlights" class="btn-primary">
+    Open →
+  </a>
+
+</article>
+
+<article class="resource-card">
+
+  <h3> 🕒Reading History</h3>
+
+  <p>
+    Pick up where you left off and revisit recently read chapters.
+  </p>
+
+  <a href="/bible/history" class="btn-primary">
+    Open →
+  </a>
+
+</article>
+<article class="resource-card">
+
+  <h3> 🙏 Prayer Journal</h3>
+
+  <p>
+    Record your prayers, reflect on your journey and keep track of what you're bringing before God.
+  </p>
+
+  <a href="/bible/prayer" class="btn-primary">
+    Open →
+  </a>
+
+</article>
 </div>
 
   </div>
@@ -152,6 +192,7 @@ Open →
 
 </article>
 
+
 ))}
 
 </div>
@@ -160,55 +201,23 @@ Open →
 
 </section>
 
-<section class="quick-access">
-
+<section class="daily-scripture">
   <div class="container">
 
     <SectionHeading
-      eyebrow="COMING NEXT"
-      title="More Bible Study Tools"
-      text="We're continually adding new features to make your Bible study experience richer and more meaningful."
+      eyebrow="TODAY'S WORD"
+      title="Daily Scripture"
+      text="Pause, reflect and let God's Word speak into your day."
       theme="light"
     />
 
-    <div class="resources-grid">
-
-      <!-- Reading Plans -->
-      <article class="resource-card">
-
-        <h3>📅 Reading Plans</h3>
-
-        <p>
-          Follow guided Bible reading plans designed to help you stay
-          consistent in God's Word.
-        </p>
-
-        <span class="coming-soon-badge">
-          Coming Soon
-        </span>
-
-      </article>
-
-      <!-- Verse Highlights -->
-      <article class="resource-card">
-
-        <h3>❤️ Verse Highlights</h3>
-
-        <p>
-          Highlight meaningful verses using different colours and revisit
-          them whenever you need encouragement.
-        </p>
-
-        <span class="coming-soon-badge">
-          Coming Soon
-        </span>
-
-      </article>
-
-    </div>
-
+    <ScriptureCard
+  reference={verse.reference}
+  text={verse.text}
+  action="Read in Context →"
+  href={`/bible/${verse.book}/${verse.chapter}`}
+/>
   </div>
-
 </section>
 
 </Layout>
@@ -221,6 +230,19 @@ Open →
 
 .daily-verse-preview .scripture-card{
   margin-bottom:3rem;
+}
+.daily-scripture {
+  padding: 4rem 0 5rem;
+  background: #0f6b73;
+}
+
+.daily-scripture .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.daily-scripture .section-heading {
+  margin-bottom: 2rem;
 }
 .quick-access{
   padding:3rem 0;

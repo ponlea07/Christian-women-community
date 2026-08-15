@@ -40,103 +40,119 @@ import Layout from "../../layouts/Layout.astro";
 
 <style>
 
-.search-page{
-  max-width:900px;
-  margin:0 auto;
-  padding:4rem 1.5rem;
+.search-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
 }
 
-.eyebrow{
-  color:#D4AF37;
-  text-transform:uppercase;
-  letter-spacing:.15em;
-  text-align:center;
+.subtitle {
+  text-align: center;
+  color: var(--color-muted-text);
+  margin-bottom: 2rem;
 }
 
-.search-page h1{
-  text-align:center;
-  margin:.5rem 0;
+.eyebrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  text-align: center;
 }
 
-.subtitle{
-  text-align:center;
-  color:#bbb;
-  margin-bottom:2rem;
+.search-page h1 {
+  text-align: center;
+  margin: 0.5rem 0;
 }
 
-.search-form{
-  display:flex;
-  gap:1rem;
-  margin-bottom:2rem;
+.search-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.search-form input{
-  flex:1;
-  padding:1rem;
-  border-radius:12px;
-  border:none;
-  font-size:1rem;
+.search-form input {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-surface-text);
+  font-size: 1rem;
 }
 
-.search-form button{
-  background:#D4AF37;
-  color:white;
-  border:none;
-  padding:1rem 1.5rem;
-  border-radius:12px;
-  cursor:pointer;
-  font-weight:600;
+.search-form input::placeholder{
+  color:var(--color-surface-text-muted);
+  opacity:1;
 }
 
-.search-form button:hover{
-  opacity:.9;
+.search-form input:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
-.results-count{
-  margin-bottom:1.5rem;
-  color:#D4AF37;
-  font-weight:600;
+.search-form button {
+  background: var(--color-accent);
+  color: var(--color-button-text);
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.results{
-  display:grid;
-  gap:1rem;
+.search-form button:hover {
+  opacity: 0.9;
 }
 
-.result-card{
-  background:white;
-  color:#333;
-  padding:1.5rem;
-  border-radius:16px;
-  box-shadow:0 8px 24px rgba(0,0,0,.08);
+.results-count {
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+  font-weight: 600;
 }
 
-.result-card h3{
-  margin:0 0 .75rem;
-  color:#0F6B73;
+.results {
+  display: grid;
+  gap: 1rem;
 }
 
-.result-card p{
-  margin:0;
-  line-height:1.7;
+:global(.result-card) {
+  background: var(--color-surface);
+  color: var(--color-surface-text);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.result-card a{
-  display:inline-block;
-  margin-top:1rem;
-  color:#D4AF37;
-  text-decoration:none;
-  font-weight:600;
+:global(.result-card h3) {
+  margin: 0 0 0.75rem;
+  color: var(--color-surface-text);
 }
 
-.result-card a:hover{
-  text-decoration:underline;
+:global(.result-card p) {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--color-surface-text);
 }
+
+:global(.result-card a) {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+:global(.result-card a:hover) {
+  text-decoration: underline;
+}
+
 :global(.pagination) {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
 }
+
 :global(.pagination-nav) {
   display: flex;
   justify-content: center;
@@ -150,11 +166,11 @@ import Layout from "../../layouts/Layout.astro";
   height: 42px;
   padding: 0 0.9rem;
 
-  border: none;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
 
-  background: white;
-  color: #0F6B73;
+  background: var(--color-surface);
+  color: var(--color-brand);
 
   font-weight: 600;
   cursor: pointer;
@@ -163,14 +179,14 @@ import Layout from "../../layouts/Layout.astro";
 }
 
 :global(.pagination-nav button:hover:not(:disabled)) {
-  background: #D4AF37;
-  color: white;
+  background: var(--color-accent);
+  color: var(--color-button-text);
 }
 
 :global(.pagination-nav button.active) {
-  background: #D4AF37;
-  color: #111;
-  border: 2px solid #fff;
+  background: var(--color-accent);
+  color: var(--color-button-text);
+  border: 2px solid var(--color-accent);
   font-weight: 700;
 }
 
@@ -178,9 +194,10 @@ import Layout from "../../layouts/Layout.astro";
   opacity: 0.5;
   cursor: not-allowed;
 }
+
 :global(.pagination-nav span) {
   padding: 0 0.5rem;
-  color: white;
+  color: var(--color-text);
   font-weight: bold;
 }
 

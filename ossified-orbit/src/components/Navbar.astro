@@ -22,6 +22,16 @@ import "../styles/navbar.css";
       </div>
     </a>
 
+        <button
+      class="theme-toggle"
+      id="themeToggle"
+      type="button"
+      aria-label="Switch to dark mode"
+      aria-pressed="false"
+    >
+      <span id="themeIcon" aria-hidden="true">☾</span>
+    </button>
+
     <button
       class="menu-toggle"
       id="menuToggle"
@@ -61,21 +71,80 @@ import "../styles/navbar.css";
 
 <script is:inline>
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("menuToggle");
+  const menuToggle = document.getElementById("menuToggle");
   const nav = document.getElementById("mobileNav");
 
-  if (!toggle || !nav) return;
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
 
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
+      const expanded =
+        menuToggle.getAttribute("aria-expanded") === "true";
 
-    const expanded =
-      toggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(!expanded)
+      );
+    });
+  }
 
-    toggle.setAttribute(
-      "aria-expanded",
-      String(!expanded)
+  const themeToggle =
+    document.getElementById("themeToggle");
+
+  const themeIcon =
+    document.getElementById("themeIcon");
+
+  const themeColor =
+    document.getElementById("theme-color");
+
+  if (!themeToggle || !themeIcon) return;
+
+  function updateThemeUI(theme) {
+    const isDark = theme === "dark";
+
+    themeIcon.textContent = isDark ? "☀" : "☾";
+
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark
+        ? "Switch to light mode"
+        : "Switch to dark mode"
     );
+
+    themeToggle.setAttribute(
+      "aria-pressed",
+      String(isDark)
+    );
+
+    if (themeColor instanceof HTMLMetaElement) {
+      themeColor.content = isDark
+        ? "#082F33"
+        : "#0F6B73";
+    }
+  }
+
+  const currentTheme =
+    document.documentElement.dataset.theme === "dark"
+      ? "dark"
+      : "light";
+
+  updateThemeUI(currentTheme);
+
+  themeToggle.addEventListener("click", () => {
+    const isDark =
+      document.documentElement.dataset.theme === "dark";
+
+    const nextTheme = isDark ? "light" : "dark";
+
+    if (nextTheme === "dark") {
+      document.documentElement.dataset.theme = "dark";
+    } else {
+      delete document.documentElement.dataset.theme;
+    }
+
+    localStorage.setItem("theme", nextTheme);
+
+    updateThemeUI(nextTheme);
   });
 });
 </script>

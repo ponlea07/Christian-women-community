@@ -18,6 +18,19 @@ const {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <script is:inline>
+  (() => {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (
+      savedTheme === "dark" ||
+      (!savedTheme &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  })();
+</script>
   <title>{title}</title>
 
   <meta
@@ -31,8 +44,11 @@ const {
   />
 
   <meta name="author" content="Christian Women Community" />
-  <meta name="theme-color" content="#0F6B73" />
-
+  <meta
+  name="theme-color"
+  content="#0F6B73"
+  id="theme-color"
+/>
   <!-- Canonical -->
   <link
     rel="canonical"

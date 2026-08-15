@@ -165,7 +165,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
 <style>
   .prayer-content {
   padding: 80px 0 100px;
-  background: var(--color-surface-soft);
+  background: #fdfbf7;
 }
 
   .prayer-toolbar {
@@ -178,7 +178,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
 
   .prayer-toolbar h2 {
     margin: 0 0 8px;
-    color: var(--color-surface-text);
+    color: #0f6b73;
     font-family: "Cormorant Garamond", serif;
     font-size: 2.4rem;
   }
@@ -217,21 +217,21 @@ import SectionHeading from "../../components/SectionHeading.astro";
 
   .prayer-form-header h2 {
     margin: 0 0 8px;
-    color: var(--color-surface-text);
+    color: #0f6b73;
     font-family: "Cormorant Garamond", serif;
     font-size: 2.3rem;
   }
 
   .prayer-form-header p {
     margin: 0;
-    color: var(--color-surface-text-muted);
+    color: #666;
     line-height: 1.7;
   }
 
   .prayer-close-button {
     border: 0;
     background: transparent;
-    color: var(--color-surface-text);
+    color: #0f6b73;
     font-size: 2rem;
     line-height: 1;
     cursor: pointer;
@@ -245,7 +245,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
   }
 
   .prayer-field label {
-    color: var(--color-surface-text);
+    color: #0f6b73;
     font-weight: 600;
   }
 
@@ -253,25 +253,25 @@ import SectionHeading from "../../components/SectionHeading.astro";
   .prayer-field textarea {
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid color-mix(in srgb, var(--color-surface-text) 25%, transparent);
+    border: 1px solid #ddd;
     border-radius: 12px;
-    background: var(--color-surface);
+    background: #fff;
     padding: 15px 16px;
-    color: var(--color-surface-text);
+    color: #0f6b73;
     font: inherit;
   }
 
 
   .prayer-field input::placeholder,
   .prayer-field textarea::placeholder {
-    color: var(--color-surface-text-muted);
+    color: #777;
     opacity: 1;
   }
 
   .prayer-field input:focus,
   .prayer-field textarea:focus {
     outline: 2px solid rgba(212, 175, 55, 0.35);
-    border-color: var(--color-accent);
+    border-color: #d4af37;
   }
 
   .prayer-field textarea {
@@ -291,7 +291,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
     margin: 0 auto;
     padding: 70px 40px;
     border-radius: 24px;
-    background: var(--color-surface);
+    background: #fff;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
     text-align: center;
   }
@@ -311,7 +311,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
 
   .prayer-empty-state h2 {
     margin: 0 0 14px;
-    color: var(--color-surface-text);
+    color: #0f6b73;
     font-family: "Cormorant Garamond", serif;
     font-size: 2.5rem;
   }
@@ -319,7 +319,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
   .prayer-empty-state p {
     max-width: 520px;
     margin: 0 auto 30px;
-    color: var(--color-surface-text-muted);
+    color: #666;
     line-height: 1.8;
   }
 :global(.prayer-list) {
@@ -328,26 +328,26 @@ import SectionHeading from "../../components/SectionHeading.astro";
   }
 
   :global(.prayer-card) {
-    color: var(--color-surface-text);
+    color: #0f6b73;
   }
 
   :global(.prayer-card h3) {
     margin: 0 0 14px;
-    color: var(--color-surface-text);
+    color: #0f6b73;
     font-family: "Cormorant Garamond", serif;
     font-size: 2rem;
   }
 
   :global(.prayer-card p) {
     margin: 0 0 20px;
-    color: var(--color-surface-text-muted);
+    color: #666;
     line-height: 1.8;
     white-space: pre-wrap;
   }
 
   :global(.prayer-date) {
     display: block;
-    color: var(--color-surface-text-muted);
+    color: #666;
     font-size: 0.9rem;
   }
   :global(.prayer-card-actions) {
@@ -357,29 +357,38 @@ import SectionHeading from "../../components/SectionHeading.astro";
   margin-top: 24px;
 }
 
-:global(.prayer-card-actions .btn.secondary),
-:global(.delete-confirmation__actions .btn.secondary),
-:global(.prayer-form-actions .btn.secondary) {
-  border: 2px solid var(--color-accent);
+:global(.prayer-card-actions .btn.secondary) {
+  border: 2px solid #d4af37;
   background: transparent;
-  color: var(--color-surface-text);
+  color: #0f6b73;
   padding: 10px 24px;
   border-radius: 999px;
   cursor: pointer;
 }
 
-:global(.prayer-card-actions .btn.secondary:hover),
-:global(.delete-confirmation__actions .btn.secondary:hover),
-:global(.prayer-form-actions .btn.secondary:hover) {
-  background: var(--color-accent);
-  color: var(--color-button-text);
+:global(.prayer-card-actions .btn.secondary:hover) {
+  background: #d4af37;
+  color: #0f6b73;
+}
+:global(.delete-confirmation__actions .btn.secondary) {
+  border: 2px solid #d4af37;
+  background: transparent;
+  color: #0f6b73;
+  padding: 10px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+:global(.delete-confirmation__actions .btn.secondary:hover) {
+  background: #d4af37;
+  color: #0f6b73;
 }
 :global(.prayer-empty-state) {
   max-width: 700px;
   margin: 0 auto;
   padding: 70px 40px;
   border-radius: 24px;
-  background: var(--color-surface);
+  background: #fff;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
@@ -399,7 +408,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
 
 :global(.prayer-empty-state h2) {
   margin: 0 0 14px;
-  color: var(--color-surface-text);
+  color: #0f6b73;
   font-family: "Cormorant Garamond", serif;
   font-size: 2.5rem;
 }
@@ -407,7 +416,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
 :global(.prayer-empty-state p) {
   max-width: 520px;
   margin: 0 auto 30px;
-  color: var(--color-surface-text-muted);
+  color: #666;
   line-height: 1.8;
 }
   @media (max-width: 700px) {
@@ -443,7 +452,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
     margin: 0 auto;
     padding: 40px;
     border-radius: 24px;
-    background: var(--color-surface);
+    background: #fff;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
     text-align: center;
   }
@@ -459,7 +468,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
 
   .delete-confirmation__card h2 {
     margin: 0 0 14px;
-    color: var(--color-surface-text);
+    color: #0f6b73;
     font-family: "Cormorant Garamond", serif;
     font-size: 2.4rem;
   }
@@ -467,7 +476,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
   .delete-confirmation__card p {
     max-width: 480px;
     margin: 0 auto 28px;
-    color: var(--color-surface-text-muted);
+    color: #666;
     line-height: 1.7;
   }
 

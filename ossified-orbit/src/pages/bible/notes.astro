@@ -41,7 +41,7 @@ import Layout from "../../layouts/Layout.astro";
 
   text-align: center;
 
-  border: 1px dashed rgba(255,255,255,.2);
+  border: 1px dashed var(--color-border);
   border-radius: 1rem;
 }
 
@@ -55,9 +55,8 @@ import Layout from "../../layouts/Layout.astro";
 
   border-radius: 1rem;
 
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.1);
-}
+  background: var(--color-surface-soft);
+border: 1px solid var(--color-border);
 
 .note-card__header {
   margin-bottom: 1rem;
@@ -108,8 +107,8 @@ import Layout from "../../layouts/Layout.astro";
 
 .note-button--secondary {
   background: transparent;
-  color: white;
-  border: 1px solid rgba(255,255,255,.2);
+  color: var(--color-text);
+border: 1px solid var(--color-border);
 }
 
 @media (max-width:640px) {

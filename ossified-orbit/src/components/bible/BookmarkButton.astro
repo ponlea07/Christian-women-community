@@ -148,7 +148,7 @@ const reference = `${bookName} ${chapter}`;
 
     background: transparent;
 
-    color: #d4af37;
+    color: var(--color-accent);
 
     font-family: "Poppins", sans-serif;
     font-size: 0.88rem;
@@ -167,7 +167,7 @@ const reference = `${bookName} ${chapter}`;
 
   .bookmark-button:hover {
     background: rgba(212, 175, 55, 0.1);
-    border-color: #d4af37;
+    border-color: var(--color-accent);
     transform: translateY(-1px);
   }
 
@@ -193,9 +193,9 @@ const reference = `${bookName} ${chapter}`;
   }
 
   .bookmark-button.is-bookmarked {
-    background: #d4af37;
-    border-color: #d4af37;
-    color: #ffffff;
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-button-text);
   }
 
   .bookmark-button.is-bookmarked:hover {

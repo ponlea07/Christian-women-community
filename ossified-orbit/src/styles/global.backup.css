@@ -2868,9 +2868,9 @@ cursor:pointer;
 
 .btn.primary{
 
-background:var(--color-accent);
+background:#D4AF37;
 
-color:var(--color-button-text);
+color:#0F6B73;
 
 }
 
@@ -2884,9 +2884,9 @@ box-shadow:0 18px 35px rgba(0,0,0,.2);
 
 .btn.secondary{
 
-border:2px solid var(--color-text);
+border:2px solid white;
 
-color:var(--color-text);
+color:white;
 
 background:transparent;
 
@@ -2894,9 +2894,9 @@ background:transparent;
 
 .btn.secondary:hover{
 
-background:var(--color-text);
+background:white;
 
-color:var(--color-button-text);
+color:#0F6B73;
 
 }
 /*==================================
@@ -3667,15 +3667,10 @@ transform:translateY(-3px);
 }
 
 .card{
-  background:var(--color-surface);
-  color:var(--color-surface-text);
+  background:#fff;
   border-radius:24px;
   padding:40px;
   box-shadow:0 20px 50px rgba(0,0,0,.08);
-}
-
-html[data-theme="dark"] .card{
-  box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
 
 .cta{
