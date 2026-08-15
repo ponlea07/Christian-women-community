@@ -896,7 +896,7 @@ font-size:3rem;
 
 line-height:1.2;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 margin-bottom:30px;
 
@@ -908,7 +908,7 @@ font-size:1.1rem;
 
 line-height:2;
 
-color:#555;
+color:var(--color-surface-text-muted);
 
 margin-bottom:22px;
 
@@ -930,7 +930,7 @@ flex-wrap:wrap;
 
 font-size:1.5rem;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 margin-bottom:8px;
 
@@ -938,7 +938,7 @@ margin-bottom:8px;
 
 .welcome-stats span{
 
-color:#666;
+color:var(--color-surface-text-muted);
 
 font-size:.95rem;
 
@@ -1047,7 +1047,7 @@ font-size:3.4rem;
 
 line-height:1.15;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 margin-bottom:30px;
 
@@ -1105,7 +1105,7 @@ gap:25px;
 
 .feature-card{
 
-background:#ffffff;
+background:var(--color-surface);
 
 padding:30px;
 
@@ -1141,7 +1141,7 @@ font-size:1.2rem;
 
 margin-bottom:12px;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 }
 
@@ -1151,7 +1151,7 @@ font-size:.95rem;
 
 line-height:1.7;
 
-color:#666;
+color:var(--color-surface-text-muted);
 
 }
 
@@ -1307,7 +1307,7 @@ VALUES
 
 .values{
     padding:120px 0;
-    background:#fff;
+    background:var(--color-surface);
 }
 
 .values-grid{
@@ -1320,7 +1320,7 @@ VALUES
 .value-card{
     padding:35px;
     border-radius:24px;
-    background:#FDFBF7;
+    background:var(--color-surface-soft);
 
     box-shadow:0 10px 30px rgba(0,0,0,.06);
 
@@ -1335,21 +1335,21 @@ VALUES
 }
 
 .value-card h3{
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin-bottom:15px;
     font-family:"Cormorant Garamond",serif;
     font-size:1.8rem;
 }
 
 .value-card p{
-    color:#666;
+    color:var(--color-surface-text-muted);
     line-height:1.8;
 }
 
 /* Keep section heading readable */
 
 .values .section-heading p{
-    color:#666;
+    color:var(--color-surface-text-muted);
 }
 
 /*==================================
@@ -1360,7 +1360,7 @@ WHAT WE DO
 
 padding:140px 0;
 
-background:#f8f8f6;
+background:var(--color-surface-soft);
 
 position:relative;
 
@@ -1378,7 +1378,7 @@ gap:35px;
 
 .service-card{
 
-background:white;
+background:var(--color-surface);
 
 padding:45px;
 
@@ -1515,7 +1515,7 @@ font-size:1.5rem;
 
 margin-bottom:18px;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 }
 
@@ -1525,7 +1525,7 @@ line-height:1.9;
 
 margin-bottom:30px;
 
-color:#666;
+color:var(--color-surface-text-muted);
 
 }
 
@@ -1552,7 +1552,7 @@ grid-template-columns:1fr;
 
 .events{
 
-background:#f8f8f5;
+background:var(--color-surface-soft);
 
 padding:120px 0;
 
@@ -1572,7 +1572,7 @@ margin-top:70px;
 
 .event-card{
 
-background:white;
+background:var(--color-surface);
 
 padding:40px;
 
@@ -1666,7 +1666,7 @@ font-family:"Cormorant Garamond",serif;
 
 font-size:2rem;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 margin-bottom:18px;
 
@@ -1674,7 +1674,7 @@ margin-bottom:18px;
 
 .event-card p{
 
-color:#555;
+color:var(--color-surface-text-muted);
 
 line-height:1.8;
 
@@ -1695,7 +1695,7 @@ color:#D4AF37;
 
 .marketplace{
 
-    background:#f8f6f2;
+    background:var(--color-surface-soft);
 
     padding:120px 0;
 
@@ -1717,7 +1717,7 @@ color:#D4AF37;
 
     height:120px;
 
-    background:white;
+    background:var(--color-surface);
 
     clip-path:ellipse(75% 100% at 50% 0%);
 
@@ -1741,7 +1741,7 @@ color:#D4AF37;
 
 .business-card{
 
-    background:white;
+    background:var(--color-surface);
 
     border-radius:28px;
 
@@ -1835,7 +1835,7 @@ color:#D4AF37;
 
 .business-card h3{
 
-    color:#0F6B73;
+    color:var(--color-surface-text);
 
     font-size:2rem;
 
@@ -1847,7 +1847,7 @@ color:#D4AF37;
 
 .business-card p{
 
-    color:#555;
+    color:var(--color-surface-text-muted);
 
     line-height:1.8;
 
@@ -1888,7 +1888,7 @@ VIRTUOSA STORIES
 
 .stories{
 
-background:white;
+background:var(--color-surface);
 
 padding:120px 0;
 
@@ -1906,7 +1906,7 @@ gap:35px;
 
 .story-card{
 
-background:#fff;
+background:var(--color-surface);
 
 padding:40px;
 
@@ -1964,7 +1964,7 @@ margin-bottom:10px;
 
 line-height:1.9;
 
-color:#555;
+color:var(--color-surface-text-muted);
 
 margin-bottom:35px;
 
@@ -2004,7 +2004,7 @@ color:#0F6B73;
 
 .story-author h4{
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 margin-bottom:4px;
 
@@ -2012,7 +2012,7 @@ margin-bottom:4px;
 
 .story-author span{
 
-color:#777;
+color:var(--color-surface-text-muted);
 
 font-size:.9rem;
 
@@ -2033,7 +2033,7 @@ FOUNDER
 
 .founder{
     padding:130px 0;
-    background:#FDFBF7;
+    background:var(--color-surface-soft);
 }
 
 .founder-grid{
@@ -2070,11 +2070,7 @@ FOUNDER
     padding:48px;
     text-align:center;
 
-    background:linear-gradient(
-        135deg,
-        #FDFBF7,
-        #F8F3EB
-    );
+    background:var(--color-surface);
 
     border:2px dashed rgba(15,107,115,.18);
     border-radius:24px;
@@ -2114,12 +2110,12 @@ FOUNDER
 .founder-placeholder h3{
     font-family:"Cormorant Garamond",serif;
     font-size:2rem;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin-bottom:16px;
 }
 
 .founder-placeholder p{
-    color:#666;
+    color:var(--color-surface-text-muted);
     line-height:1.8;
     max-width:300px;
 }
@@ -2129,18 +2125,18 @@ FOUNDER
 }
 
 .founder-note{
-    color:#888;
+    color:var(--color-surface-text-muted);
     font-style:italic;
 }
 
 /* Founder Content */
 
 .founder-content{
-    color:#555;
+    color:var(--color-surface-text-muted);
 }
 
 .founder-content p{
-    color:#555 !important;
+    color:var(--color-surface-text-muted) !important;
     line-height:1.9;
     margin-bottom:22px;
     font-size:1.05rem;
@@ -2149,7 +2145,7 @@ FOUNDER
 .founder-content h3{
     font-family:"Cormorant Garamond", serif;
     font-size:2rem;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin:30px 0 20px;
 }
 
@@ -2160,13 +2156,13 @@ FOUNDER
 .signature strong{
     display:block;
     font-size:1.2rem;
-    color:#0F6B73;
+    color:var(--color-surface-text);
 }
 
 .signature span{
     display:block;
     margin-top:4px;
-    color:#777;
+    color:var(--color-surface-text-muted);
 }
 
 /* Mobile */
@@ -2202,7 +2198,7 @@ FOUNDER
 
 .resources{
     padding:120px 0;
-    background:#fff;
+    background:var(--color-surface);
 }
 
 .resources-grid{
@@ -2257,7 +2253,7 @@ FOUNDER
     justify-content:center;
     align-items:center;
 
-    color:#0F6B73;
+    color:var(--color-surface-text);
 
     margin-bottom:24px;
 
@@ -2497,7 +2493,7 @@ GROW IN THE WORD
 
 padding:120px 0 80px;
 
-background:#FDFBF7;
+background:var(--color-surface-soft);
 
 }
 
@@ -2516,7 +2512,7 @@ margin-bottom:70px;
 .verse-card,
 .bible-card{
 
-background:white;
+background:var(--color-surface);
 
 padding:45px;
 
@@ -2548,7 +2544,7 @@ font-family:"Cormorant Garamond",serif;
 
 font-size:2.6rem;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 line-height:1.4;
 
@@ -2572,7 +2568,7 @@ margin-bottom:25px;
 
 line-height:1.9;
 
-color:#555;
+color:var(--color-surface-text-muted);
 
 margin-bottom:2rem;
 
@@ -2595,7 +2591,7 @@ margin-top:0.5rem;
 .bible-hub-card h3{
     font-size:1.9rem;
     font-family:"Cormorant Garamond",serif;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     line-height:1.3;
     margin-bottom:1rem;
 }
@@ -2603,7 +2599,7 @@ margin-top:0.5rem;
     max-width:280px;
     margin:0 auto 2rem;
     line-height:1.8;
-    color:#555;
+    color:var(--color-surface-text-muted);
 }
 
 .bible-qr{
@@ -2955,7 +2951,7 @@ line-height:2;
 
 padding:120px 0;
 
-background:white;
+background:var(--color-surface);
 
 }
 
@@ -2975,7 +2971,7 @@ line-height:2;
 
 margin-bottom:25px;
 
-color:#555;
+color:var(--color-surface-text-muted);
 
 }
 
@@ -2985,7 +2981,7 @@ VISION & MISSION
 
 .vision-mission{
     padding:110px 0;
-    background:#FDFBF7;
+    background:var(--color-surface-soft);
 }
 
 .vm-grid{
@@ -2995,7 +2991,7 @@ VISION & MISSION
 }
 
 .vm-card{
-    background:#fff;
+    background:var(--color-surface);
     padding:45px;
     border-radius:30px;
 
@@ -3016,12 +3012,12 @@ VISION & MISSION
 .vm-card h2{
     font-family:"Cormorant Garamond",serif;
     font-size:2.3rem;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin-bottom:20px;
 }
 
 .vm-card p{
-    color:#555;
+    color:var(--color-surface-text-muted);
     line-height:1.9;
 }
 
@@ -3055,7 +3051,7 @@ PROGRAMS PAGE
 
 padding:120px 0;
 
-background:#FDFBF7;
+background:var(--color-surface-soft);
 
 }
 
@@ -3073,7 +3069,7 @@ margin-top:70px;
 
 .program-card{
 
-background:white;
+background:var(--color-surface);
 
 padding:40px;
 
@@ -3115,7 +3111,7 @@ font-family:"Cormorant Garamond",serif;
 
 font-size:2rem;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 margin-bottom:10px;
 
@@ -3125,7 +3121,7 @@ margin-bottom:10px;
 
 font-weight:700;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 margin-bottom:20px;
 
@@ -3137,7 +3133,7 @@ line-height:1.8;
 
 margin-bottom:25px;
 
-color:#555;
+color:var(--color-surface-text-muted);
 
 }
 /*==================================
@@ -3148,7 +3144,7 @@ MARKETPLACE PAGE
 
 padding:120px 0;
 
-background:#FDFBF7;
+background:var(--color-surface-soft);
 
 }
 /*==================================
@@ -3168,7 +3164,7 @@ CONTACT PAGE
 
 .contact-page{
     padding:120px 0;
-    background:#FDFBF7;
+    background:var(--color-surface-soft);
 }
 
 .contact-grid{
@@ -3179,7 +3175,7 @@ CONTACT PAGE
 }
 
 .contact-card{
-    background:#fff;
+    background:var(--color-surface);
     padding:40px;
     border-radius:24px;
     text-align:center;
@@ -3193,19 +3189,19 @@ CONTACT PAGE
 }
 
 .contact-icon{
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin-bottom:20px;
 }
 
 .contact-card h3{
     font-family:"Cormorant Garamond",serif;
     font-size:2rem;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin-bottom:15px;
 }
 
 .coming-soon{
-    color:#777;
+    color:var(--color-surface-text-muted);
     font-style:italic;
     font-weight:500;
 }
@@ -3213,18 +3209,18 @@ CONTACT PAGE
 .contact-label{
     font-size:.9rem;
     font-weight:600;
-    color:#777;
+    color:var(--color-surface-text-muted);
     margin:18px 0 6px;
 }
 
 .contact-card p{
     line-height:1.8;
-    color:#555;
+    color:var(--color-surface-text-muted);
 }
 
 .contact-email{
     display:block;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     font:inherit;
     text-decoration:none;
     line-height:1.7;
@@ -3240,7 +3236,7 @@ CONTACT PAGE
 }
 
 .contact-card a{
-    color:#0F6B73;
+    color:var(--color-surface-text);
     text-decoration:none;
     transition:color .25s ease;
 }
@@ -3257,7 +3253,7 @@ JOIN PAGE
 
 padding:120px 0;
 
-background:#FDFBF7;
+background:var(--color-surface-soft);
 
 }
 
@@ -3279,7 +3275,7 @@ font-family:"Cormorant Garamond",serif;
 
 font-size:3rem;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 margin-bottom:30px;
 
@@ -3291,13 +3287,13 @@ padding-left:22px;
 
 line-height:2.2;
 
-color:#555;
+color:var(--color-surface-text-muted);
 
 }
 
 .join-form{
 
-background:white;
+background:var(--color-surface);
 
 padding:45px;
 
@@ -3313,7 +3309,7 @@ font-family:"Cormorant Garamond",serif;
 
 font-size:2rem;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 margin-bottom:25px;
 
@@ -3337,7 +3333,11 @@ padding:16px;
 
 border-radius:12px;
 
-border:1px solid #ddd;
+border:1px solid color-mix(in srgb, var(--color-surface-text) 25%, transparent);
+
+background:var(--color-surface);
+
+color:var(--color-surface-text);
 
 font-size:1rem;
 
@@ -3364,8 +3364,10 @@ grid-template-columns:1fr;
 }
 .join-form select {
   padding: 16px;
-  border: 1px solid #ddd;
+  border: 1px solid color-mix(in srgb, var(--color-surface-text) 25%, transparent);
   border-radius: 12px;
+  background: var(--color-surface);
+  color: var(--color-surface-text);
   font-size: 1rem;
   font-family: inherit;
   width: 100%;
@@ -3412,7 +3414,9 @@ visibility:visible;
 
 .modal-card{
 
-background:white;
+background:var(--color-surface);
+
+color:var(--color-surface-text);
 
 width:100%;
 
@@ -3444,7 +3448,7 @@ font-family:"Cormorant Garamond",serif;
 
 font-size:2.5rem;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 margin-bottom:10px;
 
@@ -3454,7 +3458,7 @@ margin-bottom:10px;
 
 margin-bottom:30px;
 
-color:#666;
+color:var(--color-surface-text-muted);
 
 }
 
@@ -3478,7 +3482,11 @@ padding:16px;
 
 border-radius:12px;
 
-border:1px solid #ddd;
+border:1px solid color-mix(in srgb, var(--color-surface-text) 25%, transparent);
+
+background:var(--color-surface);
+
+color:var(--color-surface-text);
 
 font-size:1rem;
 
@@ -3504,7 +3512,7 @@ font-size:2rem;
 
 cursor:pointer;
 
-color:#888;
+color:var(--color-surface-text-muted);
 
 transition:.2s;
 
@@ -3512,7 +3520,7 @@ transition:.2s;
 
 .modal-close:hover{
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 transform:rotate(90deg);
 
@@ -3535,7 +3543,7 @@ font-size:2rem;
 }
 .join-card{
 
-background:white;
+background:var(--color-surface);
 
 padding:45px;
 
@@ -3557,7 +3565,7 @@ margin-left:auto;
 .join-card h3{
     font-family:"Cormorant Garamond",serif;
     font-size:2.4rem;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin:15px 0;
 }
 .join-card h3{
@@ -3567,7 +3575,7 @@ line-height:1.25;
 }
 
 .join-card p{
-    color:#666;
+    color:var(--color-surface-text-muted);
     line-height:1.8;
     margin-bottom:32px;
 }
@@ -3606,13 +3614,13 @@ margin:10px 0;
 
 .join-highlights div{
 
-background:#F6F6F6;
+background:var(--color-surface-soft);
 
 padding:14px;
 
 border-radius:14px;
 
-color:#0F6B73;
+color:var(--color-surface-text);
 
 font-weight:600;
 
@@ -3655,7 +3663,7 @@ transform:translateY(-3px);
     display:flex;
     justify-content:center;
     align-items:center;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin-bottom:20px;
 }
 /* ==========================
@@ -3704,10 +3712,10 @@ html[data-theme="dark"] .card{
 
     padding:16px 20px;
 
-    background:#F8F8F8;
+    background:var(--color-surface-soft);
     border-radius:18px;
 
-    color:#0F6B73;
+    color:var(--color-surface-text);
     font-weight:600;
 
     transition:.3s ease;
@@ -3860,12 +3868,12 @@ FEATURED BIBLE HUB
 .featured-resource-text h3{
     font-size:2.5rem;
     line-height:1.25;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin-bottom:1rem;
 }
 
 .featured-resource-text p{
-    color:#666;
+    color:var(--color-surface-text-muted);
     line-height:1.9;
     margin-bottom:2rem;
 }
@@ -3890,12 +3898,12 @@ FEATURED BIBLE HUB
 
 .featured-list li{
     margin-bottom:.9rem;
-    color:#555;
+    color:var(--color-surface-text-muted);
 }
 
 .featured-list li::before{
     content:"✓";
-    color:#0F6B73;
+    color:var(--color-surface-text);
     font-weight:700;
     margin-right:.75rem;
 }
@@ -3909,7 +3917,7 @@ FEATURED BIBLE HUB
     font-family:"Cormorant Garamond",serif;
     font-size:2.15rem;
     font-weight:700;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     line-height:1.2;
     margin:0 0 .75rem;
     letter-spacing:.3px;
@@ -3917,7 +3925,7 @@ FEATURED BIBLE HUB
 
 .featured-resource-image p{
     margin:0 0 2rem;
-    color:#777;
+    color:var(--color-surface-text-muted);
     font-size:1rem;
     letter-spacing:.6px;
 }
@@ -3925,12 +3933,12 @@ FEATURED BIBLE HUB
     max-width:420px;
     margin:0 auto .75rem;
     line-height:1.7;
-    color:#666;
+    color:var(--color-surface-text-muted);
 }
 
 .preview-meta{
     margin:0 0 1.5rem;
-    color:#777;
+    color:var(--color-surface-text-muted);
     font-size:.95rem;
     letter-spacing:.3px;
 }
@@ -3939,7 +3947,7 @@ FEATURED BIBLE HUB
     width:104%;
     border-radius:24px;
     padding:.45rem;
-    background:#fff;
+    background:var(--color-surface);
     box-shadow:0 20px 60px rgba(0,0,0,.12);
 }
 

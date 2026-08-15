@@ -171,7 +171,7 @@
 
 .contact-form-section{
     padding:6rem 0;
-    background:#fff;
+    background:var(--color-surface);
 }
 
 .contact-form-wrapper{
@@ -183,8 +183,8 @@
 .form-tag{
     display:inline-block;
     padding:.45rem 1rem;
-    background:#0F6B73;
-    color:#D4AF37;
+    background:var(--color-accent);
+    color:var(--color-button-text);
     border-radius:999px;
     font-size:.8rem;
     font-weight:700;
@@ -196,12 +196,12 @@
 .contact-form-wrapper h2{
     font-family:"Cormorant Garamond",serif;
     font-size:3rem;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin-bottom:1rem;
 }
 
 .form-intro{
-    color:#666;
+    color:var(--color-surface-text-muted);
     line-height:1.9;
     max-width:620px;
     margin:0 auto 3rem;
@@ -213,7 +213,7 @@
     gap:1.5rem;
     text-align:left;
 
-    background:#fff;
+    background:var(--color-surface);
     padding:3rem;
     border-radius:24px;
     box-shadow:0 20px 60px rgba(0,0,0,.08);
@@ -232,7 +232,7 @@
 
 .form-group label{
     font-weight:600;
-    color:#0F6B73;
+    color:var(--color-surface-text);
     margin-bottom:.6rem;
 }
 
@@ -240,8 +240,10 @@
 .form-group select,
 .form-group textarea{
     padding:1rem;
-    border:1px solid #d9d9d9;
+    border:1px solid color-mix(in srgb, var(--color-surface-text) 20%, transparent);
     border-radius:14px;
+    background:var(--color-surface);
+    color:var(--color-surface-text);
     font:inherit;
     transition:border-color .25s ease,
                box-shadow .25s ease;
@@ -251,17 +253,17 @@
 .form-group select:focus,
 .form-group textarea:focus{
     outline:none;
-    border-color:#0F6B73;
-    box-shadow:0 0 0 4px rgba(15,107,115,.12);
+    border-color:var(--color-accent);
+    box-shadow:0 0 0 4px rgba(212,175,55,.18);
 }
 .form-group input:hover,
 .form-group select:hover,
 .form-group textarea:hover{
-    border-color:#0F6B73;
+    border-color:var(--color-accent);
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder{
-    color:#999;
+    color:var(--color-surface-text-muted);
 }
 
 .contact-form .btn-primary{

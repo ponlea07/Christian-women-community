@@ -62,7 +62,7 @@ const newTestament = books.filter(book => book.testament === "new");
 .book-picker-card{
   width:min(900px,95%);
   margin:3rem auto;
-  background:white;
+  background:var(--color-surface);
   border-radius:16px;
   padding:2rem;
 }
@@ -70,11 +70,11 @@ const newTestament = books.filter(book => book.testament === "new");
 .book-picker h2{
   text-align:center;
   margin-bottom:2rem;
-  color:#0F6B73;
+  color:var(--color-surface-text);
 }
 
 .book-picker h3{
-  color:#D4AF37;
+  color:var(--color-accent);
   margin:2rem 0 1rem;
 }
 
@@ -86,13 +86,13 @@ const newTestament = books.filter(book => book.testament === "new");
 
 .book-grid a{
   text-decoration:none;
-  color:#0F6B73;
+  color:var(--color-surface-text);
   padding:.6rem .8rem;
   border-radius:8px;
   transition:.2s;
 }
 
 .book-grid a:hover{
-  background:#F4F4F4;
+  background:var(--color-surface-soft);
 }
 </style>
