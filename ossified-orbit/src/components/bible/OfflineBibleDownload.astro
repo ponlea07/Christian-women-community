@@ -2,7 +2,7 @@
   <div>
     <p class="offline-bible__eyebrow">OFFLINE READING</p>
     <h2 id="offline-bible-title">Take the Bible with you</h2>
-    <p id="offline-bible-status" class="offline-bible__status">Download all 66 books and 1,189 chapters for offline reading on this device.</p>
+    <p id="offline-bible-status" class="offline-bible__status">Read Scripture wherever you are, even when you don’t have an internet connection.</p>
   </div>
   <button id="offline-bible-download" class="offline-bible__button" type="button">Download Bible for Offline Reading</button>
 </section>
@@ -27,7 +27,6 @@
 
   if (isLocalhost) {
     button.disabled = true;
-    setStatus("Offline download is available on the published website. It is intentionally disabled during local development.");
   } else if (!("serviceWorker" in navigator)) {
     button.disabled = true;
     setStatus("This browser does not support offline downloads.");
@@ -46,7 +45,7 @@
           const message = event.data;
           if (message.type === "offline-bible-progress") setStatus(`Downloading Bible for offline reading: ${message.completed} of ${message.total} files.`);
           if (message.type === "offline-bible-complete") {
-            if (message.failed === 0) { setStatus("Bible downloaded. All 66 books and 1,189 chapters are ready offline on this device."); button.textContent = "Bible Available Offline"; }
+            if (message.failed === 0) { setStatus("Bible available offline."); button.textContent = "Bible available offline"; }
             else { setStatus(`Download needs attention: ${message.failed} files could not be saved. Please try again while online.`); button.disabled = false; }
           }
         };
