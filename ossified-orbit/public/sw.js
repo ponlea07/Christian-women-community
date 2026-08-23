@@ -1,7 +1,7 @@
-const CACHE_NAME = "cwc-bible-hub-v6";
+const CACHE_NAME = "cwc-bible-hub-v7";
 const OFFLINE_BIBLE_CACHE = "cwc-bible-offline-v1";
 const IS_LOCALHOST = self.location.hostname === "localhost" || self.location.hostname === "127.0.0.1";
-const APP_SHELL = ["/", "/bible", "/manifest.webmanifest", "/icons/cwc-icon-192.png", "/icons/cwc-icon-512.png", "/images/cwc-official-logo.jpg"];
+const APP_SHELL = ["/", "/bible", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png", "/images/cwc-official-logo.png"];
 
 if (IS_LOCALHOST) {
   self.addEventListener("activate", (event) => {
