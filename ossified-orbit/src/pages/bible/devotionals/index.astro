@@ -1,0 +1,33 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { devotionalJourneys, masterDevotionals } from "../../../content/bible/devotionals/devotionals";
+import BibleHubBackLink from "../../../components/bible/BibleHubBackLink.astro";
+import DevotionalJourneyPicker from "../../../components/bible/DevotionalJourneyPicker.astro";
+---
+
+<Layout title="Devotional Journeys | Bible Hub">
+  <main class="devotionals-page">
+    <section class="page-hero">
+      <div class="container">
+        <span class="page-eyebrow">BIBLE HUB · DAILY DEVOTIONALS</span>
+        <h1>Devotional Journeys</h1>
+        <p>Choose a faithful rhythm for meeting God in Scripture, reflection and prayer.</p>
+      </div>
+    </section>
+    <section class="devotionals-section">
+      <div class="container">
+        <DevotionalJourneyPicker devotionals={masterDevotionals} journeys={devotionalJourneys} />
+        <BibleHubBackLink />
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .devotionals-page { min-height: 100vh; }
+  .page-hero { padding: 5rem 0; background: var(--color-bg); color: var(--color-text); text-align: center; }
+  .page-eyebrow { display: inline-block; margin-bottom: .75rem; color: var(--color-accent); font-size: .8rem; font-weight: 700; letter-spacing: .15em; }
+  .page-hero h1 { margin: 0 0 1rem; font-family: "Cormorant Garamond", serif; font-size: clamp(2.5rem, 6vw, 4rem); }
+  .page-hero p { max-width: 600px; margin: 0 auto; color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.6; }
+  .devotionals-section { padding: 5rem 0; background: var(--color-surface); }
+</style>

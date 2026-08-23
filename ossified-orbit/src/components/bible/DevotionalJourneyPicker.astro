@@ -1,0 +1,71 @@
+---
+import type { Devotional, DevotionalJourney } from "../../content/bible/devotionals/types";
+interface Props { devotionals: Devotional[]; journeys: DevotionalJourney[]; }
+const { devotionals, journeys } = Astro.props;
+const availableDays = devotionals.length;
+const firstDevotionalForJourney = (journey: DevotionalJourney) => {
+  const dayNumbers = journey.id === "365-day" ? devotionals.map((devotional) => devotional.day) : journey.dayNumbers ?? [];
+  return devotionals.find((devotional) => devotional.day === dayNumbers[0]) ?? devotionals[0];
+};
+---
+<section class="journey-picker" data-devotional-journeys={JSON.stringify(journeys)} data-devotionals={JSON.stringify(devotionals.map(({ day, slug }) => ({ day, slug })))}>
+  <div class="section-heading">
+    <span class="eyebrow">DEVOTIONAL JOURNEYS</span>
+    <div class="gold-flourish" aria-hidden="true"><span></span>✦<span></span></div>
+    <h2>Choose your rhythm</h2>
+    <p>One master devotional collection will support every journey. YEAR365 includes every canonical day; HS90 and SG180 use their own explicit canonical-day selections.</p>
+  </div>
+  <div class="journey-grid">
+    {journeys.map((journey) => (
+      <article class="journey-card" data-journey-card={journey.id} data-day-numbers={JSON.stringify(journey.dayNumbers ?? [])}>
+        <span class="journey-duration">{journey.duration} DAYS</span><h3>{journey.title}</h3><p>{journey.description}</p>
+        <p class="journey-availability"><strong data-journey-available={journey.id}>{journey.id === "365-day" ? availableDays : journey.dayNumbers?.length ?? 0}</strong> of {journey.duration} selected days currently available</p>
+        <a class="journey-button" href={`/bible/devotionals/${firstDevotionalForJourney(journey)?.slug ?? ""}?journey=${journey.id}`} data-journey-link={journey.id}>Begin Journey →</a>
+        <p class="journey-progress" data-journey-progress={journey.id} aria-live="polite"></p>
+      </article>
+    ))}
+  </div>
+</section>
+<script>
+  const root = document.querySelector<HTMLElement>("[data-devotional-journeys]");
+  const storageKey = "cwc-bible-devotional-journey-v1";
+  if (root) {
+    type JourneyProgress = { completedDays?: number[]; lastVisitedDay?: number };
+    type Progress = { journeyId?: string; journeys?: Record<string, JourneyProgress>; completedDays?: number[]; lastVisitedDay?: number };
+    const journeys = JSON.parse(root.dataset.devotionalJourneys || "[]") as Array<{ id: string }>;
+    const devotionals = JSON.parse(root.dataset.devotionals || "[]") as Array<{ day: number; slug: string }>;
+    let progress: Progress = {};
+    try { progress = JSON.parse(localStorage.getItem(storageKey) || "{}"); } catch { /* Ignore malformed saved state. */ }
+    const selected = new URLSearchParams(window.location.search).get("journey");
+    if (selected && journeys.some((journey) => journey.id === selected)) { progress.journeyId = selected; localStorage.setItem(storageKey, JSON.stringify(progress)); }
+    journeys.forEach((journey) => {
+      const card = root.querySelector<HTMLElement>(`[data-journey-card="${journey.id}"]`);
+      const configuredDays = journey.id === "365-day"
+        ? devotionals.map((devotional) => devotional.day)
+        : JSON.parse(card?.dataset.dayNumbers || "[]") as number[];
+      const available = configuredDays
+        .map((day) => devotionals.find((devotional) => devotional.day === day))
+        .filter((devotional): devotional is { day: number; slug: string } => Boolean(devotional));
+      const journeyProgress = progress.journeys?.[journey.id] || (progress.journeyId === journey.id
+        ? { completedDays: progress.completedDays, lastVisitedDay: progress.lastVisitedDay }
+        : {});
+      const completed = new Set(journeyProgress.completedDays || []);
+      const lastVisited = available.find((devotional) => devotional.day === journeyProgress.lastVisitedDay);
+      const next = available.find((devotional) => !completed.has(devotional.day)) || available[available.length - 1];
+      const completedInJourney = available.filter((devotional) => completed.has(devotional.day)).length;
+      const link = root.querySelector<HTMLAnchorElement>(`[data-journey-link="${journey.id}"]`);
+      const message = root.querySelector<HTMLElement>(`[data-journey-progress="${journey.id}"]`);
+      const availability = root.querySelector<HTMLElement>(`[data-journey-available="${journey.id}"]`);
+      if (availability) availability.textContent = String(available.length);
+      const resume = lastVisited || next;
+      if (link && resume) {
+        link.href = `/bible/devotionals/${resume.slug}?journey=${journey.id}`;
+        if (journeyProgress.lastVisitedDay || completed.size) link.textContent = `Continue Day ${resume.day} →`;
+      }
+      if (message && progress.journeyId === journey.id && completedInJourney) message.textContent = `${completedInJourney} available day${completedInJourney === 1 ? "" : "s"} completed`;
+    });
+  }
+</script>
+<style>
+  .journey-picker{padding:0 0 4rem}.section-heading{max-width:720px;margin:0 auto 3rem;text-align:center;color:var(--color-surface-text)}.eyebrow,.journey-duration{color:var(--color-accent);font-size:.8rem;font-weight:700;letter-spacing:.15em}.gold-flourish{display:flex;align-items:center;justify-content:center;gap:.75rem;margin:.75rem 0 1rem;color:var(--color-accent)}.gold-flourish span{width:60px;height:1px;background:var(--color-accent)}h2,h3{font-family:"Cormorant Garamond",serif}h2{margin:0 0 .75rem;font-size:clamp(2.2rem,5vw,3rem)}.section-heading p{margin:0;color:var(--color-surface-text-muted);line-height:1.7}.journey-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}.journey-card{display:flex;flex-direction:column;padding:2rem;border:1px solid var(--color-border);border-top:4px solid var(--color-accent);border-radius:1rem;background:var(--color-surface-soft);color:var(--color-surface-text);box-shadow:0 10px 30px rgba(0,0,0,.08)}.journey-card h3{margin:.75rem 0;font-size:2rem}.journey-card>p{color:var(--color-surface-text-muted);line-height:1.7}.journey-availability{margin:1.25rem 0;font-size:.95rem}.journey-availability strong{color:var(--color-accent)}.journey-button{display:inline-flex;align-self:flex-start;margin-top:auto;padding:.75rem 1rem;border-radius:.6rem;background:var(--color-accent);color:var(--color-button-text);font-weight:700}.journey-button:hover{opacity:.9;transform:translateY(-1px)}.journey-progress{min-height:1.5rem;margin:.9rem 0 0!important;color:var(--color-accent)!important;font-size:.9rem;font-weight:600}@media (max-width:900px){.journey-grid{grid-template-columns:1fr}}
+</style>

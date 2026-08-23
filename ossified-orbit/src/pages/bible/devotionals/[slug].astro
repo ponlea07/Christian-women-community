@@ -1,0 +1,465 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { devotionalJourneys, devotionals } from "../../../content/bible/devotionals/devotionals";
+import BibleHubBackLink from "../../../components/bible/BibleHubBackLink.astro";
+
+export function getStaticPaths() {
+  return devotionals.map((devotional) => ({
+    params: { slug: devotional.slug },
+    props: { devotional },
+  }));
+}
+
+const { devotional } = Astro.props;
+const dateLabel = devotional.date
+  ? new Date(devotional.date).toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    })
+  : `Day ${devotional.day}`;
+
+const currentIndex = devotionals.findIndex(
+  (item) => item.slug === devotional.slug
+);
+
+const previousDevotional =
+  currentIndex > 0 ? devotionals[currentIndex - 1] : null;
+
+const nextDevotional =
+  currentIndex < devotionals.length - 1
+    ? devotionals[currentIndex + 1]
+    : null;
+const journeySelections = Object.fromEntries(
+  devotionalJourneys.map((journey) => [journey.id, journey.id === "365-day" ? devotionals.map((item) => item.day) : journey.dayNumbers ?? []]),
+);
+---
+
+<Layout title={`${devotional.title} | Devotionals | Bible Hub`}>
+  <main class="devotional-page">
+
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="page-eyebrow">BIBLE HUB · DEVOTIONAL</span>
+
+        <h1>{devotional.title}</h1>
+
+        <p class="date">
+          {dateLabel}
+        </p>
+      </div>
+    </section>
+
+    <!-- Devotional Content -->
+    <section class="devotional-content">
+      <div class="container">
+        <article class="devotional-reading">
+
+          <!-- Scripture -->
+          <div class="scripture-card">
+            <span class="eyebrow">TODAY'S SCRIPTURE</span>
+
+            {devotional.scripture && <blockquote>“{devotional.scripture}”</blockquote>}
+
+            <p class="scripture-reference">
+              {devotional.scriptureReference}
+            </p>
+
+            <a
+              href={`/bible/${devotional.book}/${devotional.chapter}`}
+              class="scripture-link"
+            >
+              Read Scripture in Context →
+            </a>
+            {
+              devotional.secondaryScriptureReferences?.length ? (
+                <p class="secondary-scriptures">
+                  Supporting Scriptures: {devotional.secondaryScriptureReferences.join(" · ")}
+                </p>
+              ) : null
+            }
+          </div>
+
+          <!-- Reflection -->
+          <section class="reading-section">
+            <span class="section-label">REFLECTION</span>
+
+            <h2>Pause & Reflect</h2>
+
+            <p>{devotional.reflection}</p>
+          </section>
+       
+          <!-- Declaration -->
+<section class="declaration-section">
+  <span class="section-label">DECLARATION</span>
+
+  <h2>Declare It Today</h2>
+
+  <p>
+    “{devotional.declaration}”
+  </p>
+</section>
+
+          <!-- Prayer -->
+          <section class="prayer-section">
+            <span class="section-label">PRAYER</span>
+
+            <h2>Let's Pray</h2>
+
+            <p>{devotional.prayer}</p>
+          </section>
+
+          <!-- Back to Devotionals -->
+          <div class="back-link">
+            <a href="/bible/devotionals">
+              ← Back to Devotionals
+            </a>
+          </div>
+
+          <!-- Previous / Next -->
+          <nav
+            class="devotional-navigation"
+            aria-label="Devotional navigation"
+          >
+            {
+              previousDevotional ? (
+                <a
+                  href={`/bible/devotionals/${previousDevotional.slug}`}
+                  class="nav-card"
+                  data-journey-previous
+                >
+                  <span>← Previous</span>
+                  <strong>{previousDevotional.title}</strong>
+                </a>
+              ) : (
+                <div></div>
+              )
+            }
+
+            {
+              nextDevotional ? (
+                <a
+                  href={`/bible/devotionals/${nextDevotional.slug}`}
+                  class="nav-card nav-card--next"
+                  data-journey-next
+                >
+                  <span>Next →</span>
+                  <strong>{nextDevotional.title}</strong>
+                </a>
+              ) : (
+                <div></div>
+              )
+            }
+          </nav>
+
+          <!-- Back to Bible Hub -->
+          <BibleHubBackLink />
+        </article>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<script is:inline define:vars={{ currentDay: devotional.day, journeySelections, devotionalRoutes: devotionals.map(({ day, slug, title }) => ({ day, slug, title })) }}>
+  const journeyId = new URLSearchParams(window.location.search).get("journey");
+  const selectedDays = journeyId ? journeySelections[journeyId] : undefined;
+  const storageKey = "cwc-bible-devotional-journey-v1";
+  if (journeyId && selectedDays?.includes(currentDay)) {
+    try {
+      const progress = JSON.parse(localStorage.getItem(storageKey) || "{}");
+      const journeys = progress.journeys || {};
+      journeys[journeyId] = { ...journeys[journeyId], lastVisitedDay: currentDay };
+      localStorage.setItem(storageKey, JSON.stringify({ ...progress, journeyId, journeys }));
+    } catch {
+      // Ignore unavailable or malformed browser storage.
+    }
+  }
+  if (selectedDays?.includes(currentDay)) {
+    const currentJourneyIndex = selectedDays.indexOf(currentDay);
+    const routeForDay = (day) => devotionalRoutes.find((item) => item.day === day);
+    const updateNavigation = (selector, day, label) => {
+      const link = document.querySelector(selector);
+      const route = day === undefined ? undefined : routeForDay(day);
+      if (!link || !route) { link?.replaceWith(document.createElement("div")); return; }
+      link.href = `/bible/devotionals/${route.slug}?journey=${journeyId}`;
+      link.querySelector("strong").textContent = route.title;
+      link.querySelector("span").textContent = label;
+    };
+    updateNavigation("[data-journey-previous]", selectedDays[currentJourneyIndex - 1], "← Previous");
+    updateNavigation("[data-journey-next]", selectedDays[currentJourneyIndex + 1], "Next →");
+  }
+</script>
+
+<style>
+  /* --------------------------------
+     PAGE
+  -------------------------------- */
+
+  .devotional-page {
+    min-height: 100vh;
+  }
+
+  /* --------------------------------
+     HERO
+  -------------------------------- */
+
+  .page-hero {
+    padding: 5rem 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    text-align: center;
+  }
+
+  .page-eyebrow {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  .page-hero h1 {
+    max-width: 800px;
+    margin: 0 auto 0.75rem;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .date {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+
+  /* --------------------------------
+     CONTENT
+  -------------------------------- */
+
+  .devotional-content {
+    padding: 5rem 0;
+    background: var(--color-surface);
+    color: var(--color-surface-text);
+  }
+
+  .devotional-reading {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* --------------------------------
+     SCRIPTURE CARD
+  -------------------------------- */
+
+  .scripture-card {
+    margin-bottom: 4rem;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    background: var(--color-surface-soft);
+    color: var(--color-surface-text);
+    border: 1px solid var(--color-border);
+    text-align: center;
+  }
+
+  .eyebrow {
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  blockquote {
+    margin: 1.5rem 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.4;
+  }
+
+  .scripture-reference {
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .scripture-link {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .scripture-link:hover {
+    opacity: 0.8;
+  }
+
+  .secondary-scriptures {
+    margin: 1rem 0 0;
+    color: var(--color-surface-text-muted);
+    font-size: 0.95rem;
+  }
+
+  /* --------------------------------
+     REFLECTION / PRAYER
+  -------------------------------- */
+
+  .reading-section,
+  .prayer-section {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-label {
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  .reading-section h2,
+  .prayer-section h2 {
+    margin: 0.5rem 0 1rem;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.4rem;
+    color: var(--color-surface-text);
+  }
+
+  .reading-section p,
+  .prayer-section p {
+    color: var(--color-surface-text-muted);
+    font-size: 1.08rem;
+    line-height: 1.9;
+  }
+
+  /* --------------------------------
+     Declaration
+  -------------------------------- */
+.declaration-section {
+  margin-bottom: 3.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 1rem;
+  background: var(--color-surface-soft);
+}
+
+.declaration-section h2 {
+  margin: 0.5rem 0 1rem;
+  color: var(--color-surface-text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+}
+
+.declaration-section p {
+  margin: 0;
+  color: var(--color-surface-text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+  /* --------------------------------
+     PRAYER
+  -------------------------------- */
+
+  .prayer-section {
+    padding: 2rem;
+    border-left: 4px solid var(--color-accent);
+    background: rgba(212, 175, 55, 0.08);
+  }
+
+  /* --------------------------------
+     BACK TO DEVOTIONALS
+  -------------------------------- */
+
+  .back-link {
+    margin-bottom: 2rem;
+  }
+
+  .back-link a {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .back-link a:hover {
+    opacity: 0.8;
+  }
+
+  /* --------------------------------
+     PREVIOUS / NEXT
+  -------------------------------- */
+
+  .devotional-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .nav-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    background: var(--color-surface-soft);
+    color: var(--color-surface-text);
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .nav-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-accent);
+  }
+
+  .nav-card span {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .nav-card strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.3rem;
+  }
+
+  .nav-card--next {
+    text-align: right;
+  }
+
+  /* --------------------------------
+     MOBILE
+  -------------------------------- */
+
+  @media (max-width: 700px) {
+    .devotional-content {
+      padding: 3rem 0;
+    }
+
+    .scripture-card {
+      padding: 1.5rem;
+    }
+
+    .devotional-navigation {
+      grid-template-columns: 1fr;
+    }
+
+    .nav-card--next {
+      text-align: left;
+    }
+
+    .back-to-bible-hub {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .back-to-bible-hub__button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
