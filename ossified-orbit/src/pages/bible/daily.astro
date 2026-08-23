@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { getDailyVerse } from "../../lib/bible/dailyVerse";
 import GoldFlourish from "../../components/GoldFlourish.astro";
 import ScriptureCard from "../../components/design/ScriptureCard.astro";
+import BibleHubBackLink from "../../components/bible/BibleHubBackLink.astro";
 const verse = getDailyVerse();
 ---
 
@@ -33,6 +34,8 @@ const verse = getDailyVerse();
     </a>
 
   </ScriptureCard>
+
+  <BibleHubBackLink />
 
 </section>
 

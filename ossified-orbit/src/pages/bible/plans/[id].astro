@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import { readingPlans } from "../../../content/bible/reading-plans/plans";
+import BibleHubBackLink from "../../../components/bible/BibleHubBackLink.astro";
 
 export function getStaticPaths() {
   return readingPlans.map((plan) => ({
@@ -195,6 +196,8 @@ const firstReading = firstDay?.readings[0];
       </div>
 
     </section>
+
+    <BibleHubBackLink />
 
   </main>
 </Layout>

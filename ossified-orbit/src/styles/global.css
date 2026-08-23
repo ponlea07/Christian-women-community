@@ -193,7 +193,7 @@ border-bottom:1px solid rgba(255,255,255,.08);
     align-items:center;
 
     padding:18px 0;
-
+ max-width:1320px;
 }
 
 .brand{
@@ -252,7 +252,7 @@ border-bottom:1px solid rgba(255,255,255,.08);
 nav ul{
 
     display:flex;
-    gap:34px;
+    gap: 20px;
 
     list-style:none;
 
@@ -266,6 +266,8 @@ nav a{
 
     font-weight:600;
 
+    white-space:nowrap;
+
     transition:.3s;
 
 }
@@ -276,19 +278,31 @@ nav a:hover{
 
 }
 
+.nav-right{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
 .join-btn{
 
     background:#d4af37;
 
     color:#083f45;
 
-    padding:14px 26px;
+    padding: 12px 22px;
 
     border-radius:40px;
 
     font-weight:700;
 
     text-decoration:none;
+
+    white-space:nowrap;
+
+    flex-shrink:0;
 
     transition:.3s;
 
@@ -304,7 +318,7 @@ nav a:hover{
 .theme-toggle {
   width: 42px;
   height: 42px;
-
+  flex-shrink:0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2038,8 +2052,8 @@ FOUNDER
 
 .founder-grid{
     display:grid;
-    grid-template-columns:420px 1fr;
-    gap:80px;
+    grid-template-columns:minmax(260px, .38fr) minmax(0, .62fr);
+    gap:clamp(48px, 6vw, 80px);
     align-items:center;
 }
 
@@ -2048,6 +2062,7 @@ FOUNDER
 .founder-image{
     display:flex;
     justify-content:center;
+    align-items:flex-start;
     transition:transform .3s ease;
 }
 
@@ -2055,78 +2070,25 @@ FOUNDER
     transform:translateY(-6px);
 }
 
-/* Placeholder Card */
+.founder-portrait{
+    width:auto;
+    max-width:100%;
+    max-height:390px;
+    aspect-ratio:571 / 652;
+    object-fit:cover;
+    object-position:center 20%;
+    display:block;
 
-.founder-placeholder{
-    width:100%;
-    max-width:360px;
-    min-height:420px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    padding:48px;
-    text-align:center;
-
-    background:var(--color-surface);
-
-    border:2px dashed rgba(15,107,115,.18);
+    border:1px solid rgba(212,175,55,.6);
     border-radius:24px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-
+    box-shadow:0 14px 34px rgba(15,107,115,.12), 0 4px 14px rgba(0,0,0,.06);
     transition:
         transform .3s ease,
         box-shadow .3s ease;
 }
 
-.founder-image:hover .founder-placeholder{
+.founder-image:hover .founder-portrait{
     box-shadow:0 22px 55px rgba(15,107,115,.12);
-}
-
-/* Avatar */
-
-.founder-avatar{
-    width:96px;
-    height:96px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    margin-bottom:24px;
-
-    border-radius:50%;
-
-    background:rgba(15,107,115,.08);
-
-    font-size:3rem;
-}
-
-/* Typography */
-
-.founder-placeholder h3{
-    font-family:"Cormorant Garamond",serif;
-    font-size:2rem;
-    color:var(--color-surface-text);
-    margin-bottom:16px;
-}
-
-.founder-placeholder p{
-    color:var(--color-surface-text-muted);
-    line-height:1.8;
-    max-width:300px;
-}
-
-.founder-placeholder p + p{
-    margin-top:16px;
-}
-
-.founder-note{
-    color:var(--color-surface-text-muted);
-    font-style:italic;
 }
 
 /* Founder Content */
@@ -2178,6 +2140,10 @@ FOUNDER
         justify-content:center;
     }
 
+    .founder-portrait{
+        max-height:350px;
+    }
+
     .founder-content{
         text-align:center;
     }
@@ -2225,6 +2191,23 @@ FOUNDER
         box-shadow .35s ease;
 
     height:100%;
+}
+
+@media (max-width:600px){
+
+    .founder{
+        padding:90px 0;
+    }
+
+    .founder-grid{
+        gap:36px;
+    }
+
+    .founder-portrait{
+        max-height:320px;
+        border-radius:20px;
+    }
+
 }
 
 .resource-card:hover{
@@ -3762,11 +3745,13 @@ html[data-theme="dark"] .card{
    TABLET & MOBILE
 ========================= */
 
-@media (max-width:1199px){
+@media (max-width:1399px){
 
     .menu-toggle{
         display:block;
     }
+
+.nav-right{ justify-content:flex-end; }
 
     nav{
         width:100%;
@@ -3799,6 +3784,12 @@ html[data-theme="dark"] .card{
 
 @media (max-width:767px){
 
+    .events-grid{
+        grid-template-columns:1fr;
+        gap:24px;
+        margin-top:42px;
+    }
+
     .nav-container{
         display:flex;
         justify-content:space-between;
@@ -3822,7 +3813,7 @@ html[data-theme="dark"] .card{
    TABLET
 ========================= */
 
-@media (min-width:768px) and (max-width:1199px){
+@media (min-width:768px) and (max-width:1399px){
 
     .nav-container{
         display:flex;

@@ -100,6 +100,8 @@ const navigation = getChapterNavigation(book, chapterNumber);
       previous={navigation.previous}
       next={navigation.next}
     />
+
+    <a href="/bible" class="reader-hub-link">← Bible Hub</a>
   </section>
 
   <NoteDialog />
@@ -123,6 +125,18 @@ const navigation = getChapterNavigation(book, chapterNumber);
   margin-bottom: 1rem;
   color: var(--color-accent);
   text-align: center;
+}
+
+.reader-hub-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.reader-hub-link:hover {
+  text-decoration: underline;
 }
 
 .reader-divider {

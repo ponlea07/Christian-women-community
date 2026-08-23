@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import SectionHeading from "../../components/SectionHeading.astro";
 import { readingPlans } from "../../content/bible/reading-plans/plans";
+import BibleHubBackLink from "../../components/bible/BibleHubBackLink.astro";
 ---
 
 <Layout title="Reading Plans">
@@ -63,6 +64,10 @@ import { readingPlans } from "../../content/bible/reading-plans/plans";
   </div>
 </section>
 
+    <div class="plans-back-link">
+      <BibleHubBackLink />
+    </div>
+
   </main>
 </Layout>
 
@@ -82,6 +87,11 @@ import { readingPlans } from "../../content/bible/reading-plans/plans";
   width: min(1100px, 100%);
   margin: -1rem auto 0;
 }
+
+  .plans-back-link {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+  }
 
   .plans-grid {
     display: grid;

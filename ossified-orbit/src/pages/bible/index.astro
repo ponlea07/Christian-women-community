@@ -4,7 +4,7 @@ import SectionHeading from "../../components/SectionHeading.astro";
 import ContinueReading from "../../components/bible/ContinueReading.astro";
 import { getDailyVerse } from "../../lib/bible/dailyVerse";
 import ScriptureCard from "../../components/design/ScriptureCard.astro";
-import PrimaryButton from "../../components/design/PrimaryButton.astro";
+import OfflineBibleDownload from "../../components/bible/OfflineBibleDownload.astro";
 const verse = getDailyVerse();
 
 const testaments = [
@@ -41,117 +41,27 @@ const testaments = [
 </section>
 <ContinueReading />
 
-<section class="quick-access">
+<OfflineBibleDownload />
 
-  <div class="container">
-
-    <SectionHeading
-  eyebrow="TOOLS"
-  title="Study & Explore"
-  text="Everything you need to read, search and study God's Word."
-  theme="light"
-/>
-
-<div class="resources-grid">
-
-  <article class="resource-card">
-
-  <h3>🔍 Search Scripture</h3>
-
-  <p>
-    Quickly find verses, passages and keywords across the Bible.
-  </p>
-
-  <a href="/bible/search" class="btn-primary">
-    Open →
-  </a>
-
-</article>
-
-<article class="resource-card">
-
-  <h3>⭐ Bookmarks</h3>
-
-  <p>
-    Save your favourite chapters and verses for easy access anytime.
-  </p>
-
-  <a href="/bible/bookmarks" class="btn-primary">
-    Open →
-  </a>
-
-</article>
-
-<article class="resource-card">
-
-  <h3>📝 Notes</h3>
-
-  <p>
-    Capture personal reflections and insights as you study Scripture.
-  </p>
-
-  <a href="/bible/notes" class="btn-primary">
-    Open →
-  </a>
-
-</article>
-
-<article class="resource-card">
-
-  <h3>Verse Highlights</h3>
-
-  <p>
-    Revisit verses you have highlighted while reading Scripture.
-  </p>
-
-  <a href="/bible/highlights" class="btn-primary">
-    Open →
-  </a>
-
-</article>
-
-<article class="resource-card">
-
-  <h3>Reading History</h3>
-
-  <p>
-    Pick up where you left off and revisit recently read chapters.
-  </p>
-
-  <a href="/bible/history" class="btn-primary">
-    Open →
-  </a>
-
-</article>
-
-</div>
-
-  </div>
-
-</section>
-
-<section class="daily-verse-preview">
-
+<section class="daily-scripture">
   <div class="container">
 
     <SectionHeading
       eyebrow="TODAY'S VERSE"
       title="God's Word For Today"
+      text="Pause, reflect and let God's Word speak into your day."
       theme="light"
     />
 
     <ScriptureCard
-      reference={verse.reference}
-      text={verse.text}
-    />
-
-    <PrimaryButton href={`/bible/${verse.book}/${verse.chapter}`}>
-      Read Full Chapter →
-    </PrimaryButton>
-
+  reference={verse.reference}
+  text={verse.text}
+  action="Read in Context →"
+  href={`/bible/${verse.book}/${verse.chapter}`}
+/>
   </div>
-
 </section>
+
 <section class="resources-page">
 
 <div class="container">
@@ -188,36 +98,140 @@ Open →
 
 </section>
 
-<section class="daily-scripture">
+<section class="quick-access">
+
   <div class="container">
 
     <SectionHeading
-      eyebrow="TODAY'S WORD"
-      title="Daily Scripture"
-      text="Pause, reflect and let God's Word speak into your day."
-      theme="light"
-    />
-
-    <ScriptureCard
-  reference={verse.reference}
-  text={verse.text}
-  action="Read in Context →"
-  href={`/bible/${verse.book}/${verse.chapter}`}
+  eyebrow="TOOLS"
+  title="Study & Explore"
+  text="Everything you need to read, search and study God's Word."
+  theme="light"
 />
+
+<div class="resources-grid">
+
+<article class="resource-card">
+
+<h3> 🔍 Search Scripture</h3>
+
+<p>
+  Quickly find verses, passages and keywords across the Bible.
+</p>
+
+<a href="/bible/search" class="btn-primary">
+  Open →
+</a>
+
+</article>
+
+<article class="resource-card">
+
+  <h3>📖 Reading Plans</h3>
+
+  <p>
+    Follow a structured Bible reading plan and stay consistent in God's Word.
+  </p>
+
+  <a href="/bible/plans" class="btn-primary">
+    Explore →
+  </a>
+
+</article>
+
+<article class="resource-card">
+
+  <h3>🙏 Devotionals</h3>
+
+  <p>
+    Pause, reflect and draw closer to God through Scripture and daily devotional reflections.
+  </p>
+
+  <a href="/bible/devotionals" class="btn-primary">
+    Explore →
+  </a>
+
+</article>
+
+<article class="resource-card">
+
+<h3>⭐ Bookmarks</h3>
+
+<p>
+  Save your favourite chapters and verses for easy access anytime.
+</p>
+
+<a href="/bible/bookmarks" class="btn-primary">
+  Open →
+</a>
+
+</article>
+
+<article class="resource-card">
+
+<h3> 📝 Notes</h3>
+
+<p>
+  Capture personal reflections and insights as you study Scripture.
+</p>
+
+<a href="/bible/notes" class="btn-primary">
+  Open →
+</a>
+
+</article>
+
+<article class="resource-card">
+
+<h3> 🖍️ Verse Highlights</h3>
+
+<p>
+  Revisit verses you have highlighted while reading Scripture.
+</p>
+
+<a href="/bible/highlights" class="btn-primary">
+  Open →
+</a>
+
+</article>
+
+<article class="resource-card">
+
+<h3> 🕒 Reading History</h3>
+
+<p>
+  Pick up where you left off and revisit recently read chapters.
+</p>
+
+<a href="/bible/history" class="btn-primary">
+  Open →
+</a>
+</article>
+
+<article class="resource-card">
+
+<h3> 📝 Prayer Journal</h3>
+
+<p>
+  Record your prayers, reflect on your journey and keep track of what you're bringing before God.
+</p>
+
+<a href="/bible/prayer" class="btn-primary">
+  Open →
+</a>
+
+
+</article>
+
+</div>
+
   </div>
+
 </section>
 
 </Layout>
 
 <style>
-.daily-verse-preview{
-  text-align:center;
-  padding:3rem 1.5rem;
-}
-
-.daily-verse-preview .scripture-card{
-  margin-bottom:3rem;
-}
 .daily-scripture {
   padding: 4rem 0 5rem;
   background: var(--color-bg);
@@ -230,6 +244,18 @@ Open →
 
 .daily-scripture .section-heading {
   margin-bottom: 2rem;
+}
+.resources-page .resources-grid{
+  grid-template-columns: repeat(2, minmax(240px, 340px));
+  justify-content: center;
+  max-width: 720px;
+  margin: 70px auto 0;
+}
+
+@media (max-width: 700px){
+  .resources-page .resources-grid{
+    grid-template-columns: minmax(240px, 340px);
+  }
 }
 .quick-access{
   padding:3rem 0;

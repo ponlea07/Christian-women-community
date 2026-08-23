@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import BibleHubBackLink from "../../components/bible/BibleHubBackLink.astro";
 ---
 
 <Layout title="My Bookmarks">
@@ -22,6 +23,8 @@ import Layout from "../../layouts/Layout.astro";
 
     <section class="bookmarks-content">
       <div id="bookmarks-list" class="bookmarks-list"></div>
+
+      <BibleHubBackLink />
     </section>
   </main>
 </Layout>

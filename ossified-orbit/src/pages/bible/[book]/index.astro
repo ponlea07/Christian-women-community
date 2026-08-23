@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import { books } from "../../../content/bible/books";
+import BibleHubBackLink from "../../../components/bible/BibleHubBackLink.astro";
 
 export async function getStaticPaths() {
   return books.map((book) => ({
@@ -55,6 +56,8 @@ Read →
 </div>
 
 </div>
+
+<BibleHubBackLink />
 
 </section>
 

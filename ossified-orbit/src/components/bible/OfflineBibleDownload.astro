@@ -1,0 +1,60 @@
+<section class="offline-bible" aria-labelledby="offline-bible-title">
+  <div>
+    <p class="offline-bible__eyebrow">OFFLINE READING</p>
+    <h2 id="offline-bible-title">Take the Bible with you</h2>
+    <p id="offline-bible-status" class="offline-bible__status">Download all 66 books and 1,189 chapters for offline reading on this device.</p>
+  </div>
+  <button id="offline-bible-download" class="offline-bible__button" type="button">Download Bible for Offline Reading</button>
+</section>
+
+<style>
+  .offline-bible { display: flex; align-items: center; justify-content: space-between; gap: 2rem; max-width: 1000px; margin: 0 auto 4rem; padding: 2rem; border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 1rem; background: var(--color-surface-soft); }
+  .offline-bible__eyebrow { margin: 0 0 0.5rem; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; }
+  .offline-bible h2 { margin: 0; color: var(--color-surface-text); }
+  .offline-bible__status { max-width: 42rem; margin: 0.5rem 0 0; color: var(--color-surface-text-muted); line-height: 1.55; }
+  .offline-bible__button { flex: 0 0 auto; padding: 0.8rem 1.25rem; border: 1px solid var(--color-accent); border-radius: 0.6rem; background: var(--color-accent); color: var(--color-button-text); font: inherit; font-weight: 700; cursor: pointer; }
+  .offline-bible__button:disabled { cursor: wait; opacity: 0.7; }
+  @media (max-width: 700px) { .offline-bible { flex-direction: column; align-items: flex-start; } .offline-bible__button { width: 100%; } }
+</style>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>("#offline-bible-download");
+  const status = document.querySelector<HTMLElement>("#offline-bible-status");
+  const isLocalhost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+  const setStatus = (message: string) => { if (status) status.textContent = message; };
+
+  if (!button || !status) throw new Error("Offline Bible controls could not be found.");
+
+  if (isLocalhost) {
+    button.disabled = true;
+    setStatus("Offline download is available on the published website. It is intentionally disabled during local development.");
+  } else if (!("serviceWorker" in navigator)) {
+    button.disabled = true;
+    setStatus("This browser does not support offline downloads.");
+  } else {
+    button.addEventListener("click", async () => {
+      button.disabled = true;
+      try {
+        setStatus("Preparing the offline Bible download…");
+        const manifestResponse = await fetch("/data/bible/offline-manifest.json", { cache: "no-store" });
+        if (!manifestResponse.ok) throw new Error("The offline Bible manifest is not available yet.");
+        const manifest = await manifestResponse.json();
+        const worker = (await navigator.serviceWorker.ready).active;
+        if (!worker) throw new Error("Offline support is still starting. Please try again in a moment.");
+        const channel = new MessageChannel();
+        channel.port1.onmessage = (event) => {
+          const message = event.data;
+          if (message.type === "offline-bible-progress") setStatus(`Downloading Bible for offline reading: ${message.completed} of ${message.total} files.`);
+          if (message.type === "offline-bible-complete") {
+            if (message.failed === 0) { setStatus("Bible downloaded. All 66 books and 1,189 chapters are ready offline on this device."); button.textContent = "Bible Available Offline"; }
+            else { setStatus(`Download needs attention: ${message.failed} files could not be saved. Please try again while online.`); button.disabled = false; }
+          }
+        };
+        worker.postMessage({ type: "CACHE_BIBLE_OFFLINE", routes: manifest.routes, assets: manifest.assets }, [channel.port2]);
+      } catch (error) {
+        setStatus(error instanceof Error ? error.message : "Offline Bible download could not start.");
+        button.disabled = false;
+      }
+    });
+  }
+</script>

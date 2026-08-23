@@ -1,6 +1,7 @@
 ---
 import { books } from "../../content/bible/books";
 import Layout from "../../layouts/Layout.astro";
+import BibleHubBackLink from "../../components/bible/BibleHubBackLink.astro";
 
 const newTestament = books.filter(
   book => book.testament === "new"
@@ -38,6 +39,8 @@ Read →
 </div>
 
 </div>
+
+<BibleHubBackLink />
 
 </section>
 
