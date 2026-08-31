@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import BecomeVirtuosa from "../components/BecomeVirtuosa.astro";
 import GrowInTheWord from "../components/GrowInTheWord.astro";
+import MarketplaceCard from "../components/MarketplaceCard.astro";
 import { marketplace } from "../content/marketplace";
 ---
 
@@ -49,41 +50,11 @@ import { marketplace } from "../content/marketplace";
 
         {marketplace.map((business) => (
 
-          <article class="business-card">
-
-            <div class="business-logo">
-
-              {business.initials}
-
-            </div>
-
-            <span class="category">
-
-              {business.category}
-
-            </span>
-
-            <h3>
-
-              {business.name}
-
-            </h3>
-
-            <p>
-
-              {business.description}
-
-            </p>
-
-            <a
-              href={business.link}
-              class="btn-primary">
-
-              View Business
-
-            </a>
-
-          </article>
+          <MarketplaceCard
+            business={business}
+            ctaLabel="View Business"
+            ctaVariant="button"
+          />
 
         ))}
 

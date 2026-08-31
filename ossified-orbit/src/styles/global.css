@@ -13,7 +13,7 @@
   --color-brand: #0F6B73;
   --color-accent: #D4AF37;
 
-  --color-button-text: #0F6B73;
+  --color-button-text: #082f33;
 }
 
 html[data-theme="dark"] {
@@ -1869,17 +1869,60 @@ color:#D4AF37;
 
 }
 
-.business-card a{
+.business-card__cta{
 
-    color:#D4AF37;
-
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    align-self:flex-start;
+    min-height:44px;
     font-weight:700;
+    transition:transform .3s ease, box-shadow .3s ease, background-color .3s ease,
+        color .3s ease, letter-spacing .3s ease;
 
 }
 
-.business-card a:hover{
+.business-card__cta:focus-visible{
+
+    outline:3px solid #082f33;
+    outline-offset:4px;
+
+}
+
+.business-card__cta--text{
+
+    color:var(--color-accent);
+
+}
+
+.business-card__cta--text:hover{
 
     letter-spacing:1px;
+
+}
+
+.business-card__cta--button{
+
+    margin-top:auto;
+    padding:14px 28px;
+    border-radius:999px;
+    background:var(--color-accent);
+    color:var(--color-button-text);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.business-card__cta--button:hover{
+
+    transform:translateY(-3px);
+    box-shadow:0 14px 28px rgba(0,0,0,.2);
+
+}
+
+.business-card__cta--button:active{
+
+    transform:translateY(-1px);
+    box-shadow:0 6px 14px rgba(0,0,0,.16);
 
 }
 

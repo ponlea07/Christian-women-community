@@ -9,9 +9,15 @@ interface Business {
 
 interface Props {
   business: Business;
+  ctaLabel?: string;
+  ctaVariant?: "text" | "button";
 }
 
-const { business } = Astro.props;
+const {
+  business,
+  ctaLabel = "View Profile →",
+  ctaVariant = "text"
+} = Astro.props;
 ---
 
 <article class="business-card">
@@ -28,8 +34,14 @@ const { business } = Astro.props;
 
   <p>{business.description}</p>
 
-  <a href={business.link}>
-    View Profile →
+  <a
+    href={business.link}
+    class:list={[
+      "business-card__cta",
+      `business-card__cta--${ctaVariant}`
+    ]}
+  >
+    {ctaLabel}
   </a>
 
 </article>
