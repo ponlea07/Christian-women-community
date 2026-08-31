@@ -3375,7 +3375,14 @@ align-items:center;
 
 justify-content:center;
 
-padding:20px;
+/* The overlay, rather than the page beneath it, owns scrolling on short viewports. */
+padding:max(20px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+
+overflow-y:auto;
+
+overscroll-behavior:contain;
+
+-webkit-overflow-scrolling:touch;
 
 opacity:0;
 
@@ -3405,6 +3412,10 @@ width:100%;
 
 max-width:650px;
 
+max-height:calc(100vh - 40px);
+
+max-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 40px);
+
 padding:45px;
 
 border-radius:28px;
@@ -3412,6 +3423,10 @@ border-radius:28px;
 box-shadow:0 30px 80px rgba(0,0,0,.18);
 
 position:relative;
+
+overflow-y:auto;
+
+overscroll-behavior:contain;
 
 transform:translateY(20px) scale(.96);
 
@@ -3515,11 +3530,39 @@ transform:rotate(90deg);
 
 padding:30px;
 
+width:min(100%, 650px);
+
+min-width:0;
+
 }
 
 .modal-card h2{
 
 font-size:2rem;
+
+}
+
+.modal-close{
+
+position:sticky;
+
+top:-14px;
+
+z-index:1;
+
+display:grid;
+
+place-items:center;
+
+width:44px;
+
+height:44px;
+
+margin:-14px -14px 4px auto;
+
+border-radius:50%;
+
+background:var(--color-surface);
 
 }
 
