@@ -989,7 +989,7 @@ justify-content:center;
 
 .welcome{
 
-background:#fff;
+background:var(--color-surface);
 
 padding:140px 0;
 
@@ -1073,7 +1073,7 @@ font-size:1.08rem;
 
 line-height:2;
 
-color:#5d5d5d;
+color:var(--color-surface-text-muted);
 
 margin-bottom:22px;
 
