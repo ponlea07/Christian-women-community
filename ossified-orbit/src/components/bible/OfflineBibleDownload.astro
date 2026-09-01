@@ -2,7 +2,15 @@
   <div>
     <p class="offline-bible__eyebrow">OFFLINE READING</p>
     <h2 id="offline-bible-title">Take the Bible with you</h2>
-    <p id="offline-bible-status" class="offline-bible__status">Read Scripture wherever you are, even when you don’t have an internet connection.</p>
+    <p id="offline-bible-status" class="offline-bible__status" role="status" aria-live="polite" aria-atomic="true">Read Scripture wherever you are, even when you don’t have an internet connection.</p>
+    <div id="offline-bible-progress" class="offline-bible__progress" hidden>
+      <div class="offline-bible__progress-heading">
+        <span id="offline-bible-progress-label">Preparing your download</span>
+        <output id="offline-bible-progress-value" for="offline-bible-progress-bar">0%</output>
+      </div>
+      <progress id="offline-bible-progress-bar" max="100" value="0" aria-labelledby="offline-bible-progress-label" aria-describedby="offline-bible-status"></progress>
+      <p id="offline-bible-progress-detail" class="offline-bible__progress-detail"></p>
+    </div>
   </div>
   <button id="offline-bible-download" class="offline-bible__button" type="button">Download Bible for Offline Reading</button>
 </section>
@@ -11,17 +19,51 @@
   .offline-bible { display: flex; align-items: center; justify-content: space-between; gap: 2rem; max-width: 1000px; margin: 0 auto 4rem; padding: 2rem; border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 1rem; background: var(--color-surface-soft); }
   .offline-bible__eyebrow { margin: 0 0 0.5rem; color: var(--color-accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; }
   .offline-bible h2 { margin: 0; color: var(--color-surface-text); }
-  .offline-bible__status { max-width: 42rem; margin: 0.5rem 0 0; color: var(--color-surface-text-muted); line-height: 1.55; }
+  .offline-bible__status { max-width: 42rem; min-height: 3.1em; margin: 0.5rem 0 0; color: var(--color-surface-text-muted); line-height: 1.55; }
+  .offline-bible__progress { max-width: 42rem; margin-top: 1rem; }
+  .offline-bible__progress[hidden] { display: none; }
+  .offline-bible__progress-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; color: var(--color-surface-text); font-size: 0.95rem; font-weight: 700; }
+  .offline-bible__progress-heading output { color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .offline-bible__progress progress { display: block; width: 100%; height: 0.7rem; margin-top: 0.5rem; overflow: hidden; border: 0; border-radius: 999px; accent-color: var(--color-accent); }
+  .offline-bible__progress-detail { margin: 0.45rem 0 0; color: var(--color-surface-text-muted); font-size: 0.875rem; font-variant-numeric: tabular-nums; }
   .offline-bible__button { flex: 0 0 auto; padding: 0.8rem 1.25rem; border: 1px solid var(--color-accent); border-radius: 0.6rem; background: var(--color-accent); color: var(--color-button-text); font: inherit; font-weight: 700; cursor: pointer; }
   .offline-bible__button:disabled { cursor: wait; opacity: 0.7; }
-  @media (max-width: 700px) { .offline-bible { flex-direction: column; align-items: flex-start; } .offline-bible__button { width: 100%; } }
+  .offline-bible__button:focus-visible { outline: 3px solid var(--color-surface-text); outline-offset: 3px; }
+  @media (max-width: 700px) { .offline-bible { flex-direction: column; align-items: flex-start; gap: 1.5rem; padding: 1.5rem; } .offline-bible__button { width: 100%; min-height: 3rem; } }
+  @media (max-width: 360px) { .offline-bible__progress-heading { align-items: flex-start; flex-direction: column; gap: 0.25rem; } }
 </style>
 
 <script>
   const button = document.querySelector<HTMLButtonElement>("#offline-bible-download");
   const status = document.querySelector<HTMLElement>("#offline-bible-status");
+  const progressContainer = document.querySelector<HTMLElement>("#offline-bible-progress");
+  const progressBar = document.querySelector<HTMLProgressElement>("#offline-bible-progress-bar");
+  const progressLabel = document.querySelector<HTMLElement>("#offline-bible-progress-label");
+  const progressValue = document.querySelector<HTMLOutputElement>("#offline-bible-progress-value");
+  const progressDetail = document.querySelector<HTMLElement>("#offline-bible-progress-detail");
   const isLocalhost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
   const setStatus = (message: string) => { if (status) status.textContent = message; };
+  let hasStartedDownload = false;
+
+  const updateProgress = (completed: number, total: number, label: string, detail = "") => {
+    if (!progressContainer || !progressBar || !progressLabel || !progressValue || !progressDetail) return;
+    const percentage = total > 0 ? Math.min(100, Math.floor((completed / total) * 100)) : 0;
+    progressContainer.hidden = false;
+    progressBar.value = percentage;
+    progressLabel.textContent = label;
+    progressValue.value = `${percentage}%`;
+    progressValue.textContent = `${percentage}%`;
+    progressDetail.textContent = detail;
+  };
+
+  const formatProgressDetail = (completed: number, total: number) =>
+    `${completed.toLocaleString()} of ${total.toLocaleString()} parts ready`;
+
+  const isBibleAvailableOffline = async (resources: string[]) => {
+    const cache = await caches.open("cwc-bible-offline-v1");
+    const cachedUrls = new Set((await cache.keys()).map((request) => request.url));
+    return resources.every((resource) => cachedUrls.has(new URL(resource, window.location.origin).href));
+  };
 
   if (!button || !status) throw new Error("Offline Bible controls could not be found.");
 
@@ -34,24 +76,50 @@
     button.addEventListener("click", async () => {
       button.disabled = true;
       try {
-        setStatus("Preparing the offline Bible download…");
+        const isRetry = hasStartedDownload;
+        hasStartedDownload = true;
+        button.textContent = isRetry ? "Retrying download…" : "Preparing download…";
+        setStatus(isRetry ? "Retrying your Bible download…" : "Preparing your Bible download…");
+        updateProgress(0, 100, isRetry ? "Retrying your download" : "Preparing your download");
         const manifestResponse = await fetch("/data/bible/offline-manifest.json", { cache: "no-store" });
         if (!manifestResponse.ok) throw new Error("The offline Bible manifest is not available yet.");
         const manifest = await manifestResponse.json();
+        const resources = [...(manifest.routes || []), ...(manifest.assets || [])];
+        if (resources.length === 0) throw new Error("The Bible download is not available yet. Please try again shortly.");
+        setStatus("Checking whether your Bible is already ready to read offline…");
+        if (await isBibleAvailableOffline(resources)) {
+          updateProgress(resources.length, resources.length, "Bible ready offline", "Everything is ready to read without an internet connection.");
+          setStatus("The Bible is already available to read offline.");
+          button.textContent = "Bible available offline";
+          return;
+        }
         const worker = (await navigator.serviceWorker.ready).active;
         if (!worker) throw new Error("Offline support is still starting. Please try again in a moment.");
         const channel = new MessageChannel();
         channel.port1.onmessage = (event) => {
           const message = event.data;
-          if (message.type === "offline-bible-progress") setStatus(`Downloading Bible for offline reading: ${message.completed} of ${message.total} files.`);
+          if (message.type === "offline-bible-progress") {
+            updateProgress(message.completed, message.total, "Downloading your Bible", formatProgressDetail(message.completed, message.total));
+            setStatus("Your Bible is downloading for offline reading.");
+          }
           if (message.type === "offline-bible-complete") {
-            if (message.failed === 0) { setStatus("Bible available offline."); button.textContent = "Bible available offline"; }
-            else { setStatus(`Download needs attention: ${message.failed} files could not be saved. Please try again while online.`); button.disabled = false; }
+            if (message.failed === 0) {
+              updateProgress(message.total, message.total, "Bible ready offline", "Everything is ready to read without an internet connection.");
+              setStatus("Your Bible is ready to read offline.");
+              button.textContent = "Bible available offline";
+            } else {
+              const saved = message.completed - message.failed;
+              updateProgress(saved, message.total, "Download paused", `${message.failed.toLocaleString()} parts still need to be saved.`);
+              setStatus("Your download was interrupted. Please try again while you are connected to the internet.");
+              button.textContent = "Retry Bible download";
+              button.disabled = false;
+            }
           }
         };
         worker.postMessage({ type: "CACHE_BIBLE_OFFLINE", routes: manifest.routes, assets: manifest.assets }, [channel.port2]);
       } catch (error) {
-        setStatus(error instanceof Error ? error.message : "Offline Bible download could not start.");
+        setStatus(error instanceof Error ? error.message : "Your Bible download could not start. Please try again while you are connected to the internet.");
+        button.textContent = hasStartedDownload ? "Retry Bible download" : "Download Bible for Offline Reading";
         button.disabled = false;
       }
     });
