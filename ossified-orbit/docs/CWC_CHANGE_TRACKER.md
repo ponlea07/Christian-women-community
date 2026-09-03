@@ -282,6 +282,10 @@ Use `Chazah by Christian Women Community` only after counsel tests the composite
 
 ### Release Gate
 
+**Writable-checkout release validation (3 September 2026, `feature/bible-hub` at `e899e18`):** `npm ci` completed from the committed `package-lock.json`; `npm run check` and `npm run build` both passed. The build emitted 1,644 pages, retained `/bible/prayer`, and did not emit `/bible/prayer.backup` or `/test-bible`. The frozen devotional validator passed: YEAR365 content fingerprint, HS90 selection fingerprint, and SG180 selection fingerprint all matched.
+
+**Release blockers found in this validation (no source fixes made):** every sampled route emits the same canonical URL, `https://christian-women-community.vercel.app/`, rather than its own canonical route; sitemap URLs use `www.christianwomencommunity.org` while `robots.txt` names the Vercel sitemap host. At 390px, `/join` has horizontal overflow (`documentElement.clientWidth` 375px; `scrollWidth` 417px); the `.join-card` is 398px wide. The close control remains within the short 390×480 viewport, but the overflow must be fixed and rechecked. The regenerated offline manifest contains 1,266 routes and 25 current build assets (1,291 unique resources), not the previously recorded 1,293-resource / 27-asset contract; reconcile the expected contract before release rather than adding non-existent assets.
+
 - [ ] Scope is represented by approved backlog IDs; related Decision Log entries reviewed.
 - [ ] Relevant automated validation passes, including `npm run check` and production build for code changes.
 - [ ] Representative desktop and mobile routes checked; no horizontal overflow or broken navigation.
