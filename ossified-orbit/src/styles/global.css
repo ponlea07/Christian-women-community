@@ -3184,6 +3184,16 @@ padding:120px 0;
 background:var(--color-surface-soft);
 
 }
+
+/* The shared Bible book index uses the pale surface, so it needs its own
+   semantic foreground instead of inheriting the site's white-on-teal body text. */
+.bible-book-page > .container > h1{
+    color:var(--color-surface-text);
+}
+
+.bible-book-page > .container > h1 + p{
+    color:var(--color-surface-text-muted);
+}
 /*==================================
 CONTACT PAGE
 ==================================*/
