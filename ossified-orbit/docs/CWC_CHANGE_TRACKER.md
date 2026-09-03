@@ -1,6 +1,6 @@
 # Christian Women Community — Change Tracker & Release Roadmap
 
-**Last Updated:** 1 September 2026
+**Last Updated:** 3 September 2026
 **Document owner:** CWC project team
 
 > **Primary living tracker:** maintain this Markdown file in VS Code and Git. The accompanying [Word document](./CWC%20Website%20%26%20Bible%20Hub%20-%20Change%20Tracker%20and%20Release%20Roadmap.docx) is retained as an archival snapshot/reference, not the working master.
@@ -113,6 +113,87 @@ The full `CWC Bible Sanctuary` combination is pronounceable, memorable enough an
 **Decision gate before any implementation:** commission a trade-mark professional to search UK IPO, UK-designated international marks, WIPO/Madrid, EU and US records and relevant common-law/app/company/domain evidence; obtain advice on exact/near/phonetic/visual/conceptual similarity, prior-use and class specifications; decide word-mark versus logo/device strategy; and run final UK/US store and domain checks. This documentation does not provide legal advice or clearance.
 
 **Tracker status:** BRD-001 remains `QA`/decision-pending. `CWC Bible Sanctuary` remains provisional; no rename is authorised. Preserve the future rename impact audit and staged rollout below unchanged.
+
+### BRD-001 — Finalist deep screen: Bible/resource brand architecture (3 September 2026)
+
+**Decision status: research only; no rename authorised.** This is a comparative commercial and linguistic screen, **not legal advice or legal clearance**. It does not establish that a mark is available, registrable, enforceable, or free from unregistered/common-law, domain, handle, company-name, app-store, or contractual conflict. No production/source/PWA/manifest/cache/storage/devotional/main/deployment change is authorised or was made. In particular, preserve the prior **152-match / 38-file future-rename impact audit**, all `/bible` and `/bible/**` routes, `cwc-bible-hub-v7`, `OFFLINE_BIBLE_CACHE`, existing browser-storage keys and frozen YEAR365/HS90/SG180 content.
+
+#### Method, coverage and limitations
+
+The public screen used exact, spaced/unspaced, ampersand/`and`, word-order, phonetic, transliteration and close-concept searches: `CHAZAH`, `Chazah`, `Chaza`, `Ḥāzâ`, `חזה`; `RUBIES & REVELATION`, `Rubies and Revelation`, `Rubies Revelation`, `Revelation & Rubies`; `WORDBORNE`, `Word Borne`, `Word-Borne`; `UNVEILED`, `Unveil'd`, `Unveiled Bible`, `Unveiled women`; and `HAREL`, `Har'el`, `Har El`, `הראל`, `altar hearth`, `mountain of God`. The same set (plus `Bible`, `study`, `devotional`, `prayer`, `app`, `ministry`, `publishing` and `community`) must be re-run by counsel against actual goods/services.
+
+| Source/database or market screen | What was established | Important limitation / required professional step |
+|---|---|---|
+| [UK IPO register and journal](https://www.gov.uk/search-for-trademark) | IPO provides keyword/phrase searching for similar UK marks and owners, plus the journal for UK and UK-designated international applications. The interactive result pages could not be exported/reliably preserved in this environment. | Counsel must save live exact, fuzzy/phonetic, visual/conceptual and goods/services results; examine status, owner, priority, specification, opposition and coexistence evidence—not only mark text. The IPO itself warns that an automated similar-mark result does not decide likelihood of confusion. |
+| [WIPO Global Brand Database](https://www.wipo.int/en/web/global-brand-database), [Madrid search guidance](https://www.wipo.int/en/web/madrid-system/how_to/search/index), [EUIPO/TMview entry point](https://www.euipo.europa.eu/en/search) | WIPO covers Madrid plus participating national/regional collections and supports keyword, name, goods/services, fuzzy, phonetic and word-stem searching; EUIPO exposes EUTM/TMview tools. | WIPO says national/regional registers must also be searched and gives no legal opinion on conflicts. The interactive record search was CAPTCHA/dynamic-interface limited here; therefore this tracker makes **no assertion of a no-match result**. Search EUTM and comparable UK rights (including retained EU-derived UK rights), UK, US/USPTO and all intended territories. |
+| Apple App Store UK/US public pages/indexed search; Google Play public pages/indexed search | An exact, overlapping Apple listing was surfaced for **Unveiled: Bible Word Study**; active Harel apps were surfaced. No exact listing for the other three finalists was surfaced by the available public/indexed screen. | Store results vary by country, account and time and are not trade-mark clearance. Repeat logged, hands-on UK and US searches immediately before submission and confirm title availability in the developer consoles. |
+| Christian study/devotional/prayer/ministry/publishing and wider-web/common-law screen | Direct overlapping Christian women’s uses were surfaced for **Unveiled**. Exact `Wordborne` is already used by a translation business and a word game; `Chazah` is used by unrelated businesses; `Harel` is a major financial/app brand. No exact `Rubies & Revelation` resource/app was surfaced in the accessible public screen. | Search results cannot prove absence of rights, use, domain registration, social ownership, company availability or priority. Commission counsel-led common-law checks; record live UK Companies House/charity and US state/entity results, registrar/RDAP checks and core social handles at decision time. No domains or handles were registered. |
+
+**Core filing/search frame.** Treat Nice **9** (downloadable mobile apps/digital publications) and **41** (Bible study, education, publishing, devotional content) as core. Add **42** only if the actual offer includes hosted/non-downloadable software, SaaS or platform services; add **45** only if CWC actually offers community/personal/religious services in scope, rather than merely Christian-themed content. Search UK, US, EU/EEA/EUTM, Madrid designations and every planned launch market. An EUTM does not itself cover the UK after Brexit, while earlier registered EUTMs received comparable UK rights; both records need checking. Do not rely on class numbers alone: compare real specifications, channels and consumers.
+
+#### Linguistic and theological findings
+
+| Term | Verified finding | Brand-safe conclusion |
+|---|---|---|
+| **CHAZAH** | Hebrew **חָזָה** is conventionally transliterated **ḥāzâ** (plain-English `chazah`; roughly *khah-ZAH*, with `ch` like German *Bach*, not English *church*). Lexical sources give “see, behold, perceive,” including perception/understanding and visionary/prophetic contexts; its Old-Testament use is often poetic and can concern seeing in vision, rather than a slogan for generic “deep insight.” See [H2372 lexical entry](https://biblehub.com/strongs/hebrew/2372.htm) and [usage summary](https://thecorebible.org/lexiconword-hebrew/?hw=2372). | The modest claim **“see, behold and perceive Scripture more deeply”** is defensible as a *brand metaphor*, provided copy says it is inspired by the Hebrew verb and does not claim `Chazah` is a biblical person/name, means only “deep study,” or promises revelation. Teach pronunciation once in launch copy/audio; the unfamiliar spelling is a cost, not a defect. |
+| **HAREL** | Hebrew **הַרְאֵל** (*har'el*) occurs in Ezekiel 43:15–16 in the temple-altar description. Lexical/academic discussion treats it in that context as the upper altar/altar-hearth (with associated `ariel` wording), although “mountain of God” is an etymological analysis sometimes offered; it is not a straightforward female biblical name or a simple “strength” word. See [Ezekiel-context reference](https://www.jevzajcg.me/enciklopedia/Encyclopaedia%20Judaica%2C%20v.%2002%20%28Alr-Az%29.pdf) and [altar discussion](https://clickbible.org/post/ezekiel-4315-unknown-author-159251/). | Do **not** market it as “a female biblical name meaning strength,” nor flatten it to “mountain of God.” Its ritual altar context is real but indirect for a women’s Bible/product platform, and needs specialist Hebrew review if used in any public theology. |
+| **RUBIES & REVELATION** | `Rubies` directly fits CWC’s existing Donna Virtuosa / **More Than Rubies** hierarchy and Proverbs 31:10’s incomparable worth imagery. “Wisdom/revelation” also has a credible Scripture-study association (for example, wisdom is compared with rubies and Ephesians 1:17 speaks of wisdom and revelation), but `Revelation` in a title can initially be read as the final Bible book. | Use a clarifying descriptor consistently: **“A Christian Women Community Scripture study & devotional collection”** or **“Treasures of wisdom and revelation in God’s Word.”** Do not label it a Revelation-book product without intent. |
+| **UNVEILED** | It has a strong 2 Corinthians 3:18 association (beholding/transformation), but the association is already actively used by women’s Bible-study and ministry products. | The theology is sound; the ownership position is not sufficiently clean for CWC’s umbrella/app name. |
+
+#### Candidate evidence and risk conclusions
+
+| Candidate | Material surfaced evidence / naming issue | Screen result | Why |
+|---|---|---|---|
+| **CHAZAH** | Unrelated business signals include Chazah Pharmaceuticals (India), a New York `Chazah Creations` entity and Chazah Global (Singapore). No exact Christian Bible/study/app product was surfaced in the accessible Apple/Google/public-web pass. | **GREEN — go to professional/filing check** | Best distinctiveness and strongest theology-to-product bridge. This is a *screening green*, not clearance: counsel must investigate registered and pending 9/41 (and conditional 42/45) marks, Chazah/Chaza/Ḥāzâ/חזה variants, spoken similarity and future-market conflicts. |
+| **RUBIES & REVELATION** / **Rubies and Revelation** | No exact resource/app was surfaced in this public screen. The phrase is naturally descriptive/evocative—rubies, revelation, wisdom, and women’s devotion are all crowded Christian concepts—but the combined phrase is CWC-native and harmonises with More Than Rubies. | **GREEN — go to professional/filing check** | Strongest CWC resource-series name, not the strongest standalone technology mark. Test `&`/`and`, reversal and `Revelation`-book confusion; seek counsel on inherent distinctiveness and whether a CWC logo/device mark should supplement the words. |
+| **WORDBORNE** / **Word Borne** / **Word-Borne** | Exact use exists for [Wordborne](https://www.wordborne.pl/), a Polish translation business, and for `WordBorne: Crypts of Letters`, a word-game title; public handles also appear occupied. No direct Christian Bible app was surfaced. The coined compound can mean “carried by the Word,” “born of the Word,” or simply “word game/translation,” so it is ambiguous in speech. | **AMBER — professional assessment required** | Memorable and scalable but already collision-prone as an exact coined word. Search classes 9/41/42, translation/localisation, education and games closely; do not invest in domains/identity until counsel assesses proximity. |
+| **UNVEILED** | Directly overlapping evidence includes [Unveiled: Bible Word Study](https://apps.apple.com/nz/app/unveiled-bible-word-study/id6787166446), a Bible word-study iPhone app with Hebrew/Greek functionality; [BRF’s *Unveiled*](https://www.brf.org.uk/unveiled/), an eight-part resource/book on Old Testament women; [Live Unveiled](https://www.liveunveiled.com/who-we-are), a women’s Bible-study/prayer/community ministry; and women’s-ministry podcast use. | **RED — eliminate** | These are not abstract uses: they overlap scripture study, biblical languages, women, devotion/reflection and community. Very high app-store, search and common-law confusion risk even before register results. |
+| **HAREL** / **Har'el** / **Har El** / **הראל** | `Harel` is an established, prominent insurance/financial group with consumer apps, including [Harel Health Insurance Online](https://apps.apple.com/us/app/harel-health-insurance-online/id1069719475?platform=ipad) and [Harel Switch](https://play.google.com/store/apps/details?id=com.harel.harel_switch). It is also a widespread surname/place/personal name; the biblical reference is specialised altar terminology. | **RED — eliminate** | The existing global digital-brand footprint makes searchability and app association poor, while the altar-hearth context does not clearly serve the intended Bible/devotional promise. The unrelated classes do not erase cross-platform, domain and expansion friction. |
+
+#### Weighted scorecard and ranking
+
+Scores are comparative screen scores out of 10, not probability-of-registration scores. Weighting favours the mission and durable ownability needed for an umbrella digital product: mission/CWC fit **15%**, biblical depth **10%**, memorability **10%**, pronunciation **8%**, distinctiveness/ownability **18%**, searchability **10%**, app suitability **10%**, scalability **9%**, and collision safety **10%**. `Collision safety` is scored high only where the accessible evidence is safer; it is deliberately reduced by actual overlap and never treats a missing search result as safe.
+
+| Rank | Candidate | Mission / biblical / memorable / pronounceable | Ownable / searchable / app / scalable / collision-safe | Weighted score | Decision |
+|---:|---|---|---|---:|---|
+| 1 | **CHAZAH** | 9 / 9 / 8 / 6 | 8 / 7 / 8 / 9 / 7 | **7.9** | **GREEN** — preferred platform/app candidate, subject to professional check |
+| 2 | **RUBIES & REVELATION** | 10 / 8 / 8 / 9 | 6 / 6 / 7 / 9 / 7 | **7.7** | **GREEN** — preferred CWC signature resource-series candidate, subject to professional check |
+| 3 | **WORDBORNE** | 7 / 6 / 8 / 8 | 6 / 6 / 7 / 8 / 4 | **6.6** | **AMBER** — reserve only if counsel clears the existing exact uses |
+| 4 | **UNVEILED** | 8 / 9 / 8 / 10 | 2 / 2 / 2 / 7 / 1 | **5.2** | **RED — drop** |
+| 5 | **HAREL** | 4 / 6 / 6 / 7 | 2 / 2 / 3 / 6 / 1 | **3.9** | **RED — drop** |
+| Benchmark | **CWC Bible Sanctuary** | 7 / 6 / 7 / 9 | 4 / 4 / 6 / 8 / 4 | **5.9** | **AMBER** — provisional descriptive fallback only |
+
+**Top 3:** 1) **CHAZAH**, 2) **Rubies & Revelation**, 3) **Wordborne**. **Eliminate now:** **Unveiled** and **Harel**. The Top 3 is a strategic shortlist, not an instruction to use or file any name. `CWC Bible Sanctuary` remains **AMBER**, but no longer leads the strategy: its existing `Sanctuary` collision/categorisation problems remain materially worse than a successful Chazah-led architecture. Retain it only as a CWC-led descriptive contingency pending the professional screen; do not implement or advertise it and do not perform any rename work.
+
+#### Architecture test and recommendation
+
+| Architecture | Assessment | Result |
+|---|---|---|
+| **A. One umbrella product name** — one name for Bible, devotionals, prayer and study | Most coherent in navigation, but `Rubies & Revelation` is long and collection-like, `Unveiled`/`Harel` are rejected, and `Wordborne` has exact-use friction. `CHAZAH` is the only candidate with a plausible distinctive umbrella role. | Viable only as **CHAZAH**, after professional clearance; otherwise do not force a finalist into this role. |
+| **B. Distinctive platform + CWC signature collection** | Separates tech/platform ownability from the feminine, existing CWC/Donna Virtuosa resource story; avoids forcing a single phrase to do both jobs. It also keeps future studies, journals and reading plans naturally extensible. | **Recommended, subject to two separate professional checks.** |
+| **C. CWC-led descriptive naming without a separate platform brand** | Least migration/discoverability burden and strongest immediate house-mark clarity, but `CWC Bible Sanctuary` remains only moderately distinctive, components are crowded, and it can sound like a church/building. | Contingency only: **Christian Women Community Bible & Study** (descriptive presentation) while counsel/leadership decides; do not treat it as a substitute word mark or rename authority. |
+
+**Recommended hierarchy/wording (not implemented):**
+
+> **CHAZAH**
+> *The Christian Women Community Scripture Platform*
+> **Bible · Study · Devotionals · Prayer**
+>
+> **Rubies & Revelation**
+> *A Christian Women Community signature study & devotional collection*
+> *Treasures of wisdom and revelation in God’s Word*
+
+Use `Chazah by Christian Women Community` only after counsel tests the composite wording as well as `CHAZAH` alone. Use **Rubies & Revelation** in collection/sub-brand placement rather than as the technical platform/app name. Do not claim that a file mark, logo/device mark, domain or store acceptance cures word-mark conflict.
+
+#### Mandatory professional verification before a decision, filing or rollout
+
+1. Obtain a UK trade-mark attorney’s written clearance/filing strategy for `CHAZAH`, `Chaza`, `Chazah Bible`, `ḥāzâ`, `חזה`, `RUBIES & REVELATION`, `Rubies and Revelation`, word-order/ampersand variants and the CWC composite; include exact, similarity, phonetic, transliteration and conceptual searches in classes 9/41 and actual conditional classes 42/45.
+2. Repeat/register-search UK IPO and journal, UK-designated Madrid records, WIPO/Madrid Monitor, EUIPO/EUTM and comparable UK rights, USPTO and priority future markets; assess owners, priority, status, goods/services, oppositions and unregistered evidence. No database or search-engine non-result is clearance.
+3. Retain live UK Companies House/charity/business-name, US/common-law, registrar/RDAP and key social-handle evidence, then complete live UK/US Apple and Google searches with title, developer, subtitle, category and screenshots. Do not buy domains, reserve handles or submit stores until authority is expressly granted.
+4. Have a qualified Hebrew/Biblical-language reviewer approve outward-facing **Chazah** and **Harel** explanatory copy if either is used. The present conclusion is sufficient for screening, not an academic endorsement.
+5. Only after written selection and professional sign-off may a separately approved, small visible-brand rollout be scoped. Preserve the existing impact audit and the stable `/bible`, PWA/cache/storage and devotional safeguards; do not merge or deploy from this documentation screen.
+
+**Tracker status:** BRD-001 remains **QA / decision-pending**. This update records the finalist evidence, Top 3, eliminations and recommended architecture; it does not supersede the need for a professional clearance or authorise a production rename.
 
 ### Future rename impact audit
 
