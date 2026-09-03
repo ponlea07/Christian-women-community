@@ -20,7 +20,7 @@ export const site = {
 
   phone: "",
 
-  website: "https://christianwomencommunity.org",
+  website: "https://www.christianwomencommunity.org",
 
   social: {
 

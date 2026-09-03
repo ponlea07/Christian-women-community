@@ -10,6 +10,9 @@ interface Props {
 const {
   title = "Christian Women Community | Donna Virtuosa"
 } = Astro.props;
+const site = Astro.site ?? new URL("https://www.christianwomencommunity.org");
+const canonicalUrl = new URL(Astro.url.pathname, site);
+const socialImageUrl = new URL("/images/cwc-official-logo.png", site);
 ---
 
 <!DOCTYPE html>
@@ -53,7 +56,7 @@ const {
   <!-- Canonical -->
   <link
     rel="canonical"
-    href="https://christian-women-community.vercel.app/"
+    href={canonicalUrl}
   />
 
   <!-- Favicon -->
@@ -72,11 +75,11 @@ const {
   />
   <meta
     property="og:image"
-    content="https://christian-women-community.vercel.app/images/cwc-official-logo.png"
+    content={socialImageUrl}
   />
   <meta
     property="og:url"
-    content="https://christian-women-community.vercel.app"
+    content={canonicalUrl}
   />
   <meta property="og:site_name" content="Christian Women Community" />
 
@@ -92,7 +95,7 @@ const {
   />
   <meta
     name="twitter:image"
-    content="https://christian-women-community.vercel.app/images/cwc-official-logo.png"
+    content={socialImageUrl}
   />
 
   <!-- Fonts -->

@@ -3627,6 +3627,10 @@ flex-direction:column;
 gap:22px;
 max-width:560px;
 
+width:100%;
+
+min-width:0;
+
 margin-left:auto;
 
 }
@@ -3673,7 +3677,7 @@ width:fit-content;
 
 display:grid;
 
-grid-template-columns:1fr 1fr;
+grid-template-columns:minmax(0,1fr) minmax(0,1fr);
 
 gap:15px;
 
